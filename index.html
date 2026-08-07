@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corvus Lab — Laboratorio de ideas</title>
+<meta name="description" content="Corvus Lab es un laboratorio de ideas que produce proyectos: herramientas, archivos, datos e interfaces entre la información y la decisión.">
+<meta property="og:title" content="Corvus Lab">
+<meta property="og:description" content="No es una organización. Es una señal en el ruido.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070e18;
+  --panel:#0c1626;
+  --panel-2:#0e1a2e;
+  --line:rgba(88,198,208,0.14);
+  --text:#e8e4dc;
+  --muted:#7d8a99;
+  --soft:#55626f;
+  --teal:#58C6D0;
+  --teal-dim:rgba(88,198,208,0.10);
+  --warm:#D9A066;
+  --sans:'Inter',system-ui,sans-serif;
+  --serif:'Fraunces',Georgia,serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.container{max-width:960px;margin:0 auto;padding:0 32px}
+a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(88,198,208,0.25);transition:border-color .2s,color .2s}
+a:hover{color:#8fdfe6;border-color:#8fdfe6}
+
+/* grain */
+.grain{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.025;background-image:radial-gradient(circle at 20% 20%,rgba(255,255,255,.4) .4px,transparent .6px);background-size:14px 14px}
+
+/* grid backdrop */
+.grid-lines{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:96px 96px;mask-image:radial-gradient(ellipse 90% 70% at 50% 20%,#000 0%,transparent 75%);}
+
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--teal)}
+.eyebrow-warm{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--warm)}
+
+/* ---------- NAV ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 0;background:linear-gradient(180deg,rgba(7,14,24,.92),rgba(7,14,24,0));}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.brand{font-family:var(--serif);font-weight:500;font-size:17px;letter-spacing:.02em;color:var(--text);border:0}
+.brand em{font-style:italic;color:var(--teal)}
+.nav-links{display:flex;gap:28px;font-size:13px}
+.nav-links a{border:0;color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.nav-links a:hover{color:var(--text)}
+
+/* ---------- HERO ---------- */
+.hero{padding:190px 0 110px;position:relative;z-index:1}
+.hero .crow{width:86px;height:auto;margin-bottom:44px;filter:drop-shadow(0 0 24px rgba(88,198,208,.12))}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(52px,9vw,96px);line-height:.98;letter-spacing:-.02em;margin:18px 0 34px}
+.hero h1 .lab{font-style:italic;color:var(--teal)}
+.hero .epigraph{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(19px,2.6vw,26px);color:var(--muted);max-width:640px;line-height:1.4;margin-bottom:52px}
+.hero .mantra{font-family:var(--mono);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}
+.hero .mantra span{color:var(--soft)}
+
+/* ---------- IDENTIDAD ---------- */
+section{position:relative;z-index:1;padding:96px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:52px;gap:24px}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.5vw,44px);letter-spacing:-.01em}
+.sec-head .num{font-family:var(--mono);font-size:12px;color:var(--soft)}
+
+.lead{font-size:clamp(18px,2.4vw,23px);font-weight:300;max-width:720px;margin-bottom:60px;line-height:1.55}
+.lead strong{color:var(--teal);font-weight:500}
+
+.convictions{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.conviction{background:var(--panel);padding:38px 30px;min-height:280px;display:flex;flex-direction:column}
+.conviction .idx{font-family:var(--mono);font-size:12px;color:var(--warm);margin-bottom:20px}
+.conviction h3{font-family:var(--serif);font-weight:500;font-size:19px;line-height:1.3;margin-bottom:14px}
+.conviction p{font-size:14px;color:var(--muted);line-height:1.6}
+
+.selective{margin-top:56px;display:flex;align-items:center;gap:22px}
+.selective .rule{width:56px;height:2px;background:var(--teal);flex-shrink:0}
+.selective p{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.6vw,24px);color:var(--text)}
+
+/* ---------- PROPOSITO ---------- */
+.proposito{background:var(--panel);border-top:1px solid var(--line)}
+.proposito .container{display:flex;flex-direction:column;align-items:flex-start}
+.proposito blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(30px,5vw,52px);line-height:1.15;letter-spacing:-.01em;max-width:820px}
+.proposito blockquote strong{font-style:italic;font-weight:500;color:var(--teal)}
+.proposito .sub{margin-top:30px;font-size:16px;color:var(--muted);max-width:640px}
+
+/* ---------- PROYECTOS ---------- */
+.cat{margin-bottom:64px}
+.cat-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:4px}
+.cat-head h3{font-family:var(--serif);font-weight:500;font-size:22px}
+.cat-head .cryptic{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);text-align:right;max-width:340px}
+.project{display:grid;grid-template-columns:1fr 2fr 1fr auto;gap:24px;padding:26px 4px;border-bottom:1px solid var(--line);align-items:baseline;transition:background .2s}
+.project:hover{background:rgba(88,198,208,.03)}
+.project .p-name{font-family:var(--serif);font-weight:500;font-size:18px}
+.project .p-desc{font-size:13.5px;color:var(--muted);line-height:1.55}
+.project .p-tag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--warm);border:1px solid rgba(217,160,102,.35);padding:4px 9px;white-space:nowrap;justify-self:start}
+.project .p-tag.pub{color:var(--teal);border-color:rgba(88,198,208,.35)}
+.project .p-tag.gray{color:var(--soft);border-color:rgba(85,98,111,.4)}
+.project .p-link{font-size:13px;border:0;color:var(--soft);white-space:nowrap}
+.project .p-link:hover{color:var(--teal)}
+
+/* ---------- FILOSOFIA ---------- */
+.filosofia .container{display:grid;grid-template-columns:5fr 4fr;gap:72px;align-items:start}
+.filosofia .copy p{font-size:15px;color:var(--muted);margin-bottom:20px;line-height:1.7}
+.filosofia .copy p strong{color:var(--text);font-weight:500}
+.filosofia .copy .pull{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(20px,2.6vw,26px);color:var(--text);line-height:1.4;margin:34px 0}
+.filosofia .stencil{border:1px solid var(--line);background:var(--panel);padding:56px 40px;display:flex;align-items:center;justify-content:center}
+.filosofia .stencil svg{width:100%;max-width:280px;height:auto}
+.filosofia .stencil-caption{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);text-align:center;margin-top:18px}
+
+/* ---------- CONTACTO ---------- */
+.contact .container{display:flex;flex-direction:column;align-items:flex-start}
+.contact h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4vw,38px);margin-bottom:14px}
+.contact p{color:var(--muted);font-size:15px;max-width:520px;margin-bottom:36px}
+
+.btn{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--bg);background:var(--teal);padding:16px 30px;border:0;transition:background .2s}
+.btn:hover{background:#8fdfe6;color:var(--bg)}
+
+/* ---------- FOOTER ---------- */
+footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-index:1}
+footer .container{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+footer .f-brand{font-family:var(--serif);font-size:18px}
+footer .f-brand em{font-style:italic;color:var(--teal)}
+footer .f-mantra{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft)}
+footer .f-copy{font-family:var(--mono);font-size:10px;color:var(--soft);letter-spacing:.1em;width:100%;margin-top:26px}
+
+@media(max-width:820px){
+  .convictions{grid-template-columns:1fr}
+  .conviction{min-height:auto}
+  .project{grid-template-columns:1fr;gap:8px}
+  .project .p-link{display:none}
+  .filosofia .container{grid-template-columns:1fr;gap:40px}
+  .hero{padding:150px 0 80px}
+  .nav-links{display:none}
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div class="grid-lines"></div>
+
+<nav>
+  <div class="container">
+    <a class="brand" href="#top">Corvus <em>Lab</em></a>
+    <div class="nav-links">
+      <a href="#identidad">Identidad</a>
+      <a href="#proposito">Propósito</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#filosofia">Filosofía</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container">
+    <svg class="crow" viewBox="0 0 200 130" fill="none" aria-hidden="true">
+      <path fill="#58C6D0" fill-rule="evenodd" d="M12 48 L26 40 L28 46 L40 30 L56 34 L72 26 L98 34 L128 28 L158 22 L150 44 L166 54 L138 48 L118 66 L92 58 L68 70 L52 88 L46 78 L34 90 L30 78 L16 68 L10 58 Z M44 37 A4 4 0 1 0 44.01 37 Z"/>
+    </svg>
+    <p class="eyebrow">Laboratorio de ideas — Argentina</p>
+    <h1>Corvus <span class="lab">Lab</span></h1>
+    <p class="epigraph">No fundamos un laboratorio. Creamos las condiciones para que las preguntas correctas encuentren respuestas incorrectas, y viceversa.</p>
+    <p class="mantra">Encontrar <span>·</span> Construir <span>·</span> Publicar <span>·</span> Repetir</p>
+  </div>
+</header>
+
+<section class="identidad" id="identidad">
+  <div class="container">
+    <div class="sec-head">
+      <h2>Identidad</h2>
+      <span class="num">01 / 05</span>
+    </div>
+    <p class="lead">Corvus Lab no es una organización. <strong>Es una señal en el ruido.</strong> Operamos en la intersección de tres convicciones:</p>
+    <div class="convictions">
+      <div class="conviction">
+        <span class="idx">I.</span>
+        <h3>La información es un bien público distribuido de manera desigual.</h3>
+        <p>No nos interesa acumularla — nos interesa redistribuirla en forma de herramientas.</p>
+      </div>
+      <div class="conviction">
+        <span class="idx">II.</span>
+        <h3>Los problemas complejos no se resuelven con más teoría.</h3>
+        <p>Se resuelven con algo que anda. Aunque sea feo. Aunque sea chico. Aunque haya que reescribirlo al mes siguiente.</p>
+      </div>
+      <div class="conviction">
+        <span class="idx">III.</span>
+        <h3>El conocimiento que no circula no existe.</h3>
+        <p>Cada proyecto es un conducto: para que un dato, una historia, un índice o una métrica pase de invisible a útil. De ser de alguien, a ser de todos.</p>
+      </div>
+    </div>
+    <div class="selective">
+      <div class="rule"></div>
+      <p>No somos neutrales. Somos selectivos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="proposito" id="proposito">
+  <div class="container">
+    <p class="eyebrow-warm" style="margin-bottom:28px">Propósito</p>
+    <blockquote>Que la complejidad <strong>no sea excusa</strong> para la opacidad.</blockquote>
+    <p class="sub">Corvus Lab existe para que lo que está oculto — por burocracia, por distancia, por falta de herramientas — sea visible. Y lo que es visible, sea accionable.</p>
+  </div>
+</section>
+
+<section class="proyectos" id="proyectos">
+  <div class="container">
+    <div class="sec-head">
+      <h2>Proyectos</h2>
+      <span class="num">02 / 05</span>
+    </div>
+
+    <div class="cat">
+      <div class="cat-head">
+        <h3>Herramientas públicas</h3>
+        <span class="cryptic">El conocimiento no es el output. La herramienta es el output.</span>
+      </div>
+      <div class="project">
+        <span class="p-name">RIGI Tracker</span>
+        <span class="p-desc">Seguimiento de los proyectos de inversión del Régimen de Incentivo a las Grandes Inversiones. Transparencia donde no la hay.</span>
+        <span class="p-tag pub">Público</span>
+        <a class="p-link" href="https://rigi-tracker.vercel.app" target="_blank">abrir →</a>
+      </div>
+      <div class="project">
+        <span class="p-name">Punto de Partida</span>
+        <span class="p-desc">Indicadores comparativos — Argentina contra el mundo. Datos curados de Banco Mundial, UNDP y OMS. Sin opinión, sin agenda.</span>
+        <span class="p-tag pub">Público</span>
+        <a class="p-link" href="https://punto-de-partida-three.vercel.app" target="_blank">abrir →</a>
+      </div>
+      <div class="project">
+        <span class="p-name">Soberanía Cognitiva</span>
+        <span class="p-desc">Protocolo de dominio público sobre la captura de atención y la reconstrucción del pensamiento crítico.</span>
+        <span class="p-tag pub">Público</span>
+        <a class="p-link" href="https://soberaniacognitiva.com.ar" target="_blank">abrir →</a>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-head">
+        <h3>Archivo y memoria</h3>
+        <span class="cryptic">Lo que se archiva no se pierde. Lo que circula, existe.</span>
+      </div>
+      <div class="project">
+        <span class="p-name">100 Cuentos Argentinos</span>
+        <span class="p-desc">Una colección de cuentos que crece — con ilustración, impresión y tinta. Un cuento por vez.</span>
+        <span class="p-tag pub">Público</span>
+        <a class="p-link" href="https://cuentos-argentinos.vercel.app" target="_blank">abrir →</a>
+      </div>
+      <div class="project">
+        <span class="p-name">Panteón Personal</span>
+        <span class="p-desc">Pensadores que enseñaron a pensar. Fichas vivas, contradicciones incluidas — la multiplicidad, no la biografía aislada.</span>
+        <span class="p-tag gray">Personal</span>
+        <a class="p-link" href="https://nanopisaroni.vercel.app/panteon.html" target="_blank">abrir →</a>
+      </div>
+      <div class="project">
+        <span class="p-name">Nuestra PBP</span>
+        <span class="p-desc">Biblioteca popular compartida entre amigos. Catálogo vivo, reseñas, préstamos. Cada uno pone lo que leyó.</span>
+        <span class="p-tag pub">Público</span>
+        <a class="p-link" href="https://nuestra-pbp.vercel.app" target="_blank">abrir →</a>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-head">
+        <h3>Investigación</h3>
+        <span class="cryptic">Donde el Estado no llega, llega el dato.</span>
+      </div>
+      <div class="project">
+        <span class="p-name">Ausencia del Estado</span>
+        <span class="p-desc">Costo de que el Estado no esté donde debería. Obras mapeadas, consultas ciudadanas, sobrecostos documentados.</span>
+        <span class="p-tag gray">Sandbox</span>
+        <a class="p-link" href="#proyectos">en desarrollo →</a>
+      </div>
+      <div class="project">
+        <span class="p-name">GBrain</span>
+        <span class="p-desc">Grafo de conocimiento personal. Lo leído, lo pensado, lo conectado — indexado para volver a encontrarlo.</span>
+        <span class="p-tag gray">Privado</span>
+        <span class="p-link" style="color:var(--soft)">interno</span>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-head">
+        <h3>Comerciales</h3>
+        <span class="cryptic">Algunos proyectos pagan el alquiler de los que no.</span>
+      </div>
+      <div class="project">
+        <span class="p-name">Kalei Ventures</span>
+        <span class="p-desc">Venture capital para startups de IA en América Latina.</span>
+        <span class="p-tag">Comercial</span>
+        <a class="p-link" href="https://kaleiventures.com" target="_blank">abrir →</a>
+      </div>
+      <div class="project">
+        <span class="p-name">Only Hwangs</span>
+        <span class="p-desc">K-beauty desde COSMAX Korea. Ciencia coreana, piel argentina.</span>
+        <span class="p-tag">Comercial</span>
+        <a class="p-link" href="https://onlyhwangs.com" target="_blank">abrir →</a>
+      </div>
+      <div class="project">
+        <span class="p-name">Box & Co</span>
+        <span class="p-desc">Regalos empresariales. Cajas que se eligen, se personalizan y se entregan.</span>
+        <span class="p-tag">Comercial</span>
+        <a class="p-link" href="https://boxyco.com.ar" target="_blank">abrir →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="filosofia" id="filosofia">
+  <div class="container">
+    <div class="copy">
+      <div class="sec-head" style="margin-bottom:32px">
+        <h2>Por qué el cuervo</h2>
+        <span class="num">03 / 05</span>
+      </div>
+      <p>El cuervo no es un símbolo decorativo. Es el animal que <strong>recuerda caras, resuelve acertijos, usa herramientas, reconoce espejos</strong> y entierra comida para el invierno.</p>
+      <p>No es el más fuerte. <strong>Es el que mejor se adapta.</strong></p>
+      <p class="pull">Corvus Lab funciona igual. Proyectos chicos, rápidos, que se ajustan al problema antes de que el problema cambie. Sin burocracia. Sin planes quinquenales. Sin necesidad de pedir permiso.</p>
+      <p>No tenemos un stack fijo ni una ideología fija. Tenemos un método: <strong>identificar, construir, publicar, iterar.</strong></p>
+    </div>
+    <div>
+      <div class="stencil">
+        <svg viewBox="0 0 200 130" fill="none" aria-hidden="true">
+          <path fill="#58C6D0" fill-rule="evenodd" d="M12 48 L26 40 L28 46 L40 30 L56 34 L72 26 L98 34 L128 28 L158 22 L150 44 L166 54 L138 48 L118 66 L92 58 L68 70 L52 88 L46 78 L34 90 L30 78 L16 68 L10 58 Z M44 37 A4 4 0 1 0 44.01 37 Z"/>
+        </svg>
+      </div>
+      <p class="stencil-caption">Corvus · el ave que usa herramientas</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="container">
+    <p class="eyebrow" style="margin-bottom:24px">04 / 05</p>
+    <h2>¿Tenés un problema que nadie más quiere resolver?</h2>
+    <p>Demasiado chico, demasiado local, demasiado incómodo. Ese es exactamente el tipo de problema que nos interesa.</p>
+    <a class="btn" href="mailto:leandro@kaleiventures.com?subject=Proyecto%20para%20Corvus%20Lab">Escribinos →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span class="f-brand">Corvus <em>Lab</em></span>
+    <span class="f-mantra">Encontrar · Construir · Publicar · Repetir</span>
+    <span class="f-copy">© 2026 Corvus Lab. Nada de lo que hacemos es para siempre. Pero mientras sirve, sirve de verdad.</span>
+  </div>
+</footer>
+
+</body>
+</html>

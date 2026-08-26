@@ -55,6 +55,10 @@ SITES = [
         "kpi": "sitio", "tag": "Comercial",
     },
     {
+        "id": "hipotecas", "name": "Hipotecas AR", "url": "https://hipotecas-ar.vercel.app",
+        "kpi": "ofertas", "tag": "Datos", "data": "https://hipotecas-ar.vercel.app/data.js",
+    },
+    {
         "id": "personal", "name": "Sitio Personal", "url": "https://nanopisaroni.vercel.app",
         "kpi": "sitio", "tag": "Personal",
     },
@@ -120,6 +124,12 @@ def extract(site, probe_res):
     elif sid == "kalei":
         mm = re.search(r"(\d+)\s*portfolio", body)
         m["portcos"] = int(mm.group(1)) if mm else None
+    elif sid == "hipotecas":
+        try:
+            d = http_get(site["data"])
+            m["ofertas"] = d.count('"ent":')
+        except Exception as e:
+            m["error_hipotecas"] = str(e)[:60]
     return m
 
 def main():

@@ -1,5 +1,5 @@
 window.METRICS = {
- "generated_at": "2026-08-29T06:01:47.386653+00:00",
+ "generated_at": "2026-08-29T12:02:28.094654+00:00",
  "sites": [
   {
    "id": "corvus-lab",
@@ -9,7 +9,7 @@ window.METRICS = {
    "kpi": "Landing del Lab",
    "up": true,
    "status": 200,
-   "latency_ms": 467,
+   "latency_ms": 504,
    "size_kb": 14.9,
    "metrics": {}
   },
@@ -30,13 +30,13 @@ window.METRICS = {
     "empleos": 114380,
     "aprobados": 9,
     "statuses": {
-     "anunciado": 2,
+     "aprobado": 8,
      "desarrollo": 9,
      "ampliacion": 3,
      "operativo": 1,
-     "aprobado": 8,
-     "exploracion": 1,
-     "construccion": 1
+     "anunciado": 2,
+     "construccion": 1,
+     "exploracion": 1
     }
    }
   },
@@ -48,7 +48,7 @@ window.METRICS = {
    "kpi": "indicadores",
    "up": true,
    "status": 200,
-   "latency_ms": 91,
+   "latency_ms": 112,
    "size_kb": 42.2,
    "metrics": {
     "indicadores": 50,
@@ -63,7 +63,7 @@ window.METRICS = {
    "kpi": "firmas",
    "up": true,
    "status": 200,
-   "latency_ms": 270,
+   "latency_ms": 115,
    "size_kb": 28.3,
    "metrics": {
     "firmas": 3
@@ -92,7 +92,7 @@ window.METRICS = {
    "kpi": "libros",
    "up": true,
    "status": 200,
-   "latency_ms": 97,
+   "latency_ms": 100,
    "size_kb": 99.9,
    "metrics": {
     "libros": 120,
@@ -108,7 +108,7 @@ window.METRICS = {
    "kpi": "productos",
    "up": true,
    "status": 200,
-   "latency_ms": 185,
+   "latency_ms": 342,
    "size_kb": 61.2,
    "metrics": {
     "productos": 630
@@ -122,7 +122,7 @@ window.METRICS = {
    "kpi": "sitio",
    "up": true,
    "status": 200,
-   "latency_ms": 739,
+   "latency_ms": 802,
    "size_kb": 19.7,
    "metrics": {}
   },
@@ -134,7 +134,7 @@ window.METRICS = {
    "kpi": "portcos",
    "up": true,
    "status": 200,
-   "latency_ms": 178,
+   "latency_ms": 118,
    "size_kb": 25.4,
    "metrics": {
     "portcos": 25
@@ -148,7 +148,7 @@ window.METRICS = {
    "kpi": "sitio",
    "up": true,
    "status": 200,
-   "latency_ms": 122,
+   "latency_ms": 190,
    "size_kb": 19.9,
    "metrics": {}
   },
@@ -160,7 +160,7 @@ window.METRICS = {
    "kpi": "ofertas",
    "up": true,
    "status": 200,
-   "latency_ms": 110,
+   "latency_ms": 83,
    "size_kb": 21.5,
    "metrics": {
     "ofertas": 321
@@ -174,7 +174,7 @@ window.METRICS = {
    "kpi": "sitio",
    "up": true,
    "status": 200,
-   "latency_ms": 109,
+   "latency_ms": 108,
    "size_kb": 3.2,
    "metrics": {}
   }

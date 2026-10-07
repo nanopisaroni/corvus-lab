@@ -5,7 +5,8 @@ import json, os, subprocess, sys, time
 PROJECT_NAME = "corvus-lab"
 ALIAS = "corvus-lab.vercel.app"
 ROOT = os.path.expanduser("~/projects/corvus-lab")
-FILES = ["index.html", "dashboard.html", "metrics.js", "metrics_history.json", "vercel.json"]
+FILES = ["index.html", "dashboard.html", "metrics.js", "metrics_history.json", "vercel.json",
+         "notas/ultimo-escalon.html"]
 
 def token():
     for line in open(os.path.expanduser("~/.hermes/.env")):

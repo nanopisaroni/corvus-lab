@@ -1,5 +1,5 @@
 window.METRICS = {
- "generated_at": "2026-10-14T12:00:18.012610+00:00",
+ "generated_at": "2026-10-14T18:00:27.984186+00:00",
  "sites": [
   {
    "id": "corvus-lab",
@@ -9,7 +9,7 @@ window.METRICS = {
    "kpi": "Landing del Lab",
    "up": true,
    "status": 200,
-   "latency_ms": 397,
+   "latency_ms": 234,
    "size_kb": 15.7,
    "metrics": {}
   },
@@ -21,7 +21,7 @@ window.METRICS = {
    "kpi": "proyectos RIGI",
    "up": true,
    "status": 200,
-   "latency_ms": 429,
+   "latency_ms": 90,
    "size_kb": 28.7,
    "metrics": {
     "proyectos": 26,
@@ -30,10 +30,10 @@ window.METRICS = {
     "empleos": 116980,
     "aprobados": 10,
     "statuses": {
-     "anunciado": 2,
      "operativo": 1,
-     "ampliacion": 3,
      "exploracion": 1,
+     "ampliacion": 3,
+     "anunciado": 2,
      "construccion": 1,
      "desarrollo": 9,
      "aprobado": 9
@@ -48,7 +48,7 @@ window.METRICS = {
    "kpi": "indicadores",
    "up": true,
    "status": 200,
-   "latency_ms": 350,
+   "latency_ms": 424,
    "size_kb": 34.2,
    "metrics": {
     "indicadores": 50,
@@ -63,7 +63,7 @@ window.METRICS = {
    "kpi": "firmas",
    "up": true,
    "status": 200,
-   "latency_ms": 146,
+   "latency_ms": 63,
    "size_kb": 28.3,
    "metrics": {
     "firmas": 3
@@ -77,7 +77,7 @@ window.METRICS = {
    "kpi": "cuentos",
    "up": true,
    "status": 200,
-   "latency_ms": 428,
+   "latency_ms": 314,
    "size_kb": 45.8,
    "metrics": {
     "cuentos_total": 30,
@@ -92,7 +92,7 @@ window.METRICS = {
    "kpi": "libros",
    "up": true,
    "status": 200,
-   "latency_ms": 289,
+   "latency_ms": 132,
    "size_kb": 128.7,
    "metrics": {
     "libros": 120,
@@ -108,10 +108,10 @@ window.METRICS = {
    "kpi": "productos",
    "up": true,
    "status": 200,
-   "latency_ms": 342,
-   "size_kb": 76.5,
+   "latency_ms": 275,
+   "size_kb": 79.1,
    "metrics": {
-    "productos": 690
+    "productos": 650
    }
   },
   {
@@ -122,7 +122,7 @@ window.METRICS = {
    "kpi": "sitio",
    "up": true,
    "status": 200,
-   "latency_ms": 780,
+   "latency_ms": 779,
    "size_kb": 19.7,
    "metrics": {}
   },
@@ -134,7 +134,7 @@ window.METRICS = {
    "kpi": "portcos",
    "up": true,
    "status": 200,
-   "latency_ms": 98,
+   "latency_ms": 145,
    "size_kb": 25.4,
    "metrics": {
     "portcos": 25
@@ -148,7 +148,7 @@ window.METRICS = {
    "kpi": "sitio",
    "up": true,
    "status": 200,
-   "latency_ms": 529,
+   "latency_ms": 124,
    "size_kb": 19.9,
    "metrics": {}
   },
@@ -160,7 +160,7 @@ window.METRICS = {
    "kpi": "ofertas",
    "up": true,
    "status": 200,
-   "latency_ms": 269,
+   "latency_ms": 85,
    "size_kb": 21.7,
    "metrics": {
     "ofertas": 292
@@ -174,7 +174,7 @@ window.METRICS = {
    "kpi": "sitio",
    "up": true,
    "status": 200,
-   "latency_ms": 261,
+   "latency_ms": 225,
    "size_kb": 3.3,
    "metrics": {}
   }

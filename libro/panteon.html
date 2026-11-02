@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Panteón Personal · Corvus Lab</title><meta name="description" content="Un mapa mental de dieciséis pensadores que me formaron"><meta property="og:title" content="Panteón Personal · Corvus Lab"><meta property="og:description" content="Un mapa mental de dieciséis pensadores que me formaron"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;700&family=Piazzolla:ital,opsz,wght@0,8..30,400;0,8..30,600;1,8..30,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
+:root{
+  --tinta:#131f38; --tinta2:#1c3050; --papel:#f2ecdd; --papel2:#e9e1cc;
+  --sangre:#c2371f; --gris:#6a6353; --negro:#141414;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--tinta);color:var(--papel);font-family:'Archivo',system-ui,sans-serif;
+  line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+/* height:auto es imprescindible: sin esto el atributo height del HTML se impone como
+   altura fija y la imagen se estira cuando el ancho queda limitado por el contenedor. */
+img{display:block;max-width:100%;height:auto}
+
+.banda{padding:clamp(52px,8vw,96px) clamp(20px,6vw,80px)}
+.banda.papel{background:var(--papel);color:var(--negro)}
+.banda.tinta2{background:var(--tinta2)}
+.max{max-width:1080px;margin:0 auto}
+.mono{font-family:'IBM Plex Mono',monospace}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--sangre);margin-bottom:26px}
+.banda.papel .kicker{color:var(--sangre)}
+
+nav{padding:26px clamp(20px,6vw,80px);display:flex;justify-content:space-between;
+  align-items:center;gap:20px;flex-wrap:wrap;border-bottom:1px solid rgba(242,236,221,.14)}
+nav .marca{font-family:'Archivo Black',Archivo,sans-serif;font-size:16px;letter-spacing:.04em}
+nav .marca i{font-family:'Piazzolla',serif;font-style:italic;color:var(--sangre);font-weight:600}
+nav .links{display:flex;gap:24px;font-family:'IBM Plex Mono',monospace;font-size:11px;
+  letter-spacing:.16em;text-transform:uppercase;color:rgba(242,236,221,.62)}
+nav .links a:hover{color:var(--papel)}
+
+h1{font-family:'Archivo Black',Archivo,sans-serif;line-height:.92;letter-spacing:-.015em;
+  font-size:clamp(46px,10vw,132px);margin:0}
+h1 .r1{display:block}
+h1 .r2{display:block;color:transparent;-webkit-text-stroke:2px var(--papel);text-stroke:2px var(--papel)}
+h1 .r3{display:block;color:var(--sangre)}
+h1.negro .r2{-webkit-text-stroke:2px var(--negro);text-stroke:2px var(--negro)}
+.bajada{font-family:'Piazzolla',serif;font-style:italic;font-size:clamp(18px,2.2vw,25px);
+  max-width:46ch;margin:32px 0 0;color:rgba(242,236,221,.9)}
+.banda.papel .bajada{color:rgba(20,20,20,.82)}
+
+h2{font-family:'Archivo Black',Archivo,sans-serif;font-size:clamp(26px,4vw,44px);
+  line-height:1.04;letter-spacing:-.01em;margin-bottom:26px}
+h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:19px;margin-bottom:8px}
+p{font-size:16.5px;max-width:68ch;margin-bottom:18px}
+p.grande{font-size:clamp(18px,2vw,21px);line-height:1.6}
+.regla{height:3px;background:var(--sangre);width:74px;margin:0 0 30px}
+
+.lista-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:34px}
+.btn{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;padding:15px 24px;border:2px solid currentColor;display:inline-block;
+  transition:background .15s,color .15s}
+.btn.fuerte{background:var(--sangre);border-color:var(--sangre);color:var(--papel)}
+.btn.fuerte:hover{background:#a52d18;border-color:#a52d18}
+.btn:hover{background:var(--papel);color:var(--tinta)}
+.banda.papel .btn:hover{background:var(--negro);color:var(--papel)}
+.banda.papel .btn.fuerte:hover{background:#a52d18;color:var(--papel)}
+
+/* estante */
+.estante{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:12px}
+.vol-card{display:block}
+.vol-card .marco{border:1px solid rgba(20,20,20,.2);overflow:hidden;background:var(--papel2)}
+.vol-card img{width:100%;height:auto;transition:transform .4s cubic-bezier(.2,.7,.3,1)}
+.vol-card:hover img{transform:scale(1.035)}
+.vol-card .pie{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--gris);line-height:1.5}
+.vol-card .pie b{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:0;text-transform:none;color:var(--negro)}
+
+/* canon */
+.canon{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;margin-top:8px;
+  border-top:1px solid rgba(20,20,20,.18)}
+.canon div{display:flex;gap:16px;align-items:baseline;padding:13px 0;
+  border-bottom:1px solid rgba(20,20,20,.12)}
+.canon .nn{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--sangre);min-width:26px}
+.canon .nm{font-family:'Piazzolla',serif;font-size:19px}
+
+/* volumen largo */
+.vol-fila{display:grid;grid-template-columns:250px 1fr;gap:52px;align-items:start}
+.vol-fila .tapa{border:1px solid rgba(20,20,20,.2)}
+.vol-fila .num{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;
+  color:var(--sangre);text-transform:uppercase;margin-bottom:14px;display:block}
+.vol-fila .sub{font-family:'Piazzolla',serif;font-style:italic;font-size:22px;
+  margin-bottom:24px;color:rgba(20,20,20,.85)}
+.vol-fila .ficha{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gris);
+  letter-spacing:.06em;margin:24px 0 22px;padding:16px 0;
+  border-top:1px solid rgba(20,20,20,.16);border-bottom:1px solid rgba(20,20,20,.16)}
+.vol-fila .ficha span{margin-right:20px;white-space:nowrap}
+.descargas{display:flex;flex-direction:column;gap:9px;margin-top:4px}
+.descargas a{display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;
+  font-size:12px;letter-spacing:.06em;padding:14px 18px;border:1px solid rgba(242,236,221,.28);
+  color:var(--papel)}
+.descargas a:hover{border-color:var(--sangre);color:var(--sangre)}
+.descargas a .fl{color:var(--sangre);font-size:15px}
+.banda.papel .descargas a{border-color:rgba(20,20,20,.25);color:var(--negro)}
+.banda.papel .descargas a:hover{border-color:var(--sangre);color:var(--sangre)}
+
+/* indice de capitulos */
+.indice{display:grid;grid-template-columns:repeat(2,1fr);gap:0 44px;margin-top:10px}
+.indice div{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid rgba(20,20,20,.12)}
+.indice .nn{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--sangre);
+  min-width:30px;padding-top:3px}
+.indice .nm{font-size:16px}
+
+footer{padding:52px clamp(20px,6vw,80px) 76px;text-align:center;
+  font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:2;color:rgba(242,236,221,.55)}
+footer .inf{font-family:'Piazzolla',serif;font-size:32px;display:block;
+  color:rgba(242,236,221,.35);margin-bottom:10px}
+
+@media(max-width:900px){
+  .estante{grid-template-columns:repeat(3,1fr)}
+  .vol-fila{grid-template-columns:1fr;gap:32px}
+  .vol-fila .tapa{max-width:260px}
+  .canon,.indice{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .estante{grid-template-columns:repeat(2,1fr);gap:16px}
+  nav .links{display:none}
+  .vol-fila .ficha span{white-space:normal;display:block;margin:0 0 4px}
+}
+</style></head><body>
+<nav>
+  <a class="marca" href="/">CORVUS <i>Lab</i></a>
+  <div class="links">
+    <a href="/">Laboratorio</a>
+    <a href="/coleccion">Colección</a>
+    <a href="/dashboard">Dashboard</a>
+  </div>
+</nav>
+<section class="banda">
+  <div class="max">
+    <p class="kicker">Colección Corvus Lab · Volumen 01 · Canon</p>
+    <h1 style="font-size:clamp(26px,14.5vw,132px)"><span class="r1">PANTEÓN</span><span class="r3">PERSONAL</span></h1>
+    <p class="bajada">Un mapa mental de dieciséis pensadores que me formaron</p>
+  </div>
+</section>
+<section class="banda papel">
+  <div class="max vol-fila">
+    <div class="tapa"><img src="/coleccion/panteon.webp" alt="PANTEÓN PERSONAL"
+      width="760" height="1078"></div>
+    <div>
+      <p class="kicker">Descargar y leer</p>
+      <h2 class="negro">De qué trata</h2>
+      <p class="grande">Cada uno de los dieciséis está en el libro por una razón precisa. No están por prestigio ni por completitud: están porque dejaron una herramienta mental que sigue en uso. Borges enseña a leer las bibliotecas como mapas. Feynman enseña a desconfiar de uno mismo con método. Taleb enseña a mirar el riesgo antes que el promedio.</p><p>El libro no propone admiración. Propone uso. Cada capítulo cierra con los conceptos que se pueden aplicar y con las conexiones hacia los demás del panteón, porque el valor de una lista así está en los cruces: Popper con Deutsch, Munger con Kahneman, los estoicos con Watts.</p><p>Es el volumen del que salen los otros cuatro. Las referencias que aparecen en el resto de la colección se eligen acá, y ese es el motivo por el que abre la serie.</p>
+      <p class="ficha"><span>262 páginas</span><span>2026</span><span>Castellano · English edition</span></p>
+      <div class="descargas"><a href="https://nanopisaroni.vercel.app/books/panteon-personal.pdf"><span class="fl">&#8595;</span>PDF · castellano 2,1 MB</a><a href="https://nanopisaroni.vercel.app/books/panteon-en.pdf"><span class="fl">&#8595;</span>PDF · English edition</a></div>
+      <div class="lista-cta">
+        <a class="btn fuerte" href="https://nanopisaroni.vercel.app/panteon.html">Leer en el sitio</a>
+        <a class="btn" href="/coleccion">Volver a la colección</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="banda">
+  <div class="max">
+    <p class="kicker">Los dieciséis</p>
+    <h2>Lo que hay adentro</h2>
+    <div class="canon"><div><span class="nn">01</span><span class="nm">Jorge Luis Borges</span></div><div><span class="nn">02</span><span class="nm">Richard Feynman</span></div><div><span class="nn">03</span><span class="nm">Nassim Nicholas Taleb</span></div><div><span class="nn">04</span><span class="nm">David Deutsch</span></div><div><span class="nn">05</span><span class="nm">Peter Thiel</span></div><div><span class="nn">06</span><span class="nm">Karl Popper</span></div><div><span class="nn">07</span><span class="nm">Charlie Munger</span></div><div><span class="nn">08</span><span class="nm">Daniel Kahneman</span></div><div><span class="nn">09</span><span class="nm">Paul Graham</span></div><div><span class="nn">10</span><span class="nm">Naval Ravikant</span></div><div><span class="nn">11</span><span class="nm">Eliezer Yudkowsky</span></div><div><span class="nn">12</span><span class="nm">Marco Aurelio</span></div><div><span class="nn">13</span><span class="nm">Epicteto (y Séneca)</span></div><div><span class="nn">14</span><span class="nm">Alan Watts</span></div><div><span class="nn">15</span><span class="nm">Jiddu Krishnamurti</span></div><div><span class="nn">16</span><span class="nm">Facundo Cabral</span></div></div>
+  </div>
+</section>
+<footer>
+  <span class="inf">&#8734;</span>
+  Corvus Lab · Córdoba, Argentina<br>
+  Los cinco volúmenes se escribieron con asistencia de máquinas y los libros lo declaran<br>
+  en su advertencia y en su colofón.
+</footer>
+</body></html>

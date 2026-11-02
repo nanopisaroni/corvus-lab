@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Colección · Corvus Lab</title><meta name="description" content="Cinco volúmenes sobre lo que sostiene a una persona y se pierde por goteo. Escritos desde Córdoba."><meta property="og:title" content="Colección · Corvus Lab"><meta property="og:description" content="Cinco volúmenes sobre lo que sostiene a una persona y se pierde por goteo. Escritos desde Córdoba."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;700&family=Piazzolla:ital,opsz,wght@0,8..30,400;0,8..30,600;1,8..30,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
+:root{
+  --tinta:#131f38; --tinta2:#1c3050; --papel:#f2ecdd; --papel2:#e9e1cc;
+  --sangre:#c2371f; --gris:#6a6353; --negro:#141414;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--tinta);color:var(--papel);font-family:'Archivo',system-ui,sans-serif;
+  line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+/* height:auto es imprescindible: sin esto el atributo height del HTML se impone como
+   altura fija y la imagen se estira cuando el ancho queda limitado por el contenedor. */
+img{display:block;max-width:100%;height:auto}
+
+.banda{padding:clamp(52px,8vw,96px) clamp(20px,6vw,80px)}
+.banda.papel{background:var(--papel);color:var(--negro)}
+.banda.tinta2{background:var(--tinta2)}
+.max{max-width:1080px;margin:0 auto}
+.mono{font-family:'IBM Plex Mono',monospace}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--sangre);margin-bottom:26px}
+.banda.papel .kicker{color:var(--sangre)}
+
+nav{padding:26px clamp(20px,6vw,80px);display:flex;justify-content:space-between;
+  align-items:center;gap:20px;flex-wrap:wrap;border-bottom:1px solid rgba(242,236,221,.14)}
+nav .marca{font-family:'Archivo Black',Archivo,sans-serif;font-size:16px;letter-spacing:.04em}
+nav .marca i{font-family:'Piazzolla',serif;font-style:italic;color:var(--sangre);font-weight:600}
+nav .links{display:flex;gap:24px;font-family:'IBM Plex Mono',monospace;font-size:11px;
+  letter-spacing:.16em;text-transform:uppercase;color:rgba(242,236,221,.62)}
+nav .links a:hover{color:var(--papel)}
+
+h1{font-family:'Archivo Black',Archivo,sans-serif;line-height:.92;letter-spacing:-.015em;
+  font-size:clamp(46px,10vw,132px);margin:0}
+h1 .r1{display:block}
+h1 .r2{display:block;color:transparent;-webkit-text-stroke:2px var(--papel);text-stroke:2px var(--papel)}
+h1 .r3{display:block;color:var(--sangre)}
+h1.negro .r2{-webkit-text-stroke:2px var(--negro);text-stroke:2px var(--negro)}
+.bajada{font-family:'Piazzolla',serif;font-style:italic;font-size:clamp(18px,2.2vw,25px);
+  max-width:46ch;margin:32px 0 0;color:rgba(242,236,221,.9)}
+.banda.papel .bajada{color:rgba(20,20,20,.82)}
+
+h2{font-family:'Archivo Black',Archivo,sans-serif;font-size:clamp(26px,4vw,44px);
+  line-height:1.04;letter-spacing:-.01em;margin-bottom:26px}
+h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:19px;margin-bottom:8px}
+p{font-size:16.5px;max-width:68ch;margin-bottom:18px}
+p.grande{font-size:clamp(18px,2vw,21px);line-height:1.6}
+.regla{height:3px;background:var(--sangre);width:74px;margin:0 0 30px}
+
+.lista-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:34px}
+.btn{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;padding:15px 24px;border:2px solid currentColor;display:inline-block;
+  transition:background .15s,color .15s}
+.btn.fuerte{background:var(--sangre);border-color:var(--sangre);color:var(--papel)}
+.btn.fuerte:hover{background:#a52d18;border-color:#a52d18}
+.btn:hover{background:var(--papel);color:var(--tinta)}
+.banda.papel .btn:hover{background:var(--negro);color:var(--papel)}
+.banda.papel .btn.fuerte:hover{background:#a52d18;color:var(--papel)}
+
+/* estante */
+.estante{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:12px}
+.vol-card{display:block}
+.vol-card .marco{border:1px solid rgba(20,20,20,.2);overflow:hidden;background:var(--papel2)}
+.vol-card img{width:100%;height:auto;transition:transform .4s cubic-bezier(.2,.7,.3,1)}
+.vol-card:hover img{transform:scale(1.035)}
+.vol-card .pie{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--gris);line-height:1.5}
+.vol-card .pie b{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:0;text-transform:none;color:var(--negro)}
+
+/* canon */
+.canon{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;margin-top:8px;
+  border-top:1px solid rgba(20,20,20,.18)}
+.canon div{display:flex;gap:16px;align-items:baseline;padding:13px 0;
+  border-bottom:1px solid rgba(20,20,20,.12)}
+.canon .nn{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--sangre);min-width:26px}
+.canon .nm{font-family:'Piazzolla',serif;font-size:19px}
+
+/* volumen largo */
+.vol-fila{display:grid;grid-template-columns:250px 1fr;gap:52px;align-items:start}
+.vol-fila .tapa{border:1px solid rgba(20,20,20,.2)}
+.vol-fila .num{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;
+  color:var(--sangre);text-transform:uppercase;margin-bottom:14px;display:block}
+.vol-fila .sub{font-family:'Piazzolla',serif;font-style:italic;font-size:22px;
+  margin-bottom:24px;color:rgba(20,20,20,.85)}
+.vol-fila .ficha{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gris);
+  letter-spacing:.06em;margin:24px 0 22px;padding:16px 0;
+  border-top:1px solid rgba(20,20,20,.16);border-bottom:1px solid rgba(20,20,20,.16)}
+.vol-fila .ficha span{margin-right:20px;white-space:nowrap}
+.descargas{display:flex;flex-direction:column;gap:9px;margin-top:4px}
+.descargas a{display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;
+  font-size:12px;letter-spacing:.06em;padding:14px 18px;border:1px solid rgba(242,236,221,.28);
+  color:var(--papel)}
+.descargas a:hover{border-color:var(--sangre);color:var(--sangre)}
+.descargas a .fl{color:var(--sangre);font-size:15px}
+.banda.papel .descargas a{border-color:rgba(20,20,20,.25);color:var(--negro)}
+.banda.papel .descargas a:hover{border-color:var(--sangre);color:var(--sangre)}
+
+/* indice de capitulos */
+.indice{display:grid;grid-template-columns:repeat(2,1fr);gap:0 44px;margin-top:10px}
+.indice div{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid rgba(20,20,20,.12)}
+.indice .nn{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--sangre);
+  min-width:30px;padding-top:3px}
+.indice .nm{font-size:16px}
+
+footer{padding:52px clamp(20px,6vw,80px) 76px;text-align:center;
+  font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:2;color:rgba(242,236,221,.55)}
+footer .inf{font-family:'Piazzolla',serif;font-size:32px;display:block;
+  color:rgba(242,236,221,.35);margin-bottom:10px}
+
+@media(max-width:900px){
+  .estante{grid-template-columns:repeat(3,1fr)}
+  .vol-fila{grid-template-columns:1fr;gap:32px}
+  .vol-fila .tapa{max-width:260px}
+  .canon,.indice{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .estante{grid-template-columns:repeat(2,1fr);gap:16px}
+  nav .links{display:none}
+  .vol-fila .ficha span{white-space:normal;display:block;margin:0 0 4px}
+}
+</style></head><body>
+<nav>
+  <a class="marca" href="/">CORVUS <i>Lab</i></a>
+  <div class="links">
+    <a href="/">Laboratorio</a>
+    <a href="/coleccion">Colección</a>
+    <a href="/dashboard">Dashboard</a>
+  </div>
+</nav>
+<section class="banda">
+  <div class="max">
+    <p class="kicker">Corvus Lab · Colección · 2026</p>
+    <h1 style="font-size:clamp(26px,8.3vw,101px)"><span class="r1">CINCO</span><span class="r2">VOLÚMENES</span><span class="r3">UNA BIBLIOTECA</span></h1>
+    <p class="bajada">Lo que sostiene a una persona dejó de ser suyo sin que nadie firmara nada.
+    Estos cinco libros trabajan sobre esa pérdida, y ninguno propone arreglarla en soledad.</p>
+    <div class="lista-cta">
+      <a class="btn fuerte" href="#volumenes">Ver los cinco</a>
+      <a class="btn" href="#sintesis">La síntesis</a>
+    </div>
+  </div>
+</section>
+<section class="banda papel" id="sintesis">
+  <div class="max">
+    <div class="regla"></div>
+    <p class="kicker">La síntesis</p>
+    <h2 class="negro">Nada se pierde de golpe</h2>
+    <p class="grande">Lo que sostiene a una persona no se perdió de una vez. Se perdió por goteo, y
+    cada paso suelto parecía razonable. Las ideas propias llegan recomendadas, la atención se
+    vende por subasta, la casa y el trabajo se alquilan, y lo que uno sabe hacer lo empieza a
+    hacer una máquina.</p>
+    <p>Los cinco volúmenes trabajan sobre ese goteo, cada uno desde una pieza distinta. Ninguno
+    promete que alcance con uno, ninguno propone la retirada, y ninguno se escribe desde el
+    centro: están hechos en Córdoba, donde las cosas llegan más tarde y se pueden mirar sin
+    fascinación.</p>
+    <p>Son cortos a propósito, se leen en cualquier orden y cada uno se sostiene solo.</p>
+  </div>
+</section>
+<section class="banda tinta2" id="volumenes">
+  <div class="max">
+    <p class="kicker">Los cinco volúmenes</p>
+    <h2>Los libros</h2>
+    <div class="estante"><a class="vol-card" href="/libro/panteon">
+      <div class="marco"><img src="/coleccion/panteon.webp" alt="PANTEÓN PERSONAL"
+        width="760" height="1078" loading="lazy"></div>
+      <p class="pie"><b>Panteón Personal</b>Canon · volumen 01</p>
+    </a><a class="vol-card" href="/libro/soberania">
+      <div class="marco"><img src="/coleccion/soberania.webp" alt="SOBERANÍA COGNITIVA"
+        width="760" height="1078" loading="lazy"></div>
+      <p class="pie"><b>Soberanía Cognitiva</b>Protocolo · volumen 02</p>
+    </a><a class="vol-card" href="/libro/preparacionismo">
+      <div class="marco"><img src="/coleccion/preparacionismo.webp" alt="PREPARACIONISMO OPTIMISTA"
+        width="760" height="1078" loading="lazy"></div>
+      <p class="pie"><b>Preparacionismo Optimista</b>Ensayo · volumen 03</p>
+    </a><a class="vol-card" href="/libro/escalon">
+      <div class="marco"><img src="/coleccion/escalon.webp" alt="EL ÚLTIMO ESCALÓN"
+        width="760" height="1078" loading="lazy"></div>
+      <p class="pie"><b>El Último Escalón</b>Ensayo · volumen 04</p>
+    </a><a class="vol-card" href="/libro/tecno">
+      <div class="marco"><img src="/coleccion/tecno.webp" alt="TECNO CRISTIANISMO"
+        width="760" height="1078" loading="lazy"></div>
+      <p class="pie"><b>Tecno Cristianismo</b>Ensayo · volumen 05</p>
+    </a></div>
+  </div>
+</section>
+<section class="banda papel" id="canon">
+  <div class="max">
+    <div class="regla"></div>
+    <p class="kicker">El canon</p>
+    <h2 class="negro">Los dieciséis del panteón</h2>
+    <p>El primer volumen fija las fuentes de todo lo demás. Estos son los dieciséis, en el orden
+    en que aparecen, de Borges a Facundo Cabral.</p>
+    <div class="canon"><div><span class="nn">01</span><span class="nm">Jorge Luis Borges</span></div><div><span class="nn">02</span><span class="nm">Richard Feynman</span></div><div><span class="nn">03</span><span class="nm">Nassim Nicholas Taleb</span></div><div><span class="nn">04</span><span class="nm">David Deutsch</span></div><div><span class="nn">05</span><span class="nm">Peter Thiel</span></div><div><span class="nn">06</span><span class="nm">Karl Popper</span></div><div><span class="nn">07</span><span class="nm">Charlie Munger</span></div><div><span class="nn">08</span><span class="nm">Daniel Kahneman</span></div><div><span class="nn">09</span><span class="nm">Paul Graham</span></div><div><span class="nn">10</span><span class="nm">Naval Ravikant</span></div><div><span class="nn">11</span><span class="nm">Eliezer Yudkowsky</span></div><div><span class="nn">12</span><span class="nm">Marco Aurelio</span></div><div><span class="nn">13</span><span class="nm">Epicteto (y Séneca)</span></div><div><span class="nn">14</span><span class="nm">Alan Watts</span></div><div><span class="nn">15</span><span class="nm">Jiddu Krishnamurti</span></div><div><span class="nn">16</span><span class="nm">Facundo Cabral</span></div></div>
+    <p style="margin-top:26px">Cada uno está ahí por una razón precisa y no por completitud:
+    dejó una herramienta mental que sigue en uso. El panteón no se cierra, y el libro lo dice.</p>
+  </div>
+</section>
+<section class="banda">
+  <div class="max vol-fila">
+    <a class="tapa" href="/libro/panteon"><img src="/coleccion/panteon.webp"
+      alt="PANTEÓN PERSONAL" width="760" height="1078" loading="lazy"></a>
+    <div>
+      <span class="num">Volumen 01 · Canon</span>
+      <h2>Panteón Personal</h2>
+      <p class="sub">Un mapa mental de dieciséis pensadores que me formaron</p>
+      <p class="grande">Dieciséis fichas vivas, de Borges a Facundo Cabral. Quién es cada uno, qué ideas lo definen, por qué obra se entra, cómo se conecta con los otros y qué concepto se puede llevar a la acción.</p>
+      <p class="ficha"><span>262 páginas</span><span>2026</span></p>
+      <div class="descargas"><a href="https://nanopisaroni.vercel.app/books/panteon-personal.pdf"><span class="fl">&#8595;</span>PDF · castellano 2,1 MB</a><a href="https://nanopisaroni.vercel.app/books/panteon-en.pdf"><span class="fl">&#8595;</span>PDF · English edition</a></div>
+      <div class="lista-cta"><a class="btn" href="/libro/panteon">Ver el volumen</a></div>
+    </div>
+  </div>
+</section>
+<section class="banda papel">
+  <div class="max vol-fila">
+    <a class="tapa" href="/libro/soberania"><img src="/coleccion/soberania.webp"
+      alt="SOBERANÍA COGNITIVA" width="760" height="1078" loading="lazy"></a>
+    <div>
+      <span class="num">Volumen 02 · Protocolo</span>
+      <h2>Soberanía Cognitiva</h2>
+      <p class="sub">Protocolo para recuperar la atención, el deseo y el tiempo</p>
+      <p class="grande">Un protocolo en cuatro fases para recuperar el control de la atención. Arranca por el cargador del teléfono y termina en la soberanía relacional y comunitaria.</p>
+      <p class="ficha"><span>33 páginas</span><span>2026</span></p>
+      <div class="descargas"><a href="https://soberaniacognitiva.com.ar/descargas/soberania-cognitiva.pdf"><span class="fl">&#8595;</span>PDF · 0,2 MB</a><a href="https://soberaniacognitiva.com.ar/descargas/manifiesto.pdf"><span class="fl">&#8595;</span>Manifiesto</a></div>
+      <div class="lista-cta"><a class="btn" href="/libro/soberania">Ver el volumen</a></div>
+    </div>
+  </div>
+</section>
+<section class="banda">
+  <div class="max vol-fila">
+    <a class="tapa" href="/libro/preparacionismo"><img src="/coleccion/preparacionismo.webp"
+      alt="PREPARACIONISMO OPTIMISTA" width="760" height="1078" loading="lazy"></a>
+    <div>
+      <span class="num">Volumen 03 · Ensayo</span>
+      <h2>Preparacionismo Optimista</h2>
+      <p class="sub">La resiliencia es un bien común</p>
+      <p class="grande">Una advertencia, diez capítulos y un epílogo sobre una idea que incomoda a los dos bandos: prepararse no es acumular por miedo.</p>
+      <p class="ficha"><span>144 páginas</span><span>39.972 palabras</span><span>2026</span></p>
+      <div class="descargas"><a href="https://preparacionismo.vercel.app/descargas/preparacionismo-en-pantuflas.pdf"><span class="fl">&#8595;</span>PDF · 0,5 MB</a><a href="https://preparacionismo.vercel.app/descargas/preparacionismo-en-pantuflas.epub"><span class="fl">&#8595;</span>EPUB · 0,4 MB</a></div>
+      <div class="lista-cta"><a class="btn" href="/libro/preparacionismo">Ver el volumen</a></div>
+    </div>
+  </div>
+</section>
+<section class="banda papel">
+  <div class="max vol-fila">
+    <a class="tapa" href="/libro/escalon"><img src="/coleccion/escalon.webp"
+      alt="EL ÚLTIMO ESCALÓN" width="760" height="1078" loading="lazy"></a>
+    <div>
+      <span class="num">Volumen 04 · Ensayo</span>
+      <h2>El Último Escalón</h2>
+      <p class="sub">Qué guardar de lo humano cuando la IA funciona bien</p>
+      <p class="grande">Sobre el humanismo que se organiza contra la inteligencia artificial, la síntesis como producto del colectivo y el Optimistic Prep.</p>
+      <p class="ficha"><span>138 páginas</span><span>36.058 palabras</span><span>2026</span></p>
+      <div class="descargas"><a href="https://el-ultimo-escalon.vercel.app/descargas/el-ultimo-escalon.pdf"><span class="fl">&#8595;</span>PDF · 0,3 MB</a><a href="https://el-ultimo-escalon.vercel.app/descargas/el-ultimo-escalon.epub"><span class="fl">&#8595;</span>EPUB · 0,7 MB</a></div>
+      <div class="lista-cta"><a class="btn" href="/libro/escalon">Ver el volumen</a></div>
+    </div>
+  </div>
+</section>
+<section class="banda">
+  <div class="max vol-fila">
+    <a class="tapa" href="/libro/tecno"><img src="/coleccion/tecno.webp"
+      alt="TECNO CRISTIANISMO" width="760" height="1078" loading="lazy"></a>
+    <div>
+      <span class="num">Volumen 05 · Ensayo</span>
+      <h2>Tecno Cristianismo</h2>
+      <p class="sub">Una tercera posición desde el sur</p>
+      <p class="grande">Diez capítulos en cuatro partes sobre el concepto de tecnocristianismo que formuló Tomás Rebord, puestos en diálogo con la encíclica Magnifica Humanitas de León XIV.</p>
+      <p class="ficha"><span>138 páginas</span><span>38.417 palabras</span><span>2026</span></p>
+      <div class="descargas"><a href="https://tecnocristianismo.vercel.app/descargas/tecnocristianismo.pdf"><span class="fl">&#8595;</span>PDF · 0,4 MB</a><a href="https://tecnocristianismo.vercel.app/descargas/tecnocristianismo.epub"><span class="fl">&#8595;</span>EPUB · 0,2 MB</a></div>
+      <div class="lista-cta"><a class="btn" href="/libro/tecno">Ver el volumen</a></div>
+    </div>
+  </div>
+</section>
+<footer>
+  <span class="inf">&#8734;</span>
+  Corvus Lab · Córdoba, Argentina<br>
+  Los cinco volúmenes se escribieron con asistencia de máquinas y los libros lo declaran<br>
+  en su advertencia y en su colofón.
+</footer>
+</body></html>

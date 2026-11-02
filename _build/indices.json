@@ -1,0 +1,172 @@
+{
+ "escalon": [
+  {
+   "archivo": "00-prologo.md",
+   "titulo": "Prólogo: Lo que le pedimos"
+  },
+  {
+   "archivo": "01-tres-formulas.md",
+   "titulo": "Tres fórmulas"
+  },
+  {
+   "archivo": "02-la-bomba.md",
+   "titulo": "La bomba"
+  },
+  {
+   "archivo": "03-quimica-no-contabilidad.md",
+   "titulo": "Química"
+  },
+  {
+   "archivo": "04-el-resto.md",
+   "titulo": "El resto"
+  },
+  {
+   "archivo": "05-donde-se-corta-la-escalera.md",
+   "titulo": "Dónde se corta la escalera"
+  },
+  {
+   "archivo": "06-el-humanismo-sin-nombre.md",
+   "titulo": "El humanismo sin nombre"
+  },
+  {
+   "archivo": "07-la-inversion-de-escasez.md",
+   "titulo": "La inversión de escasez"
+  },
+  {
+   "archivo": "08-la-mochila.md",
+   "titulo": "La mochila"
+  },
+  {
+   "archivo": "09-la-disciplina.md",
+   "titulo": "La disciplina"
+  },
+  {
+   "archivo": "99-epilogo.md",
+   "titulo": "Epílogo: Solo se puede hacer"
+  },
+  {
+   "archivo": "aa-advertencia.md",
+   "titulo": "Advertencia"
+  }
+ ],
+ "preparacionismo": [
+  {
+   "archivo": "00-advertencia.md",
+   "titulo": "Advertencia"
+  },
+  {
+   "archivo": "00-prologo.md",
+   "titulo": "Prólogo: El escenario que nadie ensaya"
+  },
+  {
+   "archivo": "01-el-prepper-que-no-sirve.md",
+   "titulo": "El prepper que no sirve"
+  },
+  {
+   "archivo": "02-tres-semanas.md",
+   "titulo": "Tres semanas"
+  },
+  {
+   "archivo": "03-la-catastrofe-comoda.md",
+   "titulo": "La catástrofe cómoda"
+  },
+  {
+   "archivo": "04-comprar-no-es-preparar.md",
+   "titulo": "Comprar no es preparar"
+  },
+  {
+   "archivo": "05-el-bunker-es-una-isla.md",
+   "titulo": "El búnker es una isla"
+  },
+  {
+   "archivo": "06-lo-que-se-practica.md",
+   "titulo": "Lo que se practica"
+  },
+  {
+   "archivo": "07-lo-que-se-comparte.md",
+   "titulo": "Lo que se comparte"
+  },
+  {
+   "archivo": "08-lo-que-se-cuida.md",
+   "titulo": "Lo que se cuida"
+  },
+  {
+   "archivo": "09-los-primeros-treinta-dias.md",
+   "titulo": "Los primeros treinta días"
+  },
+  {
+   "archivo": "98-nota-fuentes.md",
+   "titulo": "Nota sobre las fuentes"
+  },
+  {
+   "archivo": "99-epilogo.md",
+   "titulo": "Epílogo: Lo que se transmite"
+  }
+ ],
+ "tecno": [
+  {
+   "archivo": "00-advertencia.md",
+   "titulo": "Advertencia"
+  },
+  {
+   "archivo": "00-prologo.md",
+   "titulo": "Prólogo: La pregunta que no tiene tres respuestas"
+  },
+  {
+   "archivo": "01-el-paraiso-como-producto.md",
+   "titulo": "El paraíso como producto"
+  },
+  {
+   "archivo": "02-el-futuro-administrado.md",
+   "titulo": "El futuro administrado"
+  },
+  {
+   "archivo": "03-el-miedo-como-ultima-ideologia.md",
+   "titulo": "El miedo como última ideología"
+  },
+  {
+   "archivo": "04-la-maquina-imita.md",
+   "titulo": "La máquina imita, la persona vive"
+  },
+  {
+   "archivo": "05-el-que-crea-y-el-que-repite.md",
+   "titulo": "El que crea y el que repite"
+  },
+  {
+   "archivo": "06-los-senores-tecnofeudales.md",
+   "titulo": "Los señores tecnofeudales"
+  },
+  {
+   "archivo": "07-la-atencion-es-territorio.md",
+   "titulo": "La atención es territorio"
+  },
+  {
+   "archivo": "08-lo-que-se-hace-entre-varios.md",
+   "titulo": "Lo que se hace entre varios"
+  },
+  {
+   "archivo": "09-lo-que-se-guarda.md",
+   "titulo": "Lo que se guarda de lo humano"
+  },
+  {
+   "archivo": "10-tecnocristianismo-en-sus-palabras.md",
+   "titulo": "Tecnocristianismo, en sus palabras"
+  },
+  {
+   "archivo": "11-magnifica-humanitas.md",
+   "titulo": "Magnifica Humanitas"
+  },
+  {
+   "archivo": "12-la-esperanza-como-posicion.md",
+   "titulo": "La esperanza como posición política"
+  },
+  {
+   "archivo": "98-nota-fuentes.md",
+   "titulo": "Nota sobre las fuentes"
+  },
+  {
+   "archivo": "99-epilogo.md",
+   "titulo": "Epílogo: Queremos creer"
+  }
+ ]
+}

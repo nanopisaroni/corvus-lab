@@ -1,12 +1,21 @@
 #!/usr/bin/env python3
 """Deploy corvus-lab (static: index.html, dashboard.html, metrics.js, vercel.json) via REST API + curl."""
 import json, os, subprocess, sys, time
+import base64
 
 PROJECT_NAME = "corvus-lab"
 ALIAS = "corvus-lab.vercel.app"
 ROOT = os.path.expanduser("~/projects/corvus-lab")
 FILES = ["index.html", "dashboard.html", "metrics.js", "metrics_history.json", "vercel.json",
-         "notas/ultimo-escalon.html"]
+         "notas/ultimo-escalon.html", "coleccion.html",
+         "libro/panteon.html", "libro/soberania.html", "libro/preparacionismo.html",
+         "libro/escalon.html", "libro/tecno.html"]
+
+# Archivos binarios. Van con el campo encoding=base64, que es el que entiende la API de
+# Vercel. Abrirlos como texto (utf-8) los corrompe o revienta el decode.
+BINARIOS = ["coleccion/panteon.webp", "coleccion/soberania.webp",
+            "coleccion/preparacionismo.webp", "coleccion/escalon.webp",
+            "coleccion/tecno.webp"]
 
 def token():
     for line in open(os.path.expanduser("~/.hermes/.env")):
@@ -39,6 +48,14 @@ def main():
     for f in FILES:
         with open(os.path.join(ROOT, f), "r", encoding="utf-8") as fh:
             files.append({"file": f, "data": fh.read()})
+    for f in BINARIOS:
+        p = os.path.join(ROOT, f)
+        if not os.path.exists(p):
+            sys.exit(f"falta el binario {p}")
+        with open(p, "rb") as fh:
+            files.append({"file": f, "data": base64.b64encode(fh.read()).decode("ascii"),
+                          "encoding": "base64"})
+    print(f"archivos: {len(files)} ({len(FILES)} de texto + {len(BINARIOS)} binarios)")
     body = {"name": PROJECT_NAME, "files": files,
             "projectSettings": {"framework": None}, "target": "production"}
     tmp = "/tmp/vercel_body_cl.json"

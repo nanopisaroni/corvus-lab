@@ -4,296 +4,246 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Corvus Lab</title>
-<meta name="description" content="Corvus Lab — laboratorio de ideas. Proyectos sobre lo que está oculto, para hacerlo visible.">
+<meta name="description" content="Corvus Lab, taller de ideas en Córdoba. Herramientas para leer lo que se publica sobre la cosa pública y casi nadie alcanza a leer.">
 <meta property="og:title" content="Corvus Lab">
-<meta property="og:description" content="No es una organización. Es una señal en el ruido.">
+<meta property="og:description" content="La complejidad de un asunto no autoriza a nadie a volverlo oscuro.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,500;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#070e18;
-  --panel:#0c1626;
-  --line:rgba(88,198,208,0.14);
-  --text:#e8e4dc;
-  --muted:#7d8a99;
-  --soft:#55626f;
-  --teal:#58C6D0;
-  --warm:#D9A066;
-  --sans:'Inter',system-ui,sans-serif;
-  --serif:'Fraunces',Georgia,serif;
-  --mono:'JetBrains Mono',monospace;
+  --papel:#f1ebdd;
+  --papel2:#e8e0cc;
+  --tinta:#1d1b17;
+  --gris:#6b6456;
+  --filete:rgba(29,27,23,.22);
+  --sangre:#9b2d1f;
+  --display:'Libre Bodoni',Didot,'Bodoni 72',Georgia,serif;
+  --texto:'EB Garamond',Garamond,Georgia,serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-.container{max-width:960px;margin:0 auto;padding:0 32px}
-a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(88,198,208,0.25);transition:border-color .2s,color .2s}
-a:hover{color:#8fdfe6;border-color:#8fdfe6}
+body{font-family:var(--texto);font-size:20px;line-height:1.55;background:var(--papel);color:var(--tinta);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--filete);transition:border-color .2s,color .2s}
+a:hover{color:var(--sangre);border-color:var(--sangre)}
+.pliego{max-width:760px;margin:0 auto;padding:0 24px}
+.versalitas{font-variant:small-caps;letter-spacing:.12em;text-transform:lowercase}
 
-.grain{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.025;background-image:radial-gradient(circle at 20% 20%,rgba(255,255,255,.4) .4px,transparent .6px);background-size:14px 14px}
-.grid-lines{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:96px 96px;mask-image:radial-gradient(ellipse 90% 70% at 50% 20%,#000 0%,transparent 75%);}
+/* cabecera de revista */
+.cabecera{padding:64px 0 0;text-align:center}
+.cabecera .linea-sup{display:flex;justify-content:space-between;font-size:15px;color:var(--gris);border-bottom:1px solid var(--tinta);padding-bottom:10px}
+.cabecera .cuervo{width:84px;height:auto;margin:52px auto 28px;display:block}
+.cabecera h1{font-family:var(--display);font-weight:400;font-size:clamp(64px,15vw,138px);line-height:.9;letter-spacing:.06em}
+.cabecera .subtitulo{font-family:var(--display);font-style:italic;font-size:clamp(19px,2.6vw,24px);margin:20px 0 0}
+.cabecera .doble{border-top:1px solid var(--tinta);border-bottom:1px solid var(--tinta);height:5px;margin:44px 0 0}
 
-.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--teal)}
-.eyebrow-warm{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--warm)}
+nav{margin:14px 0 0;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px;font-size:17px}
+nav a{border:0}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 0;background:linear-gradient(180deg,rgba(7,14,24,.92),rgba(7,14,24,0));}
-nav .container{display:flex;justify-content:space-between;align-items:center}
-.brand{font-family:var(--serif);font-weight:500;font-size:17px;letter-spacing:.02em;color:var(--text);border:0}
-.brand em{font-style:italic;color:var(--teal)}
-.nav-links{display:flex;gap:28px;font-size:13px}
-.nav-links a{border:0;color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-.nav-links a:hover{color:var(--text)}
+/* sumario */
+.sumario{padding:72px 0 24px}
+.sumario h2{text-align:center}
+.sumario ol{list-style:none;margin-top:28px}
+.sumario li{display:flex;align-items:baseline;gap:10px;padding:7px 0}
+.sumario li .t{flex:0 1 auto}
+.sumario li .t a{border:0}
+.sumario li .relleno{flex:1;border-bottom:1px dotted var(--gris);transform:translateY(-6px);min-width:24px}
+.sumario li .n{font-variant:small-caps;letter-spacing:.08em;color:var(--gris)}
 
-.hero{padding:190px 0 110px;position:relative;z-index:1}
-.hero .crow{width:86px;height:auto;margin-bottom:44px;filter:drop-shadow(0 0 24px rgba(88,198,208,.12))}
-.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(52px,9vw,96px);line-height:.98;letter-spacing:-.02em;margin:18px 0 34px}
-.hero h1 .lab{font-style:italic;color:var(--teal)}
-.hero .epigraph{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(19px,2.6vw,26px);color:var(--muted);max-width:640px;line-height:1.4;margin-bottom:52px}
-.hero .mantra{font-family:var(--mono);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}
-.hero .mantra span{color:var(--soft)}
+/* secciones */
+section{padding:64px 0}
+.ornamento{text-align:center;color:var(--sangre);font-size:20px;letter-spacing:1em;padding:8px 0 0;margin-right:-1em}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,5vw,40px);line-height:1.1;letter-spacing:.01em;margin-bottom:8px}
+.rubro{display:block;text-align:center;font-variant:small-caps;letter-spacing:.2em;text-transform:lowercase;color:var(--sangre);font-size:17px;margin-bottom:14px}
+.titulo-sec{text-align:center;margin-bottom:40px}
+.titulo-sec .bajada{font-style:italic;color:var(--gris);font-size:19px;margin-top:6px}
 
-section{position:relative;z-index:1;padding:96px 0;border-top:1px solid var(--line)}
-.sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:52px;gap:24px}
-.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.5vw,44px);letter-spacing:-.01em}
-.sec-head .num{font-family:var(--mono);font-size:12px;color:var(--soft)}
+.prosa p{margin-bottom:1em;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.prosa p+p{text-indent:1.6em}
+.prosa p.capitular::first-letter{font-family:var(--display);float:left;font-size:4.1em;line-height:.82;padding:.08em .08em 0 0;color:var(--sangre)}
+.prosa p.sin-sangria{text-indent:0}
 
-.lead{font-size:clamp(18px,2.4vw,23px);font-weight:300;max-width:720px;margin-bottom:60px;line-height:1.55}
-.lead strong{color:var(--teal);font-weight:500}
+.cita{margin:48px auto;max-width:560px;text-align:center;font-family:var(--display);font-style:italic;font-size:clamp(24px,3.6vw,31px);line-height:1.3}
+.cita::before,.cita::after{content:"";display:block;width:56px;height:1px;background:var(--tinta);margin:0 auto}
+.cita::before{margin-bottom:24px}
+.cita::after{margin-top:24px}
 
-.convictions{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.conviction{background:var(--panel);padding:38px 30px;min-height:260px;display:flex;flex-direction:column}
-.conviction .idx{font-family:var(--mono);font-size:12px;color:var(--warm);margin-bottom:20px}
-.conviction h3{font-family:var(--serif);font-weight:500;font-size:19px;line-height:1.3;margin-bottom:14px}
-.conviction p{font-size:14px;color:var(--muted);line-height:1.6}
+/* trabajos */
+.trabajos{border-top:1px solid var(--tinta)}
+.trabajo{display:grid;grid-template-columns:44px 1fr;gap:0 18px;padding:26px 0;border-bottom:1px solid var(--filete)}
+.trabajo .num{font-family:var(--display);color:var(--sangre);font-size:18px;padding-top:4px}
+.trabajo h3{font-family:var(--display);font-weight:500;font-size:24px;line-height:1.2}
+.trabajo h3 a{border:0}
+.trabajo h3 .estado{font-family:var(--texto);font-weight:400;font-variant:small-caps;text-transform:lowercase;letter-spacing:.1em;font-size:16px;color:var(--gris);margin-left:10px;white-space:nowrap}
+.trabajo p{grid-column:2;margin-top:6px;color:#3b3730}
+.remate{text-align:center;margin-top:36px;font-style:italic}
 
-.selective{margin-top:56px;display:flex;align-items:center;gap:22px}
-.selective .rule{width:56px;height:2px;background:var(--teal);flex-shrink:0}
-.selective p{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.6vw,24px);color:var(--text)}
+/* correspondencia */
+.correo{text-align:center}
+.correo .prosa p{text-align:center;text-indent:0}
+.boton{display:inline-block;margin-top:18px;font-variant:small-caps;text-transform:lowercase;letter-spacing:.16em;font-size:18px;padding:12px 28px;border:1px solid var(--tinta)}
+.boton:hover{background:var(--tinta);color:var(--papel);border-color:var(--tinta)}
 
-.proposito{background:var(--panel);border-top:1px solid var(--line)}
-.proposito .container{display:flex;flex-direction:column;align-items:flex-start}
-.proposito blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(30px,5vw,52px);line-height:1.15;letter-spacing:-.01em;max-width:820px}
-.proposito blockquote strong{font-style:italic;font-weight:500;color:var(--teal)}
-.proposito .sub{margin-top:30px;font-size:16px;color:var(--muted);max-width:640px}
+/* colofón */
+footer{margin-top:40px;padding:48px 0 64px;border-top:1px solid var(--tinta);text-align:center;font-size:16px;color:var(--gris)}
+footer .marca{font-family:var(--display);font-size:22px;color:var(--tinta);letter-spacing:.08em;margin-bottom:12px}
+footer p{max-width:520px;margin:0 auto 8px;font-style:italic}
 
-.inventario .list{border-top:1px solid var(--line)}
-.project{display:grid;grid-template-columns:56px 1fr 1.6fr;gap:28px;padding:40px 4px;border-bottom:1px solid var(--line);align-items:baseline;transition:background .2s}
-.project:hover{background:rgba(88,198,208,.03)}
-.project .p-idx{font-family:var(--mono);font-size:13px;color:var(--warm)}
-.project .p-name{font-family:var(--serif);font-weight:500;font-size:22px}
-.project .p-name a{border:0;color:var(--text)}
-.project .p-name a:hover{color:var(--teal)}
-.project .p-desc{font-size:14px;color:var(--muted);line-height:1.6;font-style:italic;font-family:var(--serif);font-weight:300}
-.project .p-status{grid-column:3;justify-self:start;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);border:1px solid rgba(88,198,208,.35);padding:4px 9px;margin-top:-6px}
-.project .p-status.wip{color:var(--soft);border-color:rgba(85,98,111,.4)}
-
-.filosofia .container{display:grid;grid-template-columns:5fr 4fr;gap:72px;align-items:start}
-.filosofia .copy p{font-size:15px;color:var(--muted);margin-bottom:20px;line-height:1.7}
-.filosofia .copy p strong{color:var(--text);font-weight:500}
-.filosofia .copy .pull{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(20px,2.6vw,26px);color:var(--text);line-height:1.4;margin:34px 0}
-.filosofia .stencil{border:1px solid var(--line);background:var(--panel);padding:56px 40px;display:flex;align-items:center;justify-content:center}
-.filosofia .stencil svg{width:100%;max-width:280px;height:auto}
-.filosofia .stencil-caption{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);text-align:center;margin-top:18px}
-
-.contact .container{display:flex;flex-direction:column;align-items:flex-start}
-.contact h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4vw,38px);margin-bottom:14px}
-.contact p{color:var(--muted);font-size:15px;max-width:520px;margin-bottom:36px}
-
-.btn{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--bg);background:var(--teal);padding:16px 30px;border:0;transition:background .2s}
-.btn:hover{background:#8fdfe6;color:var(--bg)}
-
-footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-index:1}
-footer .container{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
-footer .f-brand{font-family:var(--serif);font-size:18px}
-footer .f-brand em{font-style:italic;color:var(--teal)}
-footer .f-mantra{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft)}
-footer .f-copy{font-family:var(--mono);font-size:10px;color:var(--soft);letter-spacing:.1em;width:100%;margin-top:26px}
-
-@media(max-width:820px){
-  .convictions{grid-template-columns:1fr}
-  .conviction{min-height:auto}
-  .project{grid-template-columns:1fr;gap:8px}
-  .project .p-status{grid-column:1}
-  .filosofia .container{grid-template-columns:1fr;gap:40px}
-  .hero{padding:150px 0 80px}
-  .nav-links{display:none}
+@media(max-width:560px){
+  body{font-size:18.5px}
+  .cabecera{padding-top:32px}
+  .cabecera .linea-sup{font-size:13px}
+  .prosa p{text-align:left;hyphens:manual}
+  .trabajo{grid-template-columns:32px 1fr;gap:0 10px}
+  .trabajo h3 .estado{display:block;margin:2px 0 0}
 }
 </style>
 </head>
 <body>
-<div class="grain"></div>
-<div class="grid-lines"></div>
 
-<nav>
-  <div class="container">
-    <a class="brand" href="#top">Corvus <em>Lab</em></a>
-    <div class="nav-links">
-      <a href="#identidad">Identidad</a>
-      <a href="#proposito">Propósito</a>
-      <a href="#proyectos">Proyectos</a>
+<header class="cabecera" id="inicio">
+  <div class="pliego">
+    <div class="linea-sup"><span>Córdoba</span><span class="versalitas">Año I</span><span>MMXXVI</span></div>
+    <svg class="cuervo" viewBox="0 0 200 130" aria-hidden="true">
+      <path fill="#1d1b17" fill-rule="evenodd" d="M12 48 L26 40 L28 46 L40 30 L56 34 L72 26 L98 34 L128 28 L158 22 L150 44 L166 54 L138 48 L118 66 L92 58 L68 70 L52 88 L46 78 L34 90 L30 78 L16 68 L10 58 Z M44 37 A4 4 0 1 0 44.01 37 Z"/>
+    </svg>
+    <h1>CORVUS</h1>
+    <p class="subtitulo">Cuaderno de un taller de ideas</p>
+    <div class="doble"></div>
+    <nav>
+      <a href="#propositos">Propósitos</a>
+      <a href="/proyectos">Trabajos</a>
       <a href="/coleccion">Colección</a>
       <a href="#notas">Notas</a>
-      <a href="#filosofia">Filosofía</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="container">
-    <svg class="crow" viewBox="0 0 200 130" fill="none" aria-hidden="true">
-      <path fill="#58C6D0" fill-rule="evenodd" d="M12 48 L26 40 L28 46 L40 30 L56 34 L72 26 L98 34 L128 28 L158 22 L150 44 L166 54 L138 48 L118 66 L92 58 L68 70 L52 88 L46 78 L34 90 L30 78 L16 68 L10 58 Z M44 37 A4 4 0 1 0 44.01 37 Z"/>
-    </svg>
-    <p class="eyebrow">Laboratorio de ideas — Argentina</p>
-    <h1>Corvus <span class="lab">Lab</span></h1>
-    <p class="epigraph">No fundamos un laboratorio. Creamos las condiciones para que las preguntas correctas encuentren respuestas incorrectas, y viceversa.</p>
-    <p class="mantra">Encontrar <span>·</span> Construir <span>·</span> Publicar <span>·</span> Repetir</p>
+      <a href="#correspondencia">Correspondencia</a>
+    </nav>
   </div>
 </header>
 
-<section class="identidad" id="identidad">
-  <div class="container">
-    <div class="sec-head">
-      <h2>Identidad</h2>
-      <span class="num">Ⅰ</span>
-    </div>
-    <p class="lead">Corvus Lab no es una organización. <strong>Es una señal en el ruido.</strong> Tres convicciones, ninguna negociable:</p>
-    <div class="convictions">
-      <div class="conviction">
-        <span class="idx">I.</span>
-        <h3>La información es un bien público mal distribuido.</h3>
-        <p>La tomamos donde sobra. La dejamos donde falta.</p>
-      </div>
-      <div class="conviction">
-        <span class="idx">II.</span>
-        <h3>La teoría no resuelve.</h3>
-        <p>Lo que anda, resuelve. Aunque sea feo. Aunque sea chico. Aunque haya que reescribirlo mañana.</p>
-      </div>
-      <div class="conviction">
-        <span class="idx">III.</span>
-        <h3>Lo que no circula, no existe.</h3>
-        <p>Cada proyecto es un conducto entre lo invisible y lo útil.</p>
-      </div>
-    </div>
-    <div class="selective">
-      <div class="rule"></div>
-      <p>No somos neutrales. Somos selectivos.</p>
-    </div>
-  </div>
-</section>
+<div class="pliego">
 
-<section class="proposito" id="proposito">
-  <div class="container">
-    <p class="eyebrow-warm" style="margin-bottom:28px">Propósito</p>
-    <blockquote>Que la complejidad <strong>no sea excusa</strong> para la opacidad.</blockquote>
-    <p class="sub">Lo que está oculto — por burocracia, por distancia, por falta de herramientas — se vuelve visible. Y lo visible, accionable.</p>
+  <div class="sumario">
+    <h2><span class="rubro">Sumario</span></h2>
+    <ol>
+      <li><span class="t"><a href="#propositos">Propósitos</a></span><span class="relleno"></span><span class="n">i</span></li>
+      <li><span class="t"><a href="#trabajos">Los trabajos</a></span><span class="relleno"></span><span class="n">ii</span></li>
+      <li><span class="t"><a href="#notas">Notas</a></span><span class="relleno"></span><span class="n">iii</span></li>
+      <li><span class="t"><a href="#cuervo">Del cuervo</a></span><span class="relleno"></span><span class="n">iv</span></li>
+      <li><span class="t"><a href="#correspondencia">Correspondencia</a></span><span class="relleno"></span><span class="n">v</span></li>
+    </ol>
   </div>
-</section>
 
-<section class="inventario" id="proyectos">
-  <div class="container">
-    <div class="sec-head">
-      <h2>Proyectos</h2>
-      <span class="num">Ⅱ</span>
-    </div>
-    <div class="list">
-      <div class="project">
-        <span class="p-idx">01</span>
-        <span class="p-name"><a href="https://rigi-tracker.vercel.app" target="_blank">RIGI Tracker</a></span>
-        <span class="p-desc">Grandes inversiones, promesas públicas. Lo que se promete se mide, para que nadie lo olvide.</span>
-        <span class="p-status">Abierto</span>
-      </div>
-      <div class="project">
-        <span class="p-idx">02</span>
-        <span class="p-name"><a href="https://punto-de-partida-three.vercel.app" target="_blank">Punto de Partida</a></span>
-        <span class="p-desc">Argentina contra el mundo, indicador por indicador. Un espejo sin opinión.</span>
-        <span class="p-status">Abierto</span>
-      </div>
-      <div class="project">
-        <span class="p-idx">03</span>
-        <span class="p-name">Ausencia del Estado</span>
-        <span class="p-desc">Lo que el Estado no hace también se mide. Obras, consultas, costos.</span>
-        <span class="p-status wip">En curso</span>
-      </div>
-      <div class="project">
-        <span class="p-idx">04</span>
-        <span class="p-name"><a href="https://corvus-lab.vercel.app/dashboard" target="_blank">Dashboard</a></span>
-        <span class="p-desc">El observatorio. Estado y métricas de todo lo que corre bajo el nombre del Lab.</span>
-        <span class="p-status">Abierto</span>
-      </div>
-      <div class="project">
-        <span class="p-idx">05</span>
-        <span class="p-name"><a href="https://hipotecas-ar.vercel.app" target="_blank">Hipotecas AR</a></span>
-        <span class="p-desc">321 ofertas, 30 bancos, un solo número que importa: el CFT.</span>
-        <span class="p-status">Abierto</span>
-      </div>
-      <div class="project">
-        <span class="p-idx">06</span>
-        <span class="p-name"><a href="/coleccion">Colección</a></span>
-        <span class="p-desc">Cinco volúmenes. Un canon personal, un protocolo de atención y tres ensayos que se leen separados y se entienden juntos.</span>
-        <span class="p-status">Abierto</span>
-      </div>
-    </div>
-    <p class="sub" style="margin-top:40px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)">Hay más proyectos. No todos se muestran.</p>
-  </div>
-</section>
+  <p class="ornamento" aria-hidden="true">✶ ✶ ✶</p>
 
-<section class="inventario" id="notas">
-  <div class="container">
-    <div class="sec-head">
+  <section id="propositos">
+    <div class="titulo-sec">
+      <span class="rubro">i</span>
+      <h2>Propósitos</h2>
+    </div>
+    <div class="prosa">
+      <p class="capitular">Corvus Lab empezó, como empiezan casi todas las cosas que después duran, sin la menor intención de durar. Es un taller pequeño, sin sede ni estatutos, donde se arman herramientas para leer lo que el Estado, los bancos y las reparticiones oficiales publican de un modo que nadie, en la práctica, alcanza a leer.</p>
+      <p>Partimos de una sospecha antigua: que la información pública abunda en unos sitios y escasea en otros, y que esa mala distribución rara vez es inocente. No pretendemos remediarla con teorías. Preferimos la cosa hecha, aunque salga modesta y haya que rehacerla al mes siguiente; una tabla que funciona nos ha enseñado más que varios tratados sobre la transparencia.</p>
+      <p>Tampoco aspiramos a la neutralidad, esa virtud que suelen reclamar para sí quienes ya eligieron. Elegimos, eso sí, con cuidado, y procuramos que lo que se averigua en el taller no quede guardado en él: un dato que no circula es, para el ciudadano, lo mismo que un dato que no existe.</p>
+    </div>
+    <p class="cita">La complejidad de un asunto no autoriza a nadie a volverlo oscuro.</p>
+    <div class="prosa">
+      <p class="sin-sangria">Lo que permanece a la sombra, sea por obra de la burocracia, de la distancia o de la simple falta de instrumentos, puede traerse a la luz; y lo que está a la luz puede, por fin, discutirse y corregirse.</p>
+    </div>
+  </section>
+
+  <p class="ornamento" aria-hidden="true">✶ ✶ ✶</p>
+
+  <section id="trabajos">
+    <div class="titulo-sec">
+      <span class="rubro">ii</span>
+      <h2>Los trabajos</h2>
+      <p class="bajada">Seis de los once que lleva el taller, para empezar</p>
+    </div>
+    <div class="trabajos">
+      <div class="trabajo">
+        <span class="num">1</span>
+        <h3><a href="https://elrigi.com.ar" target="_blank" rel="noopener">RIGI Tracker</a><span class="estado">publicado</span></h3>
+        <p>Las grandes inversiones se anuncian con más estruendo del que luego se cumplen. Aquí se lleva la cuenta de cada una, para que la memoria pública no dependa de la buena voluntad de nadie.</p>
+      </div>
+      <div class="trabajo">
+        <span class="num">2</span>
+        <h3><a href="https://punto-de-partida-three.vercel.app" target="_blank" rel="noopener">Punto de Partida</a><span class="estado">publicado</span></h3>
+        <p>La Argentina comparada con el mundo, indicador por indicador, sin otro comentario que el de los números mismos.</p>
+      </div>
+      <div class="trabajo">
+        <span class="num">3</span>
+        <h3><a href="https://ausencia-estado.vercel.app" target="_blank" rel="noopener">Ausencia del Estado</a><span class="estado">en curso</span></h3>
+        <p>Lo que el Estado deja de hacer también admite medida: obras detenidas, pedidos de informes sin respuesta, costos que nadie se toma el trabajo de explicar.</p>
+      </div>
+      <div class="trabajo">
+        <span class="num">4</span>
+        <h3><a href="https://ciudadania-ar.vercel.app" target="_blank" rel="noopener">Ciudadanía Argentina</a><span class="estado">publicado</span></h3>
+        <p>Las seis maneras que la ley prevé para hacerse argentino, con lo que cada una exige, lo que demora y lo que cuesta de verdad.</p>
+      </div>
+      <div class="trabajo">
+        <span class="num">5</span>
+        <h3><a href="https://hipotecas-ar.vercel.app" target="_blank" rel="noopener">Hipotecas AR</a><span class="estado">publicado</span></h3>
+        <p>Trescientas veintiuna ofertas de treinta bancos, ordenadas por el único número que no admite maquillaje: el costo financiero total.</p>
+      </div>
+      <div class="trabajo">
+        <span class="num">6</span>
+        <h3><a href="/coleccion">Colección</a><span class="estado">publicado</span></h3>
+        <p>Cinco volúmenes: un canon personal, un protocolo de la atención y tres ensayos, que pueden leerse por separado aunque fueron pensados para leerse juntos.</p>
+      </div>
+    </div>
+    <p class="remate"><a href="/proyectos">Índice completo de los once trabajos</a></p>
+  </section>
+
+  <p class="ornamento" aria-hidden="true">✶ ✶ ✶</p>
+
+  <section id="notas">
+    <div class="titulo-sec">
+      <span class="rubro">iii</span>
       <h2>Notas</h2>
-      <span class="num">Ⅲ</span>
+      <p class="bajada">Lo que se piensa en el taller cuando no se está construyendo nada</p>
     </div>
-    <div class="list">
-      <div class="project">
-        <span class="p-idx">01</span>
-        <span class="p-name"><a href="/notas/ultimo-escalon">El último escalón</a></span>
-        <span class="p-desc">El humanismo no es una posición sobre la tecnología. Es una disciplina de acopio.</span>
-        <span class="p-status">Nota</span>
+    <div class="trabajos">
+      <div class="trabajo">
+        <span class="num">1</span>
+        <h3><a href="/notas/ultimo-escalon">El último escalón</a><span class="estado">ensayo</span></h3>
+        <p>Sobre el humanismo entendido, no como una opinión acerca de la técnica, sino como un oficio de guardar.</p>
       </div>
     </div>
-    <p class="sub" style="margin-top:40px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)">Lo que pensamos cuando no estamos construyendo.</p>
-  </div>
-</section>
+  </section>
 
-<section class="filosofia" id="filosofia">
-  <div class="container">
-    <div class="copy">
-      <div class="sec-head" style="margin-bottom:32px">
-        <h2>Por qué el cuervo</h2>
-        <span class="num">Ⅳ</span>
-      </div>
-      <p>El cuervo <strong>recuerda caras, resuelve acertijos, usa herramientas, reconoce espejos</strong> y entierra comida para el invierno.</p>
-      <p>No es el más fuerte. <strong>Es el que mejor se adapta.</strong></p>
-      <p class="pull">Proyectos chicos, rápidos, que se ajustan al problema antes de que el problema cambie. Sin burocracia. Sin planes quinquenales. Sin necesidad de pedir permiso.</p>
-      <p>No tenemos un stack fijo ni una ideología fija. Tenemos un método: <strong>identificar, construir, publicar, iterar.</strong></p>
-    </div>
-    <div>
-      <div class="stencil">
-        <svg viewBox="0 0 200 130" fill="none" aria-hidden="true">
-          <path fill="#58C6D0" fill-rule="evenodd" d="M12 48 L26 40 L28 46 L40 30 L56 34 L72 26 L98 34 L128 28 L158 22 L150 44 L166 54 L138 48 L118 66 L92 58 L68 70 L52 88 L46 78 L34 90 L30 78 L16 68 L10 58 Z M44 37 A4 4 0 1 0 44.01 37 Z"/>
-        </svg>
-      </div>
-      <p class="stencil-caption">Corvus · el ave que usa herramientas</p>
-    </div>
-  </div>
-</section>
+  <p class="ornamento" aria-hidden="true">✶ ✶ ✶</p>
 
-<section class="contact" id="contacto">
-  <div class="container">
-    <p class="eyebrow" style="margin-bottom:24px">Ⅴ</p>
-    <h2>Los problemas sin dueño buscan uno.</h2>
-    <p>Demasiado chicos, demasiado locales, demasiado incómodos. Esos son los que nos interesan.</p>
-    <a class="btn" href="mailto:leandro@kaleiventures.com?subject=Proyecto%20para%20Corvus%20Lab">Escribir →</a>
-  </div>
-</section>
+  <section id="cuervo">
+    <div class="titulo-sec">
+      <span class="rubro">iv</span>
+      <h2>Del cuervo</h2>
+    </div>
+    <div class="prosa">
+      <p class="capitular">Los antiguos lo tenían por mensajero, y no sin razón. El cuervo recuerda la cara de quien lo ha tratado mal, resuelve acertijos que dejarían perplejo a más de un perro, se sirve de ramitas a modo de herramientas y entierra alimento en previsión del invierno. No es el más fuerte de los pájaros; es, acaso, el que mejor se acomoda a las circunstancias.</p>
+      <p>Algo de eso quisiéramos para el taller: trabajos breves, hechos a la medida del problema y a tiempo, antes de que el problema cambie de forma, y sin tener que pedirle permiso a nadie para empezarlos. No profesamos un método fijo ni una doctrina; tenemos una costumbre, que consiste en averiguar, hacer, publicar y, cuando hace falta, volver a empezar.</p>
+    </div>
+  </section>
+
+  <p class="ornamento" aria-hidden="true">✶ ✶ ✶</p>
+
+  <section id="correspondencia" class="correo">
+    <div class="titulo-sec">
+      <span class="rubro">v</span>
+      <h2>Correspondencia</h2>
+    </div>
+    <div class="prosa">
+      <p>Hay problemas que no tienen dueño, porque son demasiado chicos para un ministerio, demasiado locales para un diario de la capital o demasiado incómodos para cualquiera de los dos. Son los que más nos interesan. Si usted conoce alguno, le rogamos que nos escriba.</p>
+    </div>
+    <a class="boton" href="mailto:leandro@kaleiventures.com?subject=Un%20problema%20para%20Corvus%20Lab">Escribir al taller</a>
+  </section>
+
+</div>
 
 <footer>
-  <div class="container">
-    <span class="f-brand">Corvus <em>Lab</em></span>
-    <span class="f-mantra">Encontrar · Construir · Publicar · Repetir</span>
-    <span class="f-copy">© 2026 Corvus Lab. Nada de lo que hacemos es para siempre. Pero mientras sirve, sirve de verdad.</span>
+  <div class="pliego">
+    <div class="marca">CORVUS LAB</div>
+    <p>Este cuaderno se compone en Córdoba y aparece sin periodicidad fija. Nada de lo que aquí se hace pretende ser definitivo; mientras sirva, que sirva bien.</p>
+    <p>© 2026</p>
   </div>
 </footer>
 

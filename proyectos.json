@@ -1,47 +1,47 @@
 {
   "actualizado": "2026-11-03",
-  "linea": "Línea pública",
-  "definicion": "Proyectos sobre lo que es de todos: el Estado, la ley, el dinero público, la ciudadanía y los datos que permiten decidir mejor. Se publican abiertos y sin registro.",
+  "linea": "Índice de trabajos",
+  "definicion": "Trabajos sobre lo que pertenece a todos y casi nadie mira de cerca: el Estado, la ley, el dinero público, la ciudadanía y los datos con que debería decidirse. Todos se publican abiertos, y ninguno pide registrarse para leerlo.",
   "estados": {
-    "Publicado": "Funciona, está en línea y se actualiza.",
-    "En curso": "Empezado, con avance verificable, todavía sin versión final.",
-    "Archivado": "Cerrado o discontinuado. Se conserva por su registro."
+    "Publicado": "En línea, en uso y al día.",
+    "En curso": "Empezado, con avances que pueden verificarse, todavía sin forma definitiva.",
+    "Archivado": "Concluido o abandonado; se conserva como constancia."
   },
   "categorias": [
     {
       "id": "rendicion",
       "nombre": "Rendición de cuentas",
-      "bajada": "Qué se promete, qué se gasta y qué se cumple."
+      "bajada": "Lo que se promete, lo que se gasta y lo que, al fin, se cumple."
     },
     {
       "id": "informacion",
       "nombre": "Información pública",
-      "bajada": "Datos duros para decisiones que se toman con datos flojos."
+      "bajada": "Datos firmes para decisiones que suelen tomarse con datos endebles."
     },
     {
       "id": "ciudadania",
       "nombre": "Ciudadanía",
-      "bajada": "Cómo se entra, cuánto cuesta y qué exige ser argentino."
+      "bajada": "Cómo se llega a ser argentino, cuánto cuesta y qué se pide a cambio."
     },
     {
       "id": "investigacion",
       "nombre": "Investigación",
-      "bajada": "Lo que no aparece en el comunicado de prensa."
+      "bajada": "Lo que el comunicado de prensa, por discreción o por oficio, prefiere callar."
     },
     {
       "id": "participacion",
       "nombre": "Participación",
-      "bajada": "Herramientas para intervenir en la discusión pública."
+      "bajada": "Instrumentos para quien quiera intervenir en la conversación pública con algo más que opiniones."
     },
     {
       "id": "cultura",
       "nombre": "Cultura",
-      "bajada": "Lo público también se construye leyendo."
+      "bajada": "Porque lo público también se forma leyendo, y conviene empezar temprano."
     },
     {
       "id": "editorial",
       "nombre": "Editorial",
-      "bajada": "Lo que publicamos como Lab."
+      "bajada": "Lo que el taller publica con su propio nombre."
     }
   ],
   "proyectos": [
@@ -51,8 +51,8 @@
       "categoria": "rendicion",
       "estado": "Publicado",
       "url": "https://elrigi.com.ar",
-      "descripcion": "Los 28 proyectos aprobados bajo el RIGI, con monto, sector, provincia y estado. US$79.375 millones monitoreados.",
-      "detalle": "Sigue cada adhesión al régimen de grandes inversiones desde la presentación hasta la puesta en marcha. Deduplica la planilla oficial, que repite proyectos por provincia, y cruza los anuncios con lo efectivamente aprobado."
+      "descripcion": "Los veintiocho proyectos aprobados bajo el RIGI, con su monto, su sector, su provincia y su estado: US$79.375 millones bajo observación.",
+      "detalle": "Sigue cada adhesión al régimen de grandes inversiones desde que se presenta hasta que entra en funcionamiento. Depura la planilla oficial, que repite un mismo proyecto en cada provincia que toca, y coteja lo anunciado con lo efectivamente aprobado."
     },
     {
       "n": 2,
@@ -60,8 +60,8 @@
       "categoria": "rendicion",
       "estado": "En curso",
       "url": "https://ausencia-estado.vercel.app",
-      "descripcion": "Siete consultas de acceso a la información pública, presentadas el mismo día, con seguimiento automático de cada respuesta.",
-      "detalle": "Obras paralizadas, subsidios mal asignados y compras que nunca se usan. Usa la Ley 27.275 para exigir los datos y los publica en lenguaje ciudadano. Si el organismo no responde en 30 días hábiles, corre el silencio positivo."
+      "descripcion": "Siete pedidos de acceso a la información pública, presentados el mismo día, cuyas respuestas se siguen de manera automática.",
+      "detalle": "Obras paralizadas, subsidios mal asignados, compras que nunca llegaron a usarse. El trabajo se apoya en la Ley 27.275 para reclamar los datos y los publica en un idioma que cualquier ciudadano entiende. Si el organismo calla más de treinta días hábiles, corre el silencio positivo, y aquí se deja constancia."
     },
     {
       "n": 3,
@@ -69,8 +69,8 @@
       "categoria": "informacion",
       "estado": "Publicado",
       "url": "https://punto-de-partida-three.vercel.app",
-      "descripcion": "Cincuenta indicadores que comparan a la Argentina con 31 países, uno por uno, sin índice compuesto que esconda el detalle.",
-      "detalle": "Cada indicador muestra el valor argentino, el del país de referencia y la brecha. Sirve para discutir con números en lugar de con impresiones, y para ver dónde el problema es estructural y dónde es de gestión."
+      "descripcion": "Cincuenta indicadores que ponen a la Argentina frente a treinta y un países, uno por uno, sin índices compuestos que disimulen el detalle.",
+      "detalle": "Cada indicador muestra el valor argentino, el del país de referencia y la distancia entre ambos. Sirve para discutir con cifras y no con impresiones, y para distinguir los males de estructura de los males de administración."
     },
     {
       "n": 4,
@@ -78,8 +78,8 @@
       "categoria": "informacion",
       "estado": "Publicado",
       "url": "https://hipotecas-ar.vercel.app",
-      "descripcion": "Comparador de ofertas hipotecarias del BCRA. El único número que importa es el CFT.",
-      "detalle": "Ordena las ofertas por costo financiero total y no por tasa nominal, que es donde se esconde la diferencia. Incluye los gastos que las publicidades dejan afuera."
+      "descripcion": "Comparador de las ofertas hipotecarias que informa el BCRA. El único número que importa es el costo financiero total.",
+      "detalle": "Ordena las ofertas por CFT y no por tasa nominal, que es donde suele esconderse la diferencia, e incluye los gastos que la publicidad prefiere omitir."
     },
     {
       "n": 5,
@@ -87,8 +87,8 @@
       "categoria": "ciudadania",
       "estado": "Publicado",
       "url": "https://ciudadania-ar.vercel.app",
-      "descripcion": "Las seis vías de acceso a la ciudadanía argentina, con requisitos, plazos y costos reales.",
-      "detalle": "Desde la inversión desde US$350.000 hasta la residencia por arraigo. Cada vía con lo que pide, cuánto tarda y dónde se traba."
+      "descripcion": "Las seis vías que la ley abre para obtener la ciudadanía argentina, con sus requisitos, sus plazos y sus costos reales.",
+      "detalle": "Desde la inversión, a partir de US$350.000, hasta la residencia por arraigo. De cada vía se dice qué pide, cuánto demora y dónde suele trabarse."
     },
     {
       "n": 6,
@@ -96,8 +96,8 @@
       "categoria": "ciudadania",
       "estado": "Publicado",
       "url": "https://argentina-cbi.vercel.app",
-      "descripcion": "Estado, costo real y plazos de la ciudadanía por inversión, en inglés, para el público que la evalúa desde afuera.",
-      "detalle": "Versión internacional del análisis. Mide lo que cuesta de verdad el proceso completo y no solo la inversión mínima que figura en la norma."
+      "descripcion": "Estado, costo real y plazos de la ciudadanía por inversión, escrito en inglés para quien la considera desde afuera.",
+      "detalle": "Es la versión internacional del análisis anterior. Calcula lo que cuesta de verdad el trámite completo, y no sólo la inversión mínima que fija la norma."
     },
     {
       "n": 7,
@@ -105,8 +105,8 @@
       "categoria": "investigacion",
       "estado": "Publicado",
       "url": "https://sea-lion-quien.vercel.app",
-      "descripcion": "Quiénes están detrás del proyecto petrolero Sea Lion, en la plataforma continental de las Islas Malvinas.",
-      "detalle": "Sociedades, accionistas y beneficiarios finales de una operación que se anuncia como británica y se financia en varios mercados."
+      "descripcion": "Quiénes están detrás de Sea Lion, el proyecto petrolero en la plataforma continental de las Islas Malvinas.",
+      "detalle": "Sociedades, accionistas y beneficiarios finales de una operación que se presenta como británica y se financia en varias plazas a la vez."
     },
     {
       "n": 8,
@@ -114,8 +114,8 @@
       "categoria": "participacion",
       "estado": "Publicado",
       "url": "https://democracia-sa.vercel.app",
-      "descripcion": "Un juego sobre cuánto vale un voto y quién paga la campaña. Incluye modo simulador con las anclas macro vigentes.",
-      "detalle": "Traduce el financiamiento de la política a decisiones concretas. El simulador permite mover las variables y ver qué pasa con el resultado."
+      "descripcion": "Un juego acerca de cuánto vale un voto y quién paga las campañas, con un modo simulador sobre las variables macroeconómicas vigentes.",
+      "detalle": "Traduce el financiamiento de la política a decisiones concretas. El simulador permite mover cada variable y observar qué ocurre con el resultado."
     },
     {
       "n": 9,
@@ -123,8 +123,8 @@
       "categoria": "participacion",
       "estado": "Publicado",
       "url": "https://a-quien-criticas.vercel.app",
-      "descripcion": "Crítica fundada a figuras públicas, con el mismo estándar para todos y con la réplica esperada incluida.",
-      "detalle": "Cada crítica trae evidencia, proporcionalidad y la respuesta que el criticado daría, más su refutación. El crítico no se queda con la última palabra."
+      "descripcion": "Crítica razonada de figuras públicas, con una misma vara para todos y con la réplica del aludido incluida.",
+      "detalle": "Cada crítica viene acompañada de su evidencia, de una medida de proporción y de la respuesta que daría el criticado, seguida de su refutación. Al crítico no se le concede la última palabra."
     },
     {
       "n": 10,
@@ -132,8 +132,8 @@
       "categoria": "cultura",
       "estado": "Publicado",
       "url": "https://cuentos-argentinos.vercel.app",
-      "descripcion": "Cuentos ilustrados sobre argentinos de verdad, para leer en voz alta a chicos y chicas.",
-      "detalle": "Historias para criar, no para adoctrinar. Cada cuento se puede leer en pantalla o descargar para imprimir."
+      "descripcion": "Cuentos ilustrados sobre argentinos que existieron, para leer en voz alta a los chicos.",
+      "detalle": "Historias para criar y no para adoctrinar. Pueden leerse en la pantalla o imprimirse."
     },
     {
       "n": 11,
@@ -141,8 +141,8 @@
       "categoria": "editorial",
       "estado": "Publicado",
       "url": "https://corvus-lab.vercel.app/coleccion",
-      "descripcion": "Cinco volúmenes sobre lo que sostiene a una persona cuando el Estado, el trabajo y la atención dejan de sostenerla.",
-      "detalle": "El panteón personal, el protocolo de atención, el preparacionismo, el último escalón y el tecnocristianismo. Se leen separados y se leen juntos."
+      "descripcion": "Cinco volúmenes acerca de lo que sostiene a una persona cuando el Estado, el trabajo y la atención dejan de sostenerla.",
+      "detalle": "El panteón personal, el protocolo de la atención, el preparacionismo, el último escalón y el tecnocristianismo. Cada uno se basta a sí mismo; juntos dicen algo más."
     }
   ]
 }

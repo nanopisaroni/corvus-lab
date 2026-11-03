@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Genera la colección Corvus Lab: la portada de la colección y una página por libro.
 
-Estética: la del sitio de Soberanía Cognitiva (papel / tinta / sangre, Archivo Black,
-Piazzolla, IBM Plex Mono, bandas a todo el ancho). No la previa del laboratorio.
+Estética: la de la portada del laboratorio (revista literaria de los años cincuenta:
+papel, tinta y un rojo apagado, Libre Bodoni y EB Garamond). La hoja de estilo vive en
+_build/estilo_coleccion.css, junto a este script.
 """
 import json, os
 
@@ -19,7 +20,7 @@ LIBROS = [
   slug="panteon", n="01", clase="Canon", t1="PANTEÓN", t2="PERSONAL",
   sub="Un mapa mental de dieciséis pensadores que me formaron",
   paginas="262 páginas", palabras=None, anio="2026",
-  tesis="Dieciséis fichas vivas, de Borges a Facundo Cabral. Quién es cada uno, qué ideas lo definen, por qué obra se entra, cómo se conecta con los otros y qué concepto se puede llevar a la acción.",
+  tesis="Dieciséis fichas, de Borges a Facundo Cabral: quién fue cada uno, qué ideas lo definen, por qué obra conviene entrar, cómo se vincula con los demás y qué concepto puede llevarse a la práctica.",
   cuerpo=[
    "Cada uno de los dieciséis está en el libro por una razón precisa. No están por prestigio ni por completitud: están porque dejaron una herramienta mental que sigue en uso. Borges enseña a leer las bibliotecas como mapas. Feynman enseña a desconfiar de uno mismo con método. Taleb enseña a mirar el riesgo antes que el promedio.",
    "El libro no propone admiración. Propone uso. Cada capítulo cierra con los conceptos que se pueden aplicar y con las conexiones hacia los demás del panteón, porque el valor de una lista así está en los cruces: Popper con Deutsch, Munger con Kahneman, los estoicos con Watts.",
@@ -44,7 +45,7 @@ LIBROS = [
   slug="soberania", n="02", clase="Protocolo", t1="SOBERANÍA", t2="COGNITIVA",
   sub="Protocolo para recuperar la atención, el deseo y el tiempo",
   paginas="33 páginas", palabras=None, anio="2026",
-  tesis="Un protocolo en cuatro fases para recuperar el control de la atención. Arranca por el cargador del teléfono y termina en la soberanía relacional y comunitaria.",
+  tesis="Un protocolo en cuatro fases para recobrar el gobierno de la propia atención. Empieza por algo tan humilde como el lugar donde se carga el teléfono y concluye en la soberanía de los vínculos y de la comunidad.",
   cuerpo=[
    "El libro arranca donde está el problema y no donde queda más cómodo explicarlo. La primera intervención es el cargador: dónde duerme el teléfono, a qué hora entra a la habitación, qué pasa en los primeros veinte minutos del día. De ahí pasa a la infraestructura propia, después a las relaciones y al final a la comunidad.",
    "Desarrolla el concepto de soberanía cognitiva que formuló Juan Ruocco, lo lleva a la práctica y también lo discute. La advertencia del libro es explícita desde la primera página: esto no es autoayuda. Lo que se disputa acá es diseño, negocio y poder, y por eso se pelea con instrumentos y no con fuerza de voluntad.",
@@ -73,7 +74,7 @@ LIBROS = [
   slug="preparacionismo", n="03", clase="Ensayo", t1="PREPARACIONISMO", t2="OPTIMISTA",
   sub="La resiliencia es un bien común",
   paginas="144 páginas", palabras="39.972 palabras", anio="2026",
-  tesis="Una advertencia, diez capítulos y un epílogo sobre una idea que incomoda a los dos bandos: prepararse no es acumular por miedo.",
+  tesis="Una advertencia, diez capítulos y un epílogo en torno a una idea que incomoda por igual a los dos bandos: que prepararse no es acumular por miedo.",
   cuerpo=[
    "El libro empieza descartando al prepper que no sirve, el de la imagen de supervivencia individual con el rifle y el sótano. Lo que propone en su lugar es acopiar capacidades portadoras de sentido antes de que la escasez se invierta, y hacerlo con otros.",
    "La tesis central es que la resiliencia se reparte o no existe. Un barrio que sabe reparar lo que se rompe aguanta mejor que un sótano lleno de latas, y el vecino que sabe hacer algo vale más que el inventario. De ahí el subtítulo: un bien común, no una colección privada.",
@@ -92,7 +93,7 @@ LIBROS = [
   slug="escalon", n="04", clase="Ensayo", t1="EL ÚLTIMO", t2="ESCALÓN",
   sub="Qué guardar de lo humano cuando la IA funciona bien",
   paginas="138 páginas", palabras="36.058 palabras", anio="2026",
-  tesis="Sobre el humanismo que se organiza contra la inteligencia artificial, la síntesis como producto del colectivo y el Optimistic Prep.",
+  tesis="Acerca del humanismo que se organiza frente a la inteligencia artificial, de la síntesis como obra colectiva y del Optimistic Prep.",
   cuerpo=[
    "El libro no discute si la máquina puede pensar. Discute qué se guarda cuando ya funciona lo bastante bien como para que la pregunta sea otra. Ese es el último escalón del título: el punto donde la comparación deja de servir y hay que decidir qué conservar.",
    "Nombra y critica el humanismo sin nombre, ese que se define por oposición y no por contenido, y propone en su lugar la síntesis como producto del colectivo: lo que un grupo de personas puede producir junto y ninguna por separado.",
@@ -110,7 +111,7 @@ LIBROS = [
   slug="tecno", n="05", clase="Ensayo", t1="TECNO", t2="CRISTIANISMO",
   sub="Una tercera posición desde el sur",
   paginas="138 páginas", palabras="38.417 palabras", anio="2026",
-  tesis="Diez capítulos en cuatro partes sobre el concepto de tecnocristianismo que formuló Tomás Rebord, puestos en diálogo con la encíclica Magnifica Humanitas de León XIV.",
+  tesis="Diez capítulos, repartidos en cuatro partes, sobre el tecnocristianismo tal como lo formuló Tomás Rebord, puestos en diálogo con la encíclica Magnifica Humanitas de León XIV.",
   cuerpo=[
    "El capítulo décimo va directo al punto: tecnocristianismo, en sus palabras. El libro rastrea de dónde viene el término, hasta la formulación de Tomás Rebord, lo desarrolla y también lo discute. Desarrollar el concepto de otro como propio convertiría el ensayo en otra cosa, y el libro lo dice en el cuerpo y en la nota de fuentes.",
    "El onceavo lee la encíclica Magnifica Humanitas de León XIV con el mismo criterio, citando por párrafo numerado para que se pueda verificar cada referencia.",
@@ -129,141 +130,20 @@ LIBROS = [
 CANON = LIBROS[0]["canon"]
 
 # ---------------------------------------------------------------- css
-CSS = """
-:root{
-  --tinta:#131f38; --tinta2:#1c3050; --papel:#f2ecdd; --papel2:#e9e1cc;
-  --sangre:#c2371f; --gris:#6a6353; --negro:#141414;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--tinta);color:var(--papel);font-family:'Archivo',system-ui,sans-serif;
-  line-height:1.62;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-/* height:auto es imprescindible: sin esto el atributo height del HTML se impone como
-   altura fija y la imagen se estira cuando el ancho queda limitado por el contenedor. */
-img{display:block;max-width:100%;height:auto}
-
-.banda{padding:clamp(52px,8vw,96px) clamp(20px,6vw,80px)}
-.banda.papel{background:var(--papel);color:var(--negro)}
-.banda.tinta2{background:var(--tinta2)}
-.max{max-width:1080px;margin:0 auto}
-.mono{font-family:'IBM Plex Mono',monospace}
-.kicker{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.26em;
-  text-transform:uppercase;color:var(--sangre);margin-bottom:26px}
-.banda.papel .kicker{color:var(--sangre)}
-
-nav{padding:26px clamp(20px,6vw,80px);display:flex;justify-content:space-between;
-  align-items:center;gap:20px;flex-wrap:wrap;border-bottom:1px solid rgba(242,236,221,.14)}
-nav .marca{font-family:'Archivo Black',Archivo,sans-serif;font-size:16px;letter-spacing:.04em}
-nav .marca i{font-family:'Piazzolla',serif;font-style:italic;color:var(--sangre);font-weight:600}
-nav .links{display:flex;gap:24px;font-family:'IBM Plex Mono',monospace;font-size:11px;
-  letter-spacing:.16em;text-transform:uppercase;color:rgba(242,236,221,.62)}
-nav .links a:hover{color:var(--papel)}
-
-h1{font-family:'Archivo Black',Archivo,sans-serif;line-height:.92;letter-spacing:-.015em;
-  font-size:clamp(46px,10vw,132px);margin:0}
-h1 .r1{display:block}
-h1 .r2{display:block;color:transparent;-webkit-text-stroke:2px var(--papel);text-stroke:2px var(--papel)}
-h1 .r3{display:block;color:var(--sangre)}
-h1.negro .r2{-webkit-text-stroke:2px var(--negro);text-stroke:2px var(--negro)}
-.bajada{font-family:'Piazzolla',serif;font-style:italic;font-size:clamp(18px,2.2vw,25px);
-  max-width:46ch;margin:32px 0 0;color:rgba(242,236,221,.9)}
-.banda.papel .bajada{color:rgba(20,20,20,.82)}
-
-h2{font-family:'Archivo Black',Archivo,sans-serif;font-size:clamp(26px,4vw,44px);
-  line-height:1.04;letter-spacing:-.01em;margin-bottom:26px}
-h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:19px;margin-bottom:8px}
-p{font-size:16.5px;max-width:68ch;margin-bottom:18px}
-p.grande{font-size:clamp(18px,2vw,21px);line-height:1.6}
-.regla{height:3px;background:var(--sangre);width:74px;margin:0 0 30px}
-
-.lista-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:34px}
-.btn{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;
-  text-transform:uppercase;padding:15px 24px;border:2px solid currentColor;display:inline-block;
-  transition:background .15s,color .15s}
-.btn.fuerte{background:var(--sangre);border-color:var(--sangre);color:var(--papel)}
-.btn.fuerte:hover{background:#a52d18;border-color:#a52d18}
-.btn:hover{background:var(--papel);color:var(--tinta)}
-.banda.papel .btn:hover{background:var(--negro);color:var(--papel)}
-.banda.papel .btn.fuerte:hover{background:#a52d18;color:var(--papel)}
-
-/* estante */
-.estante{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:12px}
-.vol-card{display:block}
-.vol-card .marco{border:1px solid rgba(20,20,20,.2);overflow:hidden;background:var(--papel2)}
-.vol-card img{width:100%;height:auto;transition:transform .4s cubic-bezier(.2,.7,.3,1)}
-.vol-card:hover img{transform:scale(1.035)}
-.vol-card .pie{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;
-  letter-spacing:.14em;text-transform:uppercase;color:var(--gris);line-height:1.5}
-.vol-card .pie b{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:14px;
-  letter-spacing:0;text-transform:none;color:var(--negro)}
-
-/* canon */
-.canon{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;margin-top:8px;
-  border-top:1px solid rgba(20,20,20,.18)}
-.canon div{display:flex;gap:16px;align-items:baseline;padding:13px 0;
-  border-bottom:1px solid rgba(20,20,20,.12)}
-.canon .nn{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--sangre);min-width:26px}
-.canon .nm{font-family:'Piazzolla',serif;font-size:19px}
-
-/* volumen largo */
-.vol-fila{display:grid;grid-template-columns:250px 1fr;gap:52px;align-items:start}
-.vol-fila .tapa{border:1px solid rgba(20,20,20,.2)}
-.vol-fila .num{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;
-  color:var(--sangre);text-transform:uppercase;margin-bottom:14px;display:block}
-.vol-fila .sub{font-family:'Piazzolla',serif;font-style:italic;font-size:22px;
-  margin-bottom:24px;color:rgba(20,20,20,.85)}
-.vol-fila .ficha{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gris);
-  letter-spacing:.06em;margin:24px 0 22px;padding:16px 0;
-  border-top:1px solid rgba(20,20,20,.16);border-bottom:1px solid rgba(20,20,20,.16)}
-.vol-fila .ficha span{margin-right:20px;white-space:nowrap}
-.descargas{display:flex;flex-direction:column;gap:9px;margin-top:4px}
-.descargas a{display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;
-  font-size:12px;letter-spacing:.06em;padding:14px 18px;border:1px solid rgba(242,236,221,.28);
-  color:var(--papel)}
-.descargas a:hover{border-color:var(--sangre);color:var(--sangre)}
-.descargas a .fl{color:var(--sangre);font-size:15px}
-.banda.papel .descargas a{border-color:rgba(20,20,20,.25);color:var(--negro)}
-.banda.papel .descargas a:hover{border-color:var(--sangre);color:var(--sangre)}
-
-/* indice de capitulos */
-.indice{display:grid;grid-template-columns:repeat(2,1fr);gap:0 44px;margin-top:10px}
-.indice div{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid rgba(20,20,20,.12)}
-.indice .nn{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--sangre);
-  min-width:30px;padding-top:3px}
-.indice .nm{font-size:16px}
-
-footer{padding:52px clamp(20px,6vw,80px) 76px;text-align:center;
-  font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:2;color:rgba(242,236,221,.55)}
-footer .inf{font-family:'Piazzolla',serif;font-size:32px;display:block;
-  color:rgba(242,236,221,.35);margin-bottom:10px}
-
-@media(max-width:900px){
-  .estante{grid-template-columns:repeat(3,1fr)}
-  .vol-fila{grid-template-columns:1fr;gap:32px}
-  .vol-fila .tapa{max-width:260px}
-  .canon,.indice{grid-template-columns:1fr}
-}
-@media(max-width:560px){
-  .estante{grid-template-columns:repeat(2,1fr);gap:16px}
-  nav .links{display:none}
-  .vol-fila .ficha span{white-space:normal;display:block;margin:0 0 4px}
-}
-"""
+CSS = open(os.path.join(BASE, "estilo_coleccion.css"), encoding="utf-8").read()
 
 FUENTES = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
  '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
- '<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;700'
- '&family=Piazzolla:ital,opsz,wght@0,8..30,400;0,8..30,600;1,8..30,400'
- '&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">')
+ '<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,500;0,700;1,400'
+ '&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">')
 
 def nav():
     return """<nav>
   <a class="marca" href="/">CORVUS <i>Lab</i></a>
   <div class="links">
-    <a href="/">Laboratorio</a>
+    <a href="/">Portada</a>
     <a href="/coleccion">Colección</a>
-    <a href="/dashboard">Dashboard</a>
+    <a href="/proyectos">Trabajos</a>
   </div>
 </nav>"""
 
@@ -271,8 +151,8 @@ def pie():
     return """<footer>
   <span class="inf">&#8734;</span>
   Corvus Lab · Córdoba, Argentina<br>
-  Los cinco volúmenes se escribieron con asistencia de máquinas y los libros lo declaran<br>
-  en su advertencia y en su colofón.
+  Los cinco volúmenes se escribieron con asistencia de máquinas,<br>
+  y cada libro lo declara en su advertencia y en su colofón.
 </footer>"""
 
 def escala(chars):
@@ -331,35 +211,34 @@ def build_coleccion():
       f"""<section class="banda">
   <div class="max">
     <p class="kicker">Corvus Lab · Colección · 2026</p>
-    <h1 style="{escala(14)}"><span class="r1">CINCO</span><span class="r2">VOLÚMENES</span><span class="r3">UNA BIBLIOTECA</span></h1>
-    <p class="bajada">Lo que sostiene a una persona dejó de ser suyo sin que nadie firmara nada.
-    Estos cinco libros trabajan sobre esa pérdida, y ninguno propone arreglarla en soledad.</p>
+    <h1 style="font-size:clamp(44px,9vw,96px)"><span class="r1">CINCO</span><span class="r2">volúmenes</span><span class="r3">Y UNA PÉRDIDA</span></h1>
+    <p class="bajada">Lo que sostiene a una persona ha ido dejando de pertenecerle sin que nadie firmara nada. Sobre esa pérdida trabajan estos cinco libros, y ninguno aconseja enfrentarla a solas.</p>
     <div class="lista-cta">
-      <a class="btn fuerte" href="#volumenes">Ver los cinco</a>
-      <a class="btn" href="#sintesis">La síntesis</a>
+      <a class="btn fuerte" href="#volumenes">Los cinco volúmenes</a>
+      <a class="btn" href="#sintesis">Advertencia al lector</a>
     </div>
   </div>
 </section>""",
       f"""<section class="banda papel" id="sintesis">
   <div class="max">
     <div class="regla"></div>
-    <p class="kicker">La síntesis</p>
+    <p class="kicker">Advertencia al lector</p>
     <h2 class="negro">Nada se pierde de golpe</h2>
-    <p class="grande">Lo que sostiene a una persona no se perdió de una vez. Se perdió por goteo, y
-    cada paso suelto parecía razonable. Las ideas propias llegan recomendadas, la atención se
-    vende por subasta, la casa y el trabajo se alquilan, y lo que uno sabe hacer lo empieza a
-    hacer una máquina.</p>
-    <p>Los cinco volúmenes trabajan sobre ese goteo, cada uno desde una pieza distinta. Ninguno
-    promete que alcance con uno, ninguno propone la retirada, y ninguno se escribe desde el
-    centro: están hechos en Córdoba, donde las cosas llegan más tarde y se pueden mirar sin
-    fascinación.</p>
-    <p>Son cortos a propósito, se leen en cualquier orden y cada uno se sostiene solo.</p>
+    <p class="grande">Lo que sostiene a una persona no se pierde de una vez, sino por goteo, y cada
+    gota, tomada por separado, parecía razonable. Las ideas propias llegan ahora recomendadas; la
+    atención se remata al mejor postor; la casa y el trabajo se alquilan, y aquello que uno sabía
+    hacer empieza a hacerlo una máquina.</p>
+    <p>Los cinco volúmenes se ocupan de ese goteo, cada uno desde una pieza distinta. Ninguno
+    pretende bastar por sí solo, ninguno predica la retirada, y ninguno está escrito desde el
+    centro: se escribieron en Córdoba, adonde las cosas llegan más tarde y pueden mirarse, por
+    eso mismo, sin fascinación.</p>
+    <p>Son breves a propósito. Admiten cualquier orden de lectura, y cada uno se sostiene sin los demás.</p>
   </div>
 </section>""",
       f"""<section class="banda tinta2" id="volumenes">
   <div class="max">
     <p class="kicker">Los cinco volúmenes</p>
-    <h2>Los libros</h2>
+    <h2>El estante</h2>
     <div class="estante">{estante}</div>
   </div>
 </section>""",
@@ -368,11 +247,11 @@ def build_coleccion():
     <div class="regla"></div>
     <p class="kicker">El canon</p>
     <h2 class="negro">Los dieciséis del panteón</h2>
-    <p>El primer volumen fija las fuentes de todo lo demás. Estos son los dieciséis, en el orden
+    <p>El primer volumen fija las fuentes de todo lo demás. He aquí los dieciséis, en el orden
     en que aparecen, de Borges a Facundo Cabral.</p>
     <div class="canon">{canon}</div>
-    <p style="margin-top:26px">Cada uno está ahí por una razón precisa y no por completitud:
-    dejó una herramienta mental que sigue en uso. El panteón no se cierra, y el libro lo dice.</p>
+    <p style="margin-top:26px">Ninguno figura por afán de completar la lista; cada uno dejó una herramienta del
+    pensamiento que todavía se usa. El panteón queda abierto, y el libro lo declara.</p>
   </div>
 </section>""",
       "\n".join(volumenes),

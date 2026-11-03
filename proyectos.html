@@ -3,303 +3,311 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Proyectos · Corvus Lab</title>
-<meta name="description" content="Los proyectos de la línea pública de Corvus Lab: Estado, información pública, ciudadanía, investigación y participación.">
-<meta property="og:title" content="Proyectos · Corvus Lab">
-<meta property="og:description" content="11 proyectos abiertos sobre lo que es de todos.">
+<title>Trabajos · Corvus Lab</title>
+<meta name="description" content="Trabajos sobre lo que pertenece a todos y casi nadie mira de cerca: el Estado, la ley, el dinero público, la ciudadanía y los datos con que debería decidirse. Todos se publican abiertos, y ninguno pide registrarse para leerlo.">
+<meta property="og:title" content="Trabajos · Corvus Lab">
+<meta property="og:description" content="Trabajos sobre lo que pertenece a todos y casi nadie mira de cerca: el Estado, la ley, el dinero público, la ciudadanía y los datos con que debería decidirse. Todos se publican abiertos, y ninguno pide registrarse para leerlo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,500;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#070e18; --panel:#0c1626; --line:rgba(88,198,208,0.14);
-  --text:#e8e4dc; --muted:#7d8a99; --soft:#55626f;
-  --teal:#58C6D0; --warm:#D9A066;
-  --sans:'Inter',system-ui,sans-serif; --serif:'Fraunces',Georgia,serif; --mono:'JetBrains Mono',monospace;
+  --papel:#f1ebdd;
+  --papel2:#e8e0cc;
+  --tinta:#1d1b17;
+  --gris:#6b6456;
+  --filete:rgba(29,27,23,.22);
+  --sangre:#9b2d1f;
+  --display:'Libre Bodoni',Didot,'Bodoni 72',Georgia,serif;
+  --texto:'EB Garamond',Garamond,Georgia,serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-.container{max-width:960px;margin:0 auto;padding:0 32px}
-a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(88,198,208,0.25);transition:border-color .2s,color .2s}
-a:hover{color:#8fdfe6;border-color:#8fdfe6}
-.grain{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.025;background-image:radial-gradient(circle at 20% 20%,rgba(255,255,255,.4) .4px,transparent .6px);background-size:14px 14px}
-.grid-lines{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:96px 96px;mask-image:radial-gradient(ellipse 90% 70% at 50% 20%,#000 0%,transparent 75%)}
-.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--teal)}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 0;background:linear-gradient(180deg,rgba(7,14,24,.92),rgba(7,14,24,0))}
-nav .container{display:flex;justify-content:space-between;align-items:center}
-.brand{font-family:var(--serif);font-weight:500;font-size:17px;color:var(--text);border:0}
-.brand em{font-style:italic;color:var(--teal)}
-.nav-links{display:flex;gap:28px}
-.nav-links a{border:0;color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-.nav-links a:hover{color:var(--text)}
-header.hero{padding:170px 0 80px;position:relative;z-index:1}
-.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,7vw,76px);line-height:1.02;letter-spacing:-.02em;margin:18px 0 30px}
-.hero h1 .n{font-style:italic;color:var(--teal)}
-.hero .def{font-size:clamp(17px,2.2vw,20px);font-weight:300;color:var(--muted);max-width:680px;line-height:1.6}
-.hero .cuentas{display:flex;gap:38px;margin-top:44px;flex-wrap:wrap}
-.hero .cuenta .v{font-family:var(--serif);font-size:30px;color:var(--text);line-height:1}
-.hero .cuenta .l{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-top:8px;display:block}
-.llaves{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0;position:relative;z-index:1;background:var(--panel)}
-.llaves .container{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.llave .p-status{display:inline-block;margin-bottom:10px}
-.llave p{font-size:13px;color:var(--muted);line-height:1.55}
-section.bloque{position:relative;z-index:1;padding:74px 0;border-top:1px solid var(--line)}
-section.bloque:first-of-type{border-top:0}
-.sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;gap:24px}
-.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(27px,3.8vw,38px);letter-spacing:-.01em}
-.sec-head .num{font-family:var(--mono);font-size:12px;color:var(--soft)}
-.bajada{font-size:15px;color:var(--muted);max-width:600px;margin-bottom:38px}
-.list{border-top:1px solid var(--line)}
-.project{display:grid;grid-template-columns:44px 1.25fr 1fr auto;gap:26px;padding:32px 4px;border-bottom:1px solid var(--line);align-items:start;transition:background .2s}
-.project:hover{background:rgba(88,198,208,.03)}
-.p-idx{font-family:var(--mono);font-size:12px;color:var(--warm);padding-top:5px}
-.p-name{font-family:var(--serif);font-weight:500;font-size:20px;line-height:1.25}
-.p-name a{border:0;color:var(--text)}
-.p-name a:hover{color:var(--teal)}
-.p-detalle{font-size:13px;color:var(--soft);line-height:1.55;margin-top:9px;font-weight:300}
-.p-desc{font-size:13.5px;color:var(--muted);line-height:1.55;font-style:italic;font-family:var(--serif);font-weight:300;padding-top:3px}
-.p-status{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);border:1px solid rgba(88,198,208,.35);padding:4px 8px;white-space:nowrap;margin-top:2px}
-.p-status.wip{color:var(--warm);border-color:rgba(217,160,102,.4)}
-.p-status.arch{color:var(--soft);border-color:rgba(85,98,111,.4)}
-footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-index:1}
-footer .container{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
-.f-brand{font-family:var(--serif);font-size:18px}
-.f-brand em{font-style:italic;color:var(--teal)}
-.f-mantra{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft)}
-.f-copy{font-family:var(--mono);font-size:10px;color:var(--soft);letter-spacing:.1em;width:100%;margin-top:26px}
-@media(max-width:820px){
-  .llaves .container{grid-template-columns:1fr;gap:22px}
-  .project{grid-template-columns:1fr;gap:10px}
-  .p-status{justify-self:start}
-  .nav-links{display:none}
-  header.hero{padding:130px 0 60px}
+html{scroll-behavior:smooth}
+body{font-family:var(--texto);font-size:20px;line-height:1.55;background:var(--papel);color:var(--tinta);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--filete);transition:border-color .2s,color .2s}
+a:hover{color:var(--sangre);border-color:var(--sangre)}
+.pliego{max-width:760px;margin:0 auto;padding:0 24px}
+.versalitas{font-variant:small-caps;letter-spacing:.12em;text-transform:lowercase}
+
+/* cabecera de revista */
+.cabecera{padding:64px 0 0;text-align:center}
+.cabecera .linea-sup{display:flex;justify-content:space-between;font-size:15px;color:var(--gris);border-bottom:1px solid var(--tinta);padding-bottom:10px}
+.cabecera .cuervo{width:84px;height:auto;margin:52px auto 28px;display:block}
+.cabecera h1{font-family:var(--display);font-weight:400;font-size:clamp(64px,15vw,138px);line-height:.9;letter-spacing:.06em}
+.cabecera .subtitulo{font-family:var(--display);font-style:italic;font-size:clamp(19px,2.6vw,24px);margin:20px 0 0}
+.cabecera .doble{border-top:1px solid var(--tinta);border-bottom:1px solid var(--tinta);height:5px;margin:44px 0 0}
+
+nav{margin:14px 0 0;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px;font-size:17px}
+nav a{border:0}
+
+/* sumario */
+.sumario{padding:72px 0 24px}
+.sumario h2{text-align:center}
+.sumario ol{list-style:none;margin-top:28px}
+.sumario li{display:flex;align-items:baseline;gap:10px;padding:7px 0}
+.sumario li .t{flex:0 1 auto}
+.sumario li .t a{border:0}
+.sumario li .relleno{flex:1;border-bottom:1px dotted var(--gris);transform:translateY(-6px);min-width:24px}
+.sumario li .n{font-variant:small-caps;letter-spacing:.08em;color:var(--gris)}
+
+/* secciones */
+section{padding:64px 0}
+.ornamento{text-align:center;color:var(--sangre);font-size:20px;letter-spacing:1em;padding:8px 0 0;margin-right:-1em}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,5vw,40px);line-height:1.1;letter-spacing:.01em;margin-bottom:8px}
+.rubro{display:block;text-align:center;font-variant:small-caps;letter-spacing:.2em;text-transform:lowercase;color:var(--sangre);font-size:17px;margin-bottom:14px}
+.titulo-sec{text-align:center;margin-bottom:40px}
+.titulo-sec .bajada{font-style:italic;color:var(--gris);font-size:19px;margin-top:6px}
+
+.prosa p{margin-bottom:1em;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.prosa p+p{text-indent:1.6em}
+.prosa p.capitular::first-letter{font-family:var(--display);float:left;font-size:4.1em;line-height:.82;padding:.08em .08em 0 0;color:var(--sangre)}
+.prosa p.sin-sangria{text-indent:0}
+
+.cita{margin:48px auto;max-width:560px;text-align:center;font-family:var(--display);font-style:italic;font-size:clamp(24px,3.6vw,31px);line-height:1.3}
+.cita::before,.cita::after{content:"";display:block;width:56px;height:1px;background:var(--tinta);margin:0 auto}
+.cita::before{margin-bottom:24px}
+.cita::after{margin-top:24px}
+
+/* trabajos */
+.trabajos{border-top:1px solid var(--tinta)}
+.trabajo{display:grid;grid-template-columns:44px 1fr;gap:0 18px;padding:26px 0;border-bottom:1px solid var(--filete)}
+.trabajo .num{font-family:var(--display);color:var(--sangre);font-size:18px;padding-top:4px}
+.trabajo h3{font-family:var(--display);font-weight:500;font-size:24px;line-height:1.2}
+.trabajo h3 a{border:0}
+.trabajo h3 .estado{font-family:var(--texto);font-weight:400;font-variant:small-caps;text-transform:lowercase;letter-spacing:.1em;font-size:16px;color:var(--gris);margin-left:10px;white-space:nowrap}
+.trabajo p{grid-column:2;margin-top:6px;color:#3b3730}
+.remate{text-align:center;margin-top:36px;font-style:italic}
+
+/* correspondencia */
+.correo{text-align:center}
+.correo .prosa p{text-align:center;text-indent:0}
+.boton{display:inline-block;margin-top:18px;font-variant:small-caps;text-transform:lowercase;letter-spacing:.16em;font-size:18px;padding:12px 28px;border:1px solid var(--tinta)}
+.boton:hover{background:var(--tinta);color:var(--papel);border-color:var(--tinta)}
+
+/* colofón */
+footer{margin-top:40px;padding:48px 0 64px;border-top:1px solid var(--tinta);text-align:center;font-size:16px;color:var(--gris)}
+footer .marca{font-family:var(--display);font-size:22px;color:var(--tinta);letter-spacing:.08em;margin-bottom:12px}
+footer p{max-width:520px;margin:0 auto 8px;font-style:italic}
+
+@media(max-width:560px){
+  body{font-size:18.5px}
+  .cabecera{padding-top:32px}
+  .cabecera .linea-sup{font-size:13px}
+  .prosa p{text-align:left;hyphens:manual}
+  .trabajo{grid-template-columns:32px 1fr;gap:0 10px}
+  .trabajo h3 .estado{display:block;margin:2px 0 0}
 }
+
+.cuentas{display:flex;justify-content:center;gap:48px;margin:36px 0 0;flex-wrap:wrap}
+.cuenta{text-align:center}
+.cuenta .v{display:block;font-family:var(--display);font-size:44px;line-height:1}
+.cuenta .l{font-variant:small-caps;text-transform:lowercase;letter-spacing:.14em;color:var(--gris);font-size:16px}
+.llaves{margin:44px 0 0;border-top:1px solid var(--filete);border-bottom:1px solid var(--filete);padding:18px 0}
+.llave{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:5px 0;font-size:17px}
+.llave .e{font-variant:small-caps;text-transform:lowercase;letter-spacing:.1em;color:var(--sangre)}
+.llave p{color:var(--gris);font-style:italic}
+.trabajo .detalle{font-size:17.5px;color:var(--gris);margin-top:8px}
+.trabajo h3 .estado.wip{color:var(--sangre)}
 </style>
 </head>
 <body>
-<div class="grain"></div>
-<div class="grid-lines"></div>
 
-<nav>
-  <div class="container">
-    <a href="/" class="brand">Corvus<em> Lab</em></a>
-    <div class="nav-links">
-      <a href="/">Inicio</a>
+<header class="cabecera">
+  <div class="pliego">
+    <div class="linea-sup"><span>Córdoba</span><span class="versalitas">Índice de trabajos</span><span>MMXXVI</span></div>
+    <h1 style="margin-top:56px;font-size:clamp(52px,12vw,104px)"><a href="/" style="border:0">CORVUS</a></h1>
+    <p class="subtitulo">Trabajos sobre lo que es de todos</p>
+    <div class="doble"></div>
+    <nav>
+      <a href="/">Portada</a>
       <a href="/coleccion">Colección</a>
-      <a href="/dashboard">Dashboard</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="container">
-    <p class="eyebrow">Línea pública</p>
-    <h1>Once proyectos<br>sobre lo que <span class="n">es de todos</span></h1>
-    <p class="def">Proyectos sobre lo que es de todos: el Estado, la ley, el dinero público, la ciudadanía y los datos que permiten decidir mejor. Se publican abiertos y sin registro.</p>
-    <div class="cuentas">
-      <div class="cuenta"><span class="v">11</span><span class="l">Proyectos</span></div>
-      <div class="cuenta"><span class="v">10</span><span class="l">Publicados</span></div>
-      <div class="cuenta"><span class="v">1</span><span class="l">En curso</span></div>
-    </div>
+      <a href="/#notas">Notas</a>
+      <a href="/#correspondencia">Correspondencia</a>
+    </nav>
   </div>
 </header>
 
-<div class="llaves">
-  <div class="container">
-      <div class="llave"><span class="p-status ">Publicado</span><p>Funciona, está en línea y se actualiza.</p></div>
-      <div class="llave"><span class="p-status wip">En curso</span><p>Empezado, con avance verificable, todavía sin versión final.</p></div>
-      <div class="llave"><span class="p-status arch">Archivado</span><p>Cerrado o discontinuado. Se conserva por su registro.</p></div>
+<div class="pliego">
+
+  <section style="padding-bottom:24px">
+    <div class="prosa"><p class="capitular">Trabajos sobre lo que pertenece a todos y casi nadie mira de cerca: el Estado, la ley, el dinero público, la ciudadanía y los datos con que debería decidirse. Todos se publican abiertos, y ninguno pide registrarse para leerlo.</p></div>
+    <div class="cuentas">
+      <div class="cuenta"><span class="v">11</span><span class="l">trabajos</span></div>
+      <div class="cuenta"><span class="v">10</span><span class="l">publicados</span></div>
+      <div class="cuenta"><span class="v">1</span><span class="l">en curso</span></div>
+    </div>
+    <div class="llaves">
+      <div class="llave"><span class="e">publicado</span><p>En línea, en uso y al día.</p></div>
+      <div class="llave"><span class="e">en curso</span><p>Empezado, con avances que pueden verificarse, todavía sin forma definitiva.</p></div>
+      <div class="llave"><span class="e">archivado</span><p>Concluido o abandonado; se conserva como constancia.</p></div>
+    </div>
+  </section>
+
+  <div class="sumario" style="padding-top:24px">
+    <h2><span class="rubro">Sumario</span></h2>
+    <ol>
+      <li><span class="t"><a href="#rendicion">Rendición de cuentas</a></span><span class="relleno"></span><span class="n">i</span></li>
+      <li><span class="t"><a href="#informacion">Información pública</a></span><span class="relleno"></span><span class="n">ii</span></li>
+      <li><span class="t"><a href="#ciudadania">Ciudadanía</a></span><span class="relleno"></span><span class="n">iii</span></li>
+      <li><span class="t"><a href="#investigacion">Investigación</a></span><span class="relleno"></span><span class="n">iv</span></li>
+      <li><span class="t"><a href="#participacion">Participación</a></span><span class="relleno"></span><span class="n">v</span></li>
+      <li><span class="t"><a href="#cultura">Cultura</a></span><span class="relleno"></span><span class="n">vi</span></li>
+      <li><span class="t"><a href="#editorial">Editorial</a></span><span class="relleno"></span><span class="n">vii</span></li>
+    </ol>
   </div>
+
+  <p class="ornamento" aria-hidden="true">✶ ✶ ✶</p>
+
+  <section id="rendicion">
+    <div class="titulo-sec">
+      <span class="rubro">i</span>
+      <h2>Rendición de cuentas</h2>
+      <p class="bajada">Lo que se promete, lo que se gasta y lo que, al fin, se cumple.</p>
+    </div>
+    <div class="trabajos">
+      <div class="trabajo">
+        <span class="num">1</span>
+        <h3><a href="https://elrigi.com.ar" target="_blank" rel="noopener">RIGI Tracker</a><span class="estado ">publicado</span></h3>
+        <p>Los veintiocho proyectos aprobados bajo el RIGI, con su monto, su sector, su provincia y su estado: US$79.375 millones bajo observación.</p>
+        <p class="detalle">Sigue cada adhesión al régimen de grandes inversiones desde que se presenta hasta que entra en funcionamiento. Depura la planilla oficial, que repite un mismo proyecto en cada provincia que toca, y coteja lo anunciado con lo efectivamente aprobado.</p>
+      </div>
+      <div class="trabajo">
+        <span class="num">2</span>
+        <h3><a href="https://ausencia-estado.vercel.app" target="_blank" rel="noopener">Ausencia del Estado</a><span class="estado wip">en curso</span></h3>
+        <p>Siete pedidos de acceso a la información pública, presentados el mismo día, cuyas respuestas se siguen de manera automática.</p>
+        <p class="detalle">Obras paralizadas, subsidios mal asignados, compras que nunca llegaron a usarse. El trabajo se apoya en la Ley 27.275 para reclamar los datos y los publica en un idioma que cualquier ciudadano entiende. Si el organismo calla más de treinta días hábiles, corre el silencio positivo, y aquí se deja constancia.</p>
+      </div>
+    </div>
+  </section>
+  <p class="ornamento" aria-hidden="true">✶ ✶ ✶</p>
+
+  <section id="informacion">
+    <div class="titulo-sec">
+      <span class="rubro">ii</span>
+      <h2>Información pública</h2>
+      <p class="bajada">Datos firmes para decisiones que suelen tomarse con datos endebles.</p>
+    </div>
+    <div class="trabajos">
+      <div class="trabajo">
+        <span class="num">1</span>
+        <h3><a href="https://punto-de-partida-three.vercel.app" target="_blank" rel="noopener">Punto de Partida</a><span class="estado ">publicado</span></h3>
+        <p>Cincuenta indicadores que ponen a la Argentina frente a treinta y un países, uno por uno, sin índices compuestos que disimulen el detalle.</p>
+        <p class="detalle">Cada indicador muestra el valor argentino, el del país de referencia y la distancia entre ambos. Sirve para discutir con cifras y no con impresiones, y para distinguir los males de estructura de los males de administración.</p>
+      </div>
+      <div class="trabajo">
+        <span class="num">2</span>
+        <h3><a href="https://hipotecas-ar.vercel.app" target="_blank" rel="noopener">Hipotecas AR</a><span class="estado ">publicado</span></h3>
+        <p>Comparador de las ofertas hipotecarias que informa el BCRA. El único número que importa es el costo financiero total.</p>
+        <p class="detalle">Ordena las ofertas por CFT y no por tasa nominal, que es donde suele esconderse la diferencia, e incluye los gastos que la publicidad prefiere omitir.</p>
+      </div>
+    </div>
+  </section>
+  <p class="ornamento" aria-hidden="true">✶ ✶ ✶</p>
+
+  <section id="ciudadania">
+    <div class="titulo-sec">
+      <span class="rubro">iii</span>
+      <h2>Ciudadanía</h2>
+      <p class="bajada">Cómo se llega a ser argentino, cuánto cuesta y qué se pide a cambio.</p>
+    </div>
+    <div class="trabajos">
+      <div class="trabajo">
+        <span class="num">1</span>
+        <h3><a href="https://ciudadania-ar.vercel.app" target="_blank" rel="noopener">Ciudadanía Argentina</a><span class="estado ">publicado</span></h3>
+        <p>Las seis vías que la ley abre para obtener la ciudadanía argentina, con sus requisitos, sus plazos y sus costos reales.</p>
+        <p class="detalle">Desde la inversión, a partir de US$350.000, hasta la residencia por arraigo. De cada vía se dice qué pide, cuánto demora y dónde suele trabarse.</p>
+      </div>
+      <div class="trabajo">
+        <span class="num">2</span>
+        <h3><a href="https://argentina-cbi.vercel.app" target="_blank" rel="noopener">Argentina CBI</a><span class="estado ">publicado</span></h3>
+        <p>Estado, costo real y plazos de la ciudadanía por inversión, escrito en inglés para quien la considera desde afuera.</p>
+        <p class="detalle">Es la versión internacional del análisis anterior. Calcula lo que cuesta de verdad el trámite completo, y no sólo la inversión mínima que fija la norma.</p>
+      </div>
+    </div>
+  </section>
+  <p class="ornamento" aria-hidden="true">✶ ✶ ✶</p>
+
+  <section id="investigacion">
+    <div class="titulo-sec">
+      <span class="rubro">iv</span>
+      <h2>Investigación</h2>
+      <p class="bajada">Lo que el comunicado de prensa, por discreción o por oficio, prefiere callar.</p>
+    </div>
+    <div class="trabajos">
+      <div class="trabajo">
+        <span class="num">1</span>
+        <h3><a href="https://sea-lion-quien.vercel.app" target="_blank" rel="noopener">Sea Lion</a><span class="estado ">publicado</span></h3>
+        <p>Quiénes están detrás de Sea Lion, el proyecto petrolero en la plataforma continental de las Islas Malvinas.</p>
+        <p class="detalle">Sociedades, accionistas y beneficiarios finales de una operación que se presenta como británica y se financia en varias plazas a la vez.</p>
+      </div>
+    </div>
+  </section>
+  <p class="ornamento" aria-hidden="true">✶ ✶ ✶</p>
+
+  <section id="participacion">
+    <div class="titulo-sec">
+      <span class="rubro">v</span>
+      <h2>Participación</h2>
+      <p class="bajada">Instrumentos para quien quiera intervenir en la conversación pública con algo más que opiniones.</p>
+    </div>
+    <div class="trabajos">
+      <div class="trabajo">
+        <span class="num">1</span>
+        <h3><a href="https://democracia-sa.vercel.app" target="_blank" rel="noopener">Democracia S.A.</a><span class="estado ">publicado</span></h3>
+        <p>Un juego acerca de cuánto vale un voto y quién paga las campañas, con un modo simulador sobre las variables macroeconómicas vigentes.</p>
+        <p class="detalle">Traduce el financiamiento de la política a decisiones concretas. El simulador permite mover cada variable y observar qué ocurre con el resultado.</p>
+      </div>
+      <div class="trabajo">
+        <span class="num">2</span>
+        <h3><a href="https://a-quien-criticas.vercel.app" target="_blank" rel="noopener">A Quién Criticás</a><span class="estado ">publicado</span></h3>
+        <p>Crítica razonada de figuras públicas, con una misma vara para todos y con la réplica del aludido incluida.</p>
+        <p class="detalle">Cada crítica viene acompañada de su evidencia, de una medida de proporción y de la respuesta que daría el criticado, seguida de su refutación. Al crítico no se le concede la última palabra.</p>
+      </div>
+    </div>
+  </section>
+  <p class="ornamento" aria-hidden="true">✶ ✶ ✶</p>
+
+  <section id="cultura">
+    <div class="titulo-sec">
+      <span class="rubro">vi</span>
+      <h2>Cultura</h2>
+      <p class="bajada">Porque lo público también se forma leyendo, y conviene empezar temprano.</p>
+    </div>
+    <div class="trabajos">
+      <div class="trabajo">
+        <span class="num">1</span>
+        <h3><a href="https://cuentos-argentinos.vercel.app" target="_blank" rel="noopener">Cuentos Argentinos</a><span class="estado ">publicado</span></h3>
+        <p>Cuentos ilustrados sobre argentinos que existieron, para leer en voz alta a los chicos.</p>
+        <p class="detalle">Historias para criar y no para adoctrinar. Pueden leerse en la pantalla o imprimirse.</p>
+      </div>
+    </div>
+  </section>
+  <p class="ornamento" aria-hidden="true">✶ ✶ ✶</p>
+
+  <section id="editorial">
+    <div class="titulo-sec">
+      <span class="rubro">vii</span>
+      <h2>Editorial</h2>
+      <p class="bajada">Lo que el taller publica con su propio nombre.</p>
+    </div>
+    <div class="trabajos">
+      <div class="trabajo">
+        <span class="num">1</span>
+        <h3><a href="/coleccion">Colección Corvus Lab</a><span class="estado ">publicado</span></h3>
+        <p>Cinco volúmenes acerca de lo que sostiene a una persona cuando el Estado, el trabajo y la atención dejan de sostenerla.</p>
+        <p class="detalle">El panteón personal, el protocolo de la atención, el preparacionismo, el último escalón y el tecnocristianismo. Cada uno se basta a sí mismo; juntos dicen algo más.</p>
+      </div>
+    </div>
+  </section>
+
 </div>
 
-<section class="bloque" id="rendicion">
-  <div class="container">
-    <div class="sec-head">
-      <h2>Rendición de cuentas</h2>
-      <span class="num">02</span>
-    </div>
-    <p class="bajada">Qué se promete, qué se gasta y qué se cumple.</p>
-    <div class="list">
-      <div class="project">
-        <span class="p-idx">01</span>
-        <div>
-          <span class="p-name"><a href="https://elrigi.com.ar" target="_blank" rel="noopener">RIGI Tracker</a></span>
-          <p class="p-detalle">Sigue cada adhesión al régimen de grandes inversiones desde la presentación hasta la puesta en marcha. Deduplica la planilla oficial, que repite proyectos por provincia, y cruza los anuncios con lo efectivamente aprobado.</p>
-        </div>
-        <div class="p-desc">Los 28 proyectos aprobados bajo el RIGI, con monto, sector, provincia y estado. US$79.375 millones monitoreados.</div>
-        <span class="p-status ">Publicado</span>
-      </div>
-      <div class="project">
-        <span class="p-idx">02</span>
-        <div>
-          <span class="p-name"><a href="https://ausencia-estado.vercel.app" target="_blank" rel="noopener">Ausencia del Estado</a></span>
-          <p class="p-detalle">Obras paralizadas, subsidios mal asignados y compras que nunca se usan. Usa la Ley 27.275 para exigir los datos y los publica en lenguaje ciudadano. Si el organismo no responde en 30 días hábiles, corre el silencio positivo.</p>
-        </div>
-        <div class="p-desc">Siete consultas de acceso a la información pública, presentadas el mismo día, con seguimiento automático de cada respuesta.</div>
-        <span class="p-status wip">En curso</span>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="bloque" id="informacion">
-  <div class="container">
-    <div class="sec-head">
-      <h2>Información pública</h2>
-      <span class="num">02</span>
-    </div>
-    <p class="bajada">Datos duros para decisiones que se toman con datos flojos.</p>
-    <div class="list">
-      <div class="project">
-        <span class="p-idx">01</span>
-        <div>
-          <span class="p-name"><a href="https://punto-de-partida-three.vercel.app" target="_blank" rel="noopener">Punto de Partida</a></span>
-          <p class="p-detalle">Cada indicador muestra el valor argentino, el del país de referencia y la brecha. Sirve para discutir con números en lugar de con impresiones, y para ver dónde el problema es estructural y dónde es de gestión.</p>
-        </div>
-        <div class="p-desc">Cincuenta indicadores que comparan a la Argentina con 31 países, uno por uno, sin índice compuesto que esconda el detalle.</div>
-        <span class="p-status ">Publicado</span>
-      </div>
-      <div class="project">
-        <span class="p-idx">02</span>
-        <div>
-          <span class="p-name"><a href="https://hipotecas-ar.vercel.app" target="_blank" rel="noopener">Hipotecas AR</a></span>
-          <p class="p-detalle">Ordena las ofertas por costo financiero total y no por tasa nominal, que es donde se esconde la diferencia. Incluye los gastos que las publicidades dejan afuera.</p>
-        </div>
-        <div class="p-desc">Comparador de ofertas hipotecarias del BCRA. El único número que importa es el CFT.</div>
-        <span class="p-status ">Publicado</span>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="bloque" id="ciudadania">
-  <div class="container">
-    <div class="sec-head">
-      <h2>Ciudadanía</h2>
-      <span class="num">02</span>
-    </div>
-    <p class="bajada">Cómo se entra, cuánto cuesta y qué exige ser argentino.</p>
-    <div class="list">
-      <div class="project">
-        <span class="p-idx">01</span>
-        <div>
-          <span class="p-name"><a href="https://ciudadania-ar.vercel.app" target="_blank" rel="noopener">Ciudadanía Argentina</a></span>
-          <p class="p-detalle">Desde la inversión desde US$350.000 hasta la residencia por arraigo. Cada vía con lo que pide, cuánto tarda y dónde se traba.</p>
-        </div>
-        <div class="p-desc">Las seis vías de acceso a la ciudadanía argentina, con requisitos, plazos y costos reales.</div>
-        <span class="p-status ">Publicado</span>
-      </div>
-      <div class="project">
-        <span class="p-idx">02</span>
-        <div>
-          <span class="p-name"><a href="https://argentina-cbi.vercel.app" target="_blank" rel="noopener">Argentina CBI</a></span>
-          <p class="p-detalle">Versión internacional del análisis. Mide lo que cuesta de verdad el proceso completo y no solo la inversión mínima que figura en la norma.</p>
-        </div>
-        <div class="p-desc">Estado, costo real y plazos de la ciudadanía por inversión, en inglés, para el público que la evalúa desde afuera.</div>
-        <span class="p-status ">Publicado</span>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="bloque" id="investigacion">
-  <div class="container">
-    <div class="sec-head">
-      <h2>Investigación</h2>
-      <span class="num">01</span>
-    </div>
-    <p class="bajada">Lo que no aparece en el comunicado de prensa.</p>
-    <div class="list">
-      <div class="project">
-        <span class="p-idx">01</span>
-        <div>
-          <span class="p-name"><a href="https://sea-lion-quien.vercel.app" target="_blank" rel="noopener">Sea Lion</a></span>
-          <p class="p-detalle">Sociedades, accionistas y beneficiarios finales de una operación que se anuncia como británica y se financia en varios mercados.</p>
-        </div>
-        <div class="p-desc">Quiénes están detrás del proyecto petrolero Sea Lion, en la plataforma continental de las Islas Malvinas.</div>
-        <span class="p-status ">Publicado</span>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="bloque" id="participacion">
-  <div class="container">
-    <div class="sec-head">
-      <h2>Participación</h2>
-      <span class="num">02</span>
-    </div>
-    <p class="bajada">Herramientas para intervenir en la discusión pública.</p>
-    <div class="list">
-      <div class="project">
-        <span class="p-idx">01</span>
-        <div>
-          <span class="p-name"><a href="https://democracia-sa.vercel.app" target="_blank" rel="noopener">Democracia S.A.</a></span>
-          <p class="p-detalle">Traduce el financiamiento de la política a decisiones concretas. El simulador permite mover las variables y ver qué pasa con el resultado.</p>
-        </div>
-        <div class="p-desc">Un juego sobre cuánto vale un voto y quién paga la campaña. Incluye modo simulador con las anclas macro vigentes.</div>
-        <span class="p-status ">Publicado</span>
-      </div>
-      <div class="project">
-        <span class="p-idx">02</span>
-        <div>
-          <span class="p-name"><a href="https://a-quien-criticas.vercel.app" target="_blank" rel="noopener">A Quién Criticás</a></span>
-          <p class="p-detalle">Cada crítica trae evidencia, proporcionalidad y la respuesta que el criticado daría, más su refutación. El crítico no se queda con la última palabra.</p>
-        </div>
-        <div class="p-desc">Crítica fundada a figuras públicas, con el mismo estándar para todos y con la réplica esperada incluida.</div>
-        <span class="p-status ">Publicado</span>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="bloque" id="cultura">
-  <div class="container">
-    <div class="sec-head">
-      <h2>Cultura</h2>
-      <span class="num">01</span>
-    </div>
-    <p class="bajada">Lo público también se construye leyendo.</p>
-    <div class="list">
-      <div class="project">
-        <span class="p-idx">01</span>
-        <div>
-          <span class="p-name"><a href="https://cuentos-argentinos.vercel.app" target="_blank" rel="noopener">Cuentos Argentinos</a></span>
-          <p class="p-detalle">Historias para criar, no para adoctrinar. Cada cuento se puede leer en pantalla o descargar para imprimir.</p>
-        </div>
-        <div class="p-desc">Cuentos ilustrados sobre argentinos de verdad, para leer en voz alta a chicos y chicas.</div>
-        <span class="p-status ">Publicado</span>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="bloque" id="editorial">
-  <div class="container">
-    <div class="sec-head">
-      <h2>Editorial</h2>
-      <span class="num">01</span>
-    </div>
-    <p class="bajada">Lo que publicamos como Lab.</p>
-    <div class="list">
-      <div class="project">
-        <span class="p-idx">01</span>
-        <div>
-          <span class="p-name"><a href="https://corvus-lab.vercel.app/coleccion" target="_blank" rel="noopener">Colección Corvus Lab</a></span>
-          <p class="p-detalle">El panteón personal, el protocolo de atención, el preparacionismo, el último escalón y el tecnocristianismo. Se leen separados y se leen juntos.</p>
-        </div>
-        <div class="p-desc">Cinco volúmenes sobre lo que sostiene a una persona cuando el Estado, el trabajo y la atención dejan de sostenerla.</div>
-        <span class="p-status ">Publicado</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <footer>
-  <div class="container">
-    <div>
-      <div class="f-brand">Corvus<em> Lab</em></div>
-      <p style="font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin-top:10px">
-        <a href="https://corvus-lab.vercel.app/dashboard" style="border:0;color:var(--soft)">Estado interno del Lab → dashboard</a>
-      </p>
-      <div class="f-mantra" style="margin-top:8px">Encontrar · Construir · Publicar · Repetir</div>
-    </div>
-    <div class="f-copy">Actualizado 2026-11-03 · Corvus Lab, Argentina</div>
+  <div class="pliego">
+    <div class="marca">CORVUS LAB</div>
+    <p>Índice puesto al día el 2026-11-03. Quien quiera ver el estado de las máquinas que sostienen estos trabajos puede consultar el <a href="/dashboard">tablero interno</a>.</p>
   </div>
 </footer>
+
 </body>
 </html>

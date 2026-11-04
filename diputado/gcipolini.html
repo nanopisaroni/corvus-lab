@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gerardo Cipolini · Corvus Lab</title>
+<meta name="description" content="Gerardo Cipolini, diputado por Chaco en el bloque UCR - Unión Cívica Radical. Proyectos, asistencia y votaciones en el período 144.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gerardo Cipolini · Corvus Lab">
+<meta property="og:description" content="Gerardo Cipolini, diputado por Chaco en el bloque UCR - Unión Cívica Radical. Proyectos, asistencia y votaciones en el período 144.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f8f6f2; --card: #ffffff; --ink: #16130f; --muted: #6d665c;
+  --soft: #999083; --rule: #e2dcd1; --rule-strong: #c9c1b3;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+.mono { font-family: "IBM Plex Mono", monospace; }
+a { color: var(--ink); }
+nav.top { border-bottom: 1px solid var(--rule); }
+nav.top .wrap { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 28px; }
+nav.top a { color: var(--muted); text-decoration: none; font-size: 13px; }
+nav.top a:hover { color: var(--ink); }
+nav.top .brand { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink); }
+nav.top .links a { margin-left: 20px; }
+header.hero { padding: 48px 0 26px; border-bottom: 1px solid var(--rule-strong); }
+.kicker { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--soft); margin-bottom: 14px; }
+h1 { font-size: clamp(28px, 4.4vw, 42px); line-height: 1.08; letter-spacing: -.02em;
+  font-weight: 600; margin: 0 0 14px; }
+.filiacion { font-family: "IBM Plex Mono", monospace; font-size: 13px; color: var(--muted);
+  margin: 0; letter-spacing: .01em; }
+.filiacion .sep { color: var(--rule-strong); padding: 0 8px; }
+.cifras { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--rule);
+  border-bottom: 1px solid var(--rule-strong); }
+.hero-cifras { padding-top: 0; }
+.cifra { background: var(--paper); padding: 22px 20px 20px; }
+.cifra b { display: block; font-family: "IBM Plex Mono", monospace; font-size: 27px; font-weight: 500;
+  letter-spacing: -.02em; margin-bottom: 6px; font-variant-numeric: tabular-nums; }
+.cifra span { font-size: 12px; color: var(--muted); line-height: 1.4; display: block; }
+.lectura { padding: 34px 0 8px; }
+.lectura p { font-size: 17px; line-height: 1.62; max-width: 790px; margin: 0; }
+section { padding: 34px 0 10px; }
+h2 { font-size: 20px; font-weight: 600; letter-spacing: -.01em; margin: 0 0 18px; }
+h2 span { font-weight: 300; color: var(--soft); font-size: 14px; }
+.tabla { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px; }
+th { text-align: left; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--soft); font-weight: 500; padding: 0 10px 10px;
+  border-bottom: 1px solid var(--rule-strong); }
+td { padding: 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+td.mono { white-space: nowrap; }
+th:first-child, td:first-child { padding-left: 0; }
+th:last-child, td:last-child { padding-right: 0; }
+td .tipo { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .06em; color: var(--muted); }
+.sumario { color: var(--ink); }
+.oficial { padding: 30px 0 0; }
+.oficial a { font-family: "IBM Plex Mono", monospace; font-size: 13px; color: var(--ink);
+  text-decoration: none; border-bottom: 1px solid var(--rule-strong); padding-bottom: 2px; }
+.oficial a:hover { border-bottom-color: var(--ink); }
+footer { border-top: 1px solid var(--rule); margin-top: 44px; padding: 22px 0 44px;
+  color: var(--soft); font-size: 12.5px; }
+@media (max-width: 900px) {
+  .cifras { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 760px) {
+  .cifras { grid-template-columns: repeat(2, 1fr); }
+  .cifra { padding: 18px 16px; }
+  .cifra b { font-size: 24px; }
+  header.hero { padding-top: 36px; }
+}
+</style>
+</head>
+<body>
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="/">Corvus Lab</a>
+    <span class="links"><a href="/congreso">Congreso</a><a href="/mapa">Mapa</a></span>
+  </div>
+</nav>
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Cámara de Diputados · Período 144</div>
+    <h1>Gerardo Cipolini</h1>
+    <p class="filiacion">UCR - Unión Cívica Radical<span class="sep">·</span>Chaco<span class="sep">·</span>10/12/2023 - 09/12/2027</p>
+  </div>
+</header>
+<div class="wrap hero-cifras">
+  <div class="cifras">
+      <div class="cifra"><b>1.677</b><span>proyectos presentados</span></div>
+      <div class="cifra"><b>65%</b><span>13 de 20 proyectos de la muestra</span></div>
+      <div class="cifra"><b>62%</b><span>ausencias: 2 · licencias: 1</span></div>
+      <div class="cifra"><b>0%</b><span>0 de 69 votaciones computadas</span></div>
+      <div class="cifra"><b>-92,8</b><span>eje de votaciones, de -100 a 100</span></div>
+  </div>
+</div>
+<div class="lectura">
+  <div class="wrap">
+    <p>Presentó 1.677 proyectos en el período. En la muestra de 20 proyectos clasificados: 13 leyes, 5 resoluciones y 2 declaraciones. La mayoría de la muestra son proyectos de ley. La asistencia a las votaciones es de 62%, por debajo del 80%. No registra votos contra su bloque en las 69 votaciones computadas. En el eje de votaciones, que va de -100 a 100, se ubica en -92,8.</p>
+  </div>
+</div>
+<div class="wrap">
+    <section>
+      <h2>Proyectos recientes <span>últimos 10 de la muestra</span></h2>
+      <div class="tabla">
+        <table>
+          <thead><tr><th>Tipo</th><th>Expediente</th><th>Fecha</th><th>Sumario</th></tr></thead>
+          <tbody>
+        <tr><td><span class="tipo">RESOLUCION</span></td><td class="mono">5439-D-2026</td><td class="mono">13/10/2026</td><td class="sumario">EXPRESAR BENEPLACITO POR LA CONMEMORACION DEL CENTENARIO DEL CLUB UNION GIMNASTICA SOKOL DE LA CIUDAD DE PRESIDENCIA ROQUE SAENZ PEÑA, PROVINCIA DEL CHACO.</td></tr>
+        <tr><td><span class="tipo">RESOLUCION</span></td><td class="mono">5196-D-2026</td><td class="mono">01/10/2026</td><td class="sumario">DECLARAR DE INTERES DE LA H. CAMARA LA REALIZACION DE LA 7° EDICION DE LA &quot;FIESTA PROVINCIAL DE LA TRADICION Y EL FOLCLORE&quot;, A REALIZARSE EN TRES ISLETAS, PROVINCIA DEL CHACO EL…</td></tr>
+        <tr><td><span class="tipo">LEY</span></td><td class="mono">4952-D-2026</td><td class="mono">24/09/2026</td><td class="sumario">TRANSFIERASE A TITULO GRATUITO A LA MUNICIPALIDAD DE GENERAL RAMIREZ, PROVINCIA DE ENTRE RIOS, EL DOMINIO DE UN INMUEBLE DE PROPIEDAD DEL ESTADO NACIONAL.</td></tr>
+        <tr><td><span class="tipo">LEY</span></td><td class="mono">4806-D-2026</td><td class="mono">16/09/2026</td><td class="sumario">INCLUYASE EN LA CURRICULA EDUCATIVA DEL NIVEL SECUNDARIO, EN TODAS SUS MODALIDADES, CONTENIDOS DE EDUCACION FINANCIERA. MODIFICACIONES A LA LEY 26206, DE EDUCACION NACIONAL.</td></tr>
+        <tr><td><span class="tipo">DECLARACION</span></td><td class="mono">4792-D-2026</td><td class="mono">16/09/2026</td><td class="sumario">EXPRESAR BENEPLACITO A LA EXPO FERIA DE COLECTIVIDADES EXTRANJERAS DEL CHACO, A REALIZARSE EN LA CIUDAD DE PRESIDENCIA ROQUE SAENZ PEÑA.</td></tr>
+        <tr><td><span class="tipo">DECLARACION</span></td><td class="mono">4791-D-2026</td><td class="mono">16/09/2026</td><td class="sumario">EXPRESAR BENEPLACITO A LA EDICION 2026 DE LA FIESTA NACIONAL DEL ALGODON, A REALIZARSE EN LA CIUDAD DE PRESIDENCIA ROQUE SAENZ PEÑA, PROVINCIA DEL CHACO.</td></tr>
+        <tr><td><span class="tipo">LEY</span></td><td class="mono">4648-D-2026</td><td class="mono">10/09/2026</td><td class="sumario">REGIMEN FEDERAL DE RESPONSABILIDAD FISCAL - LEY 25917 -. MODIFICACIONES SOBRE FORTALECIMIENTO DE LA DISCIPLINA FISCAL DEL SECTOR PUBLICO NACIONAL.</td></tr>
+        <tr><td><span class="tipo">LEY</span></td><td class="mono">3613-D-2026</td><td class="mono">31/07/2026</td><td class="sumario">PROTECCION DE DATOS PERSONALES - LEY 25326 - Y ACCESO A LA INFORMACION PUBLICA - LEY 27275 -. MODIFICACIONES SOBRE REGULACION DEL USO DE SISTEMAS DE INTELIGENCIA ARTIFICIAL.</td></tr>
+        <tr><td><span class="tipo">LEY</span></td><td class="mono">3612-D-2026</td><td class="mono">31/07/2026</td><td class="sumario">CODIGO CIVIL Y COMERCIAL DE LA NACION Y CODIGO PENAL DE LA NACION. MODIFICACIONES DE ACTUALIZACION DEL ORDENAMIENTO JURIDICO ARGENTINO ANTE NUEVAS MODALIDADES DE LESION DERIVADAS…</td></tr>
+        <tr><td><span class="tipo">RESOLUCION</span></td><td class="mono">3079-D-2026</td><td class="mono">25/06/2026</td><td class="sumario">EXPRESAR PESAR POR LA TRAGEDIA OCASIONADA POR LOS TERREMOTOS REGISTRADOS EL 24 DE JUNIO DE 2026 EN LA REPUBLICA BOLIVARIANA DE VENEZUELA.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div class="oficial">
+      <a href="https://www.hcdn.gob.ar/diputados/gcipolini/listado-proyectos.html" rel="noopener">Ficha oficial en HCDN &#8599;</a>
+    </div>
+</div>
+<footer>
+  <div class="wrap">Corvus Lab · datos abiertos del Congreso</div>
+</footer>
+</body>
+</html>

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Deploy corvus-lab (static: index.html, dashboard.html, metrics.js, vercel.json) via REST API + curl."""
-import json, os, subprocess, sys, time
+import json, glob, os, subprocess, sys, time
 import base64
 
 PROJECT_NAME = "corvus-lab"
@@ -18,6 +18,10 @@ FILES = ["index.html", "dashboard.html", "metrics.js", "metrics_history.json", "
 BINARIOS = ["coleccion/panteon.webp", "coleccion/soberania.webp",
             "coleccion/preparacionismo.webp", "coleccion/escalon.webp",
             "coleccion/tecno.webp", "img/cuervo-tinta.png"]
+
+FILES += sorted(os.path.relpath(f, os.path.dirname(os.path.abspath(__file__)))
+                for f in glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), "diputado", "*.html")))
+
 
 def token():
     for line in open(os.path.expanduser("~/.hermes/.env")):

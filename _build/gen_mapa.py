@@ -52,7 +52,7 @@ for p in dips:
     x = 40 + (p["x"] + 100) / 200 * (W - 80)
     y = 100 + random.gauss(0, 34)
     y = max(24, min(H - 24, y))
-    pts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.4" fill="{color(p["b"])}" opacity=".82"><title>{html.escape(p["n"])} · {html.escape(bloque_txt(p["b"]))}</title></circle>')
+    pts.append(f'<a href="/diputado/{p["s"]}.html"><circle cx="{x:.1f}" cy="{y:.1f}" r="3.4" fill="{color(p["b"])}" opacity=".82"><title>{html.escape(p["n"])} · {html.escape(bloque_txt(p["b"]))}</title></circle></a>')
 EJE = "\n".join(pts)
 
 # --- medias por bloque ---

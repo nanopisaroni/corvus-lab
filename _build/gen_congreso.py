@@ -197,6 +197,9 @@ thead th {{ position: sticky; top: 0; background: var(--paper); text-align: left
 tbody td {{ padding: 11px 8px; border-bottom: 1px solid var(--rule); vertical-align: middle; }}
 tbody tr:hover {{ background: #f1eee7; }}
 td.num, th.num {{ text-align: right; font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; }}
+td.oficial {{ width: 22px; text-align: center; }}
+td.oficial a {{ color: var(--soft); text-decoration: none; font-size: 13px; }}
+td.oficial a:hover {{ color: var(--ink); }}
 td.nombre {{ font-weight: 500; }}
 td.nombre a {{ color: inherit; text-decoration: none; border-bottom: 1px solid transparent; }}
 td.nombre a:hover {{ border-bottom-color: var(--rule-strong); }}
@@ -343,6 +346,7 @@ footer a {{ color: var(--muted); }}
       <thead><tr>
         <th class="num" style="width:44px">#</th>
         <th>Diputado</th>
+        <th></th>
         <th class="oculto-movil">Bloque</th>
         <th class="oculto-movil">Distrito</th>
         <th class="num">Proyectos</th>
@@ -415,7 +419,8 @@ function render() {{
     const pl = pct(r.ley, r.m), pr = pct(r.res, r.m), pd = 100 - pl - pr;
     return `<tr>
       <td class="num" style="color:var(--soft)">${{i+1}}</td>
-      <td class="nombre">${{r.s ? `<a href="https://www.hcdn.gob.ar/diputados/${{r.s}}/" target="_blank" rel="noopener">${{esc(r.n)}}</a>` : esc(r.n)}}</td>
+      <td class="nombre">${{r.s ? `<a href="/diputado/${{r.s}}.html">${{esc(r.n)}}</a>` : esc(r.n)}}</td>
+      <td class="oficial">${{r.s ? `<a href="https://www.hcdn.gob.ar/diputados/${{r.s}}/" target="_blank" rel="noopener" title="Ficha oficial">↗</a>` : ''}}</td>
       <td class="bloque oculto-movil">${{esc(r.b)}}</td>
       <td class="dist oculto-movil">${{esc(r.d)}}</td>
       <td class="num">${{r.t.toLocaleString('es-AR')}}</td>

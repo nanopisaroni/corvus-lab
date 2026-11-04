@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carlos Daniel Castagneto · Corvus Lab</title>
+<meta name="description" content="Carlos Daniel Castagneto, diputado por Buenos Aires en el bloque Unión por la Patria. Proyectos, asistencia y votaciones en el período 144.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Carlos Daniel Castagneto · Corvus Lab">
+<meta property="og:description" content="Carlos Daniel Castagneto, diputado por Buenos Aires en el bloque Unión por la Patria. Proyectos, asistencia y votaciones en el período 144.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f8f6f2; --card: #ffffff; --ink: #16130f; --muted: #6d665c;
+  --soft: #999083; --rule: #e2dcd1; --rule-strong: #c9c1b3;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+.mono { font-family: "IBM Plex Mono", monospace; }
+a { color: var(--ink); }
+nav.top { border-bottom: 1px solid var(--rule); }
+nav.top .wrap { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 28px; }
+nav.top a { color: var(--muted); text-decoration: none; font-size: 13px; }
+nav.top a:hover { color: var(--ink); }
+nav.top .brand { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink); }
+nav.top .links a { margin-left: 20px; }
+header.hero { padding: 48px 0 26px; border-bottom: 1px solid var(--rule-strong); }
+.kicker { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--soft); margin-bottom: 14px; }
+h1 { font-size: clamp(28px, 4.4vw, 42px); line-height: 1.08; letter-spacing: -.02em;
+  font-weight: 600; margin: 0 0 14px; }
+.filiacion { font-family: "IBM Plex Mono", monospace; font-size: 13px; color: var(--muted);
+  margin: 0; letter-spacing: .01em; }
+.filiacion .sep { color: var(--rule-strong); padding: 0 8px; }
+.cifras { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--rule);
+  border-bottom: 1px solid var(--rule-strong); }
+.hero-cifras { padding-top: 0; }
+.cifra { background: var(--paper); padding: 22px 20px 20px; }
+.cifra b { display: block; font-family: "IBM Plex Mono", monospace; font-size: 27px; font-weight: 500;
+  letter-spacing: -.02em; margin-bottom: 6px; font-variant-numeric: tabular-nums; }
+.cifra span { font-size: 12px; color: var(--muted); line-height: 1.4; display: block; }
+.lectura { padding: 34px 0 8px; }
+.lectura p { font-size: 17px; line-height: 1.62; max-width: 790px; margin: 0; }
+section { padding: 34px 0 10px; }
+h2 { font-size: 20px; font-weight: 600; letter-spacing: -.01em; margin: 0 0 18px; }
+h2 span { font-weight: 300; color: var(--soft); font-size: 14px; }
+.tabla { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px; }
+th { text-align: left; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--soft); font-weight: 500; padding: 0 10px 10px;
+  border-bottom: 1px solid var(--rule-strong); }
+td { padding: 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+td.mono { white-space: nowrap; }
+th:first-child, td:first-child { padding-left: 0; }
+th:last-child, td:last-child { padding-right: 0; }
+td .tipo { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .06em; color: var(--muted); }
+.sumario { color: var(--ink); }
+.oficial { padding: 30px 0 0; }
+.oficial a { font-family: "IBM Plex Mono", monospace; font-size: 13px; color: var(--ink);
+  text-decoration: none; border-bottom: 1px solid var(--rule-strong); padding-bottom: 2px; }
+.oficial a:hover { border-bottom-color: var(--ink); }
+footer { border-top: 1px solid var(--rule); margin-top: 44px; padding: 22px 0 44px;
+  color: var(--soft); font-size: 12.5px; }
+@media (max-width: 900px) {
+  .cifras { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 760px) {
+  .cifras { grid-template-columns: repeat(2, 1fr); }
+  .cifra { padding: 18px 16px; }
+  .cifra b { font-size: 24px; }
+  header.hero { padding-top: 36px; }
+}
+</style>
+</head>
+<body>
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="/">Corvus Lab</a>
+    <span class="links"><a href="/congreso">Congreso</a><a href="/mapa">Mapa</a></span>
+  </div>
+</nav>
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Cámara de Diputados · Período 144</div>
+    <h1>Carlos Daniel Castagneto</h1>
+    <p class="filiacion">Unión por la Patria<span class="sep">·</span>Buenos Aires<span class="sep">·</span>10/12/2023 - 09/12/2027</p>
+  </div>
+</header>
+<div class="wrap hero-cifras">
+  <div class="cifras">
+      <div class="cifra"><b>2.715</b><span>proyectos presentados</span></div>
+      <div class="cifra"><b>30%</b><span>6 de 20 proyectos de la muestra</span></div>
+      <div class="cifra"><b>100%</b><span>ausencias: 0 · licencias: 0</span></div>
+      <div class="cifra"><b>1,6%</b><span>1 de 62 votaciones computadas</span></div>
+      <div class="cifra"><b>+97,1</b><span>eje de votaciones, de -100 a 100</span></div>
+  </div>
+</div>
+<div class="lectura">
+  <div class="wrap">
+    <p>Presentó 2.715 proyectos en el período. En la muestra de 20 proyectos clasificados: 6 leyes, 13 resoluciones y 1 declaración. Las leyes son cerca de un tercio de la muestra. El resto son resoluciones y declaraciones. Asistió a todas las votaciones del período. Votó contra su bloque en 1 de 62 votaciones computadas (1,6%). En el eje de votaciones, que va de -100 a 100, se ubica en +97,1.</p>
+  </div>
+</div>
+<div class="wrap">
+    <section>
+      <h2>Proyectos recientes <span>últimos 10 de la muestra</span></h2>
+      <div class="tabla">
+        <table>
+          <thead><tr><th>Tipo</th><th>Expediente</th><th>Fecha</th><th>Sumario</th></tr></thead>
+          <tbody>
+        <tr><td><span class="tipo">RESOLUCION</span></td><td class="mono">5879-D-2026</td><td class="mono">28/10/2026</td><td class="sumario">PEDIDO DE INFORMES AL VERBALES AL JEFE DE GABINETE DE MINISTROS, A LA MINISTRA DE SEGURIDAD DE LA NACION Y AL MINISTRO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO…</td></tr>
+        <tr><td><span class="tipo">RESOLUCION</span></td><td class="mono">5878-D-2026</td><td class="mono">28/10/2026</td><td class="sumario">PEDIDO DE INFORMES AL PODER EJECUTIVO SOBRE DIVERSAS CUESTIONES RELACIONADAS CON EL INGRESO Y EGRESO PAIS DEL SENADOR BRASILEÑO FLAVIO NANTES BOLSONARO Y SU GRUPO FAMILIAR.</td></tr>
+        <tr><td><span class="tipo">RESOLUCION</span></td><td class="mono">5848-D-2026</td><td class="mono">28/10/2026</td><td class="sumario">CITAR AL SEÑOR JEFE DE GABINETE DE MINISTROS, DIEGO SANTILLI, A FIN DE QUE BRINDE INFORMES SOBRE EL INGRESO Y POSTERIOR SALIDA DEL TERRITORIO ARGENTINO DEL SENADOR BRASILEÑO…</td></tr>
+        <tr><td><span class="tipo">RESOLUCION</span></td><td class="mono">5826-D-2026</td><td class="mono">27/10/2026</td><td class="sumario">EXPRESAR REPUDIO POR LA PERSECUCION JUDICIAL EJERCIDA CONTRA EL EX INSPECTOR GENERAL DE JUSTICIA, DR. RICARDO AUGUSTO NISSEN, COMO CONSECUENCIA DEL EJERCICIO REGULAR DE SUS…</td></tr>
+        <tr><td><span class="tipo">RESOLUCION</span></td><td class="mono">5784-D-2026</td><td class="mono">26/10/2026</td><td class="sumario">PEDIDO DE INFORMES AL PODER EJECUTIVO SOBRE DIVERSAS CUESTIONES RELACIONADAS CON LA RESOLUCION POR LA CUAL SE DECLARA DE INTERES PUBLICO LA INICIATIVA DE LA FIRMA HUTTOPIA…</td></tr>
+        <tr><td><span class="tipo">LEY</span></td><td class="mono">5782-D-2026</td><td class="mono">26/10/2026</td><td class="sumario">MODERNIZACION LABORAL - LEY 27802 - . MODIFICACIONES SOBRE PROTECCION DE LAS ASIGNACIONES ESPECIFICAS PARA EL FOMENTO CINEMATOGRAFICO Y LA COMUNICACION AUDIOVISUAL PUBLICA…</td></tr>
+        <tr><td><span class="tipo">RESOLUCION</span></td><td class="mono">5759-D-2026</td><td class="mono">26/10/2026</td><td class="sumario">EXPRESAR BENEPLACITO POR LA PUBLICACION DE LAS OBRAS MEMORIAS AONIKENK: ENTRE LA ORALIDAD, LA HISTORIA Y LA CIENCIA Y LAS RECETAS DE GUEJER, DE KARINA ALEGRIA.</td></tr>
+        <tr><td><span class="tipo">RESOLUCION</span></td><td class="mono">5758-D-2026</td><td class="mono">26/10/2026</td><td class="sumario">EXPRESAR BENEPLACITO POR LA PUBLICACION DE LA NOVELA PANTALONES LARGOS DEL ESCRITOR SANTACRUCEÑO DANIEL FERNANDEZ CID.</td></tr>
+        <tr><td><span class="tipo">RESOLUCION</span></td><td class="mono">5757-D-2026</td><td class="mono">26/10/2026</td><td class="sumario">EXPRESAR BENEPLACITO POR EL REGISTRO FOTOGRAFICO Y REVALORIZACION TERRITORIAL DE LA TRAVESIA REALIZADA POR ALEJANDRO CAPELLI EN LOS CUATRO PUNTOS EXTREMOS GEOGRAFICOS DE LA PARTE…</td></tr>
+        <tr><td><span class="tipo">RESOLUCION</span></td><td class="mono">5741-D-2026</td><td class="mono">26/10/2026</td><td class="sumario">PEDIDO DE INFORMES AL PODER EJECUTIVO SOBRE DIVERSAS CUESTIONES RELACIONADAS CON LOS VUELOS DE AERONAVES CIVILES ENTRE EL TERRITORIO CONTINENTAL ARGENTINO Y LAS ISLAS MALVINAS…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div class="oficial">
+      <a href="https://www.hcdn.gob.ar/diputados/ccastagneto/listado-proyectos.html" rel="noopener">Ficha oficial en HCDN &#8599;</a>
+    </div>
+</div>
+<footer>
+  <div class="wrap">Corvus Lab · datos abiertos del Congreso</div>
+</footer>
+</body>
+</html>

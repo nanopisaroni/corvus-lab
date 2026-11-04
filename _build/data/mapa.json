@@ -1,0 +1,2493 @@
+{
+ "meta": {
+  "actas": 76,
+  "dips": 248,
+  "pc1": 87.5,
+  "pc2": 2.4,
+  "periodo": 144,
+  "desde": "2026-03-01",
+  "hasta": "2026-10-21"
+ },
+ "dips": [
+  {
+   "n": "Sabrina Ajmechet",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "sajmechet"
+  },
+  {
+   "n": "Carlos Alberto Almena",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SAN LUIS",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "calmena"
+  },
+  {
+   "n": "Lisandro Almirón",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CORRIENTES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "calmiron"
+  },
+  {
+   "n": "Barbara Andreussi",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "JUJUY",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "bandreussi"
+  },
+  {
+   "n": "Pablo Ansaloni",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "pansaloni"
+  },
+  {
+   "n": "Damián Arabia",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "darabia"
+  },
+  {
+   "n": "Belén Avico",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CORDOBA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "bavico"
+  },
+  {
+   "n": "Atilio Basualdo",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "FORMOSA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "abasualdo"
+  },
+  {
+   "n": "Mónica Becerra",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SAN LUIS",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mbecerra"
+  },
+  {
+   "n": "Alejandro Bongiovanni",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SANTA FE",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "abongiovanni"
+  },
+  {
+   "n": "Gabriel Bornoroni",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CORDOBA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "gbornoroni"
+  },
+  {
+   "n": "Adrián Brizuela",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CATAMARCA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "cabrizuela"
+  },
+  {
+   "n": "Eliana Bruno",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SALTA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "ebruno"
+  },
+  {
+   "n": "Mariano Campero",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "TUCUMAN",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mcampero"
+  },
+  {
+   "n": "Alejandro Carrancio",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "acarrancio"
+  },
+  {
+   "n": "Giselle Castelnuovo",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "gcastelnuovo"
+  },
+  {
+   "n": "Abel Chiconi",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SAN JUAN",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "rchiconi"
+  },
+  {
+   "n": "Facundo Correa Llano",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "MENDOZA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "fcorreal"
+  },
+  {
+   "n": "Romina Diez",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SANTA FE",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "rdiezv"
+  },
+  {
+   "n": "Alejandro Fargosi",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "afargosi"
+  },
+  {
+   "n": "Alida Ferreyra",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "aferreyra"
+  },
+  {
+   "n": "Sergio Figliuolo",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "sfigliuolo"
+  },
+  {
+   "n": "Maria Gabriela Flores",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SALTA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mflores"
+  },
+  {
+   "n": "Maira Frias",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CHUBUT",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mrfrias"
+  },
+  {
+   "n": "María Virginia Gallardo",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CORRIENTES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mgallardo"
+  },
+  {
+   "n": "Álvaro García",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "algarcia"
+  },
+  {
+   "n": "Silvana Giudici",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "sgiudici"
+  },
+  {
+   "n": "Rosario Goitia",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CHACO",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mgoitia"
+  },
+  {
+   "n": "Alfredo Gonzales",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "JUJUY",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "agonzales"
+  },
+  {
+   "n": "María Luisa González Estevarena",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mgestevarena"
+  },
+  {
+   "n": "Maura Gruber",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "MISIONES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mgruber"
+  },
+  {
+   "n": "Diego Hartfield",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "MISIONES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "dhartfield"
+  },
+  {
+   "n": "Patricia Holzman",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "pholzman"
+  },
+  {
+   "n": "Gerardo Huesen",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "TUCUMAN",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mhuesen"
+  },
+  {
+   "n": "Gladys Humenuk",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "ghumenuk"
+  },
+  {
+   "n": "María Cecilia Ibañez",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CORDOBA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mibanez"
+  },
+  {
+   "n": "Andrés Ariel Laumann",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "ENTRE RIOS",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "alaumann"
+  },
+  {
+   "n": "Lilia Lemoine",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "lbolukalol"
+  },
+  {
+   "n": "Andrés Leone",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "aleone"
+  },
+  {
+   "n": "Enrique Lluch",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CORDOBA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "elluch"
+  },
+  {
+   "n": "Johanna Sabrina Longo",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "jslongo"
+  },
+  {
+   "n": "Lorena Macyszyn",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mmacyszyn"
+  },
+  {
+   "n": "Nicolás Mayoraz",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SANTA FE",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "nmayoraz"
+  },
+  {
+   "n": "Julieta Metral Asensio",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "MENDOZA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mmetrala"
+  },
+  {
+   "n": "Soledad Molinuevo",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "TUCUMAN",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mmolinuevo"
+  },
+  {
+   "n": "Soledad Mondaca",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "NEUQUEN",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mmondaca"
+  },
+  {
+   "n": "Juan Pablo Montenegro",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SANTA FE",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "jpmontenegro"
+  },
+  {
+   "n": "Julio Moreno Ovalle",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SALTA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "jumoreno"
+  },
+  {
+   "n": "Miriam Niveyro",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mniveyro"
+  },
+  {
+   "n": "Joaquín Ojeda",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "jojeda"
+  },
+  {
+   "n": "Sebastián Pareja",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "spareja"
+  },
+  {
+   "n": "Marcos Patiño Brizuela",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CORDOBA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mpatinob"
+  },
+  {
+   "n": "Santiago Pauli",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "TIERRA DEL FUEGO",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "jpauli"
+  },
+  {
+   "n": "Agustín Pellegrini",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SANTA FE",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "apellegrini"
+  },
+  {
+   "n": "Federico Agustín Pelli",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "TUCUMAN",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "fpelli"
+  },
+  {
+   "n": "José Peluc",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SAN JUAN",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "jpeluc"
+  },
+  {
+   "n": "María Lorena Petrovich",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mpetrovich"
+  },
+  {
+   "n": "Luis Albino Picat",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CORDOBA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "lpicat"
+  },
+  {
+   "n": "María Celeste Ponce",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CORDOBA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mponce"
+  },
+  {
+   "n": "Manuel Quintar",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "JUJUY",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "mquintar"
+  },
+  {
+   "n": "Valentina Ravera",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SANTA FE",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "vravera"
+  },
+  {
+   "n": "Verónica Razzini",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SANTA FE",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "vrazzini"
+  },
+  {
+   "n": "Karen Reichardt",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "kreichardt"
+  },
+  {
+   "n": "Gastón Riesco",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "NEUQUEN",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "griesco"
+  },
+  {
+   "n": "Gonzalo Roca",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CORDOBA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "groca"
+  },
+  {
+   "n": "Laura Elena Rodríguez Machado",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CORDOBA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "lrodriguezm"
+  },
+  {
+   "n": "Miguel Rodríguez",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "TIERRA DEL FUEGO",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "lurodriguez"
+  },
+  {
+   "n": "Juliana Santillán Juárez Brahim",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "csantillanj"
+  },
+  {
+   "n": "Santiago Santurio",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "ssanturior"
+  },
+  {
+   "n": "Laura Soldano",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CORDOBA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "lsoldano"
+  },
+  {
+   "n": "Yamile Tomassoni",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SANTA FE",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "ytomassoni"
+  },
+  {
+   "n": "Rubén Darío Torres",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "rdtorres"
+  },
+  {
+   "n": "Aníbal Tortoriello",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "RIO NEGRO",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "atortoriello"
+  },
+  {
+   "n": "José Federico Tournier",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CORRIENTES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "jtournier"
+  },
+  {
+   "n": "César Treffinger",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CHUBUT",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "ctreffinger"
+  },
+  {
+   "n": "Hernán Urien",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "hurien"
+  },
+  {
+   "n": "Lorena Villaverde",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "RIO NEGRO",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "lvillaverde"
+  },
+  {
+   "n": "Gino Visconti",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "LA RIOJA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "gvisconti"
+  },
+  {
+   "n": "Carlos Raúl Zapata",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SALTA",
+   "x": -100.0,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 76,
+   "s": "czapata"
+  },
+  {
+   "n": "Bertie Benegas Lynch",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -99.9,
+   "y": -1.77,
+   "dis": 0,
+   "vot": 75,
+   "s": "abenegasl"
+  },
+  {
+   "n": "Jairo Guzmán",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SANTA CRUZ",
+   "x": -99.9,
+   "y": -1.77,
+   "dis": 0,
+   "vot": 75,
+   "s": "jguzman"
+  },
+  {
+   "n": "Andrea Fernanda Vera",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -99.9,
+   "y": -1.77,
+   "dis": 0,
+   "vot": 75,
+   "s": "avera"
+  },
+  {
+   "n": "Guillermo Montenegro",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -99.8,
+   "y": -1.76,
+   "dis": 0,
+   "vot": 75,
+   "s": "gmontenegro"
+  },
+  {
+   "n": "Patricia Vásquez",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "BUENOS AIRES",
+   "x": -99.8,
+   "y": -1.75,
+   "dis": 0,
+   "vot": 75,
+   "s": "pvasquez"
+  },
+  {
+   "n": "Carlos García",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CHACO",
+   "x": -99.7,
+   "y": -1.9,
+   "dis": 0,
+   "vot": 75,
+   "s": "cadgarcia"
+  },
+  {
+   "n": "Luis Petri",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "MENDOZA",
+   "x": -99.4,
+   "y": -1.39,
+   "dis": 0,
+   "vot": 73,
+   "s": "lpetri"
+  },
+  {
+   "n": "Mercedes Llano",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "MENDOZA",
+   "x": -99.2,
+   "y": -1.2,
+   "dis": 0,
+   "vot": 72,
+   "s": "mllano"
+  },
+  {
+   "n": "Gabriela Luciana Muñoz",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "NEUQUEN",
+   "x": -99.0,
+   "y": -1.03,
+   "dis": 0,
+   "vot": 71,
+   "s": "gmunoz"
+  },
+  {
+   "n": "Nicolás Emma",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": -98.8,
+   "y": -0.84,
+   "dis": 0,
+   "vot": 70,
+   "s": "nemma"
+  },
+  {
+   "n": "Francisco Morchio",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "ENTRE RIOS",
+   "x": -98.7,
+   "y": -1.68,
+   "dis": 0,
+   "vot": 75,
+   "s": "fmorchio"
+  },
+  {
+   "n": "Álvaro Martínez",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "MENDOZA",
+   "x": -96.9,
+   "y": -1.8,
+   "dis": 1,
+   "vot": 76,
+   "s": "amartinez"
+  },
+  {
+   "n": "Fernando de Andreis",
+   "b": "PRO",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": -96.0,
+   "y": -1.3,
+   "dis": 0,
+   "vot": 75,
+   "s": "fdeandreis"
+  },
+  {
+   "n": "Antonela Giampieri",
+   "b": "PRO",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": -96.0,
+   "y": -1.3,
+   "dis": 0,
+   "vot": 75,
+   "s": "agiampieri"
+  },
+  {
+   "n": "Martín Yeza",
+   "b": "PRO",
+   "d": "BUENOS AIRES",
+   "x": -96.0,
+   "y": -1.3,
+   "dis": 0,
+   "vot": 75,
+   "s": "myeza"
+  },
+  {
+   "n": "Martín Ardohain",
+   "b": "PRO",
+   "d": "LA PAMPA",
+   "x": -95.8,
+   "y": -1.25,
+   "dis": 0,
+   "vot": 74,
+   "s": "mardohain"
+  },
+  {
+   "n": "Alicia Fregonese",
+   "b": "PRO",
+   "d": "ENTRE RIOS",
+   "x": -95.8,
+   "y": -1.25,
+   "dis": 0,
+   "vot": 74,
+   "s": "afregonese"
+  },
+  {
+   "n": "María Florencia De Sensi",
+   "b": "PRO",
+   "d": "BUENOS AIRES",
+   "x": -95.6,
+   "y": -0.93,
+   "dis": 0,
+   "vot": 73,
+   "s": "mdesensi"
+  },
+  {
+   "n": "Cristian A. Ritondo",
+   "b": "PRO",
+   "d": "BUENOS AIRES",
+   "x": -95.4,
+   "y": -0.89,
+   "dis": 0,
+   "vot": 72,
+   "s": "critondo"
+  },
+  {
+   "n": "Javier Sánchez Wrba",
+   "b": "PRO",
+   "d": "BUENOS AIRES",
+   "x": -94.6,
+   "y": -1.06,
+   "dis": 0,
+   "vot": 74,
+   "s": "jsanchezw"
+  },
+  {
+   "n": "Carlos Gustavo Jaime Quiroga",
+   "b": "PRODUCCION Y TRABAJO",
+   "d": "SAN JUAN",
+   "x": -94.3,
+   "y": -1.1,
+   "dis": null,
+   "vot": null,
+   "s": "cjaimeq"
+  },
+  {
+   "n": "Nancy Viviana Picón Martínez",
+   "b": "PRODUCCION Y TRABAJO",
+   "d": "SAN JUAN",
+   "x": -94.3,
+   "y": -1.1,
+   "dis": null,
+   "vot": null,
+   "s": "npiconm"
+  },
+  {
+   "n": "Guillermo César Agüero",
+   "b": "UCR - UNIÓN CÍVICA RADICAL",
+   "d": "CHACO",
+   "x": -92.8,
+   "y": -0.66,
+   "dis": 0,
+   "vot": 69,
+   "s": "gcaguero"
+  },
+  {
+   "n": "Gerardo Cipolini",
+   "b": "UCR - UNIÓN CÍVICA RADICAL",
+   "d": "CHACO",
+   "x": -92.8,
+   "y": -0.66,
+   "dis": 0,
+   "vot": 69,
+   "s": "gcipolini"
+  },
+  {
+   "n": "Diógenes Ignacio González",
+   "b": "UCR - UNIÓN CÍVICA RADICAL",
+   "d": "CORRIENTES",
+   "x": -92.8,
+   "y": -0.66,
+   "dis": 0,
+   "vot": 69,
+   "s": "digonzalez"
+  },
+  {
+   "n": "Darío Schneider",
+   "b": "UCR - UNIÓN CÍVICA RADICAL",
+   "d": "ENTRE RIOS",
+   "x": -92.8,
+   "y": -0.66,
+   "dis": 0,
+   "vot": 69,
+   "s": "aschneider"
+  },
+  {
+   "n": "Pamela Fernanda Verasay",
+   "b": "UCR - UNIÓN CÍVICA RADICAL",
+   "d": "MENDOZA",
+   "x": -92.6,
+   "y": -0.49,
+   "dis": 0,
+   "vot": 69,
+   "s": "pverasay"
+  },
+  {
+   "n": "Daiana Fernández Molero",
+   "b": "PRO",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": -92.3,
+   "y": -1.49,
+   "dis": 0,
+   "vot": 72,
+   "s": "dfernandezm"
+  },
+  {
+   "n": "Alejandro Finocchiaro",
+   "b": "PRO",
+   "d": "BUENOS AIRES",
+   "x": -92.1,
+   "y": 0.68,
+   "dis": 0,
+   "vot": 62,
+   "s": "afinocchiaro"
+  },
+  {
+   "n": "Emmanuel Bianchetti",
+   "b": "PRO",
+   "d": "MISIONES",
+   "x": -91.7,
+   "y": -0.78,
+   "dis": 1,
+   "vot": 74,
+   "s": "rbianchetti"
+  },
+  {
+   "n": "José Luis Garrido",
+   "b": "POR SANTA CRUZ",
+   "d": "SANTA CRUZ",
+   "x": -90.7,
+   "y": -0.21,
+   "dis": null,
+   "vot": null,
+   "s": "jgarrido"
+  },
+  {
+   "n": "Lisandro Nieri",
+   "b": "UCR - UNIÓN CÍVICA RADICAL",
+   "d": "MENDOZA",
+   "x": -90.7,
+   "y": 1.16,
+   "dis": 0,
+   "vot": 60,
+   "s": "lnieri"
+  },
+  {
+   "n": "Gladys Medina",
+   "b": "INDEPENDENCIA",
+   "d": "TUCUMAN",
+   "x": -88.7,
+   "y": -0.17,
+   "dis": null,
+   "vot": null,
+   "s": "gmedina"
+  },
+  {
+   "n": "Álvaro González",
+   "b": "PRO",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": -88.1,
+   "y": 1.53,
+   "dis": 1,
+   "vot": 62,
+   "s": "agonzalez"
+  },
+  {
+   "n": "Beltrán Benedit",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "ENTRE RIOS",
+   "x": -86.5,
+   "y": -1.13,
+   "dis": 0,
+   "vot": 67,
+   "s": "bbenedit"
+  },
+  {
+   "n": "Gerardo Gustavo González",
+   "b": "ARGENTINA FEDERAL",
+   "d": "FORMOSA",
+   "x": -86.5,
+   "y": 1.97,
+   "dis": 4,
+   "vot": 33,
+   "s": "gggonzalez"
+  },
+  {
+   "n": "Rocío Bonacci",
+   "b": "LA LIBERTAD AVANZA",
+   "d": "SANTA FE",
+   "x": -86.1,
+   "y": -1.76,
+   "dis": 0,
+   "vot": 66,
+   "s": "rbonacci"
+  },
+  {
+   "n": "Sergio Eduardo Capozzi",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "RIO NEGRO",
+   "x": -85.1,
+   "y": -0.3,
+   "dis": 33,
+   "vot": 71,
+   "s": "scapozzi"
+  },
+  {
+   "n": "Elia Marina Fernández",
+   "b": "INDEPENDENCIA",
+   "d": "TUCUMAN",
+   "x": -84.4,
+   "y": 0.37,
+   "dis": null,
+   "vot": null,
+   "s": "emfernandez"
+  },
+  {
+   "n": "Karina Banfi",
+   "b": "ADELANTE BUENOS AIRES",
+   "d": "BUENOS AIRES",
+   "x": -80.9,
+   "y": -0.07,
+   "dis": null,
+   "vot": null,
+   "s": "kbanfi"
+  },
+  {
+   "n": "Yamila Ruíz",
+   "b": "ARGENTINA FEDERAL",
+   "d": "MISIONES",
+   "x": -80.1,
+   "y": 0.91,
+   "dis": 0,
+   "vot": 72,
+   "s": "yruiz"
+  },
+  {
+   "n": "Daniel Vancsik",
+   "b": "ARGENTINA FEDERAL",
+   "d": "MISIONES",
+   "x": -80.1,
+   "y": 0.91,
+   "dis": 0,
+   "vot": 72,
+   "s": "dvancsik"
+  },
+  {
+   "n": "Alberto Arrúa",
+   "b": "ARGENTINA FEDERAL",
+   "d": "MISIONES",
+   "x": -78.5,
+   "y": 1.32,
+   "dis": 0,
+   "vot": 72,
+   "s": "aarrua"
+  },
+  {
+   "n": "Yolanda Vega",
+   "b": "ARGENTINA FEDERAL",
+   "d": "SALTA",
+   "x": -75.8,
+   "y": 1.44,
+   "dis": 0,
+   "vot": 74,
+   "s": "yvega"
+  },
+  {
+   "n": "Pablo Outes",
+   "b": "ARGENTINA FEDERAL",
+   "d": "SALTA",
+   "x": -72.7,
+   "y": 1.64,
+   "dis": 1,
+   "vot": 75,
+   "s": "poutes"
+  },
+  {
+   "n": "Karina Maureira",
+   "b": "LA NEUQUINIDAD",
+   "d": "NEUQUEN",
+   "x": -69.3,
+   "y": 0.23,
+   "dis": null,
+   "vot": null,
+   "s": "kmaureira"
+  },
+  {
+   "n": "Bernardo Biella",
+   "b": "ARGENTINA FEDERAL",
+   "d": "SALTA",
+   "x": -63.7,
+   "y": 1.81,
+   "dis": 3,
+   "vot": 74,
+   "s": "bbiellac"
+  },
+  {
+   "n": "José Nuñez",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "SANTA FE",
+   "x": -61.8,
+   "y": 2.61,
+   "dis": 19,
+   "vot": 48,
+   "s": "jnunez"
+  },
+  {
+   "n": "Gisela Scaglia",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "SANTA FE",
+   "x": -50.5,
+   "y": 1.14,
+   "dis": 19,
+   "vot": 64,
+   "s": "gscaglia"
+  },
+  {
+   "n": "Javier Noguera",
+   "b": "INDEPENDENCIA",
+   "d": "TUCUMAN",
+   "x": -39.1,
+   "y": -1.16,
+   "dis": null,
+   "vot": null,
+   "s": "mnoguera"
+  },
+  {
+   "n": "María Inés Zigarán",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "JUJUY",
+   "x": -14.9,
+   "y": 3.92,
+   "dis": 14,
+   "vot": 55,
+   "s": "mzigaran"
+  },
+  {
+   "n": "Jorge Rizzotti",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "JUJUY",
+   "x": -6.6,
+   "y": 4.06,
+   "dis": 8,
+   "vot": 46,
+   "s": "jrizzotti"
+  },
+  {
+   "n": "Carolina Basualdo",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "CORDOBA",
+   "x": -2.3,
+   "y": 2.21,
+   "dis": 7,
+   "vot": 74,
+   "s": "cbasualdo"
+  },
+  {
+   "n": "Alejandra Torres",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "CORDOBA",
+   "x": -0.5,
+   "y": -1.19,
+   "dis": 2,
+   "vot": 34,
+   "s": "ltorres"
+  },
+  {
+   "n": "Carlos Gutiérrez",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "CORDOBA",
+   "x": -0.4,
+   "y": 2.05,
+   "dis": 8,
+   "vot": 72,
+   "s": "cgutierrez"
+  },
+  {
+   "n": "Ignacio García Aresca",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "CORDOBA",
+   "x": 13.1,
+   "y": -0.76,
+   "dis": 1,
+   "vot": 37,
+   "s": "igarciaa"
+  },
+  {
+   "n": "Juan Schiaretti",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "CORDOBA",
+   "x": 13.3,
+   "y": -0.02,
+   "dis": 1,
+   "vot": 36,
+   "s": "jschiaretti"
+  },
+  {
+   "n": "Martín Lousteau",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": 15.5,
+   "y": 3.12,
+   "dis": 4,
+   "vot": 43,
+   "s": "mlousteau"
+  },
+  {
+   "n": "Mariela Coletta",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": 23.6,
+   "y": 1.85,
+   "dis": 4,
+   "vot": 62,
+   "s": "mgcoletta"
+  },
+  {
+   "n": "Claudio Álvarez",
+   "b": "ARGENTINA FEDERAL",
+   "d": "SAN LUIS",
+   "x": 24.2,
+   "y": -3.27,
+   "dis": 11,
+   "vot": 43,
+   "s": "caalvarez"
+  },
+  {
+   "n": "Lourdes Micaela Arrieta",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "MENDOZA",
+   "x": 25.2,
+   "y": -0.08,
+   "dis": 21,
+   "vot": 53,
+   "s": "larrieta"
+  },
+  {
+   "n": "Maximiliano Ferraro",
+   "b": "COALICION CIVICA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": 28.6,
+   "y": 1.26,
+   "dis": null,
+   "vot": null,
+   "s": "mferraro"
+  },
+  {
+   "n": "Fernanda Avila",
+   "b": "ELIJO CATAMARCA",
+   "d": "CATAMARCA",
+   "x": 36.5,
+   "y": -2.45,
+   "dis": null,
+   "vot": null,
+   "s": "mavila"
+  },
+  {
+   "n": "Jorge Antonio Avila",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "CHUBUT",
+   "x": 37.4,
+   "y": -3.57,
+   "dis": 27,
+   "vot": 65,
+   "s": "jaavila"
+  },
+  {
+   "n": "Sergio Guillermo Casas",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "LA RIOJA",
+   "x": 49.6,
+   "y": -0.55,
+   "dis": 0,
+   "vot": 47,
+   "s": "scasas"
+  },
+  {
+   "n": "Sebastián Nóblega",
+   "b": "ELIJO CATAMARCA",
+   "d": "CATAMARCA",
+   "x": 49.8,
+   "y": -1.66,
+   "dis": null,
+   "vot": null,
+   "s": "dnoblega"
+  },
+  {
+   "n": "Fernando Monguillot",
+   "b": "ELIJO CATAMARCA",
+   "d": "CATAMARCA",
+   "x": 50.0,
+   "y": -1.62,
+   "dis": null,
+   "vot": null,
+   "s": "fmonguillot"
+  },
+  {
+   "n": "Nicolás Massot",
+   "b": "ENCUENTRO FEDERAL",
+   "d": "BUENOS AIRES",
+   "x": 52.6,
+   "y": -2.62,
+   "dis": null,
+   "vot": null,
+   "s": "nmassot"
+  },
+  {
+   "n": "Paulo Agustín Tita",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "TIERRA DEL FUEGO",
+   "x": 53.3,
+   "y": 1.69,
+   "dis": 0,
+   "vot": 37,
+   "s": "ptita"
+  },
+  {
+   "n": "Marcela Marina Pagano",
+   "b": "COHERENCIA",
+   "d": "BUENOS AIRES",
+   "x": 66.8,
+   "y": -1.77,
+   "dis": null,
+   "vot": null,
+   "s": "mpagano"
+  },
+  {
+   "n": "Mónica Frade",
+   "b": "COALICION CIVICA",
+   "d": "BUENOS AIRES",
+   "x": 69.6,
+   "y": 0.21,
+   "dis": null,
+   "vot": null,
+   "s": "mfrade"
+  },
+  {
+   "n": "Miguel Ángel Pichetto",
+   "b": "ENCUENTRO FEDERAL",
+   "d": "BUENOS AIRES",
+   "x": 69.6,
+   "y": 0.19,
+   "dis": null,
+   "vot": null,
+   "s": "mpichetto"
+  },
+  {
+   "n": "José Gomez",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTIAGO DEL ESTERO",
+   "x": 71.0,
+   "y": -0.37,
+   "dis": 1,
+   "vot": 48,
+   "s": "jegomez"
+  },
+  {
+   "n": "Juan Fernando Brügge",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "CORDOBA",
+   "x": 72.5,
+   "y": -2.5,
+   "dis": 17,
+   "vot": 65,
+   "s": "jbrugge"
+  },
+  {
+   "n": "Pablo Juliano",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "BUENOS AIRES",
+   "x": 73.0,
+   "y": -1.91,
+   "dis": 18,
+   "vot": 63,
+   "s": "pjuliano"
+  },
+  {
+   "n": "Esteban Paulón",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "SANTA FE",
+   "x": 76.7,
+   "y": -2.52,
+   "dis": 20,
+   "vot": 65,
+   "s": "epaulon"
+  },
+  {
+   "n": "Pablo Farías",
+   "b": "PROVINCIAS UNIDAS",
+   "d": "SANTA FE",
+   "x": 76.8,
+   "y": 0.44,
+   "dis": 18,
+   "vot": 55,
+   "s": "pfarias"
+  },
+  {
+   "n": "Máximo Carlos Kirchner",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 78.7,
+   "y": -2.56,
+   "dis": 1,
+   "vot": 60,
+   "s": "mkirchner"
+  },
+  {
+   "n": "Emir Félix",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "MENDOZA",
+   "x": 79.2,
+   "y": 0.83,
+   "dis": 0,
+   "vot": 53,
+   "s": "efelix"
+  },
+  {
+   "n": "M. Elena Velázquez",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 81.1,
+   "y": -0.68,
+   "dis": 0,
+   "vot": 51,
+   "s": "mevelazquez"
+  },
+  {
+   "n": "Claudia María Palladino",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CATAMARCA",
+   "x": 82.7,
+   "y": -2.79,
+   "dis": 0,
+   "vot": 67,
+   "s": "cpalladino"
+  },
+  {
+   "n": "Ramiro Gutiérrez",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 82.8,
+   "y": -2.07,
+   "dis": 0,
+   "vot": 66,
+   "s": "crgutierrez"
+  },
+  {
+   "n": "Victoria Tolosa Paz",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 82.8,
+   "y": -2.07,
+   "dis": 0,
+   "vot": 66,
+   "s": "vtolosap"
+  },
+  {
+   "n": "Natalia de la Sota",
+   "b": "DEFENDAMOS CÓRDOBA",
+   "d": "CORDOBA",
+   "x": 83.6,
+   "y": -3.72,
+   "dis": null,
+   "vot": null,
+   "s": "ndelasota"
+  },
+  {
+   "n": "Hugo Yasky",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 84.1,
+   "y": -2.23,
+   "dis": 1,
+   "vot": 66,
+   "s": "hyasky"
+  },
+  {
+   "n": "Sebastián Galmarini",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 84.9,
+   "y": -0.79,
+   "dis": 0,
+   "vot": 56,
+   "s": "sgalmarini"
+  },
+  {
+   "n": "Guillermo Snopek",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "JUJUY",
+   "x": 85.0,
+   "y": -0.08,
+   "dis": 0,
+   "vot": 55,
+   "s": "gsnopek"
+  },
+  {
+   "n": "Moira Lanesan Sancho",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTA CRUZ",
+   "x": 87.5,
+   "y": 0.17,
+   "dis": 0,
+   "vot": 58,
+   "s": "mlanesan"
+  },
+  {
+   "n": "Carlos Cisneros",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "TUCUMAN",
+   "x": 87.6,
+   "y": -0.48,
+   "dis": 0,
+   "vot": 55,
+   "s": "ccisneros"
+  },
+  {
+   "n": "Ricardo Daives",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTIAGO DEL ESTERO",
+   "x": 87.8,
+   "y": -0.05,
+   "dis": 0,
+   "vot": 58,
+   "s": "rdaives"
+  },
+  {
+   "n": "Marianela Marclay",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "ENTRE RIOS",
+   "x": 92.4,
+   "y": -0.11,
+   "dis": 0,
+   "vot": 60,
+   "s": "lmarclay"
+  },
+  {
+   "n": "Rodolfo Tailhade",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 93.3,
+   "y": -2.03,
+   "dis": 2,
+   "vot": 74,
+   "s": "ltailhade"
+  },
+  {
+   "n": "Agustina Lucrecia Propato",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 93.7,
+   "y": -0.09,
+   "dis": 1,
+   "vot": 61,
+   "s": "apropato"
+  },
+  {
+   "n": "Roxana Monzón",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 93.8,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 73,
+   "s": "rmonzon"
+  },
+  {
+   "n": "Diego A. Giuliano",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTA FE",
+   "x": 94.1,
+   "y": -0.48,
+   "dis": 0,
+   "vot": 62,
+   "s": "dgiuliano"
+  },
+  {
+   "n": "Kelly Olmos",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": 94.6,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 75,
+   "s": "kolmos"
+  },
+  {
+   "n": "José Glinski",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CHUBUT",
+   "x": 95.0,
+   "y": -2.07,
+   "dis": 0,
+   "vot": 74,
+   "s": "jglinski"
+  },
+  {
+   "n": "Vanesa Raquel Siley",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 95.0,
+   "y": -2.41,
+   "dis": 1,
+   "vot": 73,
+   "s": "vsiley"
+  },
+  {
+   "n": "Guillermo Michel",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "ENTRE RIOS",
+   "x": 95.7,
+   "y": 0.13,
+   "dis": 0,
+   "vot": 62,
+   "s": "gmichel"
+  },
+  {
+   "n": "Ana María Ianni",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTA CRUZ",
+   "x": 96.0,
+   "y": -2.14,
+   "dis": 1,
+   "vot": 75,
+   "s": "aianni"
+  },
+  {
+   "n": "Andrea Freites",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "TIERRA DEL FUEGO",
+   "x": 96.1,
+   "y": -2.35,
+   "dis": 1,
+   "vot": 75,
+   "s": "afreites"
+  },
+  {
+   "n": "Hilda Aguirre",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "LA RIOJA",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "haguirre"
+  },
+  {
+   "n": "Ernesto \"Pipi\" Alí",
+   "b": "PRIMERO SAN LUIS",
+   "d": "SAN LUIS",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "enali"
+  },
+  {
+   "n": "Cristian Andino",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SAN JUAN",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "candino"
+  },
+  {
+   "n": "Jorge Neri Araujo Hernández",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "TIERRA DEL FUEGO",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "jaraujoh"
+  },
+  {
+   "n": "Martín Aveiro",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "MENDOZA",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "maveiro"
+  },
+  {
+   "n": "Marcelo Barbur",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTIAGO DEL ESTERO",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "mbarbur"
+  },
+  {
+   "n": "Celia Campitelli",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTIAGO DEL ESTERO",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "ccampitelli"
+  },
+  {
+   "n": "Jorge Chica",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SAN JUAN",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "jchicam"
+  },
+  {
+   "n": "Sergio Dolce",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CHACO",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "sdolce"
+  },
+  {
+   "n": "Jorge Fernández",
+   "b": "PRIMERO SAN LUIS",
+   "d": "SAN LUIS",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": null,
+   "vot": null,
+   "s": "jofernandez"
+  },
+  {
+   "n": "Abelardo Ferrán",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "LA PAMPA",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "aferran"
+  },
+  {
+   "n": "Varinia Lis Marín",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "LA PAMPA",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "vmarin"
+  },
+  {
+   "n": "Germán Pedro Martínez",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTA FE",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "gpmartinez"
+  },
+  {
+   "n": "Cecilia Moreau",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "cmoreau"
+  },
+  {
+   "n": "Jorge Mukdise",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTIAGO DEL ESTERO",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "jmukdise"
+  },
+  {
+   "n": "Estela Mary Neder",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTIAGO DEL ESTERO",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "eneder"
+  },
+  {
+   "n": "Ariel Rauschenberger",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "LA PAMPA",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "arauschenberger"
+  },
+  {
+   "n": "Agustín Oscar Rossi",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTA FE",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "arossi"
+  },
+  {
+   "n": "Sabrina Selva",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "sselva"
+  },
+  {
+   "n": "Caren Tepp",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTA FE",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "ctepp"
+  },
+  {
+   "n": "Pablo Raúl Yedlin",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "TUCUMAN",
+   "x": 96.2,
+   "y": -1.98,
+   "dis": 0,
+   "vot": 76,
+   "s": "pyedlin"
+  },
+  {
+   "n": "Juan Carlos Molina",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTA CRUZ",
+   "x": 96.3,
+   "y": -2.31,
+   "dis": 1,
+   "vot": 74,
+   "s": "jucmolina"
+  },
+  {
+   "n": "Aldo Leiva",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CHACO",
+   "x": 96.4,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 75,
+   "s": "aleiva"
+  },
+  {
+   "n": "Jimena López",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 96.4,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 75,
+   "s": "mjlopez"
+  },
+  {
+   "n": "Cecilia López Pasquali",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTIAGO DEL ESTERO",
+   "x": 96.4,
+   "y": -1.94,
+   "dis": 0,
+   "vot": 75,
+   "s": "clopezp"
+  },
+  {
+   "n": "Mario Manrique",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 96.5,
+   "y": -0.22,
+   "dis": 0,
+   "vot": 61,
+   "s": "mrmanrique"
+  },
+  {
+   "n": "Raúl Hadad",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CORRIENTES",
+   "x": 96.9,
+   "y": -2.05,
+   "dis": 0,
+   "vot": 75,
+   "s": "rhadad"
+  },
+  {
+   "n": "Nancy Sand",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CORRIENTES",
+   "x": 96.9,
+   "y": -2.05,
+   "dis": 0,
+   "vot": 75,
+   "s": "nsandg"
+  },
+  {
+   "n": "Julia Strada",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 96.9,
+   "y": -2.05,
+   "dis": 0,
+   "vot": 75,
+   "s": "jstrada"
+  },
+  {
+   "n": "Christian Alejandro Zulli",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CORRIENTES",
+   "x": 96.9,
+   "y": -2.05,
+   "dis": 0,
+   "vot": 75,
+   "s": "czulli"
+  },
+  {
+   "n": "María Graciela Parola",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "FORMOSA",
+   "x": 97.0,
+   "y": -0.2,
+   "dis": 0,
+   "vot": 64,
+   "s": "mgparola"
+  },
+  {
+   "n": "Carlos Daniel Castagneto",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 97.1,
+   "y": -0.57,
+   "dis": 1,
+   "vot": 62,
+   "s": "ccastagneto"
+  },
+  {
+   "n": "Alejandrina Borgatta",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTA FE",
+   "x": 97.5,
+   "y": -2.13,
+   "dis": 1,
+   "vot": 76,
+   "s": "aborgatta"
+  },
+  {
+   "n": "Julieta Marisol Campo",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CHACO",
+   "x": 97.5,
+   "y": -2.13,
+   "dis": 1,
+   "vot": 76,
+   "s": "jmcampo"
+  },
+  {
+   "n": "Marcelo Mango",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "RIO NEGRO",
+   "x": 97.5,
+   "y": -2.13,
+   "dis": 1,
+   "vot": 76,
+   "s": "hmango"
+  },
+  {
+   "n": "Juan Marino",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 97.5,
+   "y": -2.13,
+   "dis": 1,
+   "vot": 76,
+   "s": "jmarino"
+  },
+  {
+   "n": "Hugo Antonio Moyano",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 97.5,
+   "y": -2.13,
+   "dis": 1,
+   "vot": 76,
+   "s": "hmoyano"
+  },
+  {
+   "n": "Sergio Omar Palazzo",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 97.5,
+   "y": -2.13,
+   "dis": 1,
+   "vot": 76,
+   "s": "spalazzo"
+  },
+  {
+   "n": "Luciana Potenza",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 97.5,
+   "y": -2.13,
+   "dis": 1,
+   "vot": 76,
+   "s": "lpotenza"
+  },
+  {
+   "n": "Santiago Luis Roberto",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": 97.5,
+   "y": -2.13,
+   "dis": 1,
+   "vot": 76,
+   "s": "sroberto"
+  },
+  {
+   "n": "Jorge Taiana",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 97.5,
+   "y": -2.13,
+   "dis": 1,
+   "vot": 76,
+   "s": "jtaiana"
+  },
+  {
+   "n": "Nicolás Alfredo Trotta",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 97.5,
+   "y": -2.13,
+   "dis": 1,
+   "vot": 76,
+   "s": "ntrotta"
+  },
+  {
+   "n": "Lucía Cámpora",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": 97.8,
+   "y": -2.09,
+   "dis": 1,
+   "vot": 75,
+   "s": "lcampora"
+  },
+  {
+   "n": "Fernanda Díaz",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 97.8,
+   "y": -2.09,
+   "dis": 1,
+   "vot": 75,
+   "s": "fdiaz"
+  },
+  {
+   "n": "Gabriela Beatriz Estévez",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CORDOBA",
+   "x": 97.8,
+   "y": -1.95,
+   "dis": 1,
+   "vot": 75,
+   "s": "gestevez"
+  },
+  {
+   "n": "Juan Grabois",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 97.8,
+   "y": -2.09,
+   "dis": 1,
+   "vot": 75,
+   "s": "jgrabois"
+  },
+  {
+   "n": "Itai Hagman",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": 97.8,
+   "y": -2.09,
+   "dis": 1,
+   "vot": 75,
+   "s": "ihagman"
+  },
+  {
+   "n": "Fernanda Miño",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 97.8,
+   "y": -2.09,
+   "dis": 1,
+   "vot": 75,
+   "s": "rmino"
+  },
+  {
+   "n": "Blanca Inés Osuna",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "ENTRE RIOS",
+   "x": 97.8,
+   "y": -2.09,
+   "dis": 1,
+   "vot": 75,
+   "s": "bosuna"
+  },
+  {
+   "n": "Paula Andrea Penacca",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": 97.8,
+   "y": -2.09,
+   "dis": 1,
+   "vot": 75,
+   "s": "ppenacca"
+  },
+  {
+   "n": "Horacio Pietragalla Corti",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 97.8,
+   "y": -2.09,
+   "dis": 1,
+   "vot": 75,
+   "s": "hpietragallac"
+  },
+  {
+   "n": "Adriana Cristina Serquis",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "RIO NEGRO",
+   "x": 97.8,
+   "y": -2.09,
+   "dis": 1,
+   "vot": 75,
+   "s": "aserquis"
+  },
+  {
+   "n": "Eduardo Félix Valdés",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": 97.8,
+   "y": -2.09,
+   "dis": 1,
+   "vot": 75,
+   "s": "evaldes"
+  },
+  {
+   "n": "Luis Eugenio Basterra",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "FORMOSA",
+   "x": 97.9,
+   "y": -0.5,
+   "dis": 0,
+   "vot": 68,
+   "s": "lbasterra"
+  },
+  {
+   "n": "Pablo Todero",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "NEUQUEN",
+   "x": 97.9,
+   "y": -0.5,
+   "dis": 0,
+   "vot": 68,
+   "s": "ptodero"
+  },
+  {
+   "n": "María Teresa García",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 98.3,
+   "y": -0.57,
+   "dis": 1,
+   "vot": 65,
+   "s": "mtgarcia"
+  },
+  {
+   "n": "Gustavo Bordet",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "ENTRE RIOS",
+   "x": 98.4,
+   "y": 0.02,
+   "dis": 0,
+   "vot": 65,
+   "s": "gbordet"
+  },
+  {
+   "n": "María Graciela de la Rosa",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "FORMOSA",
+   "x": 98.4,
+   "y": 0.02,
+   "dis": 0,
+   "vot": 65,
+   "s": "mdelarosa"
+  },
+  {
+   "n": "Juan Pablo Luque",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CHUBUT",
+   "x": 98.4,
+   "y": 0.02,
+   "dis": 0,
+   "vot": 65,
+   "s": "jluque"
+  },
+  {
+   "n": "Gabriela Pedrali",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "LA RIOJA",
+   "x": 98.4,
+   "y": 0.02,
+   "dis": 0,
+   "vot": 65,
+   "s": "gpedrali"
+  },
+  {
+   "n": "Marina Dorotea Salzmann",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 98.4,
+   "y": 0.02,
+   "dis": 0,
+   "vot": 65,
+   "s": "msalzmann"
+  },
+  {
+   "n": "Lorena Pokoik",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": 98.6,
+   "y": -1.38,
+   "dis": 1,
+   "vot": 71,
+   "s": "lpokoikg"
+  },
+  {
+   "n": "Natalia Zaracho",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 98.6,
+   "y": -0.31,
+   "dis": 1,
+   "vot": 63,
+   "s": "nzaracho"
+  },
+  {
+   "n": "Florencia Carignano",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "SANTA FE",
+   "x": 99.2,
+   "y": -0.65,
+   "dis": 1,
+   "vot": 68,
+   "s": "mcarignano"
+  },
+  {
+   "n": "Luana Volnovich",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 99.2,
+   "y": -0.67,
+   "dis": 1,
+   "vot": 68,
+   "s": "lvolnovich"
+  },
+  {
+   "n": "Javier Andrade",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "CIUDAD DE BUENOS AIRES",
+   "x": 99.5,
+   "y": -0.61,
+   "dis": 1,
+   "vot": 67,
+   "s": "jandrade"
+  },
+  {
+   "n": "Santiago Cafiero",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 99.5,
+   "y": -0.61,
+   "dis": 1,
+   "vot": 67,
+   "s": "scafiero"
+  },
+  {
+   "n": "Matías Molle",
+   "b": "UNIÓN POR LA PATRIA",
+   "d": "BUENOS AIRES",
+   "x": 100.0,
+   "y": -0.09,
+   "dis": 1,
+   "vot": 64,
+   "s": "mmolle"
+  }
+ ]
+}

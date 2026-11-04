@@ -152,6 +152,15 @@
       "url": "/congreso",
       "descripcion": "Los 256 diputados en ejercicio y qué presenta cada uno: cuántos proyectos, cuántos son ley y cuántos son declaraciones simbólicas.",
       "detalle": "Lee los listados oficiales de la Cámara de Diputados diputado por diputado y los ordena por producción. La mitad de lo que se presenta no es ley: son resoluciones y declaraciones que reconocen, festejan o piden, sin cambiar ninguna norma."
+    },
+    {
+      "n": 13,
+      "nombre": "Cómo vota cada diputado",
+      "categoria": "rendicion",
+      "estado": "Publicado",
+      "url": "/mapa",
+      "descripcion": "Las 76 votaciones nominales del período 144 en un solo eje. Cada diputado aparece por cómo votó, no por lo que dice.",
+      "detalle": "Las posiciones se calculan con el primer componente principal de la matriz de votos, que explica el 87,5% de la varianza. El mismo cálculo muestra quiénes se corren de su bloque y quiénes nunca lo hacen."
     }
   ]
 }

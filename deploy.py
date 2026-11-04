@@ -8,6 +8,7 @@ ALIAS = "corvus-lab.vercel.app"
 ROOT = os.path.expanduser("~/projects/corvus-lab")
 FILES = ["index.html", "dashboard.html", "metrics.js", "metrics_history.json", "vercel.json",
          "proyectos.html", "proyectos.json", "congreso.html",
+    "mapa.html",
          "notas/ultimo-escalon.html", "coleccion.html",
          "libro/panteon.html", "libro/soberania.html", "libro/preparacionismo.html",
          "libro/escalon.html", "libro/tecno.html"]

@@ -19,12 +19,12 @@ PARTICULAS = {"de", "del", "la", "las", "los", "por", "para", "y", "el"}
 def bloque_txt(b):
     """Mayúsculas del sitio oficial, con partículas en minúscula y siglas intactas."""
     palabras = []
-    for w in b.split():
+    for i, w in enumerate(b.split()):
         lw = w.lower()
         if lw in ("pro", "ucr", "mid", "pts", "fit", "unidad"):
             palabras.append(w.upper() if len(w) <= 5 else w.capitalize())
         elif lw in PARTICULAS:
-            palabras.append(lw)
+            palabras.append(w.capitalize() if i == 0 else lw)
         else:
             palabras.append(w.capitalize())
     return " ".join(palabras)
@@ -50,8 +50,16 @@ for r in dips:
     p, pct = perfil(t)
     fv = min(1.0, math.log10(1 + r["total"]) / math.log10(301)) if r["total"] else 0.0
     idx = round(100 * (pct / 100) * (0.45 + 0.55 * fv), 1)
+    asis = r.get("asist") or {}
+    apct = asis.get("pct")
+    idxg = round(idx * (0.6 + 0.4 * (apct / 100)), 1) if (apct is not None) else idx
     filas.append({
         "idx": idx,
+        "ig": idxg,
+        "as": apct,
+        "aus": asis.get("a"),
+        "lic": asis.get("l"),
+        "re": asis.get("total"),
         "n": r["nombre"],
         "s": r.get("slug", ""),
         "b": r["bloque"],
@@ -78,6 +86,9 @@ def fila_top(i, r, valor, unidad):
 
 
 TOP_IDX = "".join(fila_top(i, r, f'{r["idx"]:.0f}', " pts") for i, r in enumerate(por_indice, 1))
+TOP_AUS = "".join(
+    fila_top(i, r, f'{r["as"]}', "%") for i, r in enumerate(
+        sorted([x for x in filas if x["as"] is not None], key=lambda x: (x["as"], -x["t"]))[:10], 1))
 TOP_VOL = "".join(fila_top(i, r, f'{r["t"]:,}'.replace(",", "."), "") for i, r in enumerate(por_volumen, 1))
 total_proy = sum(f["t"] for f in filas)
 suma_ley = sum(f["ley"] for f in filas)
@@ -202,7 +213,7 @@ td.bloque, td.dist {{ color: var(--muted); font-size: 13px; }}
 .nota {{ font-size: 15px; color: #464036; max-width: 72ch; margin: 0 0 28px; line-height: 1.6; }}
 .nota strong {{ font-weight: 600; color: var(--ink); }}
 .nota.pie {{ margin: 26px 0 0; font-size: 13.5px; color: var(--muted); }}
-.dos {{ display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }}
+.dos {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; }}
 .dos h3 {{ font-size: 12px; letter-spacing: .1em; text-transform: uppercase; font-weight: 600;
   color: var(--muted); margin: 0 0 14px; font-family: "IBM Plex Mono", monospace; }}
 ol.rank {{ list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule-strong); }}
@@ -214,7 +225,7 @@ ol.rank .bl {{ color: var(--soft); font-size: 11.5px; max-width: 13ch; overflow:
   text-overflow: ellipsis; white-space: nowrap; }}
 ol.rank .vl {{ font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; }}
 ol.rank .vl em {{ font-style: normal; color: var(--soft); font-size: 11px; }}
-@media (max-width: 860px) {{ .dos {{ grid-template-columns: 1fr; gap: 34px; }} }}
+@media (max-width: 980px) {{ .dos {{ grid-template-columns: 1fr; gap: 34px; }} }}
 .metodo {{ font-size: 14px; color: var(--muted); max-width: 74ch; }}
 .metodo p {{ margin: 0 0 14px; }}
 .metodo a {{ color: var(--ink); text-underline-offset: 3px; }}
@@ -294,7 +305,15 @@ footer a {{ color: var(--muted); }}
         <h3>Quiénes más legislan</h3>
         <ol class="rank">{TOP_IDX}</ol>
       </div>
+      <div>
+        <h3>Quiénes menos van</h3>
+        <ol class="rank">{TOP_AUS}</ol>
+      </div>
     </div>
+    <p class="nota pie">La asistencia sale del registro oficial del período 144: ocho reuniones entre el 1 de marzo
+      y el 21 de octubre de 2026, contando asamblea legislativa, sesiones especiales e informativa. El promedio del
+      cuerpo es 94,5% y 170 diputados no faltaron a ninguna. Las licencias y misiones oficiales no cuentan como
+      ausencia, pero sí bajan el porcentaje.</p>
     <p class="nota pie">El índice combina la proporción de proyectos de ley con el volumen, que entra con rendimiento
       decreciente: satura a los 300 proyectos. Va de 0 a 100 y es una convención, no una verdad. Cambiar los pesos
       mueve el orden de la mitad de la tabla, así que conviene leerlo como una forma de mirar, no como un veredicto.</p>
@@ -311,6 +330,8 @@ footer a {{ color: var(--muted); }}
       <select id="fo">
         <option value="total">Más proyectos</option>
         <option value="indice">Mayor índice</option>
+        <option value="asis">Menor asistencia</option>
+        <option value="asis_desc">Mayor asistencia</option>
         <option value="ley">Más proyectos de ley</option>
         <option value="pct">Mayor proporción de ley</option>
         <option value="menos">Menos proyectos</option>
@@ -328,6 +349,7 @@ footer a {{ color: var(--muted); }}
         <th class="num">Ley</th>
         <th class="num oculto-movil">Resol.</th>
         <th class="num oculto-movil">Decl.</th>
+        <th class="num">Asist.</th>
         <th class="num">Índice</th>
         <th>Perfil</th>
       </tr></thead>
@@ -344,6 +366,7 @@ footer a {{ color: var(--muted); }}
       <p>El total incluye los proyectos que el diputado firma como autor y también los que solo cofirma. Es la cifra que publica la Cámara en su ficha, pero conviene leerla como participación en proyectos y no como autoría exclusiva. Un número alto puede significar mucha iniciativa propia o mucha firma al pie de proyectos ajenos, y esta página no distingue entre las dos.</p>
       <p>Las tres columnas de tipo —ley, resolución, declaración— suman veinte por diputado, salvo para quienes presentaron menos. El porcentaje de ley se calcula sobre ese conjunto, así que mide el perfil reciente y no la carrera completa. El total de la izquierda sí es el del período completo.</p>
       <p>El índice se calcula así: proporción de proyectos de ley en la muestra, multiplicada por un factor de volumen que crece con el total presentado y satura a los 300 proyectos, para que una sola ley entre veinte proyectos no encabece la tabla. La fórmula completa está en el generador. No mide calidad, ni resultado, ni si el proyecto era bueno: mide qué proporción de lo que presenta cada diputado es una norma y no un gesto.</p>
+      <p>La asistencia se informa aparte y no entra en el índice, porque mide otra cosa: estar no dice nada sobre qué se presenta, y presentar mucho no dice nada sobre estar. Se muestran separadas para que cada una se juzgue por su cuenta.</p>
       <p>Un proyecto de ley puede ser declarativo y una resolución puede tener efecto real. La clasificación describe la forma del instrumento, no su importancia. Cada fila enlaza a la ficha oficial, donde está el detalle.</p>
       <p>Extracción: {d['extraido']}. Los datos cambian cuando la Cámara actualiza sus listados.</p>
     </div>
@@ -383,6 +406,8 @@ function render() {{
     if (ord === 'menos') return a.t - b.t || a.n.localeCompare(b.n);
     if (ord === 'ley') return b.ley - a.ley || b.t - a.t;
     if (ord === 'indice') return b.idx - a.idx || b.t - a.t;
+    if (ord === 'asis') return (a.as ?? 999) - (b.as ?? 999) || b.t - a.t;
+    if (ord === 'asis_desc') return (b.as ?? -1) - (a.as ?? -1) || b.t - a.t;
     if (ord === 'pct') return (b.m?b.pct:-1) - (a.m?a.pct:-1) || b.ley - a.ley;
     return a.n.localeCompare(b.n);
   }});
@@ -397,6 +422,7 @@ function render() {{
       <td class="num">${{r.ley}}</td>
       <td class="num oculto-movil">${{r.res}}</td>
       <td class="num oculto-movil">${{r.dec}}</td>
+      <td class="num">${{r.as === null ? '—' : r.as + '%'}}</td>
       <td class="num">${{Math.round(r.idx)}}</td>
       <td><span class="tag ${{T[r.p]||''}}">${{LBL[r.p]||'—'}}</span>
         <span class="mini" title="ley ${{pl}}% · resolución ${{pr}}% · declaración ${{pd}}%">

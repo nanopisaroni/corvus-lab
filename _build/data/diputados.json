@@ -4,6 +4,7 @@
  "alcance": "Composición de los últimos 20 proyectos por diputado",
  "diputados": [
   {
+   "slug": "aarrua",
    "nombre": "Alberto Arrúa",
    "bloque": "ARGENTINA FEDERAL",
    "distrito": "MISIONES",
@@ -17,6 +18,7 @@
    }
   },
   {
+   "slug": "abasualdo",
    "nombre": "Atilio Basualdo",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "FORMOSA",
@@ -30,6 +32,7 @@
    }
   },
   {
+   "slug": "abenegasl",
    "nombre": "Bertie Benegas Lynch",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -43,6 +46,7 @@
    }
   },
   {
+   "slug": "abongiovanni",
    "nombre": "Alejandro Bongiovanni",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SANTA FE",
@@ -56,6 +60,7 @@
    }
   },
   {
+   "slug": "aborgatta",
    "nombre": "Alejandrina Borgatta",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTA FE",
@@ -69,6 +74,7 @@
    }
   },
   {
+   "slug": "acarrancio",
    "nombre": "Alejandro Carrancio",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -82,6 +88,7 @@
    }
   },
   {
+   "slug": "afargosi",
    "nombre": "Alejandro Fargosi",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -95,6 +102,7 @@
    }
   },
   {
+   "slug": "aferran",
    "nombre": "Abelardo Ferrán",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "LA PAMPA",
@@ -107,6 +115,7 @@
    }
   },
   {
+   "slug": "aferreyra",
    "nombre": "Alida Ferreyra",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -119,6 +128,7 @@
    }
   },
   {
+   "slug": "afinocchiaro",
    "nombre": "Alejandro Finocchiaro",
    "bloque": "PRO",
    "distrito": "BUENOS AIRES",
@@ -131,6 +141,7 @@
    }
   },
   {
+   "slug": "afregonese",
    "nombre": "Alicia Fregonese",
    "bloque": "PRO",
    "distrito": "ENTRE RIOS",
@@ -144,6 +155,7 @@
    }
   },
   {
+   "slug": "afreites",
    "nombre": "Andrea Freites",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "TIERRA DEL FUEGO",
@@ -156,6 +168,7 @@
    }
   },
   {
+   "slug": "agiampieri",
    "nombre": "Antonela Giampieri",
    "bloque": "PRO",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -168,6 +181,7 @@
    }
   },
   {
+   "slug": "agonzales",
    "nombre": "Alfredo Gonzales",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "JUJUY",
@@ -181,6 +195,7 @@
    }
   },
   {
+   "slug": "agonzalez",
    "nombre": "Álvaro González",
    "bloque": "PRO",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -194,6 +209,7 @@
    }
   },
   {
+   "slug": "aianni",
    "nombre": "Ana María Ianni",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTA CRUZ",
@@ -207,6 +223,7 @@
    }
   },
   {
+   "slug": "alaumann",
    "nombre": "Andrés Ariel Laumann",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "ENTRE RIOS",
@@ -220,6 +237,7 @@
    }
   },
   {
+   "slug": "aleiva",
    "nombre": "Aldo Leiva",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CHACO",
@@ -233,6 +251,7 @@
    }
   },
   {
+   "slug": "aleone",
    "nombre": "Andrés Leone",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -245,6 +264,7 @@
    }
   },
   {
+   "slug": "algarcia",
    "nombre": "Álvaro García",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -257,6 +277,7 @@
    }
   },
   {
+   "slug": "amartinez",
    "nombre": "Álvaro Martínez",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "MENDOZA",
@@ -270,6 +291,7 @@
    }
   },
   {
+   "slug": "apellegrini",
    "nombre": "Agustín Pellegrini",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SANTA FE",
@@ -282,6 +304,7 @@
    }
   },
   {
+   "slug": "apropato",
    "nombre": "Agustina Lucrecia Propato",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -294,6 +317,7 @@
    }
   },
   {
+   "slug": "arauschenberger",
    "nombre": "Ariel Rauschenberger",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "LA PAMPA",
@@ -306,6 +330,7 @@
    }
   },
   {
+   "slug": "arossi",
    "nombre": "Agustín Oscar Rossi",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTA FE",
@@ -319,6 +344,7 @@
    }
   },
   {
+   "slug": "aschneider",
    "nombre": "Darío Schneider",
    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
    "distrito": "ENTRE RIOS",
@@ -332,6 +358,7 @@
    }
   },
   {
+   "slug": "aserquis",
    "nombre": "Adriana Cristina Serquis",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "RIO NEGRO",
@@ -344,6 +371,7 @@
    }
   },
   {
+   "slug": "atortoriello",
    "nombre": "Aníbal Tortoriello",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "RIO NEGRO",
@@ -357,6 +385,7 @@
    }
   },
   {
+   "slug": "avera",
    "nombre": "Andrea Fernanda Vera",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -370,6 +399,7 @@
    }
   },
   {
+   "slug": "bandreussi",
    "nombre": "Barbara Andreussi",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "JUJUY",
@@ -383,6 +413,7 @@
    }
   },
   {
+   "slug": "bavico",
    "nombre": "Belén Avico",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CORDOBA",
@@ -396,6 +427,7 @@
    }
   },
   {
+   "slug": "bbenedit",
    "nombre": "Beltrán Benedit",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "ENTRE RIOS",
@@ -408,6 +440,7 @@
    }
   },
   {
+   "slug": "bbiellac",
    "nombre": "Bernardo Biella",
    "bloque": "ARGENTINA FEDERAL",
    "distrito": "SALTA",
@@ -421,6 +454,7 @@
    }
   },
   {
+   "slug": "bosuna",
    "nombre": "Blanca Inés Osuna",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "ENTRE RIOS",
@@ -433,6 +467,7 @@
    }
   },
   {
+   "slug": "caalvarez",
    "nombre": "Claudio Álvarez",
    "bloque": "ARGENTINA FEDERAL",
    "distrito": "SAN LUIS",
@@ -446,6 +481,7 @@
    }
   },
   {
+   "slug": "cabrizuela",
    "nombre": "Adrián Brizuela",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CATAMARCA",
@@ -458,6 +494,7 @@
    }
   },
   {
+   "slug": "cadgarcia",
    "nombre": "Carlos García",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CHACO",
@@ -471,6 +508,7 @@
    }
   },
   {
+   "slug": "calmena",
    "nombre": "Carlos Alberto Almena",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SAN LUIS",
@@ -483,6 +521,7 @@
    }
   },
   {
+   "slug": "calmiron",
    "nombre": "Lisandro Almirón",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CORRIENTES",
@@ -496,6 +535,7 @@
    }
   },
   {
+   "slug": "candino",
    "nombre": "Cristian Andino",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SAN JUAN",
@@ -509,6 +549,7 @@
    }
   },
   {
+   "slug": "cbasualdo",
    "nombre": "Carolina Basualdo",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "CORDOBA",
@@ -522,6 +563,7 @@
    }
   },
   {
+   "slug": "ccampitelli",
    "nombre": "Celia Campitelli",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTIAGO DEL ESTERO",
@@ -534,6 +576,7 @@
    }
   },
   {
+   "slug": "ccastagneto",
    "nombre": "Carlos Daniel Castagneto",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -547,6 +590,7 @@
    }
   },
   {
+   "slug": "ccisneros",
    "nombre": "Carlos Cisneros",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "TUCUMAN",
@@ -560,6 +604,7 @@
    }
   },
   {
+   "slug": "cgutierrez",
    "nombre": "Carlos Gutiérrez",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "CORDOBA",
@@ -573,6 +618,7 @@
    }
   },
   {
+   "slug": "cjaimeq",
    "nombre": "Carlos Gustavo Jaime Quiroga",
    "bloque": "PRODUCCION Y TRABAJO",
    "distrito": "SAN JUAN",
@@ -586,6 +632,7 @@
    }
   },
   {
+   "slug": "clopezp",
    "nombre": "Cecilia López Pasquali",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTIAGO DEL ESTERO",
@@ -598,6 +645,7 @@
    }
   },
   {
+   "slug": "cmoreau",
    "nombre": "Cecilia Moreau",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -610,6 +658,7 @@
    }
   },
   {
+   "slug": "cpalladino",
    "nombre": "Claudia María Palladino",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CATAMARCA",
@@ -622,6 +671,7 @@
    }
   },
   {
+   "slug": "crgutierrez",
    "nombre": "Ramiro Gutiérrez",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -635,6 +685,7 @@
    }
   },
   {
+   "slug": "critondo",
    "nombre": "Cristian A. Ritondo",
    "bloque": "PRO",
    "distrito": "BUENOS AIRES",
@@ -647,6 +698,7 @@
    }
   },
   {
+   "slug": "csantillanj",
    "nombre": "Juliana Santillán Juárez Brahim",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -660,6 +712,7 @@
    }
   },
   {
+   "slug": "ctepp",
    "nombre": "Caren Tepp",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTA FE",
@@ -672,6 +725,7 @@
    }
   },
   {
+   "slug": "ctreffinger",
    "nombre": "César Treffinger",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CHUBUT",
@@ -685,6 +739,7 @@
    }
   },
   {
+   "slug": "czapata",
    "nombre": "Carlos Raúl Zapata",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SALTA",
@@ -697,6 +752,7 @@
    }
   },
   {
+   "slug": "czulli",
    "nombre": "Christian Alejandro Zulli",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CORRIENTES",
@@ -710,6 +766,7 @@
    }
   },
   {
+   "slug": "darabia",
    "nombre": "Damián Arabia",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -723,6 +780,7 @@
    }
   },
   {
+   "slug": "dfernandezm",
    "nombre": "Daiana Fernández Molero",
    "bloque": "PRO",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -736,6 +794,7 @@
    }
   },
   {
+   "slug": "dgiuliano",
    "nombre": "Diego A. Giuliano",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTA FE",
@@ -749,6 +808,7 @@
    }
   },
   {
+   "slug": "dhartfield",
    "nombre": "Diego Hartfield",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "MISIONES",
@@ -762,6 +822,7 @@
    }
   },
   {
+   "slug": "digonzalez",
    "nombre": "Diógenes Ignacio González",
    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
    "distrito": "CORRIENTES",
@@ -774,6 +835,7 @@
    }
   },
   {
+   "slug": "dnoblega",
    "nombre": "Sebastián Nóblega",
    "bloque": "ELIJO CATAMARCA",
    "distrito": "CATAMARCA",
@@ -787,6 +849,7 @@
    }
   },
   {
+   "slug": "dvancsik",
    "nombre": "Daniel Vancsik",
    "bloque": "ARGENTINA FEDERAL",
    "distrito": "MISIONES",
@@ -800,6 +863,7 @@
    }
   },
   {
+   "slug": "ebruno",
    "nombre": "Eliana Bruno",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SALTA",
@@ -813,6 +877,7 @@
    }
   },
   {
+   "slug": "efalcone",
    "nombre": "Eduardo Falcone",
    "bloque": "MID - MOVIMIENTO DE INTEGRACIÓN Y DESARROLLO",
    "distrito": "BUENOS AIRES",
@@ -826,6 +891,7 @@
    }
   },
   {
+   "slug": "efelix",
    "nombre": "Emir Félix",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "MENDOZA",
@@ -838,6 +904,7 @@
    }
   },
   {
+   "slug": "elluch",
    "nombre": "Enrique Lluch",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CORDOBA",
@@ -851,6 +918,7 @@
    }
   },
   {
+   "slug": "emfernandez",
    "nombre": "Elia Marina Fernández",
    "bloque": "INDEPENDENCIA",
    "distrito": "TUCUMAN",
@@ -864,6 +932,7 @@
    }
   },
   {
+   "slug": "enali",
    "nombre": "Ernesto \"Pipi\" Alí",
    "bloque": "PRIMERO SAN LUIS",
    "distrito": "SAN LUIS",
@@ -877,6 +946,7 @@
    }
   },
   {
+   "slug": "eneder",
    "nombre": "Estela Mary Neder",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTIAGO DEL ESTERO",
@@ -890,6 +960,7 @@
    }
   },
   {
+   "slug": "epaulon",
    "nombre": "Esteban Paulón",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "SANTA FE",
@@ -903,6 +974,7 @@
    }
   },
   {
+   "slug": "evaldes",
    "nombre": "Eduardo Félix Valdés",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -915,6 +987,7 @@
    }
   },
   {
+   "slug": "fcorreal",
    "nombre": "Facundo Correa Llano",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "MENDOZA",
@@ -928,6 +1001,7 @@
    }
   },
   {
+   "slug": "fdeandreis",
    "nombre": "Fernando de Andreis",
    "bloque": "PRO",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -940,6 +1014,7 @@
    }
   },
   {
+   "slug": "fdiaz",
    "nombre": "Fernanda Díaz",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -952,6 +1027,7 @@
    }
   },
   {
+   "slug": "fmonguillot",
    "nombre": "Fernando Monguillot",
    "bloque": "ELIJO CATAMARCA",
    "distrito": "CATAMARCA",
@@ -965,6 +1041,7 @@
    }
   },
   {
+   "slug": "fmorchio",
    "nombre": "Francisco Morchio",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "ENTRE RIOS",
@@ -978,6 +1055,7 @@
    }
   },
   {
+   "slug": "fpelli",
    "nombre": "Federico Agustín Pelli",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "TUCUMAN",
@@ -991,6 +1069,7 @@
    }
   },
   {
+   "slug": "gbordet",
    "nombre": "Gustavo Bordet",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "ENTRE RIOS",
@@ -1003,6 +1082,7 @@
    }
   },
   {
+   "slug": "gbornoroni",
    "nombre": "Gabriel Bornoroni",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CORDOBA",
@@ -1016,6 +1096,7 @@
    }
   },
   {
+   "slug": "gcaguero",
    "nombre": "Guillermo César Agüero",
    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
    "distrito": "CHACO",
@@ -1029,6 +1110,7 @@
    }
   },
   {
+   "slug": "gcastelnuovo",
    "nombre": "Giselle Castelnuovo",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -1042,6 +1124,7 @@
    }
   },
   {
+   "slug": "gcipolini",
    "nombre": "Gerardo Cipolini",
    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
    "distrito": "CHACO",
@@ -1055,6 +1138,7 @@
    }
   },
   {
+   "slug": "gestevez",
    "nombre": "Gabriela Beatriz Estévez",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CORDOBA",
@@ -1068,6 +1152,7 @@
    }
   },
   {
+   "slug": "gggonzalez",
    "nombre": "Gerardo Gustavo González",
    "bloque": "ARGENTINA FEDERAL",
    "distrito": "FORMOSA",
@@ -1081,6 +1166,7 @@
    }
   },
   {
+   "slug": "ghumenuk",
    "nombre": "Gladys Humenuk",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -1094,6 +1180,7 @@
    }
   },
   {
+   "slug": "gmedina",
    "nombre": "Gladys Medina",
    "bloque": "INDEPENDENCIA",
    "distrito": "TUCUMAN",
@@ -1107,6 +1194,7 @@
    }
   },
   {
+   "slug": "gmichel",
    "nombre": "Guillermo Michel",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "ENTRE RIOS",
@@ -1119,6 +1207,7 @@
    }
   },
   {
+   "slug": "gmontenegro",
    "nombre": "Guillermo Montenegro",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -1132,6 +1221,7 @@
    }
   },
   {
+   "slug": "gmunoz",
    "nombre": "Gabriela Luciana Muñoz",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "NEUQUEN",
@@ -1145,6 +1235,7 @@
    }
   },
   {
+   "slug": "gpedrali",
    "nombre": "Gabriela Pedrali",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "LA RIOJA",
@@ -1158,6 +1249,7 @@
    }
   },
   {
+   "slug": "gpmartinez",
    "nombre": "Germán Pedro Martínez",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTA FE",
@@ -1171,6 +1263,7 @@
    }
   },
   {
+   "slug": "griesco",
    "nombre": "Gastón Riesco",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "NEUQUEN",
@@ -1184,6 +1277,7 @@
    }
   },
   {
+   "slug": "groca",
    "nombre": "Gonzalo Roca",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CORDOBA",
@@ -1196,6 +1290,7 @@
    }
   },
   {
+   "slug": "gscaglia",
    "nombre": "Gisela Scaglia",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "SANTA FE",
@@ -1209,6 +1304,7 @@
    }
   },
   {
+   "slug": "gsnopek",
    "nombre": "Guillermo Snopek",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "JUJUY",
@@ -1222,6 +1318,7 @@
    }
   },
   {
+   "slug": "gvisconti",
    "nombre": "Gino Visconti",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "LA RIOJA",
@@ -1235,6 +1332,7 @@
    }
   },
   {
+   "slug": "haguirre",
    "nombre": "Hilda Aguirre",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "LA RIOJA",
@@ -1247,6 +1345,7 @@
    }
   },
   {
+   "slug": "hmango",
    "nombre": "Marcelo Mango",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "RIO NEGRO",
@@ -1259,6 +1358,7 @@
    }
   },
   {
+   "slug": "hmoyano",
    "nombre": "Hugo Antonio Moyano",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -1271,6 +1371,7 @@
    }
   },
   {
+   "slug": "hpietragallac",
    "nombre": "Horacio Pietragalla Corti",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -1284,6 +1385,7 @@
    }
   },
   {
+   "slug": "hurien",
    "nombre": "Hernán Urien",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -1297,6 +1399,7 @@
    }
   },
   {
+   "slug": "hyasky",
    "nombre": "Hugo Yasky",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -1310,6 +1413,7 @@
    }
   },
   {
+   "slug": "igarciaa",
    "nombre": "Ignacio García Aresca",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "CORDOBA",
@@ -1323,6 +1427,7 @@
    }
   },
   {
+   "slug": "ihagman",
    "nombre": "Itai Hagman",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -1335,6 +1440,7 @@
    }
   },
   {
+   "slug": "jaavila",
    "nombre": "Jorge Antonio Avila",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "CHUBUT",
@@ -1348,6 +1454,7 @@
    }
   },
   {
+   "slug": "jandrade",
    "nombre": "Javier Andrade",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -1361,6 +1468,7 @@
    }
   },
   {
+   "slug": "jaraujoh",
    "nombre": "Jorge Neri Araujo Hernández",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "TIERRA DEL FUEGO",
@@ -1373,6 +1481,7 @@
    }
   },
   {
+   "slug": "jbrugge",
    "nombre": "Juan Fernando Brügge",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "CORDOBA",
@@ -1385,6 +1494,7 @@
    }
   },
   {
+   "slug": "jchicam",
    "nombre": "Jorge Chica",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SAN JUAN",
@@ -1398,6 +1508,7 @@
    }
   },
   {
+   "slug": "jegomez",
    "nombre": "José Gomez",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTIAGO DEL ESTERO",
@@ -1411,6 +1522,7 @@
    }
   },
   {
+   "slug": "jgarrido",
    "nombre": "José Luis Garrido",
    "bloque": "POR SANTA CRUZ",
    "distrito": "SANTA CRUZ",
@@ -1424,6 +1536,7 @@
    }
   },
   {
+   "slug": "jgiordano",
    "nombre": "Juan Carlos Giordano",
    "bloque": "IZQUIERDA SOCIALISTA - FRENTE DE IZQUIERDA UNIDAD",
    "distrito": "BUENOS AIRES",
@@ -1437,6 +1550,7 @@
    }
   },
   {
+   "slug": "jglinski",
    "nombre": "José Glinski",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CHUBUT",
@@ -1450,6 +1564,7 @@
    }
   },
   {
+   "slug": "jgrabois",
    "nombre": "Juan Grabois",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -1463,6 +1578,7 @@
    }
   },
   {
+   "slug": "jguzman",
    "nombre": "Jairo Guzmán",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SANTA CRUZ",
@@ -1476,6 +1592,7 @@
    }
   },
   {
+   "slug": "jluque",
    "nombre": "Juan Pablo Luque",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CHUBUT",
@@ -1489,6 +1606,7 @@
    }
   },
   {
+   "slug": "jmarino",
    "nombre": "Juan Marino",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -1502,6 +1620,7 @@
    }
   },
   {
+   "slug": "jmcampo",
    "nombre": "Julieta Marisol Campo",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CHACO",
@@ -1515,6 +1634,7 @@
    }
   },
   {
+   "slug": "jmukdise",
    "nombre": "Jorge Mukdise",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTIAGO DEL ESTERO",
@@ -1527,6 +1647,7 @@
    }
   },
   {
+   "slug": "jnunez",
    "nombre": "José Nuñez",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "SANTA FE",
@@ -1539,6 +1660,7 @@
    }
   },
   {
+   "slug": "jofernandez",
    "nombre": "Jorge Fernández",
    "bloque": "PRIMERO SAN LUIS",
    "distrito": "SAN LUIS",
@@ -1552,6 +1674,7 @@
    }
   },
   {
+   "slug": "jojeda",
    "nombre": "Joaquín Ojeda",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -1565,6 +1688,7 @@
    }
   },
   {
+   "slug": "jpauli",
    "nombre": "Santiago Pauli",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "TIERRA DEL FUEGO",
@@ -1578,6 +1702,7 @@
    }
   },
   {
+   "slug": "jpeluc",
    "nombre": "José Peluc",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SAN JUAN",
@@ -1591,6 +1716,7 @@
    }
   },
   {
+   "slug": "jpmontenegro",
    "nombre": "Juan Pablo Montenegro",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SANTA FE",
@@ -1604,6 +1730,7 @@
    }
   },
   {
+   "slug": "jrizzotti",
    "nombre": "Jorge Rizzotti",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "JUJUY",
@@ -1617,6 +1744,7 @@
    }
   },
   {
+   "slug": "jsanchezw",
    "nombre": "Javier Sánchez Wrba",
    "bloque": "PRO",
    "distrito": "BUENOS AIRES",
@@ -1629,6 +1757,7 @@
    }
   },
   {
+   "slug": "jschiaretti",
    "nombre": "Juan Schiaretti",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "CORDOBA",
@@ -1642,6 +1771,7 @@
    }
   },
   {
+   "slug": "jslongo",
    "nombre": "Johanna Sabrina Longo",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -1655,6 +1785,7 @@
    }
   },
   {
+   "slug": "jstrada",
    "nombre": "Julia Strada",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -1667,6 +1798,7 @@
    }
   },
   {
+   "slug": "jtaiana",
    "nombre": "Jorge Taiana",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -1680,6 +1812,7 @@
    }
   },
   {
+   "slug": "jtournier",
    "nombre": "José Federico Tournier",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CORRIENTES",
@@ -1693,6 +1826,7 @@
    }
   },
   {
+   "slug": "jucmolina",
    "nombre": "Juan Carlos Molina",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTA CRUZ",
@@ -1705,6 +1839,7 @@
    }
   },
   {
+   "slug": "jumoreno",
    "nombre": "Julio Moreno Ovalle",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SALTA",
@@ -1718,6 +1853,7 @@
    }
   },
   {
+   "slug": "kbanfi",
    "nombre": "Karina Banfi",
    "bloque": "ADELANTE BUENOS AIRES",
    "distrito": "BUENOS AIRES",
@@ -1731,6 +1867,7 @@
    }
   },
   {
+   "slug": "kmaureira",
    "nombre": "Karina Maureira",
    "bloque": "LA NEUQUINIDAD",
    "distrito": "NEUQUEN",
@@ -1744,6 +1881,7 @@
    }
   },
   {
+   "slug": "kolmos",
    "nombre": "Kelly Olmos",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -1757,6 +1895,7 @@
    }
   },
   {
+   "slug": "kreichardt",
    "nombre": "Karen Reichardt",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -1770,6 +1909,7 @@
    }
   },
   {
+   "slug": "larrieta",
    "nombre": "Lourdes Micaela Arrieta",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "MENDOZA",
@@ -1783,6 +1923,7 @@
    }
   },
   {
+   "slug": "lbasterra",
    "nombre": "Luis Eugenio Basterra",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "FORMOSA",
@@ -1795,6 +1936,7 @@
    }
   },
   {
+   "slug": "lbolukalol",
    "nombre": "Lilia Lemoine",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -1808,6 +1950,7 @@
    }
   },
   {
+   "slug": "lcampora",
    "nombre": "Lucía Cámpora",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -1820,6 +1963,7 @@
    }
   },
   {
+   "slug": "lmarclay",
    "nombre": "Marianela Marclay",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "ENTRE RIOS",
@@ -1833,6 +1977,7 @@
    }
   },
   {
+   "slug": "lnieri",
    "nombre": "Lisandro Nieri",
    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
    "distrito": "MENDOZA",
@@ -1846,6 +1991,7 @@
    }
   },
   {
+   "slug": "lpetri",
    "nombre": "Luis Petri",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "MENDOZA",
@@ -1859,6 +2005,7 @@
    }
   },
   {
+   "slug": "lpicat",
    "nombre": "Luis Albino Picat",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CORDOBA",
@@ -1872,6 +2019,7 @@
    }
   },
   {
+   "slug": "lpokoikg",
    "nombre": "Lorena Pokoik",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -1885,6 +2033,7 @@
    }
   },
   {
+   "slug": "lpotenza",
    "nombre": "Luciana Potenza",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -1898,6 +2047,7 @@
    }
   },
   {
+   "slug": "lrodriguezm",
    "nombre": "Laura Elena Rodríguez Machado",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CORDOBA",
@@ -1911,6 +2061,7 @@
    }
   },
   {
+   "slug": "lsoldano",
    "nombre": "Laura Soldano",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CORDOBA",
@@ -1923,6 +2074,7 @@
    }
   },
   {
+   "slug": "ltailhade",
    "nombre": "Rodolfo Tailhade",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -1936,6 +2088,7 @@
    }
   },
   {
+   "slug": "ltorres",
    "nombre": "Alejandra Torres",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "CORDOBA",
@@ -1948,6 +2101,7 @@
    }
   },
   {
+   "slug": "lurodriguez",
    "nombre": "Miguel Rodríguez",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "TIERRA DEL FUEGO",
@@ -1961,6 +2115,7 @@
    }
   },
   {
+   "slug": "lvillaverde",
    "nombre": "Lorena Villaverde",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "RIO NEGRO",
@@ -1974,6 +2129,7 @@
    }
   },
   {
+   "slug": "lvolnovich",
    "nombre": "Luana Volnovich",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -1987,6 +2143,7 @@
    }
   },
   {
+   "slug": "mardohain",
    "nombre": "Martín Ardohain",
    "bloque": "PRO",
    "distrito": "LA PAMPA",
@@ -1999,6 +2156,7 @@
    }
   },
   {
+   "slug": "maveiro",
    "nombre": "Martín Aveiro",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "MENDOZA",
@@ -2011,6 +2169,7 @@
    }
   },
   {
+   "slug": "mavila",
    "nombre": "Fernanda Avila",
    "bloque": "ELIJO CATAMARCA",
    "distrito": "CATAMARCA",
@@ -2024,6 +2183,7 @@
    }
   },
   {
+   "slug": "mbarbur",
    "nombre": "Marcelo Barbur",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTIAGO DEL ESTERO",
@@ -2036,6 +2196,7 @@
    }
   },
   {
+   "slug": "mbecerra",
    "nombre": "Mónica Becerra",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SAN LUIS",
@@ -2049,6 +2210,7 @@
    }
   },
   {
+   "slug": "mbregman",
    "nombre": "Myriam Bregman",
    "bloque": "PTS-FRENTE DE IZQUIERDA Y DE TRABAJADORES UNIDAD",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -2062,6 +2224,7 @@
    }
   },
   {
+   "slug": "mcampero",
    "nombre": "Mariano Campero",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "TUCUMAN",
@@ -2075,6 +2238,7 @@
    }
   },
   {
+   "slug": "mcarignano",
    "nombre": "Florencia Carignano",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTA FE",
@@ -2088,6 +2252,7 @@
    }
   },
   {
+   "slug": "mdelarosa",
    "nombre": "María Graciela de la Rosa",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "FORMOSA",
@@ -2101,6 +2266,7 @@
    }
   },
   {
+   "slug": "mdesensi",
    "nombre": "María Florencia De Sensi",
    "bloque": "PRO",
    "distrito": "BUENOS AIRES",
@@ -2114,6 +2280,7 @@
    }
   },
   {
+   "slug": "mevelazquez",
    "nombre": "M. Elena Velázquez",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -2126,6 +2293,7 @@
    }
   },
   {
+   "slug": "mferraro",
    "nombre": "Maximiliano Ferraro",
    "bloque": "COALICION CIVICA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -2139,6 +2307,7 @@
    }
   },
   {
+   "slug": "mflores",
    "nombre": "Maria Gabriela Flores",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SALTA",
@@ -2152,6 +2321,7 @@
    }
   },
   {
+   "slug": "mfrade",
    "nombre": "Mónica Frade",
    "bloque": "COALICION CIVICA",
    "distrito": "BUENOS AIRES",
@@ -2165,6 +2335,7 @@
    }
   },
   {
+   "slug": "mgallardo",
    "nombre": "María Virginia Gallardo",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CORRIENTES",
@@ -2178,6 +2349,7 @@
    }
   },
   {
+   "slug": "mgcoletta",
    "nombre": "Mariela Coletta",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -2191,6 +2363,7 @@
    }
   },
   {
+   "slug": "mgestevarena",
    "nombre": "María Luisa González Estevarena",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -2203,6 +2376,7 @@
    }
   },
   {
+   "slug": "mgoitia",
    "nombre": "Rosario Goitia",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CHACO",
@@ -2215,6 +2389,7 @@
    }
   },
   {
+   "slug": "mgparola",
    "nombre": "María Graciela Parola",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "FORMOSA",
@@ -2228,6 +2403,7 @@
    }
   },
   {
+   "slug": "mgruber",
    "nombre": "Maura Gruber",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "MISIONES",
@@ -2241,6 +2417,7 @@
    }
   },
   {
+   "slug": "mhuesen",
    "nombre": "Gerardo Huesen",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "TUCUMAN",
@@ -2254,6 +2431,7 @@
    }
   },
   {
+   "slug": "mibanez",
    "nombre": "María Cecilia Ibañez",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CORDOBA",
@@ -2266,6 +2444,7 @@
    }
   },
   {
+   "slug": "mjlopez",
    "nombre": "Jimena López",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -2279,6 +2458,7 @@
    }
   },
   {
+   "slug": "mkirchner",
    "nombre": "Máximo Carlos Kirchner",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -2292,6 +2472,7 @@
    }
   },
   {
+   "slug": "mlanesan",
    "nombre": "Moira Lanesan Sancho",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTA CRUZ",
@@ -2304,6 +2485,7 @@
    }
   },
   {
+   "slug": "mllano",
    "nombre": "Mercedes Llano",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "MENDOZA",
@@ -2317,6 +2499,7 @@
    }
   },
   {
+   "slug": "mlousteau",
    "nombre": "Martín Lousteau",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -2330,6 +2513,7 @@
    }
   },
   {
+   "slug": "mmacyszyn",
    "nombre": "Lorena Macyszyn",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -2343,6 +2527,7 @@
    }
   },
   {
+   "slug": "mmatzkin",
    "nombre": "Martín Matzkin",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "LA PAMPA",
@@ -2354,6 +2539,7 @@
    }
   },
   {
+   "slug": "mmenem",
    "nombre": "Martín Menem",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "LA RIOJA",
@@ -2367,6 +2553,7 @@
    }
   },
   {
+   "slug": "mmetrala",
    "nombre": "Julieta Metral Asensio",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "MENDOZA",
@@ -2380,6 +2567,7 @@
    }
   },
   {
+   "slug": "mmolinuevo",
    "nombre": "Soledad Molinuevo",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "TUCUMAN",
@@ -2392,6 +2580,7 @@
    }
   },
   {
+   "slug": "mmolle",
    "nombre": "Matías Molle",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -2405,6 +2594,7 @@
    }
   },
   {
+   "slug": "mmondaca",
    "nombre": "Soledad Mondaca",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "NEUQUEN",
@@ -2417,6 +2607,7 @@
    }
   },
   {
+   "slug": "mniveyro",
    "nombre": "Miriam Niveyro",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -2430,6 +2621,7 @@
    }
   },
   {
+   "slug": "mnoguera",
    "nombre": "Javier Noguera",
    "bloque": "INDEPENDENCIA",
    "distrito": "TUCUMAN",
@@ -2443,6 +2635,7 @@
    }
   },
   {
+   "slug": "mpagano",
    "nombre": "Marcela Marina Pagano",
    "bloque": "COHERENCIA",
    "distrito": "BUENOS AIRES",
@@ -2456,6 +2649,7 @@
    }
   },
   {
+   "slug": "mpatinob",
    "nombre": "Marcos Patiño Brizuela",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CORDOBA",
@@ -2469,6 +2663,7 @@
    }
   },
   {
+   "slug": "mpetrovich",
    "nombre": "María Lorena Petrovich",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -2481,6 +2676,7 @@
    }
   },
   {
+   "slug": "mpichetto",
    "nombre": "Miguel Ángel Pichetto",
    "bloque": "ENCUENTRO FEDERAL",
    "distrito": "BUENOS AIRES",
@@ -2494,6 +2690,7 @@
    }
   },
   {
+   "slug": "mponce",
    "nombre": "María Celeste Ponce",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CORDOBA",
@@ -2507,6 +2704,7 @@
    }
   },
   {
+   "slug": "mquintar",
    "nombre": "Manuel Quintar",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "JUJUY",
@@ -2520,6 +2718,7 @@
    }
   },
   {
+   "slug": "mrfrias",
    "nombre": "Maira Frias",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CHUBUT",
@@ -2533,6 +2732,7 @@
    }
   },
   {
+   "slug": "mrmanrique",
    "nombre": "Mario Manrique",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -2545,6 +2745,7 @@
    }
   },
   {
+   "slug": "msalzmann",
    "nombre": "Marina Dorotea Salzmann",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -2557,6 +2758,7 @@
    }
   },
   {
+   "slug": "mtgarcia",
    "nombre": "María Teresa García",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -2570,6 +2772,7 @@
    }
   },
   {
+   "slug": "myeza",
    "nombre": "Martín Yeza",
    "bloque": "PRO",
    "distrito": "BUENOS AIRES",
@@ -2582,6 +2785,7 @@
    }
   },
   {
+   "slug": "mzigaran",
    "nombre": "María Inés Zigarán",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "JUJUY",
@@ -2595,6 +2799,7 @@
    }
   },
   {
+   "slug": "ndelasota",
    "nombre": "Natalia de la Sota",
    "bloque": "DEFENDAMOS CÓRDOBA",
    "distrito": "CORDOBA",
@@ -2608,6 +2813,7 @@
    }
   },
   {
+   "slug": "ndelcano",
    "nombre": "Nicolás del Caño",
    "bloque": "PTS-FRENTE DE IZQUIERDA Y DE TRABAJADORES UNIDAD",
    "distrito": "BUENOS AIRES",
@@ -2621,6 +2827,7 @@
    }
   },
   {
+   "slug": "nemma",
    "nombre": "Nicolás Emma",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -2634,6 +2841,7 @@
    }
   },
   {
+   "slug": "nmassot",
    "nombre": "Nicolás Massot",
    "bloque": "ENCUENTRO FEDERAL",
    "distrito": "BUENOS AIRES",
@@ -2647,6 +2855,7 @@
    }
   },
   {
+   "slug": "nmayoraz",
    "nombre": "Nicolás Mayoraz",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SANTA FE",
@@ -2659,6 +2868,7 @@
    }
   },
   {
+   "slug": "npiconm",
    "nombre": "Nancy Viviana Picón Martínez",
    "bloque": "PRODUCCION Y TRABAJO",
    "distrito": "SAN JUAN",
@@ -2672,6 +2882,7 @@
    }
   },
   {
+   "slug": "nsandg",
    "nombre": "Nancy Sand",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CORRIENTES",
@@ -2685,6 +2896,7 @@
    }
   },
   {
+   "slug": "ntrotta",
    "nombre": "Nicolás Alfredo Trotta",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -2698,6 +2910,7 @@
    }
   },
   {
+   "slug": "nzaracho",
    "nombre": "Natalia Zaracho",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -2710,6 +2923,7 @@
    }
   },
   {
+   "slug": "oherreraa",
    "nombre": "Oscar A. Herrera Ahuad",
    "bloque": "ARGENTINA FEDERAL",
    "distrito": "MISIONES",
@@ -2723,6 +2937,7 @@
    }
   },
   {
+   "slug": "ozago",
    "nombre": "Oscar Zago",
    "bloque": "MID - MOVIMIENTO DE INTEGRACIÓN Y DESARROLLO",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -2736,6 +2951,7 @@
    }
   },
   {
+   "slug": "pansaloni",
    "nombre": "Pablo Ansaloni",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -2749,6 +2965,7 @@
    }
   },
   {
+   "slug": "pfarias",
    "nombre": "Pablo Farías",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "SANTA FE",
@@ -2761,6 +2978,7 @@
    }
   },
   {
+   "slug": "pholzman",
    "nombre": "Patricia Holzman",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -2774,6 +2992,7 @@
    }
   },
   {
+   "slug": "pjuliano",
    "nombre": "Pablo Juliano",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "BUENOS AIRES",
@@ -2787,6 +3006,7 @@
    }
   },
   {
+   "slug": "poutes",
    "nombre": "Pablo Outes",
    "bloque": "ARGENTINA FEDERAL",
    "distrito": "SALTA",
@@ -2800,6 +3020,7 @@
    }
   },
   {
+   "slug": "ppenacca",
    "nombre": "Paula Andrea Penacca",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -2812,6 +3033,7 @@
    }
   },
   {
+   "slug": "ptita",
    "nombre": "Paulo Agustín Tita",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "TIERRA DEL FUEGO",
@@ -2824,6 +3046,7 @@
    }
   },
   {
+   "slug": "ptodero",
    "nombre": "Pablo Todero",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "NEUQUEN",
@@ -2836,6 +3059,7 @@
    }
   },
   {
+   "slug": "pvasquez",
    "nombre": "Patricia Vásquez",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -2849,6 +3073,7 @@
    }
   },
   {
+   "slug": "pverasay",
    "nombre": "Pamela Fernanda Verasay",
    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
    "distrito": "MENDOZA",
@@ -2862,6 +3087,7 @@
    }
   },
   {
+   "slug": "pyedlin",
    "nombre": "Pablo Raúl Yedlin",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "TUCUMAN",
@@ -2875,6 +3101,7 @@
    }
   },
   {
+   "slug": "rbianchetti",
    "nombre": "Emmanuel Bianchetti",
    "bloque": "PRO",
    "distrito": "MISIONES",
@@ -2887,6 +3114,7 @@
    }
   },
   {
+   "slug": "rbonacci",
    "nombre": "Rocío Bonacci",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SANTA FE",
@@ -2900,6 +3128,7 @@
    }
   },
   {
+   "slug": "rchiconi",
    "nombre": "Abel Chiconi",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SAN JUAN",
@@ -2912,6 +3141,7 @@
    }
   },
   {
+   "slug": "rdaives",
    "nombre": "Ricardo Daives",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "SANTIAGO DEL ESTERO",
@@ -2924,6 +3154,7 @@
    }
   },
   {
+   "slug": "rdiezv",
    "nombre": "Romina Diez",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SANTA FE",
@@ -2937,6 +3168,7 @@
    }
   },
   {
+   "slug": "rdtorres",
    "nombre": "Rubén Darío Torres",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -2949,6 +3181,7 @@
    }
   },
   {
+   "slug": "rhadad",
    "nombre": "Raúl Hadad",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CORRIENTES",
@@ -2962,6 +3195,7 @@
    }
   },
   {
+   "slug": "rmino",
    "nombre": "Fernanda Miño",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -2974,6 +3208,7 @@
    }
   },
   {
+   "slug": "rmonzon",
    "nombre": "Roxana Monzón",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -2987,6 +3222,7 @@
    }
   },
   {
+   "slug": "sajmechet",
    "nombre": "Sabrina Ajmechet",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -3000,6 +3236,7 @@
    }
   },
   {
+   "slug": "scafiero",
    "nombre": "Santiago Cafiero",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -3012,6 +3249,7 @@
    }
   },
   {
+   "slug": "scapozzi",
    "nombre": "Sergio Eduardo Capozzi",
    "bloque": "PROVINCIAS UNIDAS",
    "distrito": "RIO NEGRO",
@@ -3025,6 +3263,7 @@
    }
   },
   {
+   "slug": "scasas",
    "nombre": "Sergio Guillermo Casas",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "LA RIOJA",
@@ -3038,6 +3277,7 @@
    }
   },
   {
+   "slug": "sdolce",
    "nombre": "Sergio Dolce",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CHACO",
@@ -3050,6 +3290,7 @@
    }
   },
   {
+   "slug": "sfigliuolo",
    "nombre": "Sergio Figliuolo",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -3063,6 +3304,7 @@
    }
   },
   {
+   "slug": "sgalmarini",
    "nombre": "Sebastián Galmarini",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -3076,6 +3318,7 @@
    }
   },
   {
+   "slug": "sgiudici",
    "nombre": "Silvana Giudici",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -3089,6 +3332,7 @@
    }
   },
   {
+   "slug": "spalazzo",
    "nombre": "Sergio Omar Palazzo",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -3102,6 +3346,7 @@
    }
   },
   {
+   "slug": "spareja",
    "nombre": "Sebastián Pareja",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -3115,6 +3360,7 @@
    }
   },
   {
+   "slug": "sroberto",
    "nombre": "Santiago Luis Roberto",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "CIUDAD DE BUENOS AIRES",
@@ -3128,6 +3374,7 @@
    }
   },
   {
+   "slug": "ssanturior",
    "nombre": "Santiago Santurio",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "BUENOS AIRES",
@@ -3141,6 +3388,7 @@
    }
   },
   {
+   "slug": "sselva",
    "nombre": "Sabrina Selva",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -3154,6 +3402,7 @@
    }
   },
   {
+   "slug": "vmarin",
    "nombre": "Varinia Lis Marín",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "LA PAMPA",
@@ -3167,6 +3416,7 @@
    }
   },
   {
+   "slug": "vravera",
    "nombre": "Valentina Ravera",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SANTA FE",
@@ -3180,6 +3430,7 @@
    }
   },
   {
+   "slug": "vrazzini",
    "nombre": "Verónica Razzini",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SANTA FE",
@@ -3193,6 +3444,7 @@
    }
   },
   {
+   "slug": "vsiley",
    "nombre": "Vanesa Raquel Siley",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -3206,6 +3458,7 @@
    }
   },
   {
+   "slug": "vtolosap",
    "nombre": "Victoria Tolosa Paz",
    "bloque": "UNIÓN POR LA PATRIA",
    "distrito": "BUENOS AIRES",
@@ -3219,6 +3472,7 @@
    }
   },
   {
+   "slug": "yruiz",
    "nombre": "Yamila Ruíz",
    "bloque": "ARGENTINA FEDERAL",
    "distrito": "MISIONES",
@@ -3232,6 +3486,7 @@
    }
   },
   {
+   "slug": "ytomassoni",
    "nombre": "Yamile Tomassoni",
    "bloque": "LA LIBERTAD AVANZA",
    "distrito": "SANTA FE",
@@ -3245,6 +3500,7 @@
    }
   },
   {
+   "slug": "yvega",
    "nombre": "Yolanda Vega",
    "bloque": "ARGENTINA FEDERAL",
    "distrito": "SALTA",

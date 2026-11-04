@@ -33,6 +33,7 @@ for r in dips:
     p, pct = perfil(t)
     filas.append({
         "n": r["nombre"],
+        "s": r.get("slug", ""),
         "b": r["bloque"],
         "d": r["distrito"],
         "t": r["total"],
@@ -153,6 +154,8 @@ tbody td {{ padding: 11px 8px; border-bottom: 1px solid var(--rule); vertical-al
 tbody tr:hover {{ background: #f1eee7; }}
 td.num, th.num {{ text-align: right; font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; }}
 td.nombre {{ font-weight: 500; }}
+td.nombre a {{ color: inherit; text-decoration: none; border-bottom: 1px solid transparent; }}
+td.nombre a:hover {{ border-bottom-color: var(--rule-strong); }}
 td.bloque, td.dist {{ color: var(--muted); font-size: 13px; }}
 .tag {{ display: inline-block; padding: 2px 8px; border-radius: 2px; font-size: 11px;
   letter-spacing: .05em; text-transform: uppercase; font-family: "IBM Plex Mono", monospace; }}
@@ -264,7 +267,8 @@ footer a {{ color: var(--muted); }}
   <div class="wrap">
     <h2>Cómo se hizo</h2>
     <div class="metodo">
-      <p>Los datos salen del sitio oficial de la <a href="https://www.hcdn.gob.ar/diputados/" target="_blank" rel="noopener">Honorable Cámara de Diputados de la Nación</a>. Para cada diputado se toma el total de proyectos presentados que informa su ficha y la composición de sus últimos veinte proyectos, que es la única página del listado que se lee de forma pareja para todos.</p>
+      <p>Los datos salen del sitio oficial de la <a href="https://www.hcdn.gob.ar/diputados/" target="_blank" rel="noopener">Honorable Cámara de Diputados de la Nación</a>. Para cada diputado se toma el total de proyectos que informa su ficha y la composición de sus últimos veinte, que es la única página del listado que se lee de forma pareja para todos.</p>
+      <p>El total incluye los proyectos que el diputado firma como autor y también los que solo cofirma. Es la cifra que publica la Cámara en su ficha, pero conviene leerla como participación en proyectos y no como autoría exclusiva. Un número alto puede significar mucha iniciativa propia o mucha firma al pie de proyectos ajenos, y esta página no distingue entre las dos.</p>
       <p>Las tres columnas de tipo —ley, resolución, declaración— suman veinte por diputado, salvo para quienes presentaron menos. El porcentaje de ley se calcula sobre ese conjunto, así que mide el perfil reciente y no la carrera completa. El total de la izquierda sí es el del período completo.</p>
       <p>Un proyecto de ley puede ser declarativo y una resolución puede tener efecto real. La clasificación describe la forma del instrumento, no su importancia. Cada fila enlaza a la ficha oficial, donde está el detalle.</p>
       <p>Extracción: {d['extraido']}. Los datos cambian cuando la Cámara actualiza sus listados.</p>
@@ -311,7 +315,7 @@ function render() {{
     const pl = pct(r.ley, r.m), pr = pct(r.res, r.m), pd = 100 - pl - pr;
     return `<tr>
       <td class="num" style="color:var(--soft)">${{i+1}}</td>
-      <td class="nombre">${{esc(r.n)}}</td>
+      <td class="nombre">${{r.s ? `<a href="https://www.hcdn.gob.ar/diputados/${{r.s}}/" target="_blank" rel="noopener">${{esc(r.n)}}</a>` : esc(r.n)}}</td>
       <td class="bloque oculto-movil">${{esc(r.b)}}</td>
       <td class="dist oculto-movil">${{esc(r.d)}}</td>
       <td class="num">${{r.t.toLocaleString('es-AR')}}</td>

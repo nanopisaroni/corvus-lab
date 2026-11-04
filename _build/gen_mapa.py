@@ -9,6 +9,7 @@ OUT = os.path.join(BASE, "mapa.html")
 
 d = json.load(open(SRC, encoding="utf-8"))
 meta, dips = d["meta"], d["dips"]
+actas = d.get("actas", [])
 
 PARTICULAS = {"de", "del", "la", "las", "los", "por", "para", "y", "el"}
 SIGLAS = {"pro", "ucr", "mid", "pts", "fit", "eva", "pst"}
@@ -81,13 +82,25 @@ perfectos = sum(1 for p in con if p["dis"] == 0)
 izq = [p for p in dips if p["x"] <= -85]
 der = [p for p in dips if p["x"] >= 85]
 
+def fecha_txt(dia):
+    return f"{dia[6:8]}/{dia[4:6]}/{dia[0:4]}"
+
+
+fechas = sorted(a["dia"] for a in actas)
+FILAS_VOTOS = "".join(
+    f'<tr><td class="num">{fecha_txt(a["dia"])}</td><td class="num">{a["acta"]}</td>'
+    f'<td>{html.escape(a["asunto"] or "Sin asunto identificado")}</td>'
+    f'<td class="num">{100*a["div"]:.0f}%</td></tr>'
+    for a in actas
+)
+
 HTML = f"""<!DOCTYPE html>
 <html lang="es-AR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mapa de votaciones · Cámara de Diputados</title>
-<meta name="description" content="Cómo votó cada diputado en el período 144. Posiciones calculadas sobre 76 votaciones nominales, sin interpretación editorial.">
+<meta name="description" content="Cómo votó cada diputado en el período 144. Posiciones calculadas sobre {meta["actas"]} votaciones nominales, sin interpretación editorial.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -204,6 +217,15 @@ footer {{ border-top: 1px solid var(--rule); padding: 22px 0 40px; color: var(--
   <p class="intro">Para cada votación se toma la posición mayoritaria del bloque de cada diputado y se cuenta cuántas veces votó distinto. Solo se incluyen los que participaron en al menos el 70% de las votaciones.</p>
   <ol class="rank">{TOP_DIS}</ol>
   <p class="intro" style="margin-top:20px">{perfectos} diputados no se corrieron nunca. El promedio del cuerpo es {100*sum(p["dis"] for p in con)/max(1,sum(p["vot"] for p in con)):.1f}%.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Qué se votó <span>· las {meta["actas"]} votaciones que ordenan el eje</span></h2>
+  <p class="intro">Cada fila es una votación nominal donde el resultado no fue unánime. La columna de disenso mide qué porcentaje del cuerpo se apartó de la mayoría.</p>
+  <table>
+    <thead><tr><th>Fecha</th><th>Acta</th><th>Asunto</th><th class="num">Disenso</th></tr></thead>
+    <tbody>{FILAS_VOTOS}</tbody>
+  </table>
 </div></section>
 
 <div class="metodo"><div class="wrap">

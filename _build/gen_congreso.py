@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Genera congreso.html desde _build/data/diputados.json
 # Fuente: Honorable Cámara de Diputados de la Nación.
-import json, os, html
+import json, os, html, math
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(BASE, "_build", "data", "diputados.json")
@@ -11,6 +11,23 @@ d = json.load(open(SRC, encoding="utf-8"))
 dips = d["diputados"]
 
 TIPOS = ["LEY", "RESOLUCION", "DECLARACION"]
+
+
+PARTICULAS = {"de", "del", "la", "las", "los", "por", "para", "y", "el"}
+
+
+def bloque_txt(b):
+    """Mayúsculas del sitio oficial, con partículas en minúscula y siglas intactas."""
+    palabras = []
+    for w in b.split():
+        lw = w.lower()
+        if lw in ("pro", "ucr", "mid", "pts", "fit", "unidad"):
+            palabras.append(w.upper() if len(w) <= 5 else w.capitalize())
+        elif lw in PARTICULAS:
+            palabras.append(lw)
+        else:
+            palabras.append(w.capitalize())
+    return " ".join(palabras)
 
 
 def perfil(t):
@@ -31,7 +48,10 @@ for r in dips:
     t = r.get("tipos", {})
     tot_tipos = sum(t.get(k, 0) for k in TIPOS)
     p, pct = perfil(t)
+    fv = min(1.0, math.log10(1 + r["total"]) / math.log10(301)) if r["total"] else 0.0
+    idx = round(100 * (pct / 100) * (0.45 + 0.55 * fv), 1)
     filas.append({
+        "idx": idx,
         "n": r["nombre"],
         "s": r.get("slug", ""),
         "b": r["bloque"],
@@ -46,6 +66,19 @@ for r in dips:
     })
 
 filas.sort(key=lambda x: (-x["t"], x["n"]))
+por_indice = sorted(filas, key=lambda x: -x["idx"])[:10]
+por_volumen = sorted(filas, key=lambda x: -x["t"])[:10]
+
+
+def fila_top(i, r, valor, unidad):
+    return (f'<li><span class="pos">{i}</span>'
+            f'<span class="nm">{html.escape(r["n"])}</span>'
+            f'<span class="bl">{html.escape(bloque_txt(r["b"]))}</span>'
+            f'<span class="vl">{valor}<em>{unidad}</em></span></li>')
+
+
+TOP_IDX = "".join(fila_top(i, r, f'{r["idx"]:.0f}', " pts") for i, r in enumerate(por_indice, 1))
+TOP_VOL = "".join(fila_top(i, r, f'{r["t"]:,}'.replace(",", "."), "") for i, r in enumerate(por_volumen, 1))
 total_proy = sum(f["t"] for f in filas)
 suma_ley = sum(f["ley"] for f in filas)
 suma_res = sum(f["res"] for f in filas)
@@ -166,6 +199,22 @@ td.bloque, td.dist {{ color: var(--muted); font-size: 13px; }}
   background: var(--rule); vertical-align: middle; }}
 .mini i {{ display: block; height: 100%; }}
 
+.nota {{ font-size: 15px; color: #464036; max-width: 72ch; margin: 0 0 28px; line-height: 1.6; }}
+.nota strong {{ font-weight: 600; color: var(--ink); }}
+.nota.pie {{ margin: 26px 0 0; font-size: 13.5px; color: var(--muted); }}
+.dos {{ display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }}
+.dos h3 {{ font-size: 12px; letter-spacing: .1em; text-transform: uppercase; font-weight: 600;
+  color: var(--muted); margin: 0 0 14px; font-family: "IBM Plex Mono", monospace; }}
+ol.rank {{ list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule-strong); }}
+ol.rank li {{ display: grid; grid-template-columns: 26px 1fr auto auto; gap: 10px; align-items: baseline;
+  padding: 9px 0; border-bottom: 1px solid var(--rule); font-size: 14.5px; }}
+ol.rank .pos {{ color: var(--soft); font-family: "IBM Plex Mono", monospace; font-size: 12px; }}
+ol.rank .nm {{ font-weight: 500; }}
+ol.rank .bl {{ color: var(--soft); font-size: 11.5px; max-width: 13ch; overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap; }}
+ol.rank .vl {{ font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; }}
+ol.rank .vl em {{ font-style: normal; color: var(--soft); font-size: 11px; }}
+@media (max-width: 860px) {{ .dos {{ grid-template-columns: 1fr; gap: 34px; }} }}
 .metodo {{ font-size: 14px; color: var(--muted); max-width: 74ch; }}
 .metodo p {{ margin: 0 0 14px; }}
 .metodo a {{ color: var(--ink); text-underline-offset: 3px; }}
@@ -232,13 +281,36 @@ footer a {{ color: var(--muted); }}
 
 <section>
   <div class="wrap">
+    <h2>Dos rankings que casi no se tocan <span>· volumen y sustancia</span></h2>
+    <p class="nota">Presentar más proyectos no guarda relación con presentar mejores proyectos. La correlación entre
+      cantidad y proporción de leyes, entre los 256 diputados, es de <strong>−0,02</strong>: prácticamente cero.
+      Por eso van los dos por separado y no uno solo.</p>
+    <div class="dos">
+      <div>
+        <h3>Quiénes más presentan</h3>
+        <ol class="rank">{TOP_VOL}</ol>
+      </div>
+      <div>
+        <h3>Quiénes más legislan</h3>
+        <ol class="rank">{TOP_IDX}</ol>
+      </div>
+    </div>
+    <p class="nota pie">El índice combina la proporción de proyectos de ley con el volumen, que entra con rendimiento
+      decreciente: satura a los 300 proyectos. Va de 0 a 100 y es una convención, no una verdad. Cambiar los pesos
+      mueve el orden de la mitad de la tabla, así que conviene leerlo como una forma de mirar, no como un veredicto.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
     <h2>Todos los diputados <span>· ordenados por cantidad de proyectos</span></h2>
     <div class="controles">
       <input id="q" type="search" placeholder="Buscar por nombre, bloque o distrito" autocomplete="off">
-      <select id="fb"><option value="">Todos los bloques</option>{''.join(f'<option value="{html.escape(b)}">{html.escape(b.title())}</option>' for b in bloques)}</select>
+      <select id="fb"><option value="">Todos los bloques</option>{''.join(f'<option value="{html.escape(b)}">{html.escape(bloque_txt(b))}</option>' for b in bloques)}</select>
       <select id="fd"><option value="">Todos los distritos</option>{''.join(f'<option value="{html.escape(x)}">{html.escape(x.title())}</option>' for x in distritos)}</select>
       <select id="fo">
         <option value="total">Más proyectos</option>
+        <option value="indice">Mayor índice</option>
         <option value="ley">Más proyectos de ley</option>
         <option value="pct">Mayor proporción de ley</option>
         <option value="menos">Menos proyectos</option>
@@ -256,6 +328,7 @@ footer a {{ color: var(--muted); }}
         <th class="num">Ley</th>
         <th class="num oculto-movil">Resol.</th>
         <th class="num oculto-movil">Decl.</th>
+        <th class="num">Índice</th>
         <th>Perfil</th>
       </tr></thead>
       <tbody id="tb"></tbody>
@@ -270,6 +343,7 @@ footer a {{ color: var(--muted); }}
       <p>Los datos salen del sitio oficial de la <a href="https://www.hcdn.gob.ar/diputados/" target="_blank" rel="noopener">Honorable Cámara de Diputados de la Nación</a>. Para cada diputado se toma el total de proyectos que informa su ficha y la composición de sus últimos veinte, que es la única página del listado que se lee de forma pareja para todos.</p>
       <p>El total incluye los proyectos que el diputado firma como autor y también los que solo cofirma. Es la cifra que publica la Cámara en su ficha, pero conviene leerla como participación en proyectos y no como autoría exclusiva. Un número alto puede significar mucha iniciativa propia o mucha firma al pie de proyectos ajenos, y esta página no distingue entre las dos.</p>
       <p>Las tres columnas de tipo —ley, resolución, declaración— suman veinte por diputado, salvo para quienes presentaron menos. El porcentaje de ley se calcula sobre ese conjunto, así que mide el perfil reciente y no la carrera completa. El total de la izquierda sí es el del período completo.</p>
+      <p>El índice se calcula así: proporción de proyectos de ley en la muestra, multiplicada por un factor de volumen que crece con el total presentado y satura a los 300 proyectos, para que una sola ley entre veinte proyectos no encabece la tabla. La fórmula completa está en el generador. No mide calidad, ni resultado, ni si el proyecto era bueno: mide qué proporción de lo que presenta cada diputado es una norma y no un gesto.</p>
       <p>Un proyecto de ley puede ser declarativo y una resolución puede tener efecto real. La clasificación describe la forma del instrumento, no su importancia. Cada fila enlaza a la ficha oficial, donde está el detalle.</p>
       <p>Extracción: {d['extraido']}. Los datos cambian cuando la Cámara actualiza sus listados.</p>
     </div>
@@ -308,6 +382,7 @@ function render() {{
     if (ord === 'total') return b.t - a.t || a.n.localeCompare(b.n);
     if (ord === 'menos') return a.t - b.t || a.n.localeCompare(b.n);
     if (ord === 'ley') return b.ley - a.ley || b.t - a.t;
+    if (ord === 'indice') return b.idx - a.idx || b.t - a.t;
     if (ord === 'pct') return (b.m?b.pct:-1) - (a.m?a.pct:-1) || b.ley - a.ley;
     return a.n.localeCompare(b.n);
   }});
@@ -322,6 +397,7 @@ function render() {{
       <td class="num">${{r.ley}}</td>
       <td class="num oculto-movil">${{r.res}}</td>
       <td class="num oculto-movil">${{r.dec}}</td>
+      <td class="num">${{Math.round(r.idx)}}</td>
       <td><span class="tag ${{T[r.p]||''}}">${{LBL[r.p]||'—'}}</span>
         <span class="mini" title="ley ${{pl}}% · resolución ${{pr}}% · declaración ${{pd}}%">
           <i style="width:${{pl}}%;background:var(--ley)"></i><i style="width:${{pr}}%;background:var(--res)"></i><i style="width:${{pd}}%;background:var(--dec)"></i>

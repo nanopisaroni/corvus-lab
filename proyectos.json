@@ -1,166 +1,175 @@
 {
-  "actualizado": "2026-11-03",
-  "linea": "Índice de trabajos",
-  "definicion": "Trabajos sobre lo que pertenece a todos y casi nadie mira de cerca: el Estado, la ley, el dinero público, la ciudadanía y los datos con que debería decidirse. Todos se publican abiertos, y ninguno pide registrarse para leerlo.",
-  "estados": {
-    "Publicado": "En línea, en uso y al día.",
-    "En curso": "Empezado, con avances que pueden verificarse, todavía sin forma definitiva.",
-    "Archivado": "Concluido o abandonado; se conserva como constancia."
+ "actualizado": "2026-11-03",
+ "linea": "Índice de trabajos",
+ "definicion": "Trabajos sobre lo que pertenece a todos y casi nadie mira de cerca: el Estado, la ley, el dinero público, la ciudadanía y los datos con que debería decidirse. Todos se publican abiertos, y ninguno pide registrarse para leerlo.",
+ "estados": {
+  "Publicado": "En línea, en uso y al día.",
+  "En curso": "Empezado, con avances que pueden verificarse, todavía sin forma definitiva.",
+  "Archivado": "Concluido o abandonado; se conserva como constancia."
+ },
+ "categorias": [
+  {
+   "id": "rendicion",
+   "nombre": "Rendición de cuentas",
+   "bajada": "Lo que se promete, lo que se gasta y lo que, al fin, se cumple."
   },
-  "categorias": [
-    {
-      "id": "rendicion",
-      "nombre": "Rendición de cuentas",
-      "bajada": "Lo que se promete, lo que se gasta y lo que, al fin, se cumple."
-    },
-    {
-      "id": "informacion",
-      "nombre": "Información pública",
-      "bajada": "Datos firmes para decisiones que suelen tomarse con datos endebles."
-    },
-    {
-      "id": "ciudadania",
-      "nombre": "Ciudadanía",
-      "bajada": "Cómo se llega a ser argentino, cuánto cuesta y qué se pide a cambio."
-    },
-    {
-      "id": "investigacion",
-      "nombre": "Investigación",
-      "bajada": "Lo que el comunicado de prensa, por discreción o por oficio, prefiere callar."
-    },
-    {
-      "id": "participacion",
-      "nombre": "Participación",
-      "bajada": "Instrumentos para quien quiera intervenir en la conversación pública con algo más que opiniones."
-    },
-    {
-      "id": "cultura",
-      "nombre": "Cultura",
-      "bajada": "Porque lo público también se forma leyendo, y conviene empezar temprano."
-    },
-    {
-      "id": "editorial",
-      "nombre": "Editorial",
-      "bajada": "Lo que el taller publica con su propio nombre."
-    }
-  ],
-  "proyectos": [
-    {
-      "n": 1,
-      "nombre": "RIGI Tracker",
-      "categoria": "rendicion",
-      "estado": "Publicado",
-      "url": "https://elrigi.com.ar",
-      "descripcion": "Los veintiocho proyectos aprobados bajo el RIGI, con su monto, su sector, su provincia y su estado: US$79.375 millones bajo observación.",
-      "detalle": "Sigue cada adhesión al régimen de grandes inversiones desde que se presenta hasta que entra en funcionamiento. Depura la planilla oficial, que repite un mismo proyecto en cada provincia que toca, y coteja lo anunciado con lo efectivamente aprobado."
-    },
-    {
-      "n": 2,
-      "nombre": "Ausencia del Estado",
-      "categoria": "rendicion",
-      "estado": "En curso",
-      "url": "https://ausencia-estado.vercel.app",
-      "descripcion": "Siete pedidos de acceso a la información pública, presentados el mismo día, cuyas respuestas se siguen de manera automática.",
-      "detalle": "Obras paralizadas, subsidios mal asignados, compras que nunca llegaron a usarse. El trabajo se apoya en la Ley 27.275 para reclamar los datos y los publica en un idioma que cualquier ciudadano entiende. Si el organismo calla más de treinta días hábiles, corre el silencio positivo, y aquí se deja constancia."
-    },
-    {
-      "n": 3,
-      "nombre": "Punto de Partida",
-      "categoria": "informacion",
-      "estado": "Publicado",
-      "url": "https://punto-de-partida-three.vercel.app",
-      "descripcion": "Cincuenta indicadores que ponen a la Argentina frente a treinta y un países, uno por uno, sin índices compuestos que disimulen el detalle.",
-      "detalle": "Cada indicador muestra el valor argentino, el del país de referencia y la distancia entre ambos. Sirve para discutir con cifras y no con impresiones, y para distinguir los males de estructura de los males de administración."
-    },
-    {
-      "n": 4,
-      "nombre": "Hipotecas AR",
-      "categoria": "informacion",
-      "estado": "Publicado",
-      "url": "https://hipotecas-ar.vercel.app",
-      "descripcion": "Comparador de las ofertas hipotecarias que informa el BCRA. El único número que importa es el costo financiero total.",
-      "detalle": "Ordena las ofertas por CFT y no por tasa nominal, que es donde suele esconderse la diferencia, e incluye los gastos que la publicidad prefiere omitir."
-    },
-    {
-      "n": 5,
-      "nombre": "Ciudadanía Argentina",
-      "categoria": "ciudadania",
-      "estado": "Publicado",
-      "url": "https://ciudadania-ar.vercel.app",
-      "descripcion": "Las seis vías que la ley abre para obtener la ciudadanía argentina, con sus requisitos, sus plazos y sus costos reales.",
-      "detalle": "Desde la inversión, a partir de US$350.000, hasta la residencia por arraigo. De cada vía se dice qué pide, cuánto demora y dónde suele trabarse."
-    },
-    {
-      "n": 6,
-      "nombre": "Argentina CBI",
-      "categoria": "ciudadania",
-      "estado": "Publicado",
-      "url": "https://argentina-cbi.vercel.app",
-      "descripcion": "Estado, costo real y plazos de la ciudadanía por inversión, escrito en inglés para quien la considera desde afuera.",
-      "detalle": "Es la versión internacional del análisis anterior. Calcula lo que cuesta de verdad el trámite completo, y no sólo la inversión mínima que fija la norma."
-    },
-    {
-      "n": 7,
-      "nombre": "Sea Lion",
-      "categoria": "investigacion",
-      "estado": "Publicado",
-      "url": "https://sea-lion-quien.vercel.app",
-      "descripcion": "Quiénes están detrás de Sea Lion, el proyecto petrolero en la plataforma continental de las Islas Malvinas.",
-      "detalle": "Sociedades, accionistas y beneficiarios finales de una operación que se presenta como británica y se financia en varias plazas a la vez."
-    },
-    {
-      "n": 8,
-      "nombre": "Democracia S.A.",
-      "categoria": "participacion",
-      "estado": "Publicado",
-      "url": "https://democracia-sa.vercel.app",
-      "descripcion": "Un juego acerca de cuánto vale un voto y quién paga las campañas, con un modo simulador sobre las variables macroeconómicas vigentes.",
-      "detalle": "Traduce el financiamiento de la política a decisiones concretas. El simulador permite mover cada variable y observar qué ocurre con el resultado."
-    },
-    {
-      "n": 9,
-      "nombre": "A Quién Criticás",
-      "categoria": "participacion",
-      "estado": "Publicado",
-      "url": "https://a-quien-criticas.vercel.app",
-      "descripcion": "Crítica razonada de figuras públicas, con una misma vara para todos y con la réplica del aludido incluida.",
-      "detalle": "Cada crítica viene acompañada de su evidencia, de una medida de proporción y de la respuesta que daría el criticado, seguida de su refutación. Al crítico no se le concede la última palabra."
-    },
-    {
-      "n": 10,
-      "nombre": "Cuentos Argentinos",
-      "categoria": "cultura",
-      "estado": "Publicado",
-      "url": "https://cuentos-argentinos.vercel.app",
-      "descripcion": "Cuentos ilustrados sobre argentinos que existieron, para leer en voz alta a los chicos.",
-      "detalle": "Historias para criar y no para adoctrinar. Pueden leerse en la pantalla o imprimirse."
-    },
-    {
-      "n": 11,
-      "nombre": "Colección Corvus Lab",
-      "categoria": "editorial",
-      "estado": "Publicado",
-      "url": "https://corvus-lab.vercel.app/coleccion",
-      "descripcion": "Cinco volúmenes acerca de lo que sostiene a una persona cuando el Estado, el trabajo y la atención dejan de sostenerla.",
-      "detalle": "El panteón personal, el protocolo de la atención, el preparacionismo, el último escalón y el tecnocristianismo. Cada uno se basta a sí mismo; juntos dicen algo más."
-    },
-    {
-      "n": 12,
-      "nombre": "Los que legislan",
-      "categoria": "rendicion",
-      "estado": "Publicado",
-      "url": "/congreso",
-      "descripcion": "Los 256 diputados en ejercicio y qué presenta cada uno: cuántos proyectos, cuántos son ley y cuántos son declaraciones simbólicas.",
-      "detalle": "Lee los listados oficiales de la Cámara de Diputados diputado por diputado y los ordena por producción. La mitad de lo que se presenta no es ley: son resoluciones y declaraciones que reconocen, festejan o piden, sin cambiar ninguna norma."
-    },
-    {
-      "n": 13,
-      "nombre": "Cómo vota cada diputado",
-      "categoria": "rendicion",
-      "estado": "Publicado",
-      "url": "/mapa",
-      "descripcion": "Las 76 votaciones nominales del período 144 en un solo eje. Cada diputado aparece por cómo votó, no por lo que dice.",
-      "detalle": "Las posiciones se calculan con el primer componente principal de la matriz de votos, que explica el 87,5% de la varianza. El mismo cálculo muestra quiénes se corren de su bloque y quiénes nunca lo hacen."
-    }
-  ]
+  {
+   "id": "informacion",
+   "nombre": "Información pública",
+   "bajada": "Datos firmes para decisiones que suelen tomarse con datos endebles."
+  },
+  {
+   "id": "ciudadania",
+   "nombre": "Ciudadanía",
+   "bajada": "Cómo se llega a ser argentino, cuánto cuesta y qué se pide a cambio."
+  },
+  {
+   "id": "investigacion",
+   "nombre": "Investigación",
+   "bajada": "Lo que el comunicado de prensa, por discreción o por oficio, prefiere callar."
+  },
+  {
+   "id": "participacion",
+   "nombre": "Participación",
+   "bajada": "Instrumentos para quien quiera intervenir en la conversación pública con algo más que opiniones."
+  },
+  {
+   "id": "cultura",
+   "nombre": "Cultura",
+   "bajada": "Porque lo público también se forma leyendo, y conviene empezar temprano."
+  },
+  {
+   "id": "editorial",
+   "nombre": "Editorial",
+   "bajada": "Lo que el taller publica con su propio nombre."
+  }
+ ],
+ "proyectos": [
+  {
+   "n": 1,
+   "nombre": "RIGI Tracker",
+   "categoria": "rendicion",
+   "estado": "Publicado",
+   "url": "https://elrigi.com.ar",
+   "descripcion": "Los veintiocho proyectos aprobados bajo el RIGI, con su monto, su sector, su provincia y su estado: US$79.375 millones bajo observación.",
+   "detalle": "Sigue cada adhesión al régimen de grandes inversiones desde que se presenta hasta que entra en funcionamiento. Depura la planilla oficial, que repite un mismo proyecto en cada provincia que toca, y coteja lo anunciado con lo efectivamente aprobado."
+  },
+  {
+   "n": 2,
+   "nombre": "Ausencia del Estado",
+   "categoria": "rendicion",
+   "estado": "En curso",
+   "url": "https://ausencia-estado.vercel.app",
+   "descripcion": "Siete pedidos de acceso a la información pública, presentados el mismo día, cuyas respuestas se siguen de manera automática.",
+   "detalle": "Obras paralizadas, subsidios mal asignados, compras que nunca llegaron a usarse. El trabajo se apoya en la Ley 27.275 para reclamar los datos y los publica en un idioma que cualquier ciudadano entiende. Si el organismo calla más de treinta días hábiles, corre el silencio positivo, y aquí se deja constancia."
+  },
+  {
+   "n": 3,
+   "nombre": "Punto de Partida",
+   "categoria": "informacion",
+   "estado": "Publicado",
+   "url": "https://punto-de-partida-three.vercel.app",
+   "descripcion": "Cincuenta indicadores que ponen a la Argentina frente a treinta y un países, uno por uno, sin índices compuestos que disimulen el detalle.",
+   "detalle": "Cada indicador muestra el valor argentino, el del país de referencia y la distancia entre ambos. Sirve para discutir con cifras y no con impresiones, y para distinguir los males de estructura de los males de administración."
+  },
+  {
+   "n": 4,
+   "nombre": "Hipotecas AR",
+   "categoria": "informacion",
+   "estado": "Publicado",
+   "url": "https://hipotecas-ar.vercel.app",
+   "descripcion": "Comparador de las ofertas hipotecarias que informa el BCRA. El único número que importa es el costo financiero total.",
+   "detalle": "Ordena las ofertas por CFT y no por tasa nominal, que es donde suele esconderse la diferencia, e incluye los gastos que la publicidad prefiere omitir."
+  },
+  {
+   "n": 5,
+   "nombre": "Ciudadanía Argentina",
+   "categoria": "ciudadania",
+   "estado": "Publicado",
+   "url": "https://ciudadania-ar.vercel.app",
+   "descripcion": "Las seis vías que la ley abre para obtener la ciudadanía argentina, con sus requisitos, sus plazos y sus costos reales.",
+   "detalle": "Desde la inversión, a partir de US$350.000, hasta la residencia por arraigo. De cada vía se dice qué pide, cuánto demora y dónde suele trabarse."
+  },
+  {
+   "n": 6,
+   "nombre": "Argentina CBI",
+   "categoria": "ciudadania",
+   "estado": "Publicado",
+   "url": "https://argentina-cbi.vercel.app",
+   "descripcion": "Estado, costo real y plazos de la ciudadanía por inversión, escrito en inglés para quien la considera desde afuera.",
+   "detalle": "Es la versión internacional del análisis anterior. Calcula lo que cuesta de verdad el trámite completo, y no sólo la inversión mínima que fija la norma."
+  },
+  {
+   "n": 7,
+   "nombre": "Sea Lion",
+   "categoria": "investigacion",
+   "estado": "Publicado",
+   "url": "https://sea-lion-quien.vercel.app",
+   "descripcion": "Quiénes están detrás de Sea Lion, el proyecto petrolero en la plataforma continental de las Islas Malvinas.",
+   "detalle": "Sociedades, accionistas y beneficiarios finales de una operación que se presenta como británica y se financia en varias plazas a la vez."
+  },
+  {
+   "n": 8,
+   "nombre": "Democracia S.A.",
+   "categoria": "participacion",
+   "estado": "Publicado",
+   "url": "https://democracia-sa.vercel.app",
+   "descripcion": "Un juego acerca de cuánto vale un voto y quién paga las campañas, con un modo simulador sobre las variables macroeconómicas vigentes.",
+   "detalle": "Traduce el financiamiento de la política a decisiones concretas. El simulador permite mover cada variable y observar qué ocurre con el resultado."
+  },
+  {
+   "n": 9,
+   "nombre": "A Quién Criticás",
+   "categoria": "participacion",
+   "estado": "Publicado",
+   "url": "https://a-quien-criticas.vercel.app",
+   "descripcion": "Crítica razonada de figuras públicas, con una misma vara para todos y con la réplica del aludido incluida.",
+   "detalle": "Cada crítica viene acompañada de su evidencia, de una medida de proporción y de la respuesta que daría el criticado, seguida de su refutación. Al crítico no se le concede la última palabra."
+  },
+  {
+   "n": 10,
+   "nombre": "Cuentos Argentinos",
+   "categoria": "cultura",
+   "estado": "Publicado",
+   "url": "https://cuentos-argentinos.vercel.app",
+   "descripcion": "Cuentos ilustrados sobre argentinos que existieron, para leer en voz alta a los chicos.",
+   "detalle": "Historias para criar y no para adoctrinar. Pueden leerse en la pantalla o imprimirse."
+  },
+  {
+   "n": 11,
+   "nombre": "Colección Corvus Lab",
+   "categoria": "editorial",
+   "estado": "Publicado",
+   "url": "https://corvus-lab.vercel.app/coleccion",
+   "descripcion": "Cinco volúmenes acerca de lo que sostiene a una persona cuando el Estado, el trabajo y la atención dejan de sostenerla.",
+   "detalle": "El panteón personal, el protocolo de la atención, el preparacionismo, el último escalón y el tecnocristianismo. Cada uno se basta a sí mismo; juntos dicen algo más."
+  },
+  {
+   "n": 12,
+   "nombre": "Los que legislan",
+   "categoria": "rendicion",
+   "estado": "Publicado",
+   "url": "/congreso",
+   "descripcion": "Los 256 diputados en ejercicio y qué presenta cada uno: cuántos proyectos, cuántos son ley y cuántos son declaraciones simbólicas.",
+   "detalle": "Lee los listados oficiales de la Cámara de Diputados diputado por diputado y los ordena por producción. La mitad de lo que se presenta no es ley: son resoluciones y declaraciones que reconocen, festejan o piden, sin cambiar ninguna norma."
+  },
+  {
+   "n": 13,
+   "nombre": "Cómo vota cada diputado",
+   "categoria": "rendicion",
+   "estado": "Publicado",
+   "url": "/mapa",
+   "descripcion": "Las 33 votaciones nominales del período 144 donde la Cámara se dividió, en un solo eje. Cada diputado aparece por cómo votó, no por lo que dice.",
+   "detalle": "Las posiciones se calculan con el primer componente principal de la matriz de votos, que explica el 89.2% de la varianza. Solo entran las votaciones donde hubo votos en contra: los ausentes no cuentan. El mismo cálculo muestra quiénes se corren de su bloque."
+  },
+  {
+   "n": 14,
+   "nombre": "Votá como tu diputado",
+   "categoria": "rendicion",
+   "estado": "Publicado",
+   "url": "/afinidad",
+   "descripcion": "Ocho votaciones reales del período. Respondés cómo habrías votado y te dice con qué diputados coincidís más y con cuáles menos.",
+   "detalle": "El cálculo compara tus respuestas con el voto registrado de cada diputado en las mismas votaciones. Solo se consideran los diputados con al menos cinco votaciones comparables. No se guarda nada."
+  }
+ ]
 }

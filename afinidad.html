@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Votá como tu diputado · Cámara de Diputados</title>
+<meta name="description" content="Diez votaciones nominales del período 144. Respondé cada una y compará tu posición con el voto registrado de los 256 diputados.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f8f6f2; --card: #ffffff; --ink: #16130f; --muted: #6d665c;
+  --soft: #999083; --rule: #e2dcd1; --rule-strong: #c9c1b3;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+.mono { font-family: "IBM Plex Mono", monospace; }
+nav.top { border-bottom: 1px solid var(--rule); }
+nav.top .wrap { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 28px; }
+nav.top a { color: var(--muted); text-decoration: none; font-size: 13px; }
+nav.top a:hover { color: var(--ink); }
+nav.top .brand { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
+header.hero { padding: 54px 0 30px; border-bottom: 1px solid var(--rule-strong); }
+.kicker { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--soft); margin-bottom: 16px; }
+h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.08; letter-spacing: -.02em; font-weight: 600; margin: 0 0 18px; }
+.dek { font-size: 17.5px; color: var(--muted); max-width: 720px; margin: 0; }
+.cifras { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule);
+  border-bottom: 1px solid var(--rule-strong); }
+.cifra { background: var(--paper); padding: 24px 28px 22px; }
+.cifra b { display: block; font-family: "IBM Plex Mono", monospace; font-size: 30px; font-weight: 500;
+  letter-spacing: -.02em; margin-bottom: 4px; }
+.cifra span { font-size: 12.5px; color: var(--muted); line-height: 1.35; display: block; }
+section { padding: 46px 0 12px; }
+h2 { font-size: 22px; font-weight: 600; letter-spacing: -.01em; margin: 0 0 6px; }
+h2 span { font-weight: 300; color: var(--soft); font-size: 15px; }
+p.intro { color: var(--muted); max-width: 760px; margin: 0 0 26px; font-size: 15.5px; }
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+th { text-align: left; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--soft); font-weight: 500; padding: 0 8px 10px; border-bottom: 1px solid var(--rule-strong); }
+td { padding: 9px 8px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+td.num, th.num { text-align: right; font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; }
+td.bar, th.bar { width: 24%; }
+td.bar span { display: block; height: 7px; border-radius: 1px; opacity: .75; }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 9px; vertical-align: middle; }
+ol.rank { list-style: none; padding: 0; margin: 0; }
+ol.rank li { display: flex; align-items: baseline; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--rule); }
+ol.rank .pos { color: var(--soft); font-family: "IBM Plex Mono", monospace; font-size: 12px; width: 20px; }
+ol.rank .nm { flex: 1; }
+ol.rank .bl { color: var(--soft); font-size: 12.5px; }
+ol.rank .vl { font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; min-width: 44px; text-align: right; }
+ol.rank .vl em { font-style: normal; color: var(--soft); font-size: 11px; }
+.metodo { border-top: 1px solid var(--rule-strong); margin-top: 46px; padding: 34px 0 60px; }
+.metodo h2 { font-size: 16px; }
+.metodo p { color: var(--muted); font-size: 14.5px; max-width: 760px; margin: 0 0 12px; }
+footer { border-top: 1px solid var(--rule); padding: 22px 0 40px; color: var(--soft); font-size: 12.5px; }
+footer a { color: var(--muted); text-decoration: none; }
+footer a:hover { color: var(--ink); }
+
+/* --- test --- */
+.q { background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--rule);
+  border-radius: 3px; padding: 20px 22px 18px; margin-bottom: 12px; }
+.q.contestada { border-left-color: var(--ink); }
+.qh { display: flex; gap: 14px; align-items: baseline; }
+.qn { font-size: 12px; color: var(--soft); letter-spacing: .08em; padding-top: 3px; }
+.qt { font-size: 17px; font-weight: 500; line-height: 1.4; margin: 0; letter-spacing: -.005em; }
+.qa { color: var(--muted); font-size: 13.5px; margin: 6px 0 0 34px; max-width: 760px; }
+.qsrc { color: var(--muted); font-size: 11px; letter-spacing: .03em; margin: 6px 0 14px 34px; text-transform: uppercase; }
+.opts { display: flex; flex-wrap: wrap; gap: 7px; margin-left: 34px; }
+.opts label { position: relative; display: inline-block; }
+.opts input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+.opts span { display: inline-block; border: 1px solid var(--rule-strong); border-radius: 2px;
+  padding: 6px 14px; font-size: 13.5px; color: var(--muted); background: var(--card);
+  cursor: pointer; transition: background .12s, color .12s, border-color .12s; }
+.opts span:hover { border-color: var(--ink); color: var(--ink); }
+.opts input:checked + span { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.opts input:focus-visible + span { outline: 2px solid #6b4fa8; outline-offset: 2px; }
+.opts .salta span { border-style: dashed; color: var(--soft); }
+.opts .salta input:checked + span { background: transparent; border-color: var(--rule-strong); color: var(--muted); }
+.acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding: 22px 0 6px;
+  border-top: 1px solid var(--rule); margin-top: 26px; }
+.btn { font: inherit; font-size: 14.5px; font-weight: 500; background: var(--ink); color: var(--paper);
+  border: 1px solid var(--ink); border-radius: 2px; padding: 10px 22px; cursor: pointer; }
+.btn:hover:not(:disabled) { background: #2c261e; }
+.btn:disabled { opacity: .38; cursor: not-allowed; }
+.btn.ghost { background: transparent; color: var(--muted); border-color: var(--rule-strong); }
+.btn.ghost:hover { color: var(--ink); border-color: var(--ink); background: transparent; }
+.btn:focus-visible { outline: 2px solid #6b4fa8; outline-offset: 2px; }
+.prog { color: var(--soft); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+.stale { color: #8a5a12; font-size: 13px; margin: 10px 0 0; }
+
+/* --- resultados --- */
+#res { padding-top: 40px; }
+.resnota { color: var(--muted); font-size: 14px; max-width: 760px; margin: 4px 0 24px; }
+.resumen { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule);
+  border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule-strong); margin-bottom: 8px; }
+.resumen .cifra b.txt { font-family: "Public Sans", sans-serif; font-size: 17px; font-weight: 600;
+  line-height: 1.25; letter-spacing: -.01em; padding-top: 8px; }
+h3.sub { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--muted); font-weight: 500; margin: 38px 0 12px; }
+.pie { color: var(--muted); font-size: 12.5px; margin: 10px 0 0; }
+ol.rank li.primero .nm b { font-weight: 600; }
+ol.rank .nm b { font-weight: 500; display: block; }
+ol.rank .nm .sub2 { display: flex; align-items: center; color: var(--soft); font-size: 12.5px; margin-top: 1px; }
+ol.rank li { align-items: flex-start; }
+ol.rank .pos { padding-top: 2px; }
+.barra { display: block; height: 3px; background: var(--rule); margin-top: 7px; border-radius: 1px; }
+.barra i { display: block; height: 100%; border-radius: 1px; opacity: .8; }
+.vl b { font-weight: 500; }
+.frac { font-size: 11.5px; color: var(--muted); min-width: 36px; text-align: right; padding-top: 2px; }
+.vl em { font-style: normal; color: var(--soft); font-size: 11px; }
+td .de { color: var(--soft); }
+td.tuvoto { font-weight: 500; }
+td.tuvoto.vacio { color: var(--soft); font-weight: 400; }
+details.todos { margin-top: 38px; border-top: 1px solid var(--rule-strong); }
+details.todos summary { cursor: pointer; padding: 16px 0; font-family: "IBM Plex Mono", monospace;
+  font-size: 11.5px; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); }
+details.todos summary:hover { color: var(--ink); }
+details.todos table { margin-bottom: 20px; }
+details.todos td { padding: 7px 8px; font-size: 13.5px; }
+.tabla-scroll { overflow-x: auto; }
+
+@media (max-width: 760px) {
+  .cifras, .resumen { grid-template-columns: 1fr 1fr; }
+  .cifra { padding: 18px 20px; }
+  td.bar, th.bar { display: none; }
+  .opts, .qa, .qsrc { margin-left: 0; }
+  .qh { gap: 10px; }
+  .q { padding: 18px 16px; }
+  .dist, th.dist { display: none; }
+}
+@media (max-width: 560px) {
+  .bl-col, th.bl-col { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top"><div class="wrap">
+  <a class="brand" href="/">Corvus Lab</a>
+  <div><a href="/congreso">Congreso</a> · <a href="/mapa">Mapa</a> · <a href="/proyectos">Trabajos</a></div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">Cámara de Diputados · Período 144 · 2026</div>
+  <h1>Votá como tu diputado</h1>
+  <p class="dek">Diez votaciones nominales del período, cada una con la fecha y el número de acta. Elegís una posición en cada pregunta y la página compara tus respuestas con el voto registrado de los 256 diputados.</p>
+</div></header>
+
+<div class="cifras">
+  <div class="cifra"><b>10</b><span>votaciones en el test</span></div>
+  <div class="cifra"><b>256</b><span>diputados en el padrón del período</span></div>
+  <div class="cifra"><b>33</b><span>votaciones nominales en las actas</span></div>
+  <div class="cifra"><b>3</b><span>posiciones por acta: a favor, en contra, abstención</span></div>
+</div>
+
+<section><div class="wrap">
+  <h2>Las diez votaciones <span>· una respuesta por pregunta</span></h2>
+  <p class="intro">Podés dejar preguntas sin responder: esas no suman ni restan en el cálculo. La aclaración indica qué parte del proyecto se votó.</p>
+
+  <div id="test">
+<div class="q">
+  <div class="qh"><span class="qn mono">01</span><p class="qt">¿Aprobás cambios al régimen de Zona Fría, que subsidia la tarifa de gas en la Patagonia?</p></div>
+  <p class="qa">Capítulo I del proyecto de energía.</p>
+  <p class="qsrc mono">Acta 15 · 20/05/2026 · Energía, capítulo I: régimen de Zona Fría</p>
+  <div class="opts" role="radiogroup" aria-label="Pregunta 1"><label class="op"><input type="radio" name="q0" value="1"><span>A favor</span></label><label class="op"><input type="radio" name="q0" value="2"><span>En contra</span></label><label class="op"><input type="radio" name="q0" value="3"><span>Abstención</span></label><label class="op salta"><input type="radio" name="q0" value="0"><span>Sin responder</span></label></div>
+</div>
+<div class="q">
+  <div class="qh"><span class="qn mono">02</span><p class="qt">¿Aprobás cambios al régimen de fomento de las energías renovables?</p></div>
+  <p class="qa">Capítulo III del proyecto de energía, artículos 6 y 7.</p>
+  <p class="qsrc mono">Acta 17 · 20/05/2026 · Energía, capítulo III: fuentes renovables</p>
+  <div class="opts" role="radiogroup" aria-label="Pregunta 2"><label class="op"><input type="radio" name="q1" value="1"><span>A favor</span></label><label class="op"><input type="radio" name="q1" value="2"><span>En contra</span></label><label class="op"><input type="radio" name="q1" value="3"><span>Abstención</span></label><label class="op salta"><input type="radio" name="q1" value="0"><span>Sin responder</span></label></div>
+</div>
+<div class="q">
+  <div class="qh"><span class="qn mono">03</span><p class="qt">¿Aprobás los cambios que el proyecto de energía introduce en el mercado de gas natural?</p></div>
+  <p class="qa">Capítulo IV del proyecto de energía, artículo 8.</p>
+  <p class="qsrc mono">Acta 18 · 20/05/2026 · Energía, capítulo IV: gas natural</p>
+  <div class="opts" role="radiogroup" aria-label="Pregunta 3"><label class="op"><input type="radio" name="q2" value="1"><span>A favor</span></label><label class="op"><input type="radio" name="q2" value="2"><span>En contra</span></label><label class="op"><input type="radio" name="q2" value="3"><span>Abstención</span></label><label class="op salta"><input type="radio" name="q2" value="0"><span>Sin responder</span></label></div>
+</div>
+<div class="q">
+  <div class="qh"><span class="qn mono">04</span><p class="qt">¿Aprobás los cambios en el régimen de hidrocarburos?</p></div>
+  <p class="qa">Capítulo V del proyecto de energía, artículos 9 y 10.</p>
+  <p class="qsrc mono">Acta 19 · 20/05/2026 · Energía, capítulo V: hidrocarburos</p>
+  <div class="opts" role="radiogroup" aria-label="Pregunta 4"><label class="op"><input type="radio" name="q3" value="1"><span>A favor</span></label><label class="op"><input type="radio" name="q3" value="2"><span>En contra</span></label><label class="op"><input type="radio" name="q3" value="3"><span>Abstención</span></label><label class="op salta"><input type="radio" name="q3" value="0"><span>Sin responder</span></label></div>
+</div>
+<div class="q">
+  <div class="qh"><span class="qn mono">05</span><p class="qt">¿Aprobás el régimen de incentivos a las grandes inversiones, conocido como RIGI?</p></div>
+  <p class="qa">Votación en general del dictamen.</p>
+  <p class="qsrc mono">Acta 10 · 24/06/2026 · Régimen de incentivos: dictamen en general</p>
+  <div class="opts" role="radiogroup" aria-label="Pregunta 5"><label class="op"><input type="radio" name="q4" value="1"><span>A favor</span></label><label class="op"><input type="radio" name="q4" value="2"><span>En contra</span></label><label class="op"><input type="radio" name="q4" value="3"><span>Abstención</span></label><label class="op salta"><input type="radio" name="q4" value="0"><span>Sin responder</span></label></div>
+</div>
+<div class="q">
+  <div class="qh"><span class="qn mono">06</span><p class="qt">¿Aprobás la reforma de la Carta Orgánica del Banco Central?</p></div>
+  <p class="qa">Votación en general del dictamen.</p>
+  <p class="qsrc mono">Acta 6 · 26/08/2026 · Carta Orgánica del BCRA: dictamen en general</p>
+  <div class="opts" role="radiogroup" aria-label="Pregunta 6"><label class="op"><input type="radio" name="q5" value="1"><span>A favor</span></label><label class="op"><input type="radio" name="q5" value="2"><span>En contra</span></label><label class="op"><input type="radio" name="q5" value="3"><span>Abstención</span></label><label class="op salta"><input type="radio" name="q5" value="0"><span>Sin responder</span></label></div>
+</div>
+<div class="q">
+  <div class="qh"><span class="qn mono">07</span><p class="qt">¿Aprobás la reforma de la ley de procedimiento tributario?</p></div>
+  <p class="qa">Modificación de la ley 11.683, votación en general.</p>
+  <p class="qsrc mono">Acta 9 · 26/08/2026 · Modificación de la ley 11.683: dictamen en general</p>
+  <div class="opts" role="radiogroup" aria-label="Pregunta 7"><label class="op"><input type="radio" name="q6" value="1"><span>A favor</span></label><label class="op"><input type="radio" name="q6" value="2"><span>En contra</span></label><label class="op"><input type="radio" name="q6" value="3"><span>Abstención</span></label><label class="op salta"><input type="radio" name="q6" value="0"><span>Sin responder</span></label></div>
+</div>
+<div class="q">
+  <div class="qh"><span class="qn mono">08</span><p class="qt">¿Aprobás que la Argentina adhiera al tratado de cooperación en materia de patentes?</p></div>
+  <p class="qa">Tratado PCT.</p>
+  <p class="qsrc mono">Acta 16 · 26/08/2026 · Tratado de cooperación en patentes</p>
+  <div class="opts" role="radiogroup" aria-label="Pregunta 8"><label class="op"><input type="radio" name="q7" value="1"><span>A favor</span></label><label class="op"><input type="radio" name="q7" value="2"><span>En contra</span></label><label class="op"><input type="radio" name="q7" value="3"><span>Abstención</span></label><label class="op salta"><input type="radio" name="q7" value="0"><span>Sin responder</span></label></div>
+</div>
+    <div class="acciones">
+      <button id="calc" class="btn" type="button" disabled>Calcular coincidencia</button>
+      <button id="reset" class="btn ghost" type="button">Reiniciar</button>
+      <span id="prog" class="prog mono">0 de 10 respondidas</span>
+    </div>
+    <p id="stale" class="stale" hidden>Cambiaste respuestas. Volvé a calcular para actualizar el ranking.</p>
+  </div>
+</div></section>
+
+<section id="res" hidden><div class="wrap">
+  <h2>Coincidencia <span>· tus respuestas contra el registro de cada diputado</span></h2>
+  <p class="resnota" id="resnota" aria-live="polite"></p>
+  <div class="resumen" id="resumen"></div>
+
+  <h3 class="sub">Los quince más cerca</h3>
+  <ol class="rank" id="top"></ol>
+  <p class="pie">La fracción son las coincidencias sobre las votaciones comparables. Los que empatan comparten posición y aparecen por orden alfabético. La lista completa está al final de la página.</p>
+
+  <h3 class="sub">Coincidencia por bloque</h3>
+  <table>
+    <thead><tr><th>Bloque</th><th class="num">Diputados</th><th class="num">Media</th><th class="bar"></th></tr></thead>
+    <tbody id="bloques"></tbody>
+  </table>
+
+  <h3 class="sub">Tus respuestas, una por una</h3>
+  <p class="pie" id="mayoria"></p>
+  <div class="tabla-scroll">
+    <table style="margin-top:10px">
+      <thead><tr><th>Votación</th><th>Tu voto</th><th class="num">A favor</th><th class="num">En contra</th><th class="num">Abstención</th></tr></thead>
+      <tbody id="detalle"></tbody>
+    </table>
+  </div>
+
+  <details class="todos">
+    <summary>Lista completa · <span id="cuenta-tabla"></span></summary>
+    <div class="tabla-scroll">
+      <table>
+        <thead><tr><th class="num">Pos.</th><th>Diputado</th><th class="bl-col">Bloque</th><th class="dist">Distrito</th><th class="num">Coincidencia</th><th class="bar"></th></tr></thead>
+        <tbody id="todo"></tbody>
+      </table>
+    </div>
+  </details>
+</div></section>
+
+<div class="metodo"><div class="wrap">
+  <h2>Método</h2>
+  <p>Las diez preguntas corresponden a diez votaciones nominales del período 144. Cada tarjeta indica la fecha, el número de acta y el asunto tal como figura en el registro.</p>
+  <p>Cada respuesta se compara con el voto que quedó en el acta para cada diputado: a favor, en contra o abstención. La coincidencia es la cantidad de respuestas iguales sobre la cantidad de votaciones donde hubo respuesta tuya y voto registrado del diputado.</p>
+  <p>Las preguntas que dejaste sin responder se descartan del cálculo, para tu respuesta y para todos los diputados por igual. Un diputado sin voto registrado en una votación tampoco entra en esa pregunta, por ausencia o por licencia. Hay 5 diputados sin ningún voto registrado en estas diez votaciones, así que quedan siempre al final de la lista.</p>
+  <p>Para entrar al ranking hacen falta al menos seis votaciones comparables cuando respondiste las diez, y el 60% de tus respuestas cuando respondiste menos. Los que quedan por debajo aparecen al final, marcados sin datos suficientes.</p>
+  <p>Con diez preguntas hay once resultados posibles, así que muchos diputados empatan y comparten puesto. Dentro de un empate ordena la cantidad de votaciones comparables y después el orden alfabético.</p>
+  <p>La abstención se compara como cualquier otra posición. En dos de las diez votaciones no hubo votos en contra en el registro, así que una respuesta en contra no coincide con nadie en esas dos preguntas.</p>
+  <p>El resultado mide coincidencia en votos registrados. No mide afinidad política, intención de voto ni comportamiento futuro, y no dice si un voto fue acertado.</p>
+  <p>Fuente: Honorable Cámara de Diputados de la Nación, actas de votación nominal, período 144.</p>
+</div></div>
+
+<footer><div class="wrap">Corvus Lab · datos abiertos del Congreso · <a href="/mapa">Mapa de votaciones</a> · <a href="/congreso">Los que legislan</a></div></footer>
+
+<script id="datos" type="application/json">{"dips":[{"n":"Abel Chiconi","b":"La Libertad Avanza","d":"San Juan","c":"#6b4fa8"},{"n":"Abelardo Ferrán","b":"Unión por la Patria","d":"La Pampa","c":"#2f6fa8"},{"n":"Adriana Cristina Serquis","b":"Unión por la Patria","d":"Río Negro","c":"#2f6fa8"},{"n":"Adrián Brizuela","b":"La Libertad Avanza","d":"Catamarca","c":"#6b4fa8"},{"n":"Agustina Lucrecia Propato","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Agustín Oscar Rossi","b":"Unión por la Patria","d":"Santa Fe","c":"#2f6fa8"},{"n":"Agustín Pellegrini","b":"La Libertad Avanza","d":"Santa Fe","c":"#6b4fa8"},{"n":"Alberto Arrúa","b":"Argentina Federal","d":"Misiones","c":"#8a5a12"},{"n":"Aldo Leiva","b":"Unión por la Patria","d":"Chaco","c":"#2f6fa8"},{"n":"Alejandra Torres","b":"Provincias Unidas","d":"Córdoba","c":"#3f7d6b"},{"n":"Alejandrina Borgatta","b":"Unión por la Patria","d":"Santa Fe","c":"#2f6fa8"},{"n":"Alejandro Bongiovanni","b":"La Libertad Avanza","d":"Santa Fe","c":"#6b4fa8"},{"n":"Alejandro Carrancio","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Alejandro Fargosi","b":"La Libertad Avanza","d":"Ciudad de Buenos Aires","c":"#6b4fa8"},{"n":"Alejandro Finocchiaro","b":"PRO","d":"Buenos Aires","c":"#b8912a"},{"n":"Alfredo Gonzales","b":"La Libertad Avanza","d":"Jujuy","c":"#6b4fa8"},{"n":"Alicia Fregonese","b":"PRO","d":"Entre Ríos","c":"#b8912a"},{"n":"Alida Ferreyra","b":"La Libertad Avanza","d":"Ciudad de Buenos Aires","c":"#6b4fa8"},{"n":"Ana María Ianni","b":"Unión por la Patria","d":"Santa Cruz","c":"#2f6fa8"},{"n":"Andrea Fernanda Vera","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Andrea Freites","b":"Unión por la Patria","d":"Tierra del Fuego","c":"#2f6fa8"},{"n":"Andrés Ariel Laumann","b":"La Libertad Avanza","d":"Entre Ríos","c":"#6b4fa8"},{"n":"Andrés Leone","b":"La Libertad Avanza","d":"Ciudad de Buenos Aires","c":"#6b4fa8"},{"n":"Antonela Giampieri","b":"PRO","d":"Ciudad de Buenos Aires","c":"#b8912a"},{"n":"Aníbal Tortoriello","b":"La Libertad Avanza","d":"Río Negro","c":"#6b4fa8"},{"n":"Ariel Rauschenberger","b":"Unión por la Patria","d":"La Pampa","c":"#2f6fa8"},{"n":"Atilio Basualdo","b":"La Libertad Avanza","d":"Formosa","c":"#6b4fa8"},{"n":"Barbara Andreussi","b":"La Libertad Avanza","d":"Jujuy","c":"#6b4fa8"},{"n":"Beltrán Benedit","b":"La Libertad Avanza","d":"Entre Ríos","c":"#6b4fa8"},{"n":"Belén Avico","b":"La Libertad Avanza","d":"Córdoba","c":"#6b4fa8"},{"n":"Bernardo Biella","b":"Argentina Federal","d":"Salta","c":"#8a5a12"},{"n":"Bertie Benegas Lynch","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Blanca Inés Osuna","b":"Unión por la Patria","d":"Entre Ríos","c":"#2f6fa8"},{"n":"Caren Tepp","b":"Unión por la Patria","d":"Santa Fe","c":"#2f6fa8"},{"n":"Carlos Alberto Almena","b":"La Libertad Avanza","d":"San Luis","c":"#6b4fa8"},{"n":"Carlos Cisneros","b":"Unión por la Patria","d":"Tucumán","c":"#2f6fa8"},{"n":"Carlos Daniel Castagneto","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Carlos García","b":"La Libertad Avanza","d":"Chaco","c":"#6b4fa8"},{"n":"Carlos Gustavo Jaime Quiroga","b":"Producción y Trabajo","d":"San Juan","c":"#b3ab9e"},{"n":"Carlos Gutiérrez","b":"Provincias Unidas","d":"Córdoba","c":"#3f7d6b"},{"n":"Carlos Raúl Zapata","b":"La Libertad Avanza","d":"Salta","c":"#6b4fa8"},{"n":"Carolina Basualdo","b":"Provincias Unidas","d":"Córdoba","c":"#3f7d6b"},{"n":"Cecilia López Pasquali","b":"Unión por la Patria","d":"Santiago del Estero","c":"#2f6fa8"},{"n":"Cecilia Moreau","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Celia Campitelli","b":"Unión por la Patria","d":"Santiago del Estero","c":"#2f6fa8"},{"n":"Christian Alejandro Zulli","b":"Unión por la Patria","d":"Corrientes","c":"#2f6fa8"},{"n":"Claudia María Palladino","b":"Unión por la Patria","d":"Catamarca","c":"#2f6fa8"},{"n":"Claudio Álvarez","b":"Argentina Federal","d":"San Luis","c":"#8a5a12"},{"n":"Cristian A. Ritondo","b":"PRO","d":"Buenos Aires","c":"#b8912a"},{"n":"Cristian Andino","b":"Unión por la Patria","d":"San Juan","c":"#2f6fa8"},{"n":"César Treffinger","b":"La Libertad Avanza","d":"Chubut","c":"#6b4fa8"},{"n":"Daiana Fernández Molero","b":"PRO","d":"Ciudad de Buenos Aires","c":"#b8912a"},{"n":"Damián Arabia","b":"La Libertad Avanza","d":"Ciudad de Buenos Aires","c":"#6b4fa8"},{"n":"Daniel Vancsik","b":"Argentina Federal","d":"Misiones","c":"#8a5a12"},{"n":"Darío Schneider","b":"UCR - Unión Cívica Radical","d":"Entre Ríos","c":"#b5442f"},{"n":"Diego A. Giuliano","b":"Unión por la Patria","d":"Santa Fe","c":"#2f6fa8"},{"n":"Diego Hartfield","b":"La Libertad Avanza","d":"Misiones","c":"#6b4fa8"},{"n":"Diógenes Ignacio González","b":"UCR - Unión Cívica Radical","d":"Corrientes","c":"#b5442f"},{"n":"Eduardo Falcone","b":"MID - Movimiento de Integración y Desarrollo","d":"Buenos Aires","c":"#b3ab9e"},{"n":"Eduardo Félix Valdés","b":"Unión por la Patria","d":"Ciudad de Buenos Aires","c":"#2f6fa8"},{"n":"Elia Marina Fernández","b":"Independencia","d":"Tucumán","c":"#7a5c9e"},{"n":"Eliana Bruno","b":"La Libertad Avanza","d":"Salta","c":"#6b4fa8"},{"n":"Emir Félix","b":"Unión por la Patria","d":"Mendoza","c":"#2f6fa8"},{"n":"Emmanuel Bianchetti","b":"PRO","d":"Misiones","c":"#b8912a"},{"n":"Enrique Lluch","b":"La Libertad Avanza","d":"Córdoba","c":"#6b4fa8"},{"n":"Ernesto \"Pipi\" Alí","b":"Primero San Luis","d":"San Luis","c":"#b3ab9e"},{"n":"Esteban Paulón","b":"Provincias Unidas","d":"Santa Fe","c":"#3f7d6b"},{"n":"Estela Mary Neder","b":"Unión por la Patria","d":"Santiago del Estero","c":"#2f6fa8"},{"n":"Facundo Correa Llano","b":"La Libertad Avanza","d":"Mendoza","c":"#6b4fa8"},{"n":"Federico Agustín Pelli","b":"La Libertad Avanza","d":"Tucumán","c":"#6b4fa8"},{"n":"Fernanda Avila","b":"Elijo Catamarca","d":"Catamarca","c":"#7a5c9e"},{"n":"Fernanda Díaz","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Fernanda Miño","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Fernando Monguillot","b":"Elijo Catamarca","d":"Catamarca","c":"#7a5c9e"},{"n":"Fernando de Andreis","b":"PRO","d":"Ciudad de Buenos Aires","c":"#b8912a"},{"n":"Florencia Carignano","b":"Unión por la Patria","d":"Santa Fe","c":"#2f6fa8"},{"n":"Francisco Morchio","b":"La Libertad Avanza","d":"Entre Ríos","c":"#6b4fa8"},{"n":"Gabriel Bornoroni","b":"La Libertad Avanza","d":"Córdoba","c":"#6b4fa8"},{"n":"Gabriela Beatriz Estévez","b":"Unión por la Patria","d":"Córdoba","c":"#2f6fa8"},{"n":"Gabriela Luciana Muñoz","b":"La Libertad Avanza","d":"Neuquén","c":"#6b4fa8"},{"n":"Gabriela Pedrali","b":"Unión por la Patria","d":"La Rioja","c":"#2f6fa8"},{"n":"Gastón Riesco","b":"La Libertad Avanza","d":"Neuquén","c":"#6b4fa8"},{"n":"Gerardo Cipolini","b":"UCR - Unión Cívica Radical","d":"Chaco","c":"#b5442f"},{"n":"Gerardo Gustavo González","b":"Argentina Federal","d":"Formosa","c":"#8a5a12"},{"n":"Gerardo Huesen","b":"La Libertad Avanza","d":"Tucumán","c":"#6b4fa8"},{"n":"Germán Pedro Martínez","b":"Unión por la Patria","d":"Santa Fe","c":"#2f6fa8"},{"n":"Gino Visconti","b":"La Libertad Avanza","d":"La Rioja","c":"#6b4fa8"},{"n":"Gisela Scaglia","b":"Provincias Unidas","d":"Santa Fe","c":"#3f7d6b"},{"n":"Giselle Castelnuovo","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Gladys Humenuk","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Gladys Medina","b":"Independencia","d":"Tucumán","c":"#7a5c9e"},{"n":"Gonzalo Roca","b":"La Libertad Avanza","d":"Córdoba","c":"#6b4fa8"},{"n":"Guillermo César Agüero","b":"UCR - Unión Cívica Radical","d":"Chaco","c":"#b5442f"},{"n":"Guillermo Michel","b":"Unión por la Patria","d":"Entre Ríos","c":"#2f6fa8"},{"n":"Guillermo Montenegro","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Guillermo Snopek","b":"Unión por la Patria","d":"Jujuy","c":"#2f6fa8"},{"n":"Gustavo Bordet","b":"Unión por la Patria","d":"Entre Ríos","c":"#2f6fa8"},{"n":"Hernán Urien","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Hilda Aguirre","b":"Unión por la Patria","d":"La Rioja","c":"#2f6fa8"},{"n":"Horacio Pietragalla Corti","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Hugo Antonio Moyano","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Hugo Yasky","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Ignacio García Aresca","b":"Provincias Unidas","d":"Córdoba","c":"#3f7d6b"},{"n":"Itai Hagman","b":"Unión por la Patria","d":"Ciudad de Buenos Aires","c":"#2f6fa8"},{"n":"Jairo Guzmán","b":"La Libertad Avanza","d":"Santa Cruz","c":"#6b4fa8"},{"n":"Javier Andrade","b":"Unión por la Patria","d":"Ciudad de Buenos Aires","c":"#2f6fa8"},{"n":"Javier Noguera","b":"Independencia","d":"Tucumán","c":"#7a5c9e"},{"n":"Javier Sánchez Wrba","b":"PRO","d":"Buenos Aires","c":"#b8912a"},{"n":"Jimena López","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Joaquín Ojeda","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Johanna Sabrina Longo","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Jorge Antonio Avila","b":"Provincias Unidas","d":"Chubut","c":"#3f7d6b"},{"n":"Jorge Chica","b":"Unión por la Patria","d":"San Juan","c":"#2f6fa8"},{"n":"Jorge Fernández","b":"Primero San Luis","d":"San Luis","c":"#b3ab9e"},{"n":"Jorge Mukdise","b":"Unión por la Patria","d":"Santiago del Estero","c":"#2f6fa8"},{"n":"Jorge Neri Araujo Hernández","b":"Unión por la Patria","d":"Tierra del Fuego","c":"#2f6fa8"},{"n":"Jorge Rizzotti","b":"Provincias Unidas","d":"Jujuy","c":"#3f7d6b"},{"n":"Jorge Taiana","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"José Federico Tournier","b":"La Libertad Avanza","d":"Corrientes","c":"#6b4fa8"},{"n":"José Glinski","b":"Unión por la Patria","d":"Chubut","c":"#2f6fa8"},{"n":"José Gomez","b":"Unión por la Patria","d":"Santiago del Estero","c":"#2f6fa8"},{"n":"José Luis Garrido","b":"Por Santa Cruz","d":"Santa Cruz","c":"#b3ab9e"},{"n":"José Nuñez","b":"Provincias Unidas","d":"Santa Fe","c":"#3f7d6b"},{"n":"José Peluc","b":"La Libertad Avanza","d":"San Juan","c":"#6b4fa8"},{"n":"Juan Carlos Giordano","b":"Izquierda Socialista - Frente de Izquierda Unidad","d":"Buenos Aires","c":"#b3ab9e"},{"n":"Juan Carlos Molina","b":"Unión por la Patria","d":"Santa Cruz","c":"#2f6fa8"},{"n":"Juan Fernando Brügge","b":"Provincias Unidas","d":"Córdoba","c":"#3f7d6b"},{"n":"Juan Grabois","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Juan Marino","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Juan Pablo Luque","b":"Unión por la Patria","d":"Chubut","c":"#2f6fa8"},{"n":"Juan Pablo Montenegro","b":"La Libertad Avanza","d":"Santa Fe","c":"#6b4fa8"},{"n":"Juan Schiaretti","b":"Provincias Unidas","d":"Córdoba","c":"#3f7d6b"},{"n":"Julia Strada","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Juliana Santillán Juárez Brahim","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Julieta Marisol Campo","b":"Unión por la Patria","d":"Chaco","c":"#2f6fa8"},{"n":"Julieta Metral Asensio","b":"La Libertad Avanza","d":"Mendoza","c":"#6b4fa8"},{"n":"Julio Moreno Ovalle","b":"La Libertad Avanza","d":"Salta","c":"#6b4fa8"},{"n":"Karen Reichardt","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Karina Banfi","b":"Adelante Buenos Aires","d":"Buenos Aires","c":"#b3ab9e"},{"n":"Karina Maureira","b":"La Neuquinidad","d":"Neuquén","c":"#b3ab9e"},{"n":"Kelly Olmos","b":"Unión por la Patria","d":"Ciudad de Buenos Aires","c":"#2f6fa8"},{"n":"Laura Elena Rodríguez Machado","b":"La Libertad Avanza","d":"Córdoba","c":"#6b4fa8"},{"n":"Laura Soldano","b":"La Libertad Avanza","d":"Córdoba","c":"#6b4fa8"},{"n":"Lilia Lemoine","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Lisandro Almirón","b":"La Libertad Avanza","d":"Corrientes","c":"#6b4fa8"},{"n":"Lisandro Nieri","b":"UCR - Unión Cívica Radical","d":"Mendoza","c":"#b5442f"},{"n":"Lorena Macyszyn","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Lorena Pokoik","b":"Unión por la Patria","d":"Ciudad de Buenos Aires","c":"#2f6fa8"},{"n":"Lorena Villaverde","b":"La Libertad Avanza","d":"Río Negro","c":"#6b4fa8"},{"n":"Lourdes Micaela Arrieta","b":"Provincias Unidas","d":"Mendoza","c":"#3f7d6b"},{"n":"Luana Volnovich","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Luciana Potenza","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Lucía Cámpora","b":"Unión por la Patria","d":"Ciudad de Buenos Aires","c":"#2f6fa8"},{"n":"Luis Albino Picat","b":"La Libertad Avanza","d":"Córdoba","c":"#6b4fa8"},{"n":"Luis Eugenio Basterra","b":"Unión por la Patria","d":"Formosa","c":"#2f6fa8"},{"n":"Luis Petri","b":"La Libertad Avanza","d":"Mendoza","c":"#6b4fa8"},{"n":"M. Elena Velázquez","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Maira Frias","b":"La Libertad Avanza","d":"Chubut","c":"#6b4fa8"},{"n":"Manuel Quintar","b":"La Libertad Avanza","d":"Jujuy","c":"#6b4fa8"},{"n":"Marcela Marina Pagano","b":"Coherencia","d":"Buenos Aires","c":"#b3ab9e"},{"n":"Marcelo Barbur","b":"Unión por la Patria","d":"Santiago del Estero","c":"#2f6fa8"},{"n":"Marcelo Mango","b":"Unión por la Patria","d":"Río Negro","c":"#2f6fa8"},{"n":"Marcos Patiño Brizuela","b":"La Libertad Avanza","d":"Córdoba","c":"#6b4fa8"},{"n":"Maria Gabriela Flores","b":"La Libertad Avanza","d":"Salta","c":"#6b4fa8"},{"n":"Marianela Marclay","b":"Unión por la Patria","d":"Entre Ríos","c":"#2f6fa8"},{"n":"Mariano Campero","b":"La Libertad Avanza","d":"Tucumán","c":"#6b4fa8"},{"n":"Mariela Coletta","b":"Provincias Unidas","d":"Ciudad de Buenos Aires","c":"#3f7d6b"},{"n":"Marina Dorotea Salzmann","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Mario Manrique","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Martín Ardohain","b":"PRO","d":"La Pampa","c":"#b8912a"},{"n":"Martín Aveiro","b":"Unión por la Patria","d":"Mendoza","c":"#2f6fa8"},{"n":"Martín Lousteau","b":"Provincias Unidas","d":"Ciudad de Buenos Aires","c":"#3f7d6b"},{"n":"Martín Matzkin","b":"La Libertad Avanza","d":"La Pampa","c":"#6b4fa8"},{"n":"Martín Menem","b":"La Libertad Avanza","d":"La Rioja","c":"#6b4fa8"},{"n":"Martín Yeza","b":"PRO","d":"Buenos Aires","c":"#b8912a"},{"n":"María Cecilia Ibañez","b":"La Libertad Avanza","d":"Córdoba","c":"#6b4fa8"},{"n":"María Celeste Ponce","b":"La Libertad Avanza","d":"Córdoba","c":"#6b4fa8"},{"n":"María Florencia De Sensi","b":"PRO","d":"Buenos Aires","c":"#b8912a"},{"n":"María Graciela Parola","b":"Unión por la Patria","d":"Formosa","c":"#2f6fa8"},{"n":"María Graciela de la Rosa","b":"Unión por la Patria","d":"Formosa","c":"#2f6fa8"},{"n":"María Inés Zigarán","b":"Provincias Unidas","d":"Jujuy","c":"#3f7d6b"},{"n":"María Lorena Petrovich","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"María Luisa González Estevarena","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"María Teresa García","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"María Virginia Gallardo","b":"La Libertad Avanza","d":"Corrientes","c":"#6b4fa8"},{"n":"Matías Molle","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Maura Gruber","b":"La Libertad Avanza","d":"Misiones","c":"#6b4fa8"},{"n":"Maximiliano Ferraro","b":"Coalición Cívica","d":"Ciudad de Buenos Aires","c":"#b3ab9e"},{"n":"Mercedes Llano","b":"La Libertad Avanza","d":"Mendoza","c":"#6b4fa8"},{"n":"Miguel Rodríguez","b":"La Libertad Avanza","d":"Tierra del Fuego","c":"#6b4fa8"},{"n":"Miguel Ángel Pichetto","b":"Encuentro Federal","d":"Buenos Aires","c":"#b3ab9e"},{"n":"Miriam Niveyro","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Moira Lanesan Sancho","b":"Unión por la Patria","d":"Santa Cruz","c":"#2f6fa8"},{"n":"Myriam Bregman","b":"PTS - Frente de Izquierda y de Trabajadores Unidad","d":"Ciudad de Buenos Aires","c":"#b3ab9e"},{"n":"Máximo Carlos Kirchner","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Mónica Becerra","b":"La Libertad Avanza","d":"San Luis","c":"#6b4fa8"},{"n":"Mónica Frade","b":"Coalición Cívica","d":"Buenos Aires","c":"#b3ab9e"},{"n":"Nancy Sand","b":"Unión por la Patria","d":"Corrientes","c":"#2f6fa8"},{"n":"Nancy Viviana Picón Martínez","b":"Producción y Trabajo","d":"San Juan","c":"#b3ab9e"},{"n":"Natalia Zaracho","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Natalia de la Sota","b":"Defendamos Córdoba","d":"Córdoba","c":"#b3ab9e"},{"n":"Nicolás Alfredo Trotta","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Nicolás Emma","b":"La Libertad Avanza","d":"Ciudad de Buenos Aires","c":"#6b4fa8"},{"n":"Nicolás Massot","b":"Encuentro Federal","d":"Buenos Aires","c":"#b3ab9e"},{"n":"Nicolás Mayoraz","b":"La Libertad Avanza","d":"Santa Fe","c":"#6b4fa8"},{"n":"Nicolás del Caño","b":"PTS - Frente de Izquierda y de Trabajadores Unidad","d":"Buenos Aires","c":"#b3ab9e"},{"n":"Oscar A. Herrera Ahuad","b":"Argentina Federal","d":"Misiones","c":"#8a5a12"},{"n":"Oscar Zago","b":"MID - Movimiento de Integración y Desarrollo","d":"Ciudad de Buenos Aires","c":"#b3ab9e"},{"n":"Pablo Ansaloni","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Pablo Farías","b":"Provincias Unidas","d":"Santa Fe","c":"#3f7d6b"},{"n":"Pablo Juliano","b":"Provincias Unidas","d":"Buenos Aires","c":"#3f7d6b"},{"n":"Pablo Outes","b":"Argentina Federal","d":"Salta","c":"#8a5a12"},{"n":"Pablo Raúl Yedlin","b":"Unión por la Patria","d":"Tucumán","c":"#2f6fa8"},{"n":"Pablo Todero","b":"Unión por la Patria","d":"Neuquén","c":"#2f6fa8"},{"n":"Pamela Fernanda Verasay","b":"UCR - Unión Cívica Radical","d":"Mendoza","c":"#b5442f"},{"n":"Patricia Holzman","b":"La Libertad Avanza","d":"Ciudad de Buenos Aires","c":"#6b4fa8"},{"n":"Patricia Vásquez","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Paula Andrea Penacca","b":"Unión por la Patria","d":"Ciudad de Buenos Aires","c":"#2f6fa8"},{"n":"Paulo Agustín Tita","b":"Unión por la Patria","d":"Tierra del Fuego","c":"#2f6fa8"},{"n":"Ramiro Gutiérrez","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Raúl Hadad","b":"Unión por la Patria","d":"Corrientes","c":"#2f6fa8"},{"n":"Ricardo Daives","b":"Unión por la Patria","d":"Santiago del Estero","c":"#2f6fa8"},{"n":"Rocío Bonacci","b":"La Libertad Avanza","d":"Santa Fe","c":"#6b4fa8"},{"n":"Rodolfo Tailhade","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Romina Diez","b":"La Libertad Avanza","d":"Santa Fe","c":"#6b4fa8"},{"n":"Rosario Goitia","b":"La Libertad Avanza","d":"Chaco","c":"#6b4fa8"},{"n":"Roxana Monzón","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Rubén Darío Torres","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Sabrina Ajmechet","b":"La Libertad Avanza","d":"Ciudad de Buenos Aires","c":"#6b4fa8"},{"n":"Sabrina Selva","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Santiago Cafiero","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Santiago Luis Roberto","b":"Unión por la Patria","d":"Ciudad de Buenos Aires","c":"#2f6fa8"},{"n":"Santiago Pauli","b":"La Libertad Avanza","d":"Tierra del Fuego","c":"#6b4fa8"},{"n":"Santiago Santurio","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Sebastián Galmarini","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Sebastián Nóblega","b":"Elijo Catamarca","d":"Catamarca","c":"#7a5c9e"},{"n":"Sebastián Pareja","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Sergio Dolce","b":"Unión por la Patria","d":"Chaco","c":"#2f6fa8"},{"n":"Sergio Eduardo Capozzi","b":"Provincias Unidas","d":"Río Negro","c":"#3f7d6b"},{"n":"Sergio Figliuolo","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Sergio Guillermo Casas","b":"Unión por la Patria","d":"La Rioja","c":"#2f6fa8"},{"n":"Sergio Omar Palazzo","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Silvana Giudici","b":"La Libertad Avanza","d":"Ciudad de Buenos Aires","c":"#6b4fa8"},{"n":"Soledad Molinuevo","b":"La Libertad Avanza","d":"Tucumán","c":"#6b4fa8"},{"n":"Soledad Mondaca","b":"La Libertad Avanza","d":"Neuquén","c":"#6b4fa8"},{"n":"Valentina Ravera","b":"La Libertad Avanza","d":"Santa Fe","c":"#6b4fa8"},{"n":"Vanesa Raquel Siley","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Varinia Lis Marín","b":"Unión por la Patria","d":"La Pampa","c":"#2f6fa8"},{"n":"Verónica Razzini","b":"La Libertad Avanza","d":"Santa Fe","c":"#6b4fa8"},{"n":"Victoria Tolosa Paz","b":"Unión por la Patria","d":"Buenos Aires","c":"#2f6fa8"},{"n":"Yamila Ruíz","b":"Argentina Federal","d":"Misiones","c":"#8a5a12"},{"n":"Yamile Tomassoni","b":"La Libertad Avanza","d":"Santa Fe","c":"#6b4fa8"},{"n":"Yolanda Vega","b":"Argentina Federal","d":"Salta","c":"#8a5a12"},{"n":"Álvaro García","b":"La Libertad Avanza","d":"Buenos Aires","c":"#6b4fa8"},{"n":"Álvaro González","b":"PRO","d":"Ciudad de Buenos Aires","c":"#b8912a"},{"n":"Álvaro Martínez","b":"La Libertad Avanza","d":"Mendoza","c":"#6b4fa8"}],"votos":["1221221122211111112121111211112122122112122222221211111211021121122211222212112121111212111112102122202212112111222202122101022222102121112121111112112221212110221121022120001111221112121311012001021222121010122122111220200211211222112212112211112210111111","1221221122211111112121111211111122122112122222221211111211021121122211122112112121111211111112102122202212112111222202122101022222102121111121111112112221212110221121022120001111221112121111012001021222111010121122111220200211211222112112112211112210111111","1221021122211111112121111211111122122112122222221211111211021121122211222212112121111212111112102122202212112111222202122101022222102121111121111112112221212110221121022120001111221112121311012001021222111010122122111220200211211222112212112211112210111111","1221021122211111112121111211111122122112122222221211111211021121122211322312112121111212111112102122202212112111222202122101022222102121111121111112112221212110221121022120001111221112121211012001021222111010122122111220200011211222112312112211112210111111","1221221120211111112121111211011122122112122222011211111211021121120211022312112121111210111112122122220212112110222232120131022222122121111121111112132221210112221101222122101111223112121211212021221222101010122122111222221211211222110312312211112212111111","1221221121211111112121111211111122122111112222211211111211021121122211322312112121111211111112122122221212112111222212122111223222112121111121111112112221210112221121322123101111221112121111212021321222131010123122111222221211211222112312112211112212111111","1221221123211111112121111211111122122112122222211211111211021121122211122112112121111211111112122122222212112112222212120111222222122121111121111112132221212112221121222122101111221112121211010021021222121010102122111222221211211222112112112211112212111111","1221021121211101112121111211110122102111112222201211111211021121120211122112112121111211111110122122221212112111222202120111221222112121111121111112112221212110221121120120101111221112121111010021021222111010101122111222221211211222112112112211112212111111"],"preguntas":[{"p":"¿Aprobás cambios al régimen de Zona Fría, que subsidia la tarifa de gas en la Patagonia?","ac":"Capítulo I del proyecto de energía.","as":"Energía, capítulo I: régimen de Zona Fría","f":"20/05/2026","a":15,"s":{"af":128,"ne":105,"ab":1,"sin":22}},{"p":"¿Aprobás cambios al régimen de fomento de las energías renovables?","ac":"Capítulo III del proyecto de energía, artículos 6 y 7.","as":"Energía, capítulo III: fuentes renovables","f":"20/05/2026","a":17,"s":{"af":137,"ne":97,"ab":0,"sin":22}},{"p":"¿Aprobás los cambios que el proyecto de energía introduce en el mercado de gas natural?","ac":"Capítulo IV del proyecto de energía, artículo 8.","as":"Energía, capítulo IV: gas natural","f":"20/05/2026","a":18,"s":{"af":131,"ne":101,"ab":1,"sin":23}},{"p":"¿Aprobás los cambios en el régimen de hidrocarburos?","ac":"Capítulo V del proyecto de energía, artículos 9 y 10.","as":"Energía, capítulo V: hidrocarburos","f":"20/05/2026","a":19,"s":{"af":131,"ne":98,"ab":3,"sin":24}},{"p":"¿Aprobás el régimen de incentivos a las grandes inversiones, conocido como RIGI?","ac":"Votación en general del dictamen.","as":"Régimen de incentivos: dictamen en general","f":"24/06/2026","a":10,"s":{"af":128,"ne":102,"ab":7,"sin":19}},{"p":"¿Aprobás la reforma de la Carta Orgánica del Banco Central?","ac":"Votación en general del dictamen.","as":"Carta Orgánica del BCRA: dictamen en general","f":"26/08/2026","a":6,"s":{"af":142,"ne":99,"ab":9,"sin":6}},{"p":"¿Aprobás la reforma de la ley de procedimiento tributario?","ac":"Modificación de la ley 11.683, votación en general.","as":"Modificación de la ley 11.683: dictamen en general","f":"26/08/2026","a":9,"s":{"af":137,"ne":107,"ab":2,"sin":10}},{"p":"¿Aprobás que la Argentina adhiera al tratado de cooperación en materia de patentes?","ac":"Tratado PCT.","as":"Tratado de cooperación en patentes","f":"26/08/2026","a":16,"s":{"af":145,"ne":90,"ab":0,"sin":21}}],"n":256}</script>
+<script>
+(function () {
+  var D = JSON.parse(document.getElementById('datos').textContent);
+  var NQ = D.preguntas.length;
+  var VOTO = { '1': 'A favor', '2': 'En contra', '3': 'Abstención' };
+  var btn = document.getElementById('calc');
+  var rst = document.getElementById('reset');
+  var prog = document.getElementById('prog');
+  var res = document.getElementById('res');
+  var stale = document.getElementById('stale');
+  var ultimo = null;
+
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function respuestas() {
+    var a = [];
+    for (var i = 0; i < NQ; i++) {
+      var el = document.querySelector('input[name="q' + i + '"]:checked');
+      a.push(el && el.value !== '0' ? el.value : null);
+    }
+    return a;
+  }
+
+  function refrescar() {
+    var a = respuestas(), n = 0, cards = document.querySelectorAll('.q');
+    for (var i = 0; i < NQ; i++) {
+      if (a[i]) n++;
+      cards[i].classList.toggle('contestada', !!a[i]);
+    }
+    prog.textContent = n + ' de ' + NQ + ' respondidas';
+    btn.disabled = n === 0;
+    stale.hidden = !(ultimo !== null && a.join('|') !== ultimo && !res.hidden);
+  }
+
+  function comparar(a) {
+    var resp = a.filter(Boolean).length;
+    var minComp = resp <= 3 ? Math.max(resp, 1) : Math.max(3, Math.ceil(resp * 0.6));
+    var filas = [];
+    for (var i = 0; i < D.dips.length; i++) {
+      var hit = 0, comp = 0;
+      for (var q = 0; q < NQ; q++) {
+        if (!a[q]) continue;
+        var v = D.votos[q].charAt(i);
+        if (v === '0') continue;
+        comp++;
+        if (v === a[q]) hit++;
+      }
+      filas.push({ i: i, hit: hit, comp: comp, pct: comp ? hit / comp : 0 });
+    }
+    function ord(x, y) {
+      if (y.pct !== x.pct) return y.pct - x.pct;
+      if (y.hit !== x.hit) return y.hit - x.hit;
+      if (y.comp !== x.comp) return y.comp - x.comp;
+      return D.dips[x.i].n.localeCompare(D.dips[y.i].n, 'es');
+    }
+    var dentro = filas.filter(function (f) { return f.comp >= minComp; }).sort(ord);
+    var fuera = filas.filter(function (f) { return f.comp < minComp; }).sort(ord);
+    return { dentro: dentro, fuera: fuera, resp: resp, minComp: minComp };
+  }
+
+  function filaTop(f) {
+    var d = D.dips[f.i];
+    return '<li class="' + (f.pos === 1 ? 'primero' : '') + '">' +
+      '<span class="pos">' + f.pos + '</span>' +
+      '<span class="nm"><b>' + esc(d.n) + '</b>' +
+      '<span class="sub2"><i class="dot" style="background:' + d.c + '"></i>' + esc(d.b) + ' · ' + esc(d.d) + '</span>' +
+      '<span class="barra"><i style="width:' + (f.pct * 100).toFixed(1) + '%;background:' + d.c + '"></i></span></span>' +
+      '<span class="frac mono">' + f.hit + '/' + f.comp + '</span>' +
+      '<span class="vl"><b>' + Math.round(f.pct * 100) + '</b><em>%</em></span></li>';
+  }
+
+  function filaTabla(f, rankeado) {
+    var d = D.dips[f.i];
+    var pos = rankeado ? f.pos : 's/d';
+    var val = f.comp
+      ? '<b>' + Math.round(f.pct * 100) + '%</b><span class="de"> · ' + f.hit + '/' + f.comp + '</span>'
+      : '<span class="de">sin votos en común</span>';
+    return '<tr>' +
+      '<td class="num">' + pos + '</td>' +
+      '<td>' + esc(d.n) + '</td>' +
+      '<td class="bl-col">' + esc(d.b) + '</td>' +
+      '<td class="dist">' + esc(d.d) + '</td>' +
+      '<td class="num">' + val + '</td>' +
+      '<td class="bar">' + (rankeado && f.comp ? '<span style="width:' + (f.pct * 100).toFixed(1) + '%;background:' + d.c + '"></span>' : '') + '</td>' +
+      '</tr>';
+  }
+
+  function pintar(a) {
+    var r = comparar(a);
+    var dentro = r.dentro, fuera = r.fuera, resp = r.resp;
+    var pos = 0, prev = null;
+    dentro.forEach(function (f, k) {
+      var key = Math.round(f.pct * 1000);
+      if (key !== prev) { pos = k + 1; prev = key; }
+      f.pos = pos;
+    });
+
+    var primeros = dentro.filter(function (f) { return f.pos === 1; });
+    var media = dentro.length ? dentro.reduce(function (s, f) { return s + f.pct; }, 0) / dentro.length : 0;
+
+    // bloque más frecuente en el primer puesto
+    var cuenta = {};
+    primeros.forEach(function (f) { var b = D.dips[f.i].b; cuenta[b] = (cuenta[b] || 0) + 1; });
+    var moda = Object.keys(cuenta).sort(function (x, y) { return cuenta[y] - cuenta[x]; })[0] || '';
+
+    document.getElementById('resumen').innerHTML =
+      '<div class="cifra"><b>' + Math.round(dentro[0].pct * 100) + '%</b><span>coincidencia más alta' +
+        (dentro[0].comp !== resp ? ' · ' + dentro[0].hit + ' de ' + dentro[0].comp + ' votaciones' : '') + '</span></div>' +
+      '<div class="cifra"><b>' + primeros.length + '</b><span>diputados en el primer puesto</span></div>' +
+      '<div class="cifra"><b class="txt">' + esc(moda) + '</b><span>bloque más frecuente entre los primeros</span></div>' +
+      '<div class="cifra"><b>' + Math.round(media * 100) + '%</b><span>coincidencia media de los comparados</span></div>';
+
+    document.getElementById('resnota').innerHTML =
+      'Respondiste ' + resp + ' de ' + NQ + ' preguntas. Se compararon ' + dentro.length +
+      ' diputados con al menos ' + (r.minComp === 1 ? 'una votación' : r.minComp + ' votaciones') +
+      ' en común contigo; ' + fuera.length +
+      ' quedan al final de la lista por falta de registro suficiente.' +
+      (resp < 5 ? ' Con ' + resp + ' respuesta' + (resp === 1 ? '' : 's') + ' el resultado se apoya en muy pocas votaciones.' : '');
+
+    document.getElementById('top').innerHTML = dentro.slice(0, 15).map(filaTop).join('');
+
+    // por bloque
+    var bl = {};
+    dentro.forEach(function (f) {
+      var b = D.dips[f.i].b, c = D.dips[f.i].c;
+      if (!bl[b]) bl[b] = { n: 0, s: 0, c: c };
+      bl[b].n++; bl[b].s += f.pct;
+    });
+    var filas = Object.keys(bl).map(function (b) {
+      return { b: b, n: bl[b].n, m: bl[b].s / bl[b].n, c: bl[b].c };
+    }).sort(function (x, y) { return y.m - x.m; });
+    var grandes = filas.filter(function (r) { return r.n >= 2; });
+    var chicos = filas.filter(function (r) { return r.n < 2; });
+    var htmlBl = grandes.slice(0, 12).map(function (r) {
+      return '<tr><td><span class="dot" style="background:' + r.c + '"></span>' + esc(r.b) + '</td>' +
+        '<td class="num">' + r.n + '</td><td class="num">' + Math.round(r.m * 100) + '%</td>' +
+        '<td class="bar"><span style="width:' + (r.m * 100).toFixed(1) + '%;background:' + r.c + '"></span></td></tr>';
+    }).join('');
+    if (chicos.length) {
+      var sn = chicos.reduce(function (s, r) { return s + r.n; }, 0);
+      var sm = chicos.reduce(function (s, r) { return s + r.m * r.n; }, 0) / sn;
+      htmlBl += '<tr><td><span class="dot" style="background:#b3ab9e"></span>Bloques con un solo diputado (' + chicos.length + ')</td>' +
+        '<td class="num">' + sn + '</td><td class="num">' + Math.round(sm * 100) + '%</td>' +
+        '<td class="bar"><span style="width:' + (sm * 100).toFixed(1) + '%;background:#b3ab9e"></span></td></tr>';
+    }
+    document.getElementById('bloques').innerHTML = htmlBl;
+
+    // respuestas una por una
+    var acuerdos = 0;
+    document.getElementById('detalle').innerHTML = D.preguntas.map(function (q, i) {
+      var y = a[i];
+      var top = Math.max(q.s.af, q.s.ne, q.s.ab);
+      var mayoria = q.s.af === top ? '1' : (q.s.ne === top ? '2' : '3');
+      if (y && y === mayoria) acuerdos++;
+      return '<tr><td><b class="mono" style="font-size:11.5px;color:#999083">' + (i + 1 < 10 ? '0' : '') + (i + 1) + '</b> ' +
+        esc(q.as) + '</td>' +
+        '<td class="tuvoto' + (y ? '' : ' vacio') + '">' + (y ? VOTO[y] : 'Sin responder') + '</td>' +
+        '<td class="num">' + q.s.af + '</td><td class="num">' + q.s.ne + '</td><td class="num">' + q.s.ab + '</td></tr>';
+    }).join('');
+
+    document.getElementById('mayoria').textContent = resp
+      ? 'En ' + acuerdos + ' de las ' + resp + ' votaciones respondidas tu posición coincide con la más votada de la Cámara.'
+      : '';
+
+    // lista completa
+    document.getElementById('todo').innerHTML =
+      dentro.map(function (f) { return filaTabla(f, true); }).join('') +
+      fuera.map(function (f) { return filaTabla(f, false); }).join('');
+    document.getElementById('cuenta-tabla').textContent = D.dips.length + ' diputados';
+
+    res.hidden = false;
+    ultimo = a.join('|');
+    stale.hidden = true;
+  }
+
+  document.getElementById('test').addEventListener('change', refrescar);
+  btn.addEventListener('click', function () {
+    var a = respuestas();
+    if (!a.filter(Boolean).length) return;
+    pintar(a);
+    res.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  rst.addEventListener('click', function () {
+    document.querySelectorAll('input[type=radio]').forEach(function (el) { el.checked = false; });
+    res.hidden = true;
+    ultimo = null;
+    stale.hidden = true;
+    refrescar();
+    document.getElementById('test').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  refrescar();
+})();
+</script>
+</body>
+</html>

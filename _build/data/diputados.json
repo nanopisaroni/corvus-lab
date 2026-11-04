@@ -1,0 +1,3261 @@
+{
+ "fuente": "Honorable Cámara de Diputados de la Nación",
+ "extraido": "2026-11-03",
+ "alcance": "Composición de los últimos 20 proyectos por diputado",
+ "diputados": [
+  {
+   "nombre": "Alberto Arrúa",
+   "bloque": "ARGENTINA FEDERAL",
+   "distrito": "MISIONES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Martillero Público Fecha de Nac.",
+   "total": 186,
+   "tipos": {
+    "RESOLUCION": 14,
+    "LEY": 5,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Atilio Basualdo",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "FORMOSA",
+   "periodo": "17/12/2025 - 09/12/2029",
+   "profesion": "Actividad Pecuaria Fecha de Nac.",
+   "total": 15,
+   "tipos": {
+    "RESOLUCION": 8,
+    "LEY": 4,
+    "DECLARACION": 3
+   }
+  },
+  {
+   "nombre": "Bertie Benegas Lynch",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Magister en Economía Fecha de Nac.",
+   "total": 7,
+   "tipos": {
+    "LEY": 4,
+    "DECLARACION": 2,
+    "RESOLUCION": 1
+   }
+  },
+  {
+   "nombre": "Alejandro Bongiovanni",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 89,
+   "tipos": {
+    "RESOLUCION": 5,
+    "LEY": 14,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Alejandrina Borgatta",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Licenciada en Ciencia Política Fecha de Nac.",
+   "total": 110,
+   "tipos": {
+    "RESOLUCION": 13,
+    "LEY": 6,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Alejandro Carrancio",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 38,
+   "tipos": {
+    "RESOLUCION": 9,
+    "DECLARACION": 9,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Alejandro Fargosi",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 33,
+   "tipos": {
+    "RESOLUCION": 9,
+    "DECLARACION": 7,
+    "LEY": 4
+   }
+  },
+  {
+   "nombre": "Abelardo Ferrán",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "LA PAMPA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Médico Veterinario Fecha de Nac.",
+   "total": 120,
+   "tipos": {
+    "RESOLUCION": 11,
+    "LEY": 9
+   }
+  },
+  {
+   "nombre": "Alida Ferreyra",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "31/01/2024 - 09/12/2027",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 110,
+   "tipos": {
+    "RESOLUCION": 16,
+    "DECLARACION": 4
+   }
+  },
+  {
+   "nombre": "Alejandro Finocchiaro",
+   "bloque": "PRO",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Docente Fecha de Nac.",
+   "total": 873,
+   "tipos": {
+    "LEY": 16,
+    "RESOLUCION": 4
+   }
+  },
+  {
+   "nombre": "Alicia Fregonese",
+   "bloque": "PRO",
+   "distrito": "ENTRE RIOS",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Fecha de Nac.",
+   "total": 711,
+   "tipos": {
+    "RESOLUCION": 9,
+    "LEY": 7,
+    "DECLARACION": 4
+   }
+  },
+  {
+   "nombre": "Andrea Freites",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "TIERRA DEL FUEGO",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Docente Fecha de Nac.",
+   "total": 1085,
+   "tipos": {
+    "LEY": 7,
+    "RESOLUCION": 13
+   }
+  },
+  {
+   "nombre": "Antonela Giampieri",
+   "bloque": "PRO",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 32,
+   "tipos": {
+    "RESOLUCION": 9,
+    "LEY": 11
+   }
+  },
+  {
+   "nombre": "Alfredo Gonzales",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "JUJUY",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Licenciado en Administración de Empresas Fecha de",
+   "total": 13,
+   "tipos": {
+    "RESOLUCION": 7,
+    "DECLARACION": 3,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "Álvaro González",
+   "bloque": "PRO",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 47,
+   "tipos": {
+    "DECLARACION": 4,
+    "LEY": 10,
+    "RESOLUCION": 6
+   }
+  },
+  {
+   "nombre": "Ana María Ianni",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTA CRUZ",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Docente",
+   "total": 2501,
+   "tipos": {
+    "RESOLUCION": 18,
+    "DECLARACION": 1,
+    "LEY": 1
+   }
+  },
+  {
+   "nombre": "Andrés Ariel Laumann",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "ENTRE RIOS",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Comerciante Fecha de Nac.",
+   "total": 24,
+   "tipos": {
+    "RESOLUCION": 12,
+    "DECLARACION": 6,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Aldo Leiva",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CHACO",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Empleado Fecha de Nac.",
+   "total": 263,
+   "tipos": {
+    "RESOLUCION": 12,
+    "LEY": 5,
+    "DECLARACION": 3
+   }
+  },
+  {
+   "nombre": "Andrés Leone",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Ingeniero Agrónomo Fecha de Nac.",
+   "total": 42,
+   "tipos": {
+    "RESOLUCION": 15,
+    "DECLARACION": 5
+   }
+  },
+  {
+   "nombre": "Álvaro García",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 38,
+   "tipos": {
+    "RESOLUCION": 13,
+    "DECLARACION": 7
+   }
+  },
+  {
+   "nombre": "Álvaro Martínez",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "MENDOZA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 229,
+   "tipos": {
+    "RESOLUCION": 10,
+    "LEY": 6,
+    "DECLARACION": 4
+   }
+  },
+  {
+   "nombre": "Agustín Pellegrini",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Productor de Seguros Fecha de Nac.",
+   "total": 2,
+   "tipos": {
+    "DECLARACION": 1,
+    "RESOLUCION": 1
+   }
+  },
+  {
+   "nombre": "Agustina Lucrecia Propato",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 850,
+   "tipos": {
+    "RESOLUCION": 18,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Ariel Rauschenberger",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "LA PAMPA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Contador Público Fecha de Nac.",
+   "total": 861,
+   "tipos": {
+    "LEY": 4,
+    "RESOLUCION": 16
+   }
+  },
+  {
+   "nombre": "Agustín Oscar Rossi",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Ingeniero Civil Fecha de Nac.",
+   "total": 1268,
+   "tipos": {
+    "RESOLUCION": 15,
+    "LEY": 4,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Darío Schneider",
+   "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+   "distrito": "ENTRE RIOS",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Arquitecto Fecha de Nac.",
+   "total": 27,
+   "tipos": {
+    "LEY": 12,
+    "RESOLUCION": 5,
+    "DECLARACION": 3
+   }
+  },
+  {
+   "nombre": "Adriana Cristina Serquis",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "RIO NEGRO",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Dra. en Física Fecha de Nac.",
+   "total": 194,
+   "tipos": {
+    "RESOLUCION": 15,
+    "LEY": 5
+   }
+  },
+  {
+   "nombre": "Aníbal Tortoriello",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "RIO NEGRO",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Empresario Fecha de Nac.",
+   "total": 827,
+   "tipos": {
+    "RESOLUCION": 12,
+    "DECLARACION": 7,
+    "LEY": 1
+   }
+  },
+  {
+   "nombre": "Andrea Fernanda Vera",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Médica Fecha de Nac.",
+   "total": 25,
+   "tipos": {
+    "RESOLUCION": 7,
+    "DECLARACION": 8,
+    "LEY": 5
+   }
+  },
+  {
+   "nombre": "Barbara Andreussi",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "JUJUY",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Fecha de Nac.",
+   "total": 30,
+   "tipos": {
+    "RESOLUCION": 10,
+    "DECLARACION": 9,
+    "LEY": 1
+   }
+  },
+  {
+   "nombre": "Belén Avico",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Emprendedora Fecha de Nac.",
+   "total": 34,
+   "tipos": {
+    "LEY": 15,
+    "RESOLUCION": 4,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Beltrán Benedit",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "ENTRE RIOS",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Ingeniero en Producción Agropecuaria Fecha de Nac.",
+   "total": 103,
+   "tipos": {
+    "RESOLUCION": 13,
+    "DECLARACION": 7
+   }
+  },
+  {
+   "nombre": "Bernardo Biella",
+   "bloque": "ARGENTINA FEDERAL",
+   "distrito": "SALTA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Médico Fecha de Nac.",
+   "total": 49,
+   "tipos": {
+    "LEY": 8,
+    "RESOLUCION": 8,
+    "DECLARACION": 4
+   }
+  },
+  {
+   "nombre": "Blanca Inés Osuna",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "ENTRE RIOS",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Docente Fecha de Nac.",
+   "total": 2010,
+   "tipos": {
+    "LEY": 7,
+    "RESOLUCION": 13
+   }
+  },
+  {
+   "nombre": "Claudio Álvarez",
+   "bloque": "ARGENTINA FEDERAL",
+   "distrito": "SAN LUIS",
+   "periodo": "10/12/2025 - 09/12/2027",
+   "profesion": "Gastronómico Fecha de Nac.",
+   "total": 15,
+   "tipos": {
+    "LEY": 5,
+    "RESOLUCION": 5,
+    "DECLARACION": 5
+   }
+  },
+  {
+   "nombre": "Adrián Brizuela",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CATAMARCA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Docente Fecha de Nac.",
+   "total": 54,
+   "tipos": {
+    "RESOLUCION": 14,
+    "DECLARACION": 6
+   }
+  },
+  {
+   "nombre": "Carlos García",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CHACO",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Productor Agropecuario Fecha de Nac.",
+   "total": 30,
+   "tipos": {
+    "RESOLUCION": 4,
+    "LEY": 8,
+    "DECLARACION": 8
+   }
+  },
+  {
+   "nombre": "Carlos Alberto Almena",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SAN LUIS",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Analista de Sistemas Fecha de Nac.",
+   "total": 77,
+   "tipos": {
+    "DECLARACION": 7,
+    "RESOLUCION": 13
+   }
+  },
+  {
+   "nombre": "Lisandro Almirón",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CORRIENTES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 27,
+   "tipos": {
+    "DECLARACION": 9,
+    "RESOLUCION": 4,
+    "LEY": 7
+   }
+  },
+  {
+   "nombre": "Cristian Andino",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SAN JUAN",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Contador Fecha de Nac.",
+   "total": 437,
+   "tipos": {
+    "RESOLUCION": 12,
+    "LEY": 6,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Carolina Basualdo",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Licenciada en Comunicación Fecha de Nac.",
+   "total": 143,
+   "tipos": {
+    "LEY": 5,
+    "RESOLUCION": 14,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Celia Campitelli",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTIAGO DEL ESTERO",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Docente Fecha de Nac.",
+   "total": 144,
+   "tipos": {
+    "RESOLUCION": 13,
+    "LEY": 7
+   }
+  },
+  {
+   "nombre": "Carlos Daniel Castagneto",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Contador Público Fecha de Nac.",
+   "total": 2715,
+   "tipos": {
+    "RESOLUCION": 13,
+    "LEY": 6,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Carlos Cisneros",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "TUCUMAN",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Empleado Bancario Fecha de Nac.",
+   "total": 308,
+   "tipos": {
+    "RESOLUCION": 5,
+    "LEY": 14,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Carlos Gutiérrez",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Comerciante Fecha de Nac.",
+   "total": 111,
+   "tipos": {
+    "RESOLUCION": 10,
+    "LEY": 8,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Carlos Gustavo Jaime Quiroga",
+   "bloque": "PRODUCCION Y TRABAJO",
+   "distrito": "SAN JUAN",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Comerciante Fecha de Nac.",
+   "total": 71,
+   "tipos": {
+    "DECLARACION": 2,
+    "LEY": 17,
+    "RESOLUCION": 1
+   }
+  },
+  {
+   "nombre": "Cecilia López Pasquali",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTIAGO DEL ESTERO",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Arquitecta Fecha de Nac.",
+   "total": 30,
+   "tipos": {
+    "LEY": 5,
+    "RESOLUCION": 15
+   }
+  },
+  {
+   "nombre": "Cecilia Moreau",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Fecha de Nac.",
+   "total": 1130,
+   "tipos": {
+    "LEY": 11,
+    "RESOLUCION": 9
+   }
+  },
+  {
+   "nombre": "Claudia María Palladino",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CATAMARCA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Médica Pediatra Fecha de Nac.",
+   "total": 208,
+   "tipos": {
+    "LEY": 8,
+    "RESOLUCION": 12
+   }
+  },
+  {
+   "nombre": "Ramiro Gutiérrez",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 430,
+   "tipos": {
+    "RESOLUCION": 8,
+    "LEY": 11,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Cristian A. Ritondo",
+   "bloque": "PRO",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Empresario de la Construcción Fecha de Nac.",
+   "total": 242,
+   "tipos": {
+    "LEY": 12,
+    "RESOLUCION": 8
+   }
+  },
+  {
+   "nombre": "Juliana Santillán Juárez Brahim",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Diplomatura en Economía Austriaca Fecha de Nac.",
+   "total": 55,
+   "tipos": {
+    "RESOLUCION": 12,
+    "DECLARACION": 5,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "Caren Tepp",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Técnica en Ciencias Políticas Fecha de Nac.",
+   "total": 164,
+   "tipos": {
+    "RESOLUCION": 17,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "César Treffinger",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CHUBUT",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Emprendedor Fecha de Nac.",
+   "total": 69,
+   "tipos": {
+    "DECLARACION": 8,
+    "RESOLUCION": 6,
+    "LEY": 6
+   }
+  },
+  {
+   "nombre": "Carlos Raúl Zapata",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SALTA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Contador Público Fecha de Nac.",
+   "total": 1058,
+   "tipos": {
+    "RESOLUCION": 15,
+    "DECLARACION": 5
+   }
+  },
+  {
+   "nombre": "Christian Alejandro Zulli",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CORRIENTES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 245,
+   "tipos": {
+    "RESOLUCION": 12,
+    "LEY": 7,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Damián Arabia",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Licenciado en Cs. Sociales Fecha de Nac.",
+   "total": 301,
+   "tipos": {
+    "RESOLUCION": 14,
+    "DECLARACION": 4,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Daiana Fernández Molero",
+   "bloque": "PRO",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Economista Fecha de Nac.",
+   "total": 69,
+   "tipos": {
+    "LEY": 12,
+    "RESOLUCION": 4,
+    "DECLARACION": 4
+   }
+  },
+  {
+   "nombre": "Diego A. Giuliano",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 439,
+   "tipos": {
+    "RESOLUCION": 13,
+    "LEY": 4,
+    "DECLARACION": 3
+   }
+  },
+  {
+   "nombre": "Diego Hartfield",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "MISIONES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Agente productor de Bolsa Fecha de Nac.",
+   "total": 19,
+   "tipos": {
+    "RESOLUCION": 10,
+    "DECLARACION": 8,
+    "LEY": 1
+   }
+  },
+  {
+   "nombre": "Diógenes Ignacio González",
+   "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+   "distrito": "CORRIENTES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 34,
+   "tipos": {
+    "RESOLUCION": 8,
+    "LEY": 12
+   }
+  },
+  {
+   "nombre": "Sebastián Nóblega",
+   "bloque": "ELIJO CATAMARCA",
+   "distrito": "CATAMARCA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 198,
+   "tipos": {
+    "LEY": 8,
+    "DECLARACION": 10,
+    "RESOLUCION": 2
+   }
+  },
+  {
+   "nombre": "Daniel Vancsik",
+   "bloque": "ARGENTINA FEDERAL",
+   "distrito": "MISIONES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Deportista Fecha de Nac.",
+   "total": 152,
+   "tipos": {
+    "LEY": 4,
+    "RESOLUCION": 7,
+    "DECLARACION": 9
+   }
+  },
+  {
+   "nombre": "Eliana Bruno",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SALTA",
+   "periodo": "10/12/2025 - 09/12/2027",
+   "profesion": "Gestora de RRHH Fecha de Nac.",
+   "total": 45,
+   "tipos": {
+    "RESOLUCION": 13,
+    "DECLARACION": 5,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Eduardo Falcone",
+   "bloque": "MID - MOVIMIENTO DE INTEGRACIÓN Y DESARROLLO",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Licenciado en Economía Fecha de Nac.",
+   "total": 43,
+   "tipos": {
+    "LEY": 11,
+    "DECLARACION": 6,
+    "RESOLUCION": 3
+   }
+  },
+  {
+   "nombre": "Emir Félix",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "MENDOZA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Productor Fecha de Nac.",
+   "total": 35,
+   "tipos": {
+    "RESOLUCION": 11,
+    "LEY": 9
+   }
+  },
+  {
+   "nombre": "Enrique Lluch",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Empresario Fecha de Nac.",
+   "total": 24,
+   "tipos": {
+    "RESOLUCION": 13,
+    "DECLARACION": 4,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "Elia Marina Fernández",
+   "bloque": "INDEPENDENCIA",
+   "distrito": "TUCUMAN",
+   "periodo": "10/12/2025 - 09/12/2027",
+   "profesion": "Docente Fecha de Nac.",
+   "total": 31,
+   "tipos": {
+    "RESOLUCION": 9,
+    "DECLARACION": 5,
+    "LEY": 6
+   }
+  },
+  {
+   "nombre": "Ernesto \"Pipi\" Alí",
+   "bloque": "PRIMERO SAN LUIS",
+   "distrito": "SAN LUIS",
+   "periodo": "31/01/2024 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 310,
+   "tipos": {
+    "DECLARACION": 6,
+    "RESOLUCION": 5,
+    "LEY": 9
+   }
+  },
+  {
+   "nombre": "Estela Mary Neder",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTIAGO DEL ESTERO",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Licenciada en Nutrición Fecha de Nac.",
+   "total": 456,
+   "tipos": {
+    "RESOLUCION": 15,
+    "LEY": 4,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Esteban Paulón",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Empleado Fecha de Nac.",
+   "total": 1063,
+   "tipos": {
+    "RESOLUCION": 14,
+    "LEY": 4,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Eduardo Félix Valdés",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 1121,
+   "tipos": {
+    "RESOLUCION": 13,
+    "LEY": 7
+   }
+  },
+  {
+   "nombre": "Facundo Correa Llano",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "MENDOZA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Contador Público Fecha de Nac.",
+   "total": 47,
+   "tipos": {
+    "RESOLUCION": 5,
+    "DECLARACION": 6,
+    "LEY": 9
+   }
+  },
+  {
+   "nombre": "Fernando de Andreis",
+   "bloque": "PRO",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Licenciado en administración Fecha de Nac.",
+   "total": 29,
+   "tipos": {
+    "RESOLUCION": 9,
+    "LEY": 11
+   }
+  },
+  {
+   "nombre": "Fernanda Díaz",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Lic. en Comunicación Social Fecha de Nac.",
+   "total": 126,
+   "tipos": {
+    "RESOLUCION": 13,
+    "LEY": 7
+   }
+  },
+  {
+   "nombre": "Fernando Monguillot",
+   "bloque": "ELIJO CATAMARCA",
+   "distrito": "CATAMARCA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 32,
+   "tipos": {
+    "LEY": 7,
+    "DECLARACION": 9,
+    "RESOLUCION": 4
+   }
+  },
+  {
+   "nombre": "Francisco Morchio",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "ENTRE RIOS",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Ing. en Producción Agropecuaria Fecha de Nac.",
+   "total": 162,
+   "tipos": {
+    "RESOLUCION": 13,
+    "DECLARACION": 4,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "Federico Agustín Pelli",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "TUCUMAN",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Licenciado en Administración Fecha de Nac.",
+   "total": 43,
+   "tipos": {
+    "RESOLUCION": 10,
+    "DECLARACION": 7,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "Gustavo Bordet",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "ENTRE RIOS",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Contador público Fecha de Nac.",
+   "total": 110,
+   "tipos": {
+    "RESOLUCION": 10,
+    "LEY": 10
+   }
+  },
+  {
+   "nombre": "Gabriel Bornoroni",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 98,
+   "tipos": {
+    "RESOLUCION": 10,
+    "DECLARACION": 6,
+    "LEY": 4
+   }
+  },
+  {
+   "nombre": "Guillermo César Agüero",
+   "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+   "distrito": "CHACO",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "abogado Fecha de Nac.",
+   "total": 77,
+   "tipos": {
+    "DECLARACION": 7,
+    "RESOLUCION": 11,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Giselle Castelnuovo",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 28,
+   "tipos": {
+    "RESOLUCION": 8,
+    "DECLARACION": 5,
+    "LEY": 7
+   }
+  },
+  {
+   "nombre": "Gerardo Cipolini",
+   "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+   "distrito": "CHACO",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Contador Público Fecha de Nac.",
+   "total": 1677,
+   "tipos": {
+    "RESOLUCION": 5,
+    "LEY": 13,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Gabriela Beatriz Estévez",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Psicóloga Fecha de Nac.",
+   "total": 1288,
+   "tipos": {
+    "DECLARACION": 3,
+    "RESOLUCION": 10,
+    "LEY": 7
+   }
+  },
+  {
+   "nombre": "Gerardo Gustavo González",
+   "bloque": "ARGENTINA FEDERAL",
+   "distrito": "FORMOSA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Empresario Fecha de Nac.",
+   "total": 26,
+   "tipos": {
+    "LEY": 7,
+    "RESOLUCION": 7,
+    "DECLARACION": 6
+   }
+  },
+  {
+   "nombre": "Gladys Humenuk",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Lic. en Dirección y Comercialización de Empresas F",
+   "total": 30,
+   "tipos": {
+    "RESOLUCION": 11,
+    "LEY": 2,
+    "DECLARACION": 7
+   }
+  },
+  {
+   "nombre": "Gladys Medina",
+   "bloque": "INDEPENDENCIA",
+   "distrito": "TUCUMAN",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Docente Fecha de Nac.",
+   "total": 147,
+   "tipos": {
+    "LEY": 14,
+    "RESOLUCION": 5,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Guillermo Michel",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "ENTRE RIOS",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado",
+   "total": 74,
+   "tipos": {
+    "LEY": 10,
+    "RESOLUCION": 10
+   }
+  },
+  {
+   "nombre": "Guillermo Montenegro",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 102,
+   "tipos": {
+    "RESOLUCION": 15,
+    "LEY": 3,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Gabriela Luciana Muñoz",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "NEUQUEN",
+   "periodo": "10/12/2025 - 09/12/2027",
+   "profesion": "ACOMPAÑANTE TERAPÉUTICO",
+   "total": 11,
+   "tipos": {
+    "RESOLUCION": 7,
+    "DECLARACION": 2,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Gabriela Pedrali",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "LA RIOJA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Empleada Fecha de Nac.",
+   "total": 947,
+   "tipos": {
+    "RESOLUCION": 13,
+    "LEY": 5,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Germán Pedro Martínez",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Licenciado en Ciencias Políticas Fecha de Nac.",
+   "total": 633,
+   "tipos": {
+    "LEY": 5,
+    "RESOLUCION": 14,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Gastón Riesco",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "NEUQUEN",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Martillero Fecha de Nac.",
+   "total": 31,
+   "tipos": {
+    "RESOLUCION": 12,
+    "DECLARACION": 5,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "Gonzalo Roca",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 4,
+   "tipos": {
+    "LEY": 2,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Gisela Scaglia",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Licenciada en Ciencias Políticas Fecha de Nac.",
+   "total": 1226,
+   "tipos": {
+    "LEY": 3,
+    "RESOLUCION": 6,
+    "DECLARACION": 11
+   }
+  },
+  {
+   "nombre": "Guillermo Snopek",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "JUJUY",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 206,
+   "tipos": {
+    "RESOLUCION": 10,
+    "DECLARACION": 3,
+    "LEY": 7
+   }
+  },
+  {
+   "nombre": "Gino Visconti",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "LA RIOJA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Licenciado en Administración",
+   "total": 21,
+   "tipos": {
+    "RESOLUCION": 8,
+    "DECLARACION": 6,
+    "LEY": 6
+   }
+  },
+  {
+   "nombre": "Hilda Aguirre",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "LA RIOJA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Psicóloga Social Fecha de Nac.",
+   "total": 1650,
+   "tipos": {
+    "RESOLUCION": 16,
+    "LEY": 4
+   }
+  },
+  {
+   "nombre": "Marcelo Mango",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "RIO NEGRO",
+   "periodo": "10/12/2025 - 09/12/2027",
+   "profesion": "Docente Fecha de Nac.",
+   "total": 332,
+   "tipos": {
+    "RESOLUCION": 16,
+    "LEY": 4
+   }
+  },
+  {
+   "nombre": "Hugo Antonio Moyano",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 55,
+   "tipos": {
+    "LEY": 12,
+    "RESOLUCION": 8
+   }
+  },
+  {
+   "nombre": "Horacio Pietragalla Corti",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Asesor Fecha de Nac.",
+   "total": 715,
+   "tipos": {
+    "RESOLUCION": 10,
+    "LEY": 5,
+    "DECLARACION": 5
+   }
+  },
+  {
+   "nombre": "Hernán Urien",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Empleado Público Fecha de Nac.",
+   "total": 22,
+   "tipos": {
+    "RESOLUCION": 10,
+    "DECLARACION": 7,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "Hugo Yasky",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Docente Fecha de Nac.",
+   "total": 1336,
+   "tipos": {
+    "DECLARACION": 2,
+    "RESOLUCION": 14,
+    "LEY": 4
+   }
+  },
+  {
+   "nombre": "Ignacio García Aresca",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Licenciado en Administración de Empresas Fecha de",
+   "total": 110,
+   "tipos": {
+    "LEY": 12,
+    "RESOLUCION": 7,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Itai Hagman",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Economista Fecha de Nac.",
+   "total": 287,
+   "tipos": {
+    "RESOLUCION": 8,
+    "LEY": 12
+   }
+  },
+  {
+   "nombre": "Jorge Antonio Avila",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "CHUBUT",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Trabajador Petrolero Fecha de Nac.",
+   "total": 39,
+   "tipos": {
+    "RESOLUCION": 6,
+    "LEY": 11,
+    "DECLARACION": 3
+   }
+  },
+  {
+   "nombre": "Javier Andrade",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2027",
+   "profesion": "Empleado Fecha de Nac.",
+   "total": 51,
+   "tipos": {
+    "RESOLUCION": 8,
+    "LEY": 9,
+    "DECLARACION": 3
+   }
+  },
+  {
+   "nombre": "Jorge Neri Araujo Hernández",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "TIERRA DEL FUEGO",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Médico Fecha de Nac.",
+   "total": 1486,
+   "tipos": {
+    "RESOLUCION": 17,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "Juan Fernando Brügge",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "abogado Fecha de Nac.",
+   "total": 399,
+   "tipos": {
+    "LEY": 11,
+    "RESOLUCION": 9
+   }
+  },
+  {
+   "nombre": "Jorge Chica",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SAN JUAN",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Técnico en gestión deportiva Fecha de Nac.",
+   "total": 586,
+   "tipos": {
+    "RESOLUCION": 13,
+    "DECLARACION": 3,
+    "LEY": 4
+   }
+  },
+  {
+   "nombre": "José Gomez",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTIAGO DEL ESTERO",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Empleado Fecha de Nac.",
+   "total": 154,
+   "tipos": {
+    "RESOLUCION": 8,
+    "LEY": 10,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "José Luis Garrido",
+   "bloque": "POR SANTA CRUZ",
+   "distrito": "SANTA CRUZ",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Empleado Fecha de Nac.",
+   "total": 39,
+   "tipos": {
+    "RESOLUCION": 5,
+    "LEY": 9,
+    "DECLARACION": 6
+   }
+  },
+  {
+   "nombre": "Juan Carlos Giordano",
+   "bloque": "IZQUIERDA SOCIALISTA - FRENTE DE IZQUIERDA UNIDAD",
+   "distrito": "BUENOS AIRES",
+   "periodo": "26/08/2026 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 180,
+   "tipos": {
+    "RESOLUCION": 11,
+    "LEY": 5,
+    "DECLARACION": 4
+   }
+  },
+  {
+   "nombre": "José Glinski",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CHUBUT",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "POLITOLOGO Fecha de Nac.",
+   "total": 174,
+   "tipos": {
+    "RESOLUCION": 11,
+    "LEY": 8,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Juan Grabois",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 48,
+   "tipos": {
+    "RESOLUCION": 9,
+    "LEY": 8,
+    "DECLARACION": 3
+   }
+  },
+  {
+   "nombre": "Jairo Guzmán",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SANTA CRUZ",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Funcionario Fecha de Nac.",
+   "total": 9,
+   "tipos": {
+    "RESOLUCION": 3,
+    "LEY": 2,
+    "DECLARACION": 4
+   }
+  },
+  {
+   "nombre": "Juan Pablo Luque",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CHUBUT",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "ABOGADO Fecha de Nac.",
+   "total": 137,
+   "tipos": {
+    "LEY": 7,
+    "RESOLUCION": 12,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Juan Marino",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Fecha de Nac.",
+   "total": 418,
+   "tipos": {
+    "RESOLUCION": 9,
+    "LEY": 9,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Julieta Marisol Campo",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CHACO",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Fecha de Nac.",
+   "total": 107,
+   "tipos": {
+    "RESOLUCION": 17,
+    "LEY": 1,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Jorge Mukdise",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTIAGO DEL ESTERO",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 87,
+   "tipos": {
+    "RESOLUCION": 16,
+    "LEY": 4
+   }
+  },
+  {
+   "nombre": "José Nuñez",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Empleado Fecha de Nac.",
+   "total": 340,
+   "tipos": {
+    "LEY": 9,
+    "RESOLUCION": 11
+   }
+  },
+  {
+   "nombre": "Jorge Fernández",
+   "bloque": "PRIMERO SAN LUIS",
+   "distrito": "SAN LUIS",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 44,
+   "tipos": {
+    "RESOLUCION": 6,
+    "DECLARACION": 9,
+    "LEY": 5
+   }
+  },
+  {
+   "nombre": "Joaquín Ojeda",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Docente Fecha de Nac.",
+   "total": 10,
+   "tipos": {
+    "RESOLUCION": 6,
+    "DECLARACION": 3,
+    "LEY": 1
+   }
+  },
+  {
+   "nombre": "Santiago Pauli",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "TIERRA DEL FUEGO",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Docente Fecha de Nac.",
+   "total": 67,
+   "tipos": {
+    "RESOLUCION": 9,
+    "DECLARACION": 7,
+    "LEY": 4
+   }
+  },
+  {
+   "nombre": "José Peluc",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SAN JUAN",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Productor Fecha de Nac.",
+   "total": 32,
+   "tipos": {
+    "RESOLUCION": 8,
+    "LEY": 9,
+    "DECLARACION": 3
+   }
+  },
+  {
+   "nombre": "Juan Pablo Montenegro",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 21,
+   "tipos": {
+    "RESOLUCION": 6,
+    "DECLARACION": 12,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Jorge Rizzotti",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "JUJUY",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "CONTADOR Fecha de Nac.",
+   "total": 489,
+   "tipos": {
+    "LEY": 10,
+    "RESOLUCION": 7,
+    "DECLARACION": 3
+   }
+  },
+  {
+   "nombre": "Javier Sánchez Wrba",
+   "bloque": "PRO",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Lic. en Ciencias Politicas y Relaciones Internacio",
+   "total": 109,
+   "tipos": {
+    "RESOLUCION": 9,
+    "LEY": 11
+   }
+  },
+  {
+   "nombre": "Juan Schiaretti",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "CORDOBA",
+   "periodo": "12/02/2026 - 09/12/2029",
+   "profesion": "Contador Público Fecha de Nac.",
+   "total": 108,
+   "tipos": {
+    "LEY": 10,
+    "RESOLUCION": 9,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Johanna Sabrina Longo",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 51,
+   "tipos": {
+    "RESOLUCION": 12,
+    "LEY": 3,
+    "DECLARACION": 5
+   }
+  },
+  {
+   "nombre": "Julia Strada",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Doctora en Desarrollo Económico Fecha de Nac.",
+   "total": 240,
+   "tipos": {
+    "RESOLUCION": 8,
+    "LEY": 12
+   }
+  },
+  {
+   "nombre": "Jorge Taiana",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Sociólogo Fecha de Nac.",
+   "total": 157,
+   "tipos": {
+    "RESOLUCION": 13,
+    "LEY": 6,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "José Federico Tournier",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CORRIENTES",
+   "periodo": "14/08/2024 - 09/12/2027",
+   "profesion": "Comerciante Fecha de Nac.",
+   "total": 55,
+   "tipos": {
+    "RESOLUCION": 8,
+    "DECLARACION": 9,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "Juan Carlos Molina",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTA CRUZ",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Sacerdote Fecha de Nac.",
+   "total": 451,
+   "tipos": {
+    "RESOLUCION": 18,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Julio Moreno Ovalle",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SALTA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Contador público",
+   "total": 116,
+   "tipos": {
+    "RESOLUCION": 10,
+    "DECLARACION": 8,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Karina Banfi",
+   "bloque": "ADELANTE BUENOS AIRES",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 1420,
+   "tipos": {
+    "DECLARACION": 13,
+    "RESOLUCION": 5,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Karina Maureira",
+   "bloque": "LA NEUQUINIDAD",
+   "distrito": "NEUQUEN",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Periodista",
+   "total": 19,
+   "tipos": {
+    "DECLARACION": 3,
+    "LEY": 11,
+    "RESOLUCION": 5
+   }
+  },
+  {
+   "nombre": "Kelly Olmos",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Lic. en Economía Fecha de Nac.",
+   "total": 248,
+   "tipos": {
+    "RESOLUCION": 11,
+    "LEY": 8,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Karen Reichardt",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "PRODUCTORA",
+   "total": 25,
+   "tipos": {
+    "RESOLUCION": 12,
+    "DECLARACION": 6,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Lourdes Micaela Arrieta",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "MENDOZA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Licenciada en Comunicación Social Fecha de Nac.",
+   "total": 251,
+   "tipos": {
+    "LEY": 6,
+    "RESOLUCION": 11,
+    "DECLARACION": 3
+   }
+  },
+  {
+   "nombre": "Luis Eugenio Basterra",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "FORMOSA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Ingeniero Agrónomo Fecha de Nac.",
+   "total": 844,
+   "tipos": {
+    "RESOLUCION": 15,
+    "LEY": 5
+   }
+  },
+  {
+   "nombre": "Lilia Lemoine",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "ESPECIALISTA EN IT Fecha de Nac.",
+   "total": 85,
+   "tipos": {
+    "RESOLUCION": 7,
+    "DECLARACION": 9,
+    "LEY": 4
+   }
+  },
+  {
+   "nombre": "Lucía Cámpora",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 50,
+   "tipos": {
+    "RESOLUCION": 14,
+    "LEY": 6
+   }
+  },
+  {
+   "nombre": "Marianela Marclay",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "ENTRE RIOS",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Lic. en Familia Fecha de Nac.",
+   "total": 101,
+   "tipos": {
+    "LEY": 10,
+    "RESOLUCION": 8,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Lisandro Nieri",
+   "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+   "distrito": "MENDOZA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Lic. en Economía Fecha de Nac.",
+   "total": 259,
+   "tipos": {
+    "LEY": 16,
+    "RESOLUCION": 3,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Luis Petri",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "MENDOZA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 686,
+   "tipos": {
+    "RESOLUCION": 1,
+    "LEY": 9,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Luis Albino Picat",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Empresario Fecha de Nac.",
+   "total": 77,
+   "tipos": {
+    "RESOLUCION": 4,
+    "DECLARACION": 8,
+    "LEY": 8
+   }
+  },
+  {
+   "nombre": "Lorena Pokoik",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Lic. en Politicas Públicas Fecha de Nac.",
+   "total": 1060,
+   "tipos": {
+    "LEY": 4,
+    "RESOLUCION": 14,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Luciana Potenza",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 65,
+   "tipos": {
+    "RESOLUCION": 11,
+    "LEY": 8,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Laura Elena Rodríguez Machado",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 24,
+   "tipos": {
+    "RESOLUCION": 6,
+    "DECLARACION": 6,
+    "LEY": 8
+   }
+  },
+  {
+   "nombre": "Laura Soldano",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Empresaria Fecha de Nac.",
+   "total": 60,
+   "tipos": {
+    "RESOLUCION": 15,
+    "DECLARACION": 5
+   }
+  },
+  {
+   "nombre": "Rodolfo Tailhade",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 270,
+   "tipos": {
+    "RESOLUCION": 13,
+    "LEY": 6,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Alejandra Torres",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 159,
+   "tipos": {
+    "LEY": 12,
+    "RESOLUCION": 8
+   }
+  },
+  {
+   "nombre": "Miguel Rodríguez",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "TIERRA DEL FUEGO",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Empresario Fecha de Nac.",
+   "total": 25,
+   "tipos": {
+    "RESOLUCION": 10,
+    "DECLARACION": 7,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "Lorena Villaverde",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "RIO NEGRO",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Empresaria Fecha de Nac.",
+   "total": 97,
+   "tipos": {
+    "RESOLUCION": 11,
+    "DECLARACION": 6,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "Luana Volnovich",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Licenciada en Ciencias Políticas Fecha de Nac.",
+   "total": 548,
+   "tipos": {
+    "RESOLUCION": 8,
+    "LEY": 11,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Martín Ardohain",
+   "bloque": "PRO",
+   "distrito": "LA PAMPA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Lic. en Administración Agragria Fecha de Nac.",
+   "total": 281,
+   "tipos": {
+    "RESOLUCION": 9,
+    "LEY": 11
+   }
+  },
+  {
+   "nombre": "Martín Aveiro",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "MENDOZA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Docente Fecha de Nac.",
+   "total": 769,
+   "tipos": {
+    "LEY": 6,
+    "RESOLUCION": 14
+   }
+  },
+  {
+   "nombre": "Fernanda Avila",
+   "bloque": "ELIJO CATAMARCA",
+   "distrito": "CATAMARCA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 75,
+   "tipos": {
+    "DECLARACION": 4,
+    "RESOLUCION": 5,
+    "LEY": 11
+   }
+  },
+  {
+   "nombre": "Marcelo Barbur",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTIAGO DEL ESTERO",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Médico Fecha de Nac.",
+   "total": 25,
+   "tipos": {
+    "RESOLUCION": 13,
+    "LEY": 7
+   }
+  },
+  {
+   "nombre": "Mónica Becerra",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SAN LUIS",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Contadora Pública Nacional Fecha de Nac.",
+   "total": 19,
+   "tipos": {
+    "RESOLUCION": 10,
+    "DECLARACION": 6,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "Myriam Bregman",
+   "bloque": "PTS-FRENTE DE IZQUIERDA Y DE TRABAJADORES UNIDAD",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 567,
+   "tipos": {
+    "RESOLUCION": 9,
+    "LEY": 8,
+    "DECLARACION": 3
+   }
+  },
+  {
+   "nombre": "Mariano Campero",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "TUCUMAN",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 70,
+   "tipos": {
+    "RESOLUCION": 4,
+    "DECLARACION": 6,
+    "LEY": 10
+   }
+  },
+  {
+   "nombre": "Florencia Carignano",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Licenciada en Relaciones Internacionales Fecha de",
+   "total": 320,
+   "tipos": {
+    "RESOLUCION": 12,
+    "LEY": 7,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "María Graciela de la Rosa",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "FORMOSA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Economista Fecha de Nac.",
+   "total": 369,
+   "tipos": {
+    "RESOLUCION": 11,
+    "DECLARACION": 4,
+    "LEY": 5
+   }
+  },
+  {
+   "nombre": "María Florencia De Sensi",
+   "bloque": "PRO",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 192,
+   "tipos": {
+    "LEY": 13,
+    "DECLARACION": 1,
+    "RESOLUCION": 6
+   }
+  },
+  {
+   "nombre": "M. Elena Velázquez",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Comerciante y administrativa Fecha de Nac.",
+   "total": 42,
+   "tipos": {
+    "LEY": 10,
+    "RESOLUCION": 10
+   }
+  },
+  {
+   "nombre": "Maximiliano Ferraro",
+   "bloque": "COALICION CIVICA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Fecha de Nac.",
+   "total": 1530,
+   "tipos": {
+    "RESOLUCION": 10,
+    "DECLARACION": 5,
+    "LEY": 5
+   }
+  },
+  {
+   "nombre": "Maria Gabriela Flores",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SALTA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 65,
+   "tipos": {
+    "LEY": 2,
+    "RESOLUCION": 13,
+    "DECLARACION": 5
+   }
+  },
+  {
+   "nombre": "Mónica Frade",
+   "bloque": "COALICION CIVICA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 436,
+   "tipos": {
+    "RESOLUCION": 10,
+    "DECLARACION": 6,
+    "LEY": 4
+   }
+  },
+  {
+   "nombre": "María Virginia Gallardo",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CORRIENTES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Artista Fecha de Nac.",
+   "total": 25,
+   "tipos": {
+    "RESOLUCION": 10,
+    "LEY": 5,
+    "DECLARACION": 5
+   }
+  },
+  {
+   "nombre": "Mariela Coletta",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Contadora Fecha de Nac.",
+   "total": 269,
+   "tipos": {
+    "LEY": 7,
+    "DECLARACION": 5,
+    "RESOLUCION": 8
+   }
+  },
+  {
+   "nombre": "María Luisa González Estevarena",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada y Escribana Fecha de Nac.",
+   "total": 48,
+   "tipos": {
+    "RESOLUCION": 15,
+    "DECLARACION": 5
+   }
+  },
+  {
+   "nombre": "Rosario Goitia",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CHACO",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 56,
+   "tipos": {
+    "DECLARACION": 8,
+    "RESOLUCION": 12
+   }
+  },
+  {
+   "nombre": "María Graciela Parola",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "FORMOSA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 394,
+   "tipos": {
+    "RESOLUCION": 11,
+    "LEY": 7,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Maura Gruber",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "MISIONES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Empresaria Fecha de Nac.",
+   "total": 12,
+   "tipos": {
+    "RESOLUCION": 8,
+    "DECLARACION": 2,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Gerardo Huesen",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "TUCUMAN",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Comerciante Fecha de Nac.",
+   "total": 97,
+   "tipos": {
+    "RESOLUCION": 6,
+    "DECLARACION": 9,
+    "LEY": 5
+   }
+  },
+  {
+   "nombre": "María Cecilia Ibañez",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 94,
+   "tipos": {
+    "RESOLUCION": 14,
+    "DECLARACION": 6
+   }
+  },
+  {
+   "nombre": "Jimena López",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Licenciada en Servicio Social Fecha de Nac.",
+   "total": 543,
+   "tipos": {
+    "RESOLUCION": 10,
+    "LEY": 9,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Máximo Carlos Kirchner",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Fecha de Nac.",
+   "total": 160,
+   "tipos": {
+    "RESOLUCION": 10,
+    "LEY": 9,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Moira Lanesan Sancho",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTA CRUZ",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Martillera",
+   "total": 410,
+   "tipos": {
+    "RESOLUCION": 14,
+    "LEY": 6
+   }
+  },
+  {
+   "nombre": "Mercedes Llano",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "MENDOZA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Politóloga",
+   "total": 57,
+   "tipos": {
+    "RESOLUCION": 4,
+    "LEY": 11,
+    "DECLARACION": 5
+   }
+  },
+  {
+   "nombre": "Martín Lousteau",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "ECONOMISTA Fecha de Nac.",
+   "total": 252,
+   "tipos": {
+    "LEY": 9,
+    "DECLARACION": 2,
+    "RESOLUCION": 9
+   }
+  },
+  {
+   "nombre": "Lorena Macyszyn",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Lic. en Administración Fecha de Nac.",
+   "total": 57,
+   "tipos": {
+    "RESOLUCION": 13,
+    "DECLARACION": 5,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Martín Matzkin",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "LA PAMPA",
+   "periodo": "24/06/2026 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 0,
+   "tipos": {
+    "RESOLUCION": 1
+   }
+  },
+  {
+   "nombre": "Martín Menem",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "LA RIOJA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 23,
+   "tipos": {
+    "DECLARACION": 9,
+    "RESOLUCION": 5,
+    "LEY": 6
+   }
+  },
+  {
+   "nombre": "Julieta Metral Asensio",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "MENDOZA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 11,
+   "tipos": {
+    "RESOLUCION": 9,
+    "LEY": 1,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Soledad Molinuevo",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "TUCUMAN",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 58,
+   "tipos": {
+    "RESOLUCION": 14,
+    "DECLARACION": 6
+   }
+  },
+  {
+   "nombre": "Matías Molle",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Fecha de Nac.",
+   "total": 103,
+   "tipos": {
+    "RESOLUCION": 11,
+    "DECLARACION": 3,
+    "LEY": 6
+   }
+  },
+  {
+   "nombre": "Soledad Mondaca",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "NEUQUEN",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Lic. Comunicación Fecha de Nac.",
+   "total": 56,
+   "tipos": {
+    "RESOLUCION": 16,
+    "DECLARACION": 4
+   }
+  },
+  {
+   "nombre": "Miriam Niveyro",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Psicopedagoga Fecha de Nac.",
+   "total": 27,
+   "tipos": {
+    "RESOLUCION": 12,
+    "DECLARACION": 6,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Javier Noguera",
+   "bloque": "INDEPENDENCIA",
+   "distrito": "TUCUMAN",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 17,
+   "tipos": {
+    "LEY": 8,
+    "DECLARACION": 6,
+    "RESOLUCION": 3
+   }
+  },
+  {
+   "nombre": "Marcela Marina Pagano",
+   "bloque": "COHERENCIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Periodista Fecha de Nac.",
+   "total": 377,
+   "tipos": {
+    "LEY": 15,
+    "DECLARACION": 1,
+    "RESOLUCION": 4
+   }
+  },
+  {
+   "nombre": "Marcos Patiño Brizuela",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "ABOGADO Fecha de Nac.",
+   "total": 17,
+   "tipos": {
+    "DECLARACION": 8,
+    "RESOLUCION": 5,
+    "LEY": 4
+   }
+  },
+  {
+   "nombre": "María Lorena Petrovich",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2027",
+   "profesion": "Periodista Fecha de Nac.",
+   "total": 40,
+   "tipos": {
+    "RESOLUCION": 15,
+    "DECLARACION": 5
+   }
+  },
+  {
+   "nombre": "Miguel Ángel Pichetto",
+   "bloque": "ENCUENTRO FEDERAL",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 1180,
+   "tipos": {
+    "LEY": 15,
+    "DECLARACION": 2,
+    "RESOLUCION": 3
+   }
+  },
+  {
+   "nombre": "María Celeste Ponce",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Empresaria Fecha de Nac.",
+   "total": 29,
+   "tipos": {
+    "DECLARACION": 9,
+    "RESOLUCION": 5,
+    "LEY": 6
+   }
+  },
+  {
+   "nombre": "Manuel Quintar",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "JUJUY",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 64,
+   "tipos": {
+    "RESOLUCION": 4,
+    "DECLARACION": 9,
+    "LEY": 7
+   }
+  },
+  {
+   "nombre": "Maira Frias",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CHUBUT",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 11,
+   "tipos": {
+    "DECLARACION": 5,
+    "RESOLUCION": 4,
+    "LEY": 2
+   }
+  },
+  {
+   "nombre": "Mario Manrique",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Mecánico Fecha de Nac.",
+   "total": 206,
+   "tipos": {
+    "RESOLUCION": 7,
+    "LEY": 13
+   }
+  },
+  {
+   "nombre": "Marina Dorotea Salzmann",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Politologa Fecha de Nac.",
+   "total": 90,
+   "tipos": {
+    "RESOLUCION": 13,
+    "LEY": 7
+   }
+  },
+  {
+   "nombre": "María Teresa García",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Fecha de Nac.",
+   "total": 692,
+   "tipos": {
+    "RESOLUCION": 9,
+    "LEY": 7,
+    "DECLARACION": 4
+   }
+  },
+  {
+   "nombre": "Martín Yeza",
+   "bloque": "PRO",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Fecha de Nac.",
+   "total": 183,
+   "tipos": {
+    "LEY": 12,
+    "RESOLUCION": 8
+   }
+  },
+  {
+   "nombre": "María Inés Zigarán",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "JUJUY",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Técnica en Comunicación Social Fecha de Nac.",
+   "total": 174,
+   "tipos": {
+    "LEY": 3,
+    "RESOLUCION": 10,
+    "DECLARACION": 7
+   }
+  },
+  {
+   "nombre": "Natalia de la Sota",
+   "bloque": "DEFENDAMOS CÓRDOBA",
+   "distrito": "CORDOBA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Docente Fecha de Nac.",
+   "total": 117,
+   "tipos": {
+    "LEY": 13,
+    "DECLARACION": 2,
+    "RESOLUCION": 5
+   }
+  },
+  {
+   "nombre": "Nicolás del Caño",
+   "bloque": "PTS-FRENTE DE IZQUIERDA Y DE TRABAJADORES UNIDAD",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Diputado Fecha de Nac.",
+   "total": 1078,
+   "tipos": {
+    "RESOLUCION": 12,
+    "LEY": 6,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Nicolás Emma",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 7,
+   "tipos": {
+    "RESOLUCION": 1,
+    "LEY": 4,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Nicolás Massot",
+   "bloque": "ENCUENTRO FEDERAL",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Economista Fecha de Nac.",
+   "total": 122,
+   "tipos": {
+    "LEY": 13,
+    "DECLARACION": 3,
+    "RESOLUCION": 4
+   }
+  },
+  {
+   "nombre": "Nicolás Mayoraz",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 112,
+   "tipos": {
+    "RESOLUCION": 12,
+    "DECLARACION": 8
+   }
+  },
+  {
+   "nombre": "Nancy Viviana Picón Martínez",
+   "bloque": "PRODUCCION Y TRABAJO",
+   "distrito": "SAN JUAN",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 140,
+   "tipos": {
+    "DECLARACION": 2,
+    "LEY": 17,
+    "RESOLUCION": 1
+   }
+  },
+  {
+   "nombre": "Nancy Sand",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CORRIENTES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Docente",
+   "total": 1677,
+   "tipos": {
+    "RESOLUCION": 15,
+    "LEY": 4,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Nicolás Alfredo Trotta",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "ABOGADO Fecha de Nac.",
+   "total": 154,
+   "tipos": {
+    "RESOLUCION": 11,
+    "DECLARACION": 5,
+    "LEY": 4
+   }
+  },
+  {
+   "nombre": "Natalia Zaracho",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Trabajadora de la Economía Popular Fecha de Nac.",
+   "total": 307,
+   "tipos": {
+    "LEY": 7,
+    "RESOLUCION": 13
+   }
+  },
+  {
+   "nombre": "Oscar A. Herrera Ahuad",
+   "bloque": "ARGENTINA FEDERAL",
+   "distrito": "MISIONES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Médico Fecha de Nac.",
+   "total": 63,
+   "tipos": {
+    "LEY": 10,
+    "DECLARACION": 3,
+    "RESOLUCION": 7
+   }
+  },
+  {
+   "nombre": "Oscar Zago",
+   "bloque": "MID - MOVIMIENTO DE INTEGRACIÓN Y DESARROLLO",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Fecha de Nac.",
+   "total": 34,
+   "tipos": {
+    "LEY": 13,
+    "DECLARACION": 6,
+    "RESOLUCION": 1
+   }
+  },
+  {
+   "nombre": "Pablo Ansaloni",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Empleado Fecha de Nac.",
+   "total": 16,
+   "tipos": {
+    "RESOLUCION": 5,
+    "DECLARACION": 6,
+    "LEY": 5
+   }
+  },
+  {
+   "nombre": "Pablo Farías",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 143,
+   "tipos": {
+    "LEY": 5,
+    "RESOLUCION": 15
+   }
+  },
+  {
+   "nombre": "Patricia Holzman",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Contadora Pública Fecha de Nac.",
+   "total": 44,
+   "tipos": {
+    "RESOLUCION": 11,
+    "DECLARACION": 8,
+    "LEY": 1
+   }
+  },
+  {
+   "nombre": "Pablo Juliano",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 354,
+   "tipos": {
+    "RESOLUCION": 7,
+    "LEY": 7,
+    "DECLARACION": 6
+   }
+  },
+  {
+   "nombre": "Pablo Outes",
+   "bloque": "ARGENTINA FEDERAL",
+   "distrito": "SALTA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Contador Fecha de Nac.",
+   "total": 70,
+   "tipos": {
+    "LEY": 9,
+    "RESOLUCION": 8,
+    "DECLARACION": 3
+   }
+  },
+  {
+   "nombre": "Paula Andrea Penacca",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "legisladora Fecha de Nac.",
+   "total": 449,
+   "tipos": {
+    "RESOLUCION": 14,
+    "LEY": 6
+   }
+  },
+  {
+   "nombre": "Paulo Agustín Tita",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "TIERRA DEL FUEGO",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Lic. en Administración Fecha de Nac.",
+   "total": 179,
+   "tipos": {
+    "RESOLUCION": 12,
+    "LEY": 8
+   }
+  },
+  {
+   "nombre": "Pablo Todero",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "NEUQUEN",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Fecha de Nac.",
+   "total": 770,
+   "tipos": {
+    "RESOLUCION": 17,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "Patricia Vásquez",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 241,
+   "tipos": {
+    "RESOLUCION": 6,
+    "DECLARACION": 5,
+    "LEY": 9
+   }
+  },
+  {
+   "nombre": "Pamela Fernanda Verasay",
+   "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+   "distrito": "MENDOZA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Contadora Pública Nacional y Perito Partidora Fech",
+   "total": 715,
+   "tipos": {
+    "LEY": 13,
+    "DECLARACION": 2,
+    "RESOLUCION": 5
+   }
+  },
+  {
+   "nombre": "Pablo Raúl Yedlin",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "TUCUMAN",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Médico Fecha de Nac.",
+   "total": 788,
+   "tipos": {
+    "LEY": 7,
+    "DECLARACION": 3,
+    "RESOLUCION": 10
+   }
+  },
+  {
+   "nombre": "Emmanuel Bianchetti",
+   "bloque": "PRO",
+   "distrito": "MISIONES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 200,
+   "tipos": {
+    "LEY": 10,
+    "RESOLUCION": 10
+   }
+  },
+  {
+   "nombre": "Rocío Bonacci",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Emprendedora Fecha de Nac.",
+   "total": 57,
+   "tipos": {
+    "RESOLUCION": 6,
+    "LEY": 7,
+    "DECLARACION": 7
+   }
+  },
+  {
+   "nombre": "Abel Chiconi",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SAN JUAN",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Licenciado en Enología Fecha de Nac.",
+   "total": 3,
+   "tipos": {
+    "RESOLUCION": 2,
+    "LEY": 1
+   }
+  },
+  {
+   "nombre": "Ricardo Daives",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "SANTIAGO DEL ESTERO",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 250,
+   "tipos": {
+    "RESOLUCION": 16,
+    "LEY": 4
+   }
+  },
+  {
+   "nombre": "Romina Diez",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Economista Fecha de Nac.",
+   "total": 39,
+   "tipos": {
+    "RESOLUCION": 5,
+    "LEY": 11,
+    "DECLARACION": 4
+   }
+  },
+  {
+   "nombre": "Rubén Darío Torres",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Contador Público Fecha de Nac.",
+   "total": 38,
+   "tipos": {
+    "RESOLUCION": 15,
+    "DECLARACION": 5
+   }
+  },
+  {
+   "nombre": "Raúl Hadad",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CORRIENTES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Fecha de Nac.",
+   "total": 222,
+   "tipos": {
+    "LEY": 8,
+    "RESOLUCION": 10,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Fernanda Miño",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Profesora Fecha de Nac.",
+   "total": 67,
+   "tipos": {
+    "RESOLUCION": 10,
+    "LEY": 10
+   }
+  },
+  {
+   "nombre": "Roxana Monzón",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Docente Fecha de Nac.",
+   "total": 1071,
+   "tipos": {
+    "RESOLUCION": 18,
+    "LEY": 1,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Sabrina Ajmechet",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Historiadora Fecha de Nac.",
+   "total": 784,
+   "tipos": {
+    "RESOLUCION": 8,
+    "DECLARACION": 7,
+    "LEY": 5
+   }
+  },
+  {
+   "nombre": "Santiago Cafiero",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Licenciado en Ciencias Políticas Fecha de Nac.",
+   "total": 257,
+   "tipos": {
+    "RESOLUCION": 13,
+    "LEY": 7
+   }
+  },
+  {
+   "nombre": "Sergio Eduardo Capozzi",
+   "bloque": "PROVINCIAS UNIDAS",
+   "distrito": "RIO NEGRO",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 409,
+   "tipos": {
+    "LEY": 13,
+    "RESOLUCION": 5,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Sergio Guillermo Casas",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "LA RIOJA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Contador Público Fecha de Nac.",
+   "total": 254,
+   "tipos": {
+    "RESOLUCION": 8,
+    "LEY": 7,
+    "DECLARACION": 5
+   }
+  },
+  {
+   "nombre": "Sergio Dolce",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CHACO",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Empleado Municipal Fecha de Nac.",
+   "total": 204,
+   "tipos": {
+    "RESOLUCION": 16,
+    "LEY": 4
+   }
+  },
+  {
+   "nombre": "Sergio Figliuolo",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Productor de Radio y Televisión Fecha de Nac.",
+   "total": 15,
+   "tipos": {
+    "RESOLUCION": 5,
+    "DECLARACION": 5,
+    "LEY": 5
+   }
+  },
+  {
+   "nombre": "Sebastián Galmarini",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Politólogo Fecha de Nac.",
+   "total": 59,
+   "tipos": {
+    "LEY": 8,
+    "RESOLUCION": 11,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Silvana Giudici",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Fecha de Nac.",
+   "total": 412,
+   "tipos": {
+    "DECLARACION": 6,
+    "LEY": 3,
+    "RESOLUCION": 11
+   }
+  },
+  {
+   "nombre": "Sergio Omar Palazzo",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Fecha de Nac.",
+   "total": 719,
+   "tipos": {
+    "RESOLUCION": 9,
+    "LEY": 10,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Sebastián Pareja",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 20,
+   "tipos": {
+    "RESOLUCION": 13,
+    "DECLARACION": 4,
+    "LEY": 3
+   }
+  },
+  {
+   "nombre": "Santiago Luis Roberto",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "CIUDAD DE BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogado Fecha de Nac.",
+   "total": 190,
+   "tipos": {
+    "RESOLUCION": 9,
+    "LEY": 9,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Santiago Santurio",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Profesor Fecha de Nac.",
+   "total": 42,
+   "tipos": {
+    "RESOLUCION": 5,
+    "DECLARACION": 8,
+    "LEY": 7
+   }
+  },
+  {
+   "nombre": "Sabrina Selva",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 785,
+   "tipos": {
+    "LEY": 7,
+    "RESOLUCION": 11,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Varinia Lis Marín",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "LA PAMPA",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 555,
+   "tipos": {
+    "RESOLUCION": 15,
+    "LEY": 3,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Valentina Ravera",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Estudiante de Derecho Fecha de Nac.",
+   "total": 6,
+   "tipos": {
+    "RESOLUCION": 4,
+    "LEY": 1,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Verónica Razzini",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Empresaria Fecha de Nac.",
+   "total": 218,
+   "tipos": {
+    "RESOLUCION": 6,
+    "DECLARACION": 5,
+    "LEY": 9
+   }
+  },
+  {
+   "nombre": "Vanesa Raquel Siley",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "abogada Fecha de Nac.",
+   "total": 618,
+   "tipos": {
+    "RESOLUCION": 8,
+    "LEY": 11,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Victoria Tolosa Paz",
+   "bloque": "UNIÓN POR LA PATRIA",
+   "distrito": "BUENOS AIRES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "CONTADORA PUBLICA Fecha de Nac.",
+   "total": 780,
+   "tipos": {
+    "RESOLUCION": 12,
+    "LEY": 6,
+    "DECLARACION": 2
+   }
+  },
+  {
+   "nombre": "Yamila Ruíz",
+   "bloque": "ARGENTINA FEDERAL",
+   "distrito": "MISIONES",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Abogada Fecha de Nac.",
+   "total": 456,
+   "tipos": {
+    "LEY": 9,
+    "RESOLUCION": 10,
+    "DECLARACION": 1
+   }
+  },
+  {
+   "nombre": "Yamile Tomassoni",
+   "bloque": "LA LIBERTAD AVANZA",
+   "distrito": "SANTA FE",
+   "periodo": "10/12/2025 - 09/12/2029",
+   "profesion": "Profesora Fecha de Nac.",
+   "total": 6,
+   "tipos": {
+    "RESOLUCION": 2,
+    "DECLARACION": 3,
+    "LEY": 1
+   }
+  },
+  {
+   "nombre": "Yolanda Vega",
+   "bloque": "ARGENTINA FEDERAL",
+   "distrito": "SALTA",
+   "periodo": "10/12/2023 - 09/12/2027",
+   "profesion": "Productora agropecuaria",
+   "total": 134,
+   "tipos": {
+    "LEY": 3,
+    "RESOLUCION": 14,
+    "DECLARACION": 3
+   }
+  }
+ ]
+}

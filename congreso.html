@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Los que legislan · Corvus Lab</title>
+<meta name="description" content="Los 256 diputados de la Nación y qué presentan: cuántos proyectos, cuántos son ley y cuántos son declaraciones simbólicas. Datos de la Cámara de Diputados.">
+<meta property="og:title" content="Los que legislan · Corvus Lab">
+<meta property="og:description" content="256 diputados, 76.250 proyectos: la mitad de lo que se presenta no es ley.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f8f6f2;
+  --card: #ffffff;
+  --ink: #16130f;
+  --muted: #6d665c;
+  --soft: #999083;
+  --rule: #e2dcd1;
+  --rule-strong: #c9c1b3;
+  --ley: #1f5c3d;
+  --res: #8a5a12;
+  --dec: #7a2f24;
+  --accent: #16130f;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px; line-height: 1.55; font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+.mono { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+nav.top { border-bottom: 1px solid var(--rule); background: var(--paper); }
+nav.top .wrap { display: flex; align-items: baseline; justify-content: space-between; height: 56px; }
+nav.top a { color: var(--ink); text-decoration: none; }
+.brand { font-weight: 600; letter-spacing: -.01em; font-size: 15px; }
+.brand em { font-style: normal; color: var(--soft); font-weight: 400; }
+nav.top ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; font-size: 13.5px; color: var(--muted); }
+nav.top ul a { color: var(--muted); }
+nav.top ul a:hover { color: var(--ink); }
+
+header.hero { padding: 64px 0 40px; border-bottom: 1px solid var(--rule); }
+.kicker { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--soft); margin-bottom: 22px; }
+h1 { font-size: clamp(38px, 6vw, 62px); line-height: 1.02; letter-spacing: -.035em;
+  font-weight: 600; margin: 0 0 22px; max-width: 15ch; }
+.lede { font-size: 19px; line-height: 1.5; color: #3d382f; max-width: 62ch; margin: 0; }
+.lede strong { font-weight: 600; color: var(--ink); }
+
+.cifras { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule);
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.cifra { background: var(--paper); padding: 24px 22px 22px; }
+.cifra .num { font-size: 32px; letter-spacing: -.03em; font-weight: 500; line-height: 1;
+  font-family: "IBM Plex Mono", monospace; }
+.cifra .lbl { font-size: 12.5px; color: var(--muted); margin-top: 9px; line-height: 1.35; }
+
+section { padding: 52px 0; border-bottom: 1px solid var(--rule); }
+h2 { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600;
+  color: var(--muted); margin: 0 0 26px; font-family: "IBM Plex Mono", monospace; }
+h2 span { color: var(--soft); font-weight: 400; letter-spacing: .06em; }
+
+.barra { display: flex; height: 46px; border-radius: 2px; overflow: hidden; margin-bottom: 18px;
+  border: 1px solid var(--rule-strong); }
+.barra div { display: flex; align-items: center; justify-content: center; color: #fff;
+  font-size: 12.5px; font-weight: 500; letter-spacing: .02em; }
+.b-ley { background: var(--ley); }
+.b-res { background: var(--res); }
+.b-dec { background: var(--dec); }
+.leyenda { display: flex; gap: 26px; flex-wrap: wrap; font-size: 13.5px; color: var(--muted); }
+.leyenda i { display: inline-block; width: 9px; height: 9px; border-radius: 1px; margin-right: 7px; }
+
+.controles { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+.controles input, .controles select {
+  width: 100%; padding: 10px 12px; border: 1px solid var(--rule-strong); background: var(--card);
+  font-family: inherit; font-size: 14px; color: var(--ink); border-radius: 2px; appearance: none;
+}
+.controles input:focus, .controles select:focus { outline: 2px solid var(--ink); outline-offset: -1px; }
+.resumen { font-size: 13px; color: var(--muted); margin-bottom: 14px; font-family: "IBM Plex Mono", monospace; }
+
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+thead th { position: sticky; top: 0; background: var(--paper); text-align: left; font-weight: 500;
+  font-size: 11.5px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted);
+  border-bottom: 1px solid var(--rule-strong); padding: 10px 8px; z-index: 2; }
+tbody td { padding: 11px 8px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+tbody tr:hover { background: #f1eee7; }
+td.num, th.num { text-align: right; font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; }
+td.nombre { font-weight: 500; }
+td.bloque, td.dist { color: var(--muted); font-size: 13px; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 2px; font-size: 11px;
+  letter-spacing: .05em; text-transform: uppercase; font-family: "IBM Plex Mono", monospace; }
+.t-ley { background: #e3efe7; color: var(--ley); }
+.t-res { background: #f6ecd9; color: var(--res); }
+.t-dec { background: #f6e6e3; color: var(--dec); }
+.mini { display: inline-flex; height: 6px; width: 74px; border-radius: 1px; overflow: hidden;
+  background: var(--rule); vertical-align: middle; }
+.mini i { display: block; height: 100%; }
+
+.metodo { font-size: 14px; color: var(--muted); max-width: 74ch; }
+.metodo p { margin: 0 0 14px; }
+.metodo a { color: var(--ink); text-underline-offset: 3px; }
+footer { padding: 40px 0 64px; font-size: 13px; color: var(--soft); }
+footer a { color: var(--muted); }
+
+@media (max-width: 860px) {
+  .cifras { grid-template-columns: repeat(2, 1fr); }
+  .controles { grid-template-columns: 1fr 1fr; }
+  .oculto-movil { display: none; }
+  header.hero { padding: 44px 0 32px; }
+  .wrap { padding: 0 18px; }
+}
+@media (max-width: 520px) {
+  .controles { grid-template-columns: 1fr; }
+  .cifra .num { font-size: 26px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="/">Corvus Lab <em>· trabajos</em></a>
+    <ul>
+      <li><a href="/proyectos">Trabajos</a></li>
+      <li><a href="/coleccion">Colección</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Cámara de Diputados de la Nación · período 2023–2027</div>
+    <h1>Los que legislan</h1>
+    <p class="lede">Cada diputado presenta proyectos. Algunos son leyes que cambian algo. Muchos son
+      declaraciones que felicitan a un pueblo por su aniversario. Esta página cuenta qué presenta
+      cada uno de los <strong>256 diputados</strong> en ejercicio, con los datos de la propia Cámara.</p>
+  </div>
+</header>
+
+<div class="cifras">
+  <div class="cifra"><div class="num">256</div><div class="lbl">diputados en ejercicio</div></div>
+  <div class="cifra"><div class="num">76.250</div><div class="lbl">proyectos presentados en el período</div></div>
+  <div class="cifra"><div class="num">50%</div><div class="lbl">son resoluciones, en su mayoría simbólicas</div></div>
+  <div class="cifra"><div class="num">33%</div><div class="lbl">son proyectos de ley</div></div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>De qué está hecha la producción <span>· últimos 20 proyectos de cada diputado</span></h2>
+    <div class="barra">
+      <div class="b-ley" style="width:33%">33% ley</div>
+      <div class="b-res" style="width:50%">50% resolución</div>
+      <div class="b-dec" style="width:17%">17% declaración</div>
+    </div>
+    <div class="leyenda">
+      <span><i class="b-ley"></i>Proyecto de ley: crea, modifica o deroga una norma</span>
+      <span><i class="b-res"></i>Resolución: expresa una posición o pide algo al Ejecutivo</span>
+      <span><i class="b-dec"></i>Declaración: reconoce o celebra, sin efecto jurídico</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Todos los diputados <span>· ordenados por cantidad de proyectos</span></h2>
+    <div class="controles">
+      <input id="q" type="search" placeholder="Buscar por nombre, bloque o distrito" autocomplete="off">
+      <select id="fb"><option value="">Todos los bloques</option><option value="ADELANTE BUENOS AIRES">Adelante Buenos Aires</option><option value="ARGENTINA FEDERAL">Argentina Federal</option><option value="COALICION CIVICA">Coalicion Civica</option><option value="COHERENCIA">Coherencia</option><option value="DEFENDAMOS CÓRDOBA">Defendamos Córdoba</option><option value="ELIJO CATAMARCA">Elijo Catamarca</option><option value="ENCUENTRO FEDERAL">Encuentro Federal</option><option value="INDEPENDENCIA">Independencia</option><option value="IZQUIERDA SOCIALISTA - FRENTE DE IZQUIERDA UNIDAD">Izquierda Socialista - Frente De Izquierda Unidad</option><option value="LA LIBERTAD AVANZA">La Libertad Avanza</option><option value="LA NEUQUINIDAD">La Neuquinidad</option><option value="MID - MOVIMIENTO DE INTEGRACIÓN Y DESARROLLO">Mid - Movimiento De Integración Y Desarrollo</option><option value="POR SANTA CRUZ">Por Santa Cruz</option><option value="PRIMERO SAN LUIS">Primero San Luis</option><option value="PRO">Pro</option><option value="PRODUCCION Y TRABAJO">Produccion Y Trabajo</option><option value="PROVINCIAS UNIDAS">Provincias Unidas</option><option value="PTS-FRENTE DE IZQUIERDA Y DE TRABAJADORES UNIDAD">Pts-Frente De Izquierda Y De Trabajadores Unidad</option><option value="UCR - UNIÓN CÍVICA RADICAL">Ucr - Unión Cívica Radical</option><option value="UNIÓN POR LA PATRIA">Unión Por La Patria</option></select>
+      <select id="fd"><option value="">Todos los distritos</option><option value="BUENOS AIRES">Buenos Aires</option><option value="CATAMARCA">Catamarca</option><option value="CHACO">Chaco</option><option value="CHUBUT">Chubut</option><option value="CIUDAD DE BUENOS AIRES">Ciudad De Buenos Aires</option><option value="CORDOBA">Cordoba</option><option value="CORRIENTES">Corrientes</option><option value="ENTRE RIOS">Entre Rios</option><option value="FORMOSA">Formosa</option><option value="JUJUY">Jujuy</option><option value="LA PAMPA">La Pampa</option><option value="LA RIOJA">La Rioja</option><option value="MENDOZA">Mendoza</option><option value="MISIONES">Misiones</option><option value="NEUQUEN">Neuquen</option><option value="RIO NEGRO">Rio Negro</option><option value="SALTA">Salta</option><option value="SAN JUAN">San Juan</option><option value="SAN LUIS">San Luis</option><option value="SANTA CRUZ">Santa Cruz</option><option value="SANTA FE">Santa Fe</option><option value="SANTIAGO DEL ESTERO">Santiago Del Estero</option><option value="TIERRA DEL FUEGO">Tierra Del Fuego</option><option value="TUCUMAN">Tucuman</option></select>
+      <select id="fo">
+        <option value="total">Más proyectos</option>
+        <option value="ley">Más proyectos de ley</option>
+        <option value="pct">Mayor proporción de ley</option>
+        <option value="menos">Menos proyectos</option>
+        <option value="nombre">Nombre A–Z</option>
+      </select>
+    </div>
+    <div class="resumen" id="resumen"></div>
+    <table>
+      <thead><tr>
+        <th class="num" style="width:44px">#</th>
+        <th>Diputado</th>
+        <th class="oculto-movil">Bloque</th>
+        <th class="oculto-movil">Distrito</th>
+        <th class="num">Proyectos</th>
+        <th class="num">Ley</th>
+        <th class="num oculto-movil">Resol.</th>
+        <th class="num oculto-movil">Decl.</th>
+        <th>Perfil</th>
+      </tr></thead>
+      <tbody id="tb"></tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Cómo se hizo</h2>
+    <div class="metodo">
+      <p>Los datos salen del sitio oficial de la <a href="https://www.hcdn.gob.ar/diputados/" target="_blank" rel="noopener">Honorable Cámara de Diputados de la Nación</a>. Para cada diputado se toma el total de proyectos presentados que informa su ficha y la composición de sus últimos veinte proyectos, que es la única página del listado que se lee de forma pareja para todos.</p>
+      <p>Las tres columnas de tipo —ley, resolución, declaración— suman veinte por diputado, salvo para quienes presentaron menos. El porcentaje de ley se calcula sobre ese conjunto, así que mide el perfil reciente y no la carrera completa. El total de la izquierda sí es el del período completo.</p>
+      <p>Un proyecto de ley puede ser declarativo y una resolución puede tener efecto real. La clasificación describe la forma del instrumento, no su importancia. Cada fila enlaza a la ficha oficial, donde está el detalle.</p>
+      <p>Extracción: 2026-11-03. Los datos cambian cuando la Cámara actualiza sus listados.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Corvus Lab · <a href="/proyectos">otros trabajos</a>
+  </div>
+</footer>
+
+<script>
+const DATA = [{"n":"Carlos Daniel Castagneto","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":2715,"ley":6,"res":13,"dec":1,"m":20,"pct":30,"p":"resolucion"},{"n":"Ana María Ianni","b":"UNIÓN POR LA PATRIA","d":"SANTA CRUZ","t":2501,"ley":1,"res":18,"dec":1,"m":20,"pct":5,"p":"resolucion"},{"n":"Blanca Inés Osuna","b":"UNIÓN POR LA PATRIA","d":"ENTRE RIOS","t":2010,"ley":7,"res":13,"dec":0,"m":20,"pct":35,"p":"resolucion"},{"n":"Gerardo Cipolini","b":"UCR - UNIÓN CÍVICA RADICAL","d":"CHACO","t":1677,"ley":13,"res":5,"dec":2,"m":20,"pct":65,"p":"ley"},{"n":"Nancy Sand","b":"UNIÓN POR LA PATRIA","d":"CORRIENTES","t":1677,"ley":4,"res":15,"dec":1,"m":20,"pct":20,"p":"resolucion"},{"n":"Hilda Aguirre","b":"UNIÓN POR LA PATRIA","d":"LA RIOJA","t":1650,"ley":4,"res":16,"dec":0,"m":20,"pct":20,"p":"resolucion"},{"n":"Maximiliano Ferraro","b":"COALICION CIVICA","d":"CIUDAD DE BUENOS AIRES","t":1530,"ley":5,"res":10,"dec":5,"m":20,"pct":25,"p":"resolucion"},{"n":"Jorge Neri Araujo Hernández","b":"UNIÓN POR LA PATRIA","d":"TIERRA DEL FUEGO","t":1486,"ley":3,"res":17,"dec":0,"m":20,"pct":15,"p":"resolucion"},{"n":"Karina Banfi","b":"ADELANTE BUENOS AIRES","d":"BUENOS AIRES","t":1420,"ley":2,"res":5,"dec":13,"m":20,"pct":10,"p":"declaracion"},{"n":"Hugo Yasky","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":1336,"ley":4,"res":14,"dec":2,"m":20,"pct":20,"p":"resolucion"},{"n":"Gabriela Beatriz Estévez","b":"UNIÓN POR LA PATRIA","d":"CORDOBA","t":1288,"ley":7,"res":10,"dec":3,"m":20,"pct":35,"p":"resolucion"},{"n":"Agustín Oscar Rossi","b":"UNIÓN POR LA PATRIA","d":"SANTA FE","t":1268,"ley":4,"res":15,"dec":1,"m":20,"pct":20,"p":"resolucion"},{"n":"Gisela Scaglia","b":"PROVINCIAS UNIDAS","d":"SANTA FE","t":1226,"ley":3,"res":6,"dec":11,"m":20,"pct":15,"p":"declaracion"},{"n":"Miguel Ángel Pichetto","b":"ENCUENTRO FEDERAL","d":"BUENOS AIRES","t":1180,"ley":15,"res":3,"dec":2,"m":20,"pct":75,"p":"ley"},{"n":"Cecilia Moreau","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":1130,"ley":11,"res":9,"dec":0,"m":20,"pct":55,"p":"ley"},{"n":"Eduardo Félix Valdés","b":"UNIÓN POR LA PATRIA","d":"CIUDAD DE BUENOS AIRES","t":1121,"ley":7,"res":13,"dec":0,"m":20,"pct":35,"p":"resolucion"},{"n":"Andrea Freites","b":"UNIÓN POR LA PATRIA","d":"TIERRA DEL FUEGO","t":1085,"ley":7,"res":13,"dec":0,"m":20,"pct":35,"p":"resolucion"},{"n":"Nicolás del Caño","b":"PTS-FRENTE DE IZQUIERDA Y DE TRABAJADORES UNIDAD","d":"BUENOS AIRES","t":1078,"ley":6,"res":12,"dec":2,"m":20,"pct":30,"p":"resolucion"},{"n":"Roxana Monzón","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":1071,"ley":1,"res":18,"dec":1,"m":20,"pct":5,"p":"resolucion"},{"n":"Esteban Paulón","b":"PROVINCIAS UNIDAS","d":"SANTA FE","t":1063,"ley":4,"res":14,"dec":2,"m":20,"pct":20,"p":"resolucion"},{"n":"Lorena Pokoik","b":"UNIÓN POR LA PATRIA","d":"CIUDAD DE BUENOS AIRES","t":1060,"ley":4,"res":14,"dec":2,"m":20,"pct":20,"p":"resolucion"},{"n":"Carlos Raúl Zapata","b":"LA LIBERTAD AVANZA","d":"SALTA","t":1058,"ley":0,"res":15,"dec":5,"m":20,"pct":0,"p":"resolucion"},{"n":"Gabriela Pedrali","b":"UNIÓN POR LA PATRIA","d":"LA RIOJA","t":947,"ley":5,"res":13,"dec":2,"m":20,"pct":25,"p":"resolucion"},{"n":"Alejandro Finocchiaro","b":"PRO","d":"BUENOS AIRES","t":873,"ley":16,"res":4,"dec":0,"m":20,"pct":80,"p":"ley"},{"n":"Ariel Rauschenberger","b":"UNIÓN POR LA PATRIA","d":"LA PAMPA","t":861,"ley":4,"res":16,"dec":0,"m":20,"pct":20,"p":"resolucion"},{"n":"Agustina Lucrecia Propato","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":850,"ley":2,"res":18,"dec":0,"m":20,"pct":10,"p":"resolucion"},{"n":"Luis Eugenio Basterra","b":"UNIÓN POR LA PATRIA","d":"FORMOSA","t":844,"ley":5,"res":15,"dec":0,"m":20,"pct":25,"p":"resolucion"},{"n":"Aníbal Tortoriello","b":"LA LIBERTAD AVANZA","d":"RIO NEGRO","t":827,"ley":1,"res":12,"dec":7,"m":20,"pct":5,"p":"resolucion"},{"n":"Pablo Raúl Yedlin","b":"UNIÓN POR LA PATRIA","d":"TUCUMAN","t":788,"ley":7,"res":10,"dec":3,"m":20,"pct":35,"p":"resolucion"},{"n":"Sabrina Selva","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":785,"ley":7,"res":11,"dec":2,"m":20,"pct":35,"p":"resolucion"},{"n":"Sabrina Ajmechet","b":"LA LIBERTAD AVANZA","d":"CIUDAD DE BUENOS AIRES","t":784,"ley":5,"res":8,"dec":7,"m":20,"pct":25,"p":"resolucion"},{"n":"Victoria Tolosa Paz","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":780,"ley":6,"res":12,"dec":2,"m":20,"pct":30,"p":"resolucion"},{"n":"Pablo Todero","b":"UNIÓN POR LA PATRIA","d":"NEUQUEN","t":770,"ley":3,"res":17,"dec":0,"m":20,"pct":15,"p":"resolucion"},{"n":"Martín Aveiro","b":"UNIÓN POR LA PATRIA","d":"MENDOZA","t":769,"ley":6,"res":14,"dec":0,"m":20,"pct":30,"p":"resolucion"},{"n":"Sergio Omar Palazzo","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":719,"ley":10,"res":9,"dec":1,"m":20,"pct":50,"p":"ley"},{"n":"Horacio Pietragalla Corti","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":715,"ley":5,"res":10,"dec":5,"m":20,"pct":25,"p":"resolucion"},{"n":"Pamela Fernanda Verasay","b":"UCR - UNIÓN CÍVICA RADICAL","d":"MENDOZA","t":715,"ley":13,"res":5,"dec":2,"m":20,"pct":65,"p":"ley"},{"n":"Alicia Fregonese","b":"PRO","d":"ENTRE RIOS","t":711,"ley":7,"res":9,"dec":4,"m":20,"pct":35,"p":"resolucion"},{"n":"María Teresa García","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":692,"ley":7,"res":9,"dec":4,"m":20,"pct":35,"p":"resolucion"},{"n":"Luis Petri","b":"LA LIBERTAD AVANZA","d":"MENDOZA","t":686,"ley":9,"res":1,"dec":2,"m":12,"pct":75,"p":"ley"},{"n":"Germán Pedro Martínez","b":"UNIÓN POR LA PATRIA","d":"SANTA FE","t":633,"ley":5,"res":14,"dec":1,"m":20,"pct":25,"p":"resolucion"},{"n":"Vanesa Raquel Siley","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":618,"ley":11,"res":8,"dec":1,"m":20,"pct":55,"p":"ley"},{"n":"Jorge Chica","b":"UNIÓN POR LA PATRIA","d":"SAN JUAN","t":586,"ley":4,"res":13,"dec":3,"m":20,"pct":20,"p":"resolucion"},{"n":"Myriam Bregman","b":"PTS-FRENTE DE IZQUIERDA Y DE TRABAJADORES UNIDAD","d":"CIUDAD DE BUENOS AIRES","t":567,"ley":8,"res":9,"dec":3,"m":20,"pct":40,"p":"resolucion"},{"n":"Varinia Lis Marín","b":"UNIÓN POR LA PATRIA","d":"LA PAMPA","t":555,"ley":3,"res":15,"dec":2,"m":20,"pct":15,"p":"resolucion"},{"n":"Luana Volnovich","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":548,"ley":11,"res":8,"dec":1,"m":20,"pct":55,"p":"ley"},{"n":"Jimena López","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":543,"ley":9,"res":10,"dec":1,"m":20,"pct":45,"p":"ley"},{"n":"Jorge Rizzotti","b":"PROVINCIAS UNIDAS","d":"JUJUY","t":489,"ley":10,"res":7,"dec":3,"m":20,"pct":50,"p":"ley"},{"n":"Estela Mary Neder","b":"UNIÓN POR LA PATRIA","d":"SANTIAGO DEL ESTERO","t":456,"ley":4,"res":15,"dec":1,"m":20,"pct":20,"p":"resolucion"},{"n":"Yamila Ruíz","b":"ARGENTINA FEDERAL","d":"MISIONES","t":456,"ley":9,"res":10,"dec":1,"m":20,"pct":45,"p":"ley"},{"n":"Juan Carlos Molina","b":"UNIÓN POR LA PATRIA","d":"SANTA CRUZ","t":451,"ley":2,"res":18,"dec":0,"m":20,"pct":10,"p":"resolucion"},{"n":"Paula Andrea Penacca","b":"UNIÓN POR LA PATRIA","d":"CIUDAD DE BUENOS AIRES","t":449,"ley":6,"res":14,"dec":0,"m":20,"pct":30,"p":"resolucion"},{"n":"Diego A. Giuliano","b":"UNIÓN POR LA PATRIA","d":"SANTA FE","t":439,"ley":4,"res":13,"dec":3,"m":20,"pct":20,"p":"resolucion"},{"n":"Cristian Andino","b":"UNIÓN POR LA PATRIA","d":"SAN JUAN","t":437,"ley":6,"res":12,"dec":2,"m":20,"pct":30,"p":"resolucion"},{"n":"Mónica Frade","b":"COALICION CIVICA","d":"BUENOS AIRES","t":436,"ley":4,"res":10,"dec":6,"m":20,"pct":20,"p":"resolucion"},{"n":"Ramiro Gutiérrez","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":430,"ley":11,"res":8,"dec":1,"m":20,"pct":55,"p":"ley"},{"n":"Juan Marino","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":418,"ley":9,"res":9,"dec":2,"m":20,"pct":45,"p":"ley"},{"n":"Silvana Giudici","b":"LA LIBERTAD AVANZA","d":"CIUDAD DE BUENOS AIRES","t":412,"ley":3,"res":11,"dec":6,"m":20,"pct":15,"p":"resolucion"},{"n":"Moira Lanesan Sancho","b":"UNIÓN POR LA PATRIA","d":"SANTA CRUZ","t":410,"ley":6,"res":14,"dec":0,"m":20,"pct":30,"p":"resolucion"},{"n":"Sergio Eduardo Capozzi","b":"PROVINCIAS UNIDAS","d":"RIO NEGRO","t":409,"ley":13,"res":5,"dec":2,"m":20,"pct":65,"p":"ley"},{"n":"Juan Fernando Brügge","b":"PROVINCIAS UNIDAS","d":"CORDOBA","t":399,"ley":11,"res":9,"dec":0,"m":20,"pct":55,"p":"ley"},{"n":"María Graciela Parola","b":"UNIÓN POR LA PATRIA","d":"FORMOSA","t":394,"ley":7,"res":11,"dec":2,"m":20,"pct":35,"p":"resolucion"},{"n":"Marcela Marina Pagano","b":"COHERENCIA","d":"BUENOS AIRES","t":377,"ley":15,"res":4,"dec":1,"m":20,"pct":75,"p":"ley"},{"n":"María Graciela de la Rosa","b":"UNIÓN POR LA PATRIA","d":"FORMOSA","t":369,"ley":5,"res":11,"dec":4,"m":20,"pct":25,"p":"resolucion"},{"n":"Pablo Juliano","b":"PROVINCIAS UNIDAS","d":"BUENOS AIRES","t":354,"ley":7,"res":7,"dec":6,"m":20,"pct":35,"p":"resolucion"},{"n":"José Nuñez","b":"PROVINCIAS UNIDAS","d":"SANTA FE","t":340,"ley":9,"res":11,"dec":0,"m":20,"pct":45,"p":"ley"},{"n":"Marcelo Mango","b":"UNIÓN POR LA PATRIA","d":"RIO NEGRO","t":332,"ley":4,"res":16,"dec":0,"m":20,"pct":20,"p":"resolucion"},{"n":"Florencia Carignano","b":"UNIÓN POR LA PATRIA","d":"SANTA FE","t":320,"ley":7,"res":12,"dec":1,"m":20,"pct":35,"p":"resolucion"},{"n":"Ernesto \"Pipi\" Alí","b":"PRIMERO SAN LUIS","d":"SAN LUIS","t":310,"ley":9,"res":5,"dec":6,"m":20,"pct":45,"p":"ley"},{"n":"Carlos Cisneros","b":"UNIÓN POR LA PATRIA","d":"TUCUMAN","t":308,"ley":14,"res":5,"dec":1,"m":20,"pct":70,"p":"ley"},{"n":"Natalia Zaracho","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":307,"ley":7,"res":13,"dec":0,"m":20,"pct":35,"p":"resolucion"},{"n":"Damián Arabia","b":"LA LIBERTAD AVANZA","d":"CIUDAD DE BUENOS AIRES","t":301,"ley":2,"res":14,"dec":4,"m":20,"pct":10,"p":"resolucion"},{"n":"Itai Hagman","b":"UNIÓN POR LA PATRIA","d":"CIUDAD DE BUENOS AIRES","t":287,"ley":12,"res":8,"dec":0,"m":20,"pct":60,"p":"ley"},{"n":"Martín Ardohain","b":"PRO","d":"LA PAMPA","t":281,"ley":11,"res":9,"dec":0,"m":20,"pct":55,"p":"ley"},{"n":"Rodolfo Tailhade","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":270,"ley":6,"res":13,"dec":1,"m":20,"pct":30,"p":"resolucion"},{"n":"Mariela Coletta","b":"PROVINCIAS UNIDAS","d":"CIUDAD DE BUENOS AIRES","t":269,"ley":7,"res":8,"dec":5,"m":20,"pct":35,"p":"resolucion"},{"n":"Aldo Leiva","b":"UNIÓN POR LA PATRIA","d":"CHACO","t":263,"ley":5,"res":12,"dec":3,"m":20,"pct":25,"p":"resolucion"},{"n":"Lisandro Nieri","b":"UCR - UNIÓN CÍVICA RADICAL","d":"MENDOZA","t":259,"ley":16,"res":3,"dec":1,"m":20,"pct":80,"p":"ley"},{"n":"Santiago Cafiero","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":257,"ley":7,"res":13,"dec":0,"m":20,"pct":35,"p":"resolucion"},{"n":"Sergio Guillermo Casas","b":"UNIÓN POR LA PATRIA","d":"LA RIOJA","t":254,"ley":7,"res":8,"dec":5,"m":20,"pct":35,"p":"resolucion"},{"n":"Martín Lousteau","b":"PROVINCIAS UNIDAS","d":"CIUDAD DE BUENOS AIRES","t":252,"ley":9,"res":9,"dec":2,"m":20,"pct":45,"p":"ley"},{"n":"Lourdes Micaela Arrieta","b":"PROVINCIAS UNIDAS","d":"MENDOZA","t":251,"ley":6,"res":11,"dec":3,"m":20,"pct":30,"p":"resolucion"},{"n":"Ricardo Daives","b":"UNIÓN POR LA PATRIA","d":"SANTIAGO DEL ESTERO","t":250,"ley":4,"res":16,"dec":0,"m":20,"pct":20,"p":"resolucion"},{"n":"Kelly Olmos","b":"UNIÓN POR LA PATRIA","d":"CIUDAD DE BUENOS AIRES","t":248,"ley":8,"res":11,"dec":1,"m":20,"pct":40,"p":"resolucion"},{"n":"Christian Alejandro Zulli","b":"UNIÓN POR LA PATRIA","d":"CORRIENTES","t":245,"ley":7,"res":12,"dec":1,"m":20,"pct":35,"p":"resolucion"},{"n":"Cristian A. Ritondo","b":"PRO","d":"BUENOS AIRES","t":242,"ley":12,"res":8,"dec":0,"m":20,"pct":60,"p":"ley"},{"n":"Patricia Vásquez","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":241,"ley":9,"res":6,"dec":5,"m":20,"pct":45,"p":"ley"},{"n":"Julia Strada","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":240,"ley":12,"res":8,"dec":0,"m":20,"pct":60,"p":"ley"},{"n":"Álvaro Martínez","b":"LA LIBERTAD AVANZA","d":"MENDOZA","t":229,"ley":6,"res":10,"dec":4,"m":20,"pct":30,"p":"resolucion"},{"n":"Raúl Hadad","b":"UNIÓN POR LA PATRIA","d":"CORRIENTES","t":222,"ley":8,"res":10,"dec":2,"m":20,"pct":40,"p":"resolucion"},{"n":"Verónica Razzini","b":"LA LIBERTAD AVANZA","d":"SANTA FE","t":218,"ley":9,"res":6,"dec":5,"m":20,"pct":45,"p":"ley"},{"n":"Claudia María Palladino","b":"UNIÓN POR LA PATRIA","d":"CATAMARCA","t":208,"ley":8,"res":12,"dec":0,"m":20,"pct":40,"p":"resolucion"},{"n":"Guillermo Snopek","b":"UNIÓN POR LA PATRIA","d":"JUJUY","t":206,"ley":7,"res":10,"dec":3,"m":20,"pct":35,"p":"resolucion"},{"n":"Mario Manrique","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":206,"ley":13,"res":7,"dec":0,"m":20,"pct":65,"p":"ley"},{"n":"Sergio Dolce","b":"UNIÓN POR LA PATRIA","d":"CHACO","t":204,"ley":4,"res":16,"dec":0,"m":20,"pct":20,"p":"resolucion"},{"n":"Emmanuel Bianchetti","b":"PRO","d":"MISIONES","t":200,"ley":10,"res":10,"dec":0,"m":20,"pct":50,"p":"ley"},{"n":"Sebastián Nóblega","b":"ELIJO CATAMARCA","d":"CATAMARCA","t":198,"ley":8,"res":2,"dec":10,"m":20,"pct":40,"p":"declaracion"},{"n":"Adriana Cristina Serquis","b":"UNIÓN POR LA PATRIA","d":"RIO NEGRO","t":194,"ley":5,"res":15,"dec":0,"m":20,"pct":25,"p":"resolucion"},{"n":"María Florencia De Sensi","b":"PRO","d":"BUENOS AIRES","t":192,"ley":13,"res":6,"dec":1,"m":20,"pct":65,"p":"ley"},{"n":"Santiago Luis Roberto","b":"UNIÓN POR LA PATRIA","d":"CIUDAD DE BUENOS AIRES","t":190,"ley":9,"res":9,"dec":2,"m":20,"pct":45,"p":"ley"},{"n":"Alberto Arrúa","b":"ARGENTINA FEDERAL","d":"MISIONES","t":186,"ley":5,"res":14,"dec":1,"m":20,"pct":25,"p":"resolucion"},{"n":"Martín Yeza","b":"PRO","d":"BUENOS AIRES","t":183,"ley":12,"res":8,"dec":0,"m":20,"pct":60,"p":"ley"},{"n":"Juan Carlos Giordano","b":"IZQUIERDA SOCIALISTA - FRENTE DE IZQUIERDA UNIDAD","d":"BUENOS AIRES","t":180,"ley":5,"res":11,"dec":4,"m":20,"pct":25,"p":"resolucion"},{"n":"Paulo Agustín Tita","b":"UNIÓN POR LA PATRIA","d":"TIERRA DEL FUEGO","t":179,"ley":8,"res":12,"dec":0,"m":20,"pct":40,"p":"resolucion"},{"n":"José Glinski","b":"UNIÓN POR LA PATRIA","d":"CHUBUT","t":174,"ley":8,"res":11,"dec":1,"m":20,"pct":40,"p":"resolucion"},{"n":"María Inés Zigarán","b":"PROVINCIAS UNIDAS","d":"JUJUY","t":174,"ley":3,"res":10,"dec":7,"m":20,"pct":15,"p":"resolucion"},{"n":"Caren Tepp","b":"UNIÓN POR LA PATRIA","d":"SANTA FE","t":164,"ley":3,"res":17,"dec":0,"m":20,"pct":15,"p":"resolucion"},{"n":"Francisco Morchio","b":"LA LIBERTAD AVANZA","d":"ENTRE RIOS","t":162,"ley":3,"res":13,"dec":4,"m":20,"pct":15,"p":"resolucion"},{"n":"Máximo Carlos Kirchner","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":160,"ley":9,"res":10,"dec":1,"m":20,"pct":45,"p":"ley"},{"n":"Alejandra Torres","b":"PROVINCIAS UNIDAS","d":"CORDOBA","t":159,"ley":12,"res":8,"dec":0,"m":20,"pct":60,"p":"ley"},{"n":"Jorge Taiana","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":157,"ley":6,"res":13,"dec":1,"m":20,"pct":30,"p":"resolucion"},{"n":"José Gomez","b":"UNIÓN POR LA PATRIA","d":"SANTIAGO DEL ESTERO","t":154,"ley":10,"res":8,"dec":2,"m":20,"pct":50,"p":"ley"},{"n":"Nicolás Alfredo Trotta","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":154,"ley":4,"res":11,"dec":5,"m":20,"pct":20,"p":"resolucion"},{"n":"Daniel Vancsik","b":"ARGENTINA FEDERAL","d":"MISIONES","t":152,"ley":4,"res":7,"dec":9,"m":20,"pct":20,"p":"declaracion"},{"n":"Gladys Medina","b":"INDEPENDENCIA","d":"TUCUMAN","t":147,"ley":14,"res":5,"dec":1,"m":20,"pct":70,"p":"ley"},{"n":"Celia Campitelli","b":"UNIÓN POR LA PATRIA","d":"SANTIAGO DEL ESTERO","t":144,"ley":7,"res":13,"dec":0,"m":20,"pct":35,"p":"resolucion"},{"n":"Carolina Basualdo","b":"PROVINCIAS UNIDAS","d":"CORDOBA","t":143,"ley":5,"res":14,"dec":1,"m":20,"pct":25,"p":"resolucion"},{"n":"Pablo Farías","b":"PROVINCIAS UNIDAS","d":"SANTA FE","t":143,"ley":5,"res":15,"dec":0,"m":20,"pct":25,"p":"resolucion"},{"n":"Nancy Viviana Picón Martínez","b":"PRODUCCION Y TRABAJO","d":"SAN JUAN","t":140,"ley":17,"res":1,"dec":2,"m":20,"pct":85,"p":"ley"},{"n":"Juan Pablo Luque","b":"UNIÓN POR LA PATRIA","d":"CHUBUT","t":137,"ley":7,"res":12,"dec":1,"m":20,"pct":35,"p":"resolucion"},{"n":"Yolanda Vega","b":"ARGENTINA FEDERAL","d":"SALTA","t":134,"ley":3,"res":14,"dec":3,"m":20,"pct":15,"p":"resolucion"},{"n":"Fernanda Díaz","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":126,"ley":7,"res":13,"dec":0,"m":20,"pct":35,"p":"resolucion"},{"n":"Nicolás Massot","b":"ENCUENTRO FEDERAL","d":"BUENOS AIRES","t":122,"ley":13,"res":4,"dec":3,"m":20,"pct":65,"p":"ley"},{"n":"Abelardo Ferrán","b":"UNIÓN POR LA PATRIA","d":"LA PAMPA","t":120,"ley":9,"res":11,"dec":0,"m":20,"pct":45,"p":"ley"},{"n":"Natalia de la Sota","b":"DEFENDAMOS CÓRDOBA","d":"CORDOBA","t":117,"ley":13,"res":5,"dec":2,"m":20,"pct":65,"p":"ley"},{"n":"Julio Moreno Ovalle","b":"LA LIBERTAD AVANZA","d":"SALTA","t":116,"ley":2,"res":10,"dec":8,"m":20,"pct":10,"p":"resolucion"},{"n":"Nicolás Mayoraz","b":"LA LIBERTAD AVANZA","d":"SANTA FE","t":112,"ley":0,"res":12,"dec":8,"m":20,"pct":0,"p":"resolucion"},{"n":"Carlos Gutiérrez","b":"PROVINCIAS UNIDAS","d":"CORDOBA","t":111,"ley":8,"res":10,"dec":2,"m":20,"pct":40,"p":"resolucion"},{"n":"Alejandrina Borgatta","b":"UNIÓN POR LA PATRIA","d":"SANTA FE","t":110,"ley":6,"res":13,"dec":1,"m":20,"pct":30,"p":"resolucion"},{"n":"Alida Ferreyra","b":"LA LIBERTAD AVANZA","d":"CIUDAD DE BUENOS AIRES","t":110,"ley":0,"res":16,"dec":4,"m":20,"pct":0,"p":"resolucion"},{"n":"Gustavo Bordet","b":"UNIÓN POR LA PATRIA","d":"ENTRE RIOS","t":110,"ley":10,"res":10,"dec":0,"m":20,"pct":50,"p":"ley"},{"n":"Ignacio García Aresca","b":"PROVINCIAS UNIDAS","d":"CORDOBA","t":110,"ley":12,"res":7,"dec":1,"m":20,"pct":60,"p":"ley"},{"n":"Javier Sánchez Wrba","b":"PRO","d":"BUENOS AIRES","t":109,"ley":11,"res":9,"dec":0,"m":20,"pct":55,"p":"ley"},{"n":"Juan Schiaretti","b":"PROVINCIAS UNIDAS","d":"CORDOBA","t":108,"ley":10,"res":9,"dec":1,"m":20,"pct":50,"p":"ley"},{"n":"Julieta Marisol Campo","b":"UNIÓN POR LA PATRIA","d":"CHACO","t":107,"ley":1,"res":17,"dec":2,"m":20,"pct":5,"p":"resolucion"},{"n":"Beltrán Benedit","b":"LA LIBERTAD AVANZA","d":"ENTRE RIOS","t":103,"ley":0,"res":13,"dec":7,"m":20,"pct":0,"p":"resolucion"},{"n":"Matías Molle","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":103,"ley":6,"res":11,"dec":3,"m":20,"pct":30,"p":"resolucion"},{"n":"Guillermo Montenegro","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":102,"ley":3,"res":15,"dec":2,"m":20,"pct":15,"p":"resolucion"},{"n":"Marianela Marclay","b":"UNIÓN POR LA PATRIA","d":"ENTRE RIOS","t":101,"ley":10,"res":8,"dec":2,"m":20,"pct":50,"p":"ley"},{"n":"Gabriel Bornoroni","b":"LA LIBERTAD AVANZA","d":"CORDOBA","t":98,"ley":4,"res":10,"dec":6,"m":20,"pct":20,"p":"resolucion"},{"n":"Gerardo Huesen","b":"LA LIBERTAD AVANZA","d":"TUCUMAN","t":97,"ley":5,"res":6,"dec":9,"m":20,"pct":25,"p":"declaracion"},{"n":"Lorena Villaverde","b":"LA LIBERTAD AVANZA","d":"RIO NEGRO","t":97,"ley":3,"res":11,"dec":6,"m":20,"pct":15,"p":"resolucion"},{"n":"María Cecilia Ibañez","b":"LA LIBERTAD AVANZA","d":"CORDOBA","t":94,"ley":0,"res":14,"dec":6,"m":20,"pct":0,"p":"resolucion"},{"n":"Marina Dorotea Salzmann","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":90,"ley":7,"res":13,"dec":0,"m":20,"pct":35,"p":"resolucion"},{"n":"Alejandro Bongiovanni","b":"LA LIBERTAD AVANZA","d":"SANTA FE","t":89,"ley":14,"res":5,"dec":1,"m":20,"pct":70,"p":"ley"},{"n":"Jorge Mukdise","b":"UNIÓN POR LA PATRIA","d":"SANTIAGO DEL ESTERO","t":87,"ley":4,"res":16,"dec":0,"m":20,"pct":20,"p":"resolucion"},{"n":"Lilia Lemoine","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":85,"ley":4,"res":7,"dec":9,"m":20,"pct":20,"p":"declaracion"},{"n":"Carlos Alberto Almena","b":"LA LIBERTAD AVANZA","d":"SAN LUIS","t":77,"ley":0,"res":13,"dec":7,"m":20,"pct":0,"p":"resolucion"},{"n":"Guillermo César Agüero","b":"UCR - UNIÓN CÍVICA RADICAL","d":"CHACO","t":77,"ley":2,"res":11,"dec":7,"m":20,"pct":10,"p":"resolucion"},{"n":"Luis Albino Picat","b":"LA LIBERTAD AVANZA","d":"CORDOBA","t":77,"ley":8,"res":4,"dec":8,"m":20,"pct":40,"p":"declaracion"},{"n":"Fernanda Avila","b":"ELIJO CATAMARCA","d":"CATAMARCA","t":75,"ley":11,"res":5,"dec":4,"m":20,"pct":55,"p":"ley"},{"n":"Guillermo Michel","b":"UNIÓN POR LA PATRIA","d":"ENTRE RIOS","t":74,"ley":10,"res":10,"dec":0,"m":20,"pct":50,"p":"ley"},{"n":"Carlos Gustavo Jaime Quiroga","b":"PRODUCCION Y TRABAJO","d":"SAN JUAN","t":71,"ley":17,"res":1,"dec":2,"m":20,"pct":85,"p":"ley"},{"n":"Mariano Campero","b":"LA LIBERTAD AVANZA","d":"TUCUMAN","t":70,"ley":10,"res":4,"dec":6,"m":20,"pct":50,"p":"ley"},{"n":"Pablo Outes","b":"ARGENTINA FEDERAL","d":"SALTA","t":70,"ley":9,"res":8,"dec":3,"m":20,"pct":45,"p":"ley"},{"n":"César Treffinger","b":"LA LIBERTAD AVANZA","d":"CHUBUT","t":69,"ley":6,"res":6,"dec":8,"m":20,"pct":30,"p":"declaracion"},{"n":"Daiana Fernández Molero","b":"PRO","d":"CIUDAD DE BUENOS AIRES","t":69,"ley":12,"res":4,"dec":4,"m":20,"pct":60,"p":"ley"},{"n":"Fernanda Miño","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":67,"ley":10,"res":10,"dec":0,"m":20,"pct":50,"p":"ley"},{"n":"Santiago Pauli","b":"LA LIBERTAD AVANZA","d":"TIERRA DEL FUEGO","t":67,"ley":4,"res":9,"dec":7,"m":20,"pct":20,"p":"resolucion"},{"n":"Luciana Potenza","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":65,"ley":8,"res":11,"dec":1,"m":20,"pct":40,"p":"resolucion"},{"n":"Maria Gabriela Flores","b":"LA LIBERTAD AVANZA","d":"SALTA","t":65,"ley":2,"res":13,"dec":5,"m":20,"pct":10,"p":"resolucion"},{"n":"Manuel Quintar","b":"LA LIBERTAD AVANZA","d":"JUJUY","t":64,"ley":7,"res":4,"dec":9,"m":20,"pct":35,"p":"declaracion"},{"n":"Oscar A. Herrera Ahuad","b":"ARGENTINA FEDERAL","d":"MISIONES","t":63,"ley":10,"res":7,"dec":3,"m":20,"pct":50,"p":"ley"},{"n":"Laura Soldano","b":"LA LIBERTAD AVANZA","d":"CORDOBA","t":60,"ley":0,"res":15,"dec":5,"m":20,"pct":0,"p":"resolucion"},{"n":"Sebastián Galmarini","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":59,"ley":8,"res":11,"dec":1,"m":20,"pct":40,"p":"resolucion"},{"n":"Soledad Molinuevo","b":"LA LIBERTAD AVANZA","d":"TUCUMAN","t":58,"ley":0,"res":14,"dec":6,"m":20,"pct":0,"p":"resolucion"},{"n":"Lorena Macyszyn","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":57,"ley":2,"res":13,"dec":5,"m":20,"pct":10,"p":"resolucion"},{"n":"Mercedes Llano","b":"LA LIBERTAD AVANZA","d":"MENDOZA","t":57,"ley":11,"res":4,"dec":5,"m":20,"pct":55,"p":"ley"},{"n":"Rocío Bonacci","b":"LA LIBERTAD AVANZA","d":"SANTA FE","t":57,"ley":7,"res":6,"dec":7,"m":20,"pct":35,"p":"declaracion"},{"n":"Rosario Goitia","b":"LA LIBERTAD AVANZA","d":"CHACO","t":56,"ley":0,"res":12,"dec":8,"m":20,"pct":0,"p":"resolucion"},{"n":"Soledad Mondaca","b":"LA LIBERTAD AVANZA","d":"NEUQUEN","t":56,"ley":0,"res":16,"dec":4,"m":20,"pct":0,"p":"resolucion"},{"n":"Hugo Antonio Moyano","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":55,"ley":12,"res":8,"dec":0,"m":20,"pct":60,"p":"ley"},{"n":"José Federico Tournier","b":"LA LIBERTAD AVANZA","d":"CORRIENTES","t":55,"ley":3,"res":8,"dec":9,"m":20,"pct":15,"p":"declaracion"},{"n":"Juliana Santillán Juárez Brahim","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":55,"ley":3,"res":12,"dec":5,"m":20,"pct":15,"p":"resolucion"},{"n":"Adrián Brizuela","b":"LA LIBERTAD AVANZA","d":"CATAMARCA","t":54,"ley":0,"res":14,"dec":6,"m":20,"pct":0,"p":"resolucion"},{"n":"Javier Andrade","b":"UNIÓN POR LA PATRIA","d":"CIUDAD DE BUENOS AIRES","t":51,"ley":9,"res":8,"dec":3,"m":20,"pct":45,"p":"ley"},{"n":"Johanna Sabrina Longo","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":51,"ley":3,"res":12,"dec":5,"m":20,"pct":15,"p":"resolucion"},{"n":"Lucía Cámpora","b":"UNIÓN POR LA PATRIA","d":"CIUDAD DE BUENOS AIRES","t":50,"ley":6,"res":14,"dec":0,"m":20,"pct":30,"p":"resolucion"},{"n":"Bernardo Biella","b":"ARGENTINA FEDERAL","d":"SALTA","t":49,"ley":8,"res":8,"dec":4,"m":20,"pct":40,"p":"resolucion"},{"n":"Juan Grabois","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":48,"ley":8,"res":9,"dec":3,"m":20,"pct":40,"p":"resolucion"},{"n":"María Luisa González Estevarena","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":48,"ley":0,"res":15,"dec":5,"m":20,"pct":0,"p":"resolucion"},{"n":"Facundo Correa Llano","b":"LA LIBERTAD AVANZA","d":"MENDOZA","t":47,"ley":9,"res":5,"dec":6,"m":20,"pct":45,"p":"ley"},{"n":"Álvaro González","b":"PRO","d":"CIUDAD DE BUENOS AIRES","t":47,"ley":10,"res":6,"dec":4,"m":20,"pct":50,"p":"ley"},{"n":"Eliana Bruno","b":"LA LIBERTAD AVANZA","d":"SALTA","t":45,"ley":2,"res":13,"dec":5,"m":20,"pct":10,"p":"resolucion"},{"n":"Jorge Fernández","b":"PRIMERO SAN LUIS","d":"SAN LUIS","t":44,"ley":5,"res":6,"dec":9,"m":20,"pct":25,"p":"declaracion"},{"n":"Patricia Holzman","b":"LA LIBERTAD AVANZA","d":"CIUDAD DE BUENOS AIRES","t":44,"ley":1,"res":11,"dec":8,"m":20,"pct":5,"p":"resolucion"},{"n":"Eduardo Falcone","b":"MID - MOVIMIENTO DE INTEGRACIÓN Y DESARROLLO","d":"BUENOS AIRES","t":43,"ley":11,"res":3,"dec":6,"m":20,"pct":55,"p":"ley"},{"n":"Federico Agustín Pelli","b":"LA LIBERTAD AVANZA","d":"TUCUMAN","t":43,"ley":3,"res":10,"dec":7,"m":20,"pct":15,"p":"resolucion"},{"n":"Andrés Leone","b":"LA LIBERTAD AVANZA","d":"CIUDAD DE BUENOS AIRES","t":42,"ley":0,"res":15,"dec":5,"m":20,"pct":0,"p":"resolucion"},{"n":"M. Elena Velázquez","b":"UNIÓN POR LA PATRIA","d":"BUENOS AIRES","t":42,"ley":10,"res":10,"dec":0,"m":20,"pct":50,"p":"ley"},{"n":"Santiago Santurio","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":42,"ley":7,"res":5,"dec":8,"m":20,"pct":35,"p":"declaracion"},{"n":"María Lorena Petrovich","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":40,"ley":0,"res":15,"dec":5,"m":20,"pct":0,"p":"resolucion"},{"n":"Jorge Antonio Avila","b":"PROVINCIAS UNIDAS","d":"CHUBUT","t":39,"ley":11,"res":6,"dec":3,"m":20,"pct":55,"p":"ley"},{"n":"José Luis Garrido","b":"POR SANTA CRUZ","d":"SANTA CRUZ","t":39,"ley":9,"res":5,"dec":6,"m":20,"pct":45,"p":"ley"},{"n":"Romina Diez","b":"LA LIBERTAD AVANZA","d":"SANTA FE","t":39,"ley":11,"res":5,"dec":4,"m":20,"pct":55,"p":"ley"},{"n":"Alejandro Carrancio","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":38,"ley":2,"res":9,"dec":9,"m":20,"pct":10,"p":"declaracion"},{"n":"Rubén Darío Torres","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":38,"ley":0,"res":15,"dec":5,"m":20,"pct":0,"p":"resolucion"},{"n":"Álvaro García","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":38,"ley":0,"res":13,"dec":7,"m":20,"pct":0,"p":"resolucion"},{"n":"Emir Félix","b":"UNIÓN POR LA PATRIA","d":"MENDOZA","t":35,"ley":9,"res":11,"dec":0,"m":20,"pct":45,"p":"ley"},{"n":"Belén Avico","b":"LA LIBERTAD AVANZA","d":"CORDOBA","t":34,"ley":15,"res":4,"dec":1,"m":20,"pct":75,"p":"ley"},{"n":"Diógenes Ignacio González","b":"UCR - UNIÓN CÍVICA RADICAL","d":"CORRIENTES","t":34,"ley":12,"res":8,"dec":0,"m":20,"pct":60,"p":"ley"},{"n":"Oscar Zago","b":"MID - MOVIMIENTO DE INTEGRACIÓN Y DESARROLLO","d":"CIUDAD DE BUENOS AIRES","t":34,"ley":13,"res":1,"dec":6,"m":20,"pct":65,"p":"ley"},{"n":"Alejandro Fargosi","b":"LA LIBERTAD AVANZA","d":"CIUDAD DE BUENOS AIRES","t":33,"ley":4,"res":9,"dec":7,"m":20,"pct":20,"p":"resolucion"},{"n":"Antonela Giampieri","b":"PRO","d":"CIUDAD DE BUENOS AIRES","t":32,"ley":11,"res":9,"dec":0,"m":20,"pct":55,"p":"ley"},{"n":"Fernando Monguillot","b":"ELIJO CATAMARCA","d":"CATAMARCA","t":32,"ley":7,"res":4,"dec":9,"m":20,"pct":35,"p":"declaracion"},{"n":"José Peluc","b":"LA LIBERTAD AVANZA","d":"SAN JUAN","t":32,"ley":9,"res":8,"dec":3,"m":20,"pct":45,"p":"ley"},{"n":"Elia Marina Fernández","b":"INDEPENDENCIA","d":"TUCUMAN","t":31,"ley":6,"res":9,"dec":5,"m":20,"pct":30,"p":"resolucion"},{"n":"Gastón Riesco","b":"LA LIBERTAD AVANZA","d":"NEUQUEN","t":31,"ley":3,"res":12,"dec":5,"m":20,"pct":15,"p":"resolucion"},{"n":"Barbara Andreussi","b":"LA LIBERTAD AVANZA","d":"JUJUY","t":30,"ley":1,"res":10,"dec":9,"m":20,"pct":5,"p":"resolucion"},{"n":"Carlos García","b":"LA LIBERTAD AVANZA","d":"CHACO","t":30,"ley":8,"res":4,"dec":8,"m":20,"pct":40,"p":"declaracion"},{"n":"Cecilia López Pasquali","b":"UNIÓN POR LA PATRIA","d":"SANTIAGO DEL ESTERO","t":30,"ley":5,"res":15,"dec":0,"m":20,"pct":25,"p":"resolucion"},{"n":"Gladys Humenuk","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":30,"ley":2,"res":11,"dec":7,"m":20,"pct":10,"p":"resolucion"},{"n":"Fernando de Andreis","b":"PRO","d":"CIUDAD DE BUENOS AIRES","t":29,"ley":11,"res":9,"dec":0,"m":20,"pct":55,"p":"ley"},{"n":"María Celeste Ponce","b":"LA LIBERTAD AVANZA","d":"CORDOBA","t":29,"ley":6,"res":5,"dec":9,"m":20,"pct":30,"p":"declaracion"},{"n":"Giselle Castelnuovo","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":28,"ley":7,"res":8,"dec":5,"m":20,"pct":35,"p":"resolucion"},{"n":"Darío Schneider","b":"UCR - UNIÓN CÍVICA RADICAL","d":"ENTRE RIOS","t":27,"ley":12,"res":5,"dec":3,"m":20,"pct":60,"p":"ley"},{"n":"Lisandro Almirón","b":"LA LIBERTAD AVANZA","d":"CORRIENTES","t":27,"ley":7,"res":4,"dec":9,"m":20,"pct":35,"p":"declaracion"},{"n":"Miriam Niveyro","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":27,"ley":2,"res":12,"dec":6,"m":20,"pct":10,"p":"resolucion"},{"n":"Gerardo Gustavo González","b":"ARGENTINA FEDERAL","d":"FORMOSA","t":26,"ley":7,"res":7,"dec":6,"m":20,"pct":35,"p":"resolucion"},{"n":"Andrea Fernanda Vera","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":25,"ley":5,"res":7,"dec":8,"m":20,"pct":25,"p":"declaracion"},{"n":"Karen Reichardt","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":25,"ley":2,"res":12,"dec":6,"m":20,"pct":10,"p":"resolucion"},{"n":"Marcelo Barbur","b":"UNIÓN POR LA PATRIA","d":"SANTIAGO DEL ESTERO","t":25,"ley":7,"res":13,"dec":0,"m":20,"pct":35,"p":"resolucion"},{"n":"María Virginia Gallardo","b":"LA LIBERTAD AVANZA","d":"CORRIENTES","t":25,"ley":5,"res":10,"dec":5,"m":20,"pct":25,"p":"resolucion"},{"n":"Miguel Rodríguez","b":"LA LIBERTAD AVANZA","d":"TIERRA DEL FUEGO","t":25,"ley":3,"res":10,"dec":7,"m":20,"pct":15,"p":"resolucion"},{"n":"Andrés Ariel Laumann","b":"LA LIBERTAD AVANZA","d":"ENTRE RIOS","t":24,"ley":2,"res":12,"dec":6,"m":20,"pct":10,"p":"resolucion"},{"n":"Enrique Lluch","b":"LA LIBERTAD AVANZA","d":"CORDOBA","t":24,"ley":3,"res":13,"dec":4,"m":20,"pct":15,"p":"resolucion"},{"n":"Laura Elena Rodríguez Machado","b":"LA LIBERTAD AVANZA","d":"CORDOBA","t":24,"ley":8,"res":6,"dec":6,"m":20,"pct":40,"p":"declaracion"},{"n":"Martín Menem","b":"LA LIBERTAD AVANZA","d":"LA RIOJA","t":23,"ley":6,"res":5,"dec":9,"m":20,"pct":30,"p":"declaracion"},{"n":"Hernán Urien","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":22,"ley":3,"res":10,"dec":7,"m":20,"pct":15,"p":"resolucion"},{"n":"Gino Visconti","b":"LA LIBERTAD AVANZA","d":"LA RIOJA","t":21,"ley":6,"res":8,"dec":6,"m":20,"pct":30,"p":"resolucion"},{"n":"Juan Pablo Montenegro","b":"LA LIBERTAD AVANZA","d":"SANTA FE","t":21,"ley":2,"res":6,"dec":12,"m":20,"pct":10,"p":"declaracion"},{"n":"Sebastián Pareja","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":20,"ley":3,"res":13,"dec":4,"m":20,"pct":15,"p":"resolucion"},{"n":"Diego Hartfield","b":"LA LIBERTAD AVANZA","d":"MISIONES","t":19,"ley":1,"res":10,"dec":8,"m":19,"pct":5,"p":"resolucion"},{"n":"Karina Maureira","b":"LA NEUQUINIDAD","d":"NEUQUEN","t":19,"ley":11,"res":5,"dec":3,"m":19,"pct":58,"p":"ley"},{"n":"Mónica Becerra","b":"LA LIBERTAD AVANZA","d":"SAN LUIS","t":19,"ley":3,"res":10,"dec":6,"m":19,"pct":16,"p":"resolucion"},{"n":"Javier Noguera","b":"INDEPENDENCIA","d":"TUCUMAN","t":17,"ley":8,"res":3,"dec":6,"m":17,"pct":47,"p":"ley"},{"n":"Marcos Patiño Brizuela","b":"LA LIBERTAD AVANZA","d":"CORDOBA","t":17,"ley":4,"res":5,"dec":8,"m":17,"pct":24,"p":"declaracion"},{"n":"Pablo Ansaloni","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":16,"ley":5,"res":5,"dec":6,"m":16,"pct":31,"p":"declaracion"},{"n":"Atilio Basualdo","b":"LA LIBERTAD AVANZA","d":"FORMOSA","t":15,"ley":4,"res":8,"dec":3,"m":15,"pct":27,"p":"resolucion"},{"n":"Claudio Álvarez","b":"ARGENTINA FEDERAL","d":"SAN LUIS","t":15,"ley":5,"res":5,"dec":5,"m":15,"pct":33,"p":"declaracion"},{"n":"Sergio Figliuolo","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":15,"ley":5,"res":5,"dec":5,"m":15,"pct":33,"p":"declaracion"},{"n":"Alfredo Gonzales","b":"LA LIBERTAD AVANZA","d":"JUJUY","t":13,"ley":3,"res":7,"dec":3,"m":13,"pct":23,"p":"resolucion"},{"n":"Maura Gruber","b":"LA LIBERTAD AVANZA","d":"MISIONES","t":12,"ley":2,"res":8,"dec":2,"m":12,"pct":17,"p":"resolucion"},{"n":"Gabriela Luciana Muñoz","b":"LA LIBERTAD AVANZA","d":"NEUQUEN","t":11,"ley":2,"res":7,"dec":2,"m":11,"pct":18,"p":"resolucion"},{"n":"Julieta Metral Asensio","b":"LA LIBERTAD AVANZA","d":"MENDOZA","t":11,"ley":1,"res":9,"dec":1,"m":11,"pct":9,"p":"resolucion"},{"n":"Maira Frias","b":"LA LIBERTAD AVANZA","d":"CHUBUT","t":11,"ley":2,"res":4,"dec":5,"m":11,"pct":18,"p":"declaracion"},{"n":"Joaquín Ojeda","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":10,"ley":1,"res":6,"dec":3,"m":10,"pct":10,"p":"resolucion"},{"n":"Jairo Guzmán","b":"LA LIBERTAD AVANZA","d":"SANTA CRUZ","t":9,"ley":2,"res":3,"dec":4,"m":9,"pct":22,"p":"declaracion"},{"n":"Bertie Benegas Lynch","b":"LA LIBERTAD AVANZA","d":"BUENOS AIRES","t":7,"ley":4,"res":1,"dec":2,"m":7,"pct":57,"p":"ley"},{"n":"Nicolás Emma","b":"LA LIBERTAD AVANZA","d":"CIUDAD DE BUENOS AIRES","t":7,"ley":4,"res":1,"dec":2,"m":7,"pct":57,"p":"ley"},{"n":"Valentina Ravera","b":"LA LIBERTAD AVANZA","d":"SANTA FE","t":6,"ley":1,"res":4,"dec":1,"m":6,"pct":17,"p":"resolucion"},{"n":"Yamile Tomassoni","b":"LA LIBERTAD AVANZA","d":"SANTA FE","t":6,"ley":1,"res":2,"dec":3,"m":6,"pct":17,"p":"declaracion"},{"n":"Gonzalo Roca","b":"LA LIBERTAD AVANZA","d":"CORDOBA","t":4,"ley":2,"res":0,"dec":2,"m":4,"pct":50,"p":"ley"},{"n":"Abel Chiconi","b":"LA LIBERTAD AVANZA","d":"SAN JUAN","t":3,"ley":1,"res":2,"dec":0,"m":3,"pct":33,"p":"resolucion"},{"n":"Agustín Pellegrini","b":"LA LIBERTAD AVANZA","d":"SANTA FE","t":2,"ley":0,"res":1,"dec":1,"m":2,"pct":0,"p":"declaracion"},{"n":"Martín Matzkin","b":"LA LIBERTAD AVANZA","d":"LA PAMPA","t":0,"ley":0,"res":1,"dec":0,"m":1,"pct":0,"p":"resolucion"}];
+const T = {"ley":"t-ley","resolucion":"t-res","declaracion":"t-dec"};
+const LBL = {"ley":"Ley","resolucion":"Resolución","declaracion":"Declaración"};
+const q = document.getElementById('q'), fb = document.getElementById('fb'),
+      fd = document.getElementById('fd'), fo = document.getElementById('fo'),
+      tb = document.getElementById('tb'), resumen = document.getElementById('resumen');
+
+function pct(a,b) { return b ? Math.round(100*a/b) : 0; }
+
+function render() {
+  const term = q.value.trim().toLowerCase();
+  let rows = DATA.filter(r => {
+    if (fb.value && r.b !== fb.value) return false;
+    if (fd.value && r.d !== fd.value) return false;
+    if (term) {
+      const s = (r.n + ' ' + r.b + ' ' + r.d).toLowerCase();
+      if (!s.includes(term)) return false;
+    }
+    return true;
+  });
+  const ord = fo.value;
+  rows.sort((a,b) => {
+    if (ord === 'total') return b.t - a.t || a.n.localeCompare(b.n);
+    if (ord === 'menos') return a.t - b.t || a.n.localeCompare(b.n);
+    if (ord === 'ley') return b.ley - a.ley || b.t - a.t;
+    if (ord === 'pct') return (b.m?b.pct:-1) - (a.m?a.pct:-1) || b.ley - a.ley;
+    return a.n.localeCompare(b.n);
+  });
+  tb.innerHTML = rows.map((r,i) => {
+    const pl = pct(r.ley, r.m), pr = pct(r.res, r.m), pd = 100 - pl - pr;
+    return `<tr>
+      <td class="num" style="color:var(--soft)">${i+1}</td>
+      <td class="nombre">${esc(r.n)}</td>
+      <td class="bloque oculto-movil">${esc(r.b)}</td>
+      <td class="dist oculto-movil">${esc(r.d)}</td>
+      <td class="num">${r.t.toLocaleString('es-AR')}</td>
+      <td class="num">${r.ley}</td>
+      <td class="num oculto-movil">${r.res}</td>
+      <td class="num oculto-movil">${r.dec}</td>
+      <td><span class="tag ${T[r.p]||''}">${LBL[r.p]||'—'}</span>
+        <span class="mini" title="ley ${pl}% · resolución ${pr}% · declaración ${pd}%">
+          <i style="width:${pl}%;background:var(--ley)"></i><i style="width:${pr}%;background:var(--res)"></i><i style="width:${pd}%;background:var(--dec)"></i>
+        </span></td>
+    </tr>`;
+  }).join('');
+  const tp = rows.reduce((s,r)=>s+r.t,0);
+  resumen.textContent = `${rows.length} diputados · ${tp.toLocaleString('es-AR')} proyectos`;
+}
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]); }
+[q,fb,fd,fo].forEach(el => el.addEventListener('input', render));
+render();
+</script>
+</body>
+</html>

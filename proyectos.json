@@ -143,6 +143,15 @@
       "url": "https://corvus-lab.vercel.app/coleccion",
       "descripcion": "Cinco volúmenes acerca de lo que sostiene a una persona cuando el Estado, el trabajo y la atención dejan de sostenerla.",
       "detalle": "El panteón personal, el protocolo de la atención, el preparacionismo, el último escalón y el tecnocristianismo. Cada uno se basta a sí mismo; juntos dicen algo más."
+    },
+    {
+      "n": 12,
+      "nombre": "Los que legislan",
+      "categoria": "rendicion",
+      "estado": "Publicado",
+      "url": "/congreso",
+      "descripcion": "Los 256 diputados en ejercicio y qué presenta cada uno: cuántos proyectos, cuántos son ley y cuántos son declaraciones simbólicas.",
+      "detalle": "Lee los listados oficiales de la Cámara de Diputados diputado por diputado y los ordena por producción. La mitad de lo que se presenta no es ley: son resoluciones y declaraciones que reconocen, festejan o piden, sin cambiar ninguna norma."
     }
   ]
 }

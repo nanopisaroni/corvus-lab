@@ -1,12 +1,19 @@
 #!/usr/bin/env python3
 # Extrae todos los proyectos de cada diputado (cola plana de páginas, reanudable).
-import urllib.request, re, json, os, time, concurrent.futures as cf
+import urllib.request, re, json, os, time, threading, concurrent.futures as cf
 
 UA = {"User-Agent": "Mozilla/5.0 (compatible; CorvusLab/1.0)"}
 DEST = "/tmp/hcdn_pages"
 os.makedirs(DEST, exist_ok=True)
 SLUGS = json.load(open("/tmp/slugs.json"))
 BASE = "https://www.hcdn.gob.ar/diputados/{s}/listado-proyectos.html"
+_LOCKS = {}
+_LOCKS_GUARD = threading.Lock()
+
+
+def lock_de(slug):
+    with _LOCKS_GUARD:
+        return _LOCKS.setdefault(slug, threading.Lock())
 
 
 def get(u, tries=3):
@@ -53,6 +60,11 @@ def guardar(slug, paginas, extra=None):
 
 def bajar_tarea(t):
     slug, pagina = t
+    with lock_de(slug):
+        return _bajar(slug, pagina)
+
+
+def _bajar(slug, pagina):
     p = f"{DEST}/{slug}.json"
     d = json.load(open(p)) if os.path.exists(p) else {}
     d.setdefault("total", 0); d.setdefault("paginas", 0); d.setdefault("hechas", []); d.setdefault("filas", [])
@@ -72,7 +84,10 @@ def bajar_tarea(t):
             d["filas"].append(f)
             vistos.add(k)
     d["completo"] = len(d["hechas"]) >= d["paginas"]
-    json.dump(d, open(p, "w"), ensure_ascii=False)
+    tmp = p + ".tmp"
+    with open(tmp, "w") as fh:
+        json.dump(d, fh, ensure_ascii=False)
+    os.replace(tmp, p)
     return slug, pagina, len(filas)
 
 

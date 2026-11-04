@@ -16,7 +16,7 @@ FILES = ["index.html", "dashboard.html", "metrics.js", "metrics_history.json", "
 # Vercel. Abrirlos como texto (utf-8) los corrompe o revienta el decode.
 BINARIOS = ["coleccion/panteon.webp", "coleccion/soberania.webp",
             "coleccion/preparacionismo.webp", "coleccion/escalon.webp",
-            "coleccion/tecno.webp"]
+            "coleccion/tecno.webp", "img/cuervo-tinta.png"]
 
 def token():
     for line in open(os.path.expanduser("~/.hermes/.env")):

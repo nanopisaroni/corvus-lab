@@ -254,6 +254,7 @@ footer a {{ color: var(--muted); }}
   <div class="wrap">
     <a class="brand" href="/">Corvus Lab <em>· trabajos</em></a>
     <ul>
+      <li><a href="/plan-de-metas">Plan de Metas</a></li>
       <li><a href="/proyectos">Trabajos</a></li>
       <li><a href="/coleccion">Colección</a></li>
     </ul>

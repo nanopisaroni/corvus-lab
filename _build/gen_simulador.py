@@ -93,6 +93,8 @@ for i, a in enumerate(actas):
                 totv += 1
                 okv += pred == voto
 acierto = okv / totv
+AC = f"{acierto*100:.1f}".replace(".", ",")
+NTV = f"{totv:,}".replace(",", ".")
 
 # --- matriz visible
 MAT = ""
@@ -339,11 +341,11 @@ HTML = f"""<!DOCTYPE html>
   <h2>Cuánto se puede confiar</h2>
   <p class="sub">El simulador no adivina un proyecto nuevo: supone que el conflicto se repite. Se probó dejando cada votación afuera y prediciendo la posición de cada bloque solo con las otras votaciones de la misma familia.</p>
   <div class="tres">
-    <div><b>{acierto*100:.1f}%</b><span>de los votos emitidos, predichos correctamente (n = {totv:,}).</span></div>
+    <div><b>{AC}%</b><span>de los votos emitidos, predichos correctamente (n = {NTV}).</span></div>
     <div><b>33</b><span>votaciones distintas, ocho familias, tres sesiones.</span></div>
     <div><b>1,6%</b><span>de los votos se apartan del bloque: ahí el simulador falla por diseño.</span></div>
   </div>
-  <div class="box"><b>El límite, dicho claro.</b> El {acierto*100:.1f}% mide consistencia, no extrapolación: dentro de una familia, las votaciones son capítulos de la misma ley, así que el bloque repite su posición casi por definición. Para un tema que nunca apareció en el período, el simulador no tiene antecedente y lo muestra como tal. Lo que falta para dar el salto son los dictámenes de comisión y más períodos de votaciones.</div>
+  <div class="box"><b>El límite, dicho claro.</b> El {AC}% mide consistencia, no extrapolación: dentro de una familia, las votaciones son capítulos de la misma ley, así que el bloque repite su posición casi por definición. Para un tema que nunca apareció en el período, el simulador no tiene antecedente y lo muestra como tal. Lo que falta para dar el salto son los dictámenes de comisión y más períodos de votaciones.</div>
 </div></section>
 
 <footer><div class="wrap">

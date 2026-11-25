@@ -9,7 +9,7 @@ ROOT = os.path.expanduser("~/projects/corvus-lab")
 FILES = ["index.html", "dashboard.html", "metrics.js", "metrics_history.json", "vercel.json",
          "proyectos.html", "proyectos.json", "congreso.html",
     "mapa.html", "afinidad.html", "cordoba.html", "disidencias.html", "plan-de-metas.html",
-    "bloques.html", "bloques.csv", "viabilidad.html",
+    "bloques.html", "bloques.csv", "viabilidad.html", "simulador.html",
          "notas/ultimo-escalon.html", "coleccion.html",
          "libro/panteon.html", "libro/soberania.html", "libro/preparacionismo.html",
          "libro/escalon.html", "libro/tecno.html"]

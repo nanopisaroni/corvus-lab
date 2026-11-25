@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulador de apoyo · qué necesita un proyecto para que lo voten</title>
+<meta name="description" content="Simulación de apoyo por bloque para un proyecto en preparación: qué toca, quién lo acompaña y cuántos votos hay que recuperar, sobre el registro real de las 33 votaciones del período 144.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root { --paper:#f8f6f2; --card:#fff; --ink:#16130f; --muted:#6d665c; --soft:#999083; --rule:#e2dcd1; --rule-strong:#c9c1b3; --ok:#2f6b4f; --no:#b04234; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+.wrap { max-width:1080px; margin:0 auto; padding:0 28px; }
+nav.top { border-bottom:1px solid var(--rule); }
+nav.top .wrap { display:flex; justify-content:space-between; align-items:baseline; padding:14px 28px; gap:16px; flex-wrap:wrap; }
+nav.top a { color:var(--muted); text-decoration:none; font-size:13px; }
+nav.top a:hover { color:var(--ink); }
+nav.top .brand { font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); }
+.kicker { font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--soft); margin-bottom:16px; }
+header.hero { padding:54px 0 30px; border-bottom:1px solid var(--rule-strong); }
+h1 { font-size:clamp(29px,5vw,44px); line-height:1.09; letter-spacing:-.02em; font-weight:600; margin:0 0 18px; }
+.dek { font-size:18px; color:#3b352d; max-width:760px; margin:0; }
+section { padding:44px 0; border-bottom:1px solid var(--rule); }
+h2 { font-size:23px; letter-spacing:-.01em; font-weight:600; margin:0 0 6px; }
+.sub { color:var(--muted); font-size:15px; margin:0 0 24px; max-width:740px; }
+.sim { display:grid; grid-template-columns:1fr 330px; gap:26px; align-items:start; }
+.ops { display:grid; grid-template-columns:1fr; gap:0; }
+.op { display:grid; grid-template-columns:22px 1fr 32px; align-items:start; gap:9px; padding:9px 0; border-bottom:1px solid #ece7de; cursor:pointer; }
+.op input { width:15px; height:15px; accent-color:#16130f; margin:2px 0 0; }
+.nm { font-size:14.5px; font-weight:500; line-height:1.3; }
+.nm em { display:block; font-style:normal; font-weight:400; font-size:12px; color:var(--muted); margin-top:1px; }
+.sd { font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--soft); text-align:right; }
+.panel { background:var(--card); border:1px solid var(--rule); border-radius:3px; padding:20px 22px; position:sticky; top:16px; }
+.panel .big { font-family:"IBM Plex Mono",monospace; font-size:38px; font-weight:500; letter-spacing:-.03em; line-height:1; }
+.panel .lab { font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--soft); }
+.res { font-size:17px; font-weight:600; margin:10px 0 2px; }
+.res.ok { color:var(--ok); } .res.no { color:var(--no); }
+.det { font-size:13px; color:#4a443b; margin:8px 0 0; line-height:1.5; }
+.chips { display:flex; flex-wrap:wrap; gap:5px; margin-top:12px; padding-top:12px; border-top:1px solid var(--rule); }
+.chip { font-family:"IBM Plex Mono",monospace; font-size:10.5px; padding:2px 6px; border-radius:2px; }
+.chip.af { background:#e3ece6; color:#2f6b4f; } .chip.ne { background:#f5e4e1; color:#b04234; } .chip.sin { background:#efece5; color:#8a8378; }
+.pret { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+.pret button { font-family:inherit; font-size:12px; padding:5px 10px; border:1px solid var(--rule-strong); background:transparent; border-radius:2px; cursor:pointer; color:#4a443b; }
+.pret button:hover { background:#efece5; color:var(--ink); }
+table.mx { width:100%; border-collapse:collapse; }
+table.mx th { text-align:left; font-family:"IBM Plex Mono",monospace; font-size:9.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--soft); font-weight:500; padding:0 4px 8px; border-bottom:1px solid var(--rule-strong); }
+table.mx th.bc { text-align:center; width:70px; }
+table.mx td { border-bottom:1px solid #ece7de; padding:6px 4px; }
+td.dm { width:230px; }
+td.dm b { display:block; font-size:13.5px; font-weight:500; line-height:1.25; }
+td.dm span { font-family:"IBM Plex Mono",monospace; font-size:10px; color:var(--soft); }
+td.cel { text-align:center; }
+td.cel b { display:block; font-size:11px; font-weight:600; }
+td.cel span { font-family:"IBM Plex Mono",monospace; font-size:9.5px; color:var(--soft); }
+td.cel.af b { color:var(--ok); } td.cel.ne b { color:var(--no); } td.cel.sin b { color:var(--soft); font-weight:400; }
+.box { border-left:3px solid #16130f; background:#f4f1ea; padding:14px 18px; font-size:14px; margin:18px 0 0; }
+.box b { font-weight:600; }
+.tres { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin:6px 0 18px; }
+.tres div b { display:block; font-family:"IBM Plex Mono",monospace; font-size:30px; font-weight:500; letter-spacing:-.03em; line-height:1; margin-bottom:5px; }
+.tres div span { font-size:13px; color:var(--muted); line-height:1.45; display:block; }
+footer { padding:30px 0 50px; font-size:13px; color:var(--muted); }
+@media (max-width:860px) { .sim { grid-template-columns:1fr; } .panel { position:static; } .tres { grid-template-columns:1fr; gap:14px; } }
+@media (max-width:620px) {
+  .wrap { padding:0 16px; }
+  header.hero { padding:34px 0 22px; }
+  section { padding:32px 0; }
+  .dek { font-size:16px; }
+  table.mx th.bc, table.mx td.cel { width:auto; }
+  td.dm { width:120px; }
+  td.cel b { font-size:9.5px; }
+  td.cel span { font-size:8.5px; }
+  table.mx th { font-size:8px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top"><div class="wrap">
+  <a class="brand" href="/">Corvus Lab</a>
+  <div><a href="/congreso">Congreso</a> · <a href="/bloques">Bloques</a> · <a href="/viabilidad">Viabilidad</a> · <a href="/simulador">Simulador</a> · <a href="/disidencias">Disidencias</a> · <a href="/mapa">Mapa</a> · <a href="/plan-de-metas">Plan de Metas</a> · <a href="/proyectos">Trabajos</a></div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">Cámara de Diputados · Período 144 · simulación de apoyo</div>
+  <h1>Qué necesita un proyecto para que lo voten</h1>
+  <p class="dek">Un proyecto no se aprueba por su texto sino por lo que toca. Marcá qué intereses mueve y el simulador devuelve qué bloque lo va a acompañar, con qué antecedente, si alcanza y cuántos votos hay que recuperar. Funciona antes de que el proyecto exista como expediente.</p>
+</div></header>
+
+<section><div class="wrap">
+  <h2>Qué toca el proyecto</h2>
+  <p class="sub">Cada dimensión es una familia de votaciones que ya ocurrió. El número a la derecha son las actas que la sostienen. Empezá con un caso real si querés ver cómo se comportó.</p>
+  <div class="pret"><button data-set="energia">Ley de energía</button><button data-set="rigi">Régimen de incentivos</button><button data-set="fiscal">Reforma de la ley 11.683</button><button data-set="bcra">Carta Orgánica del BCRA</button><button data-set="tratados">Tratado de patentes</button><button data-set="">Limpiar</button></div>
+  <div class="sim">
+    <div class="ops"><label class="op"><input type="checkbox" value="energia"><span class="nm">Energía y tarifas<em>Precio de la energía, subsidios, zona fría, hidrocarburos.</em></span><span class="sd">7</span></label><label class="op"><input type="checkbox" value="rigi"><span class="nm">Régimen de incentivos a la inversión<em>Beneficios impositivos y aduaneros para grandes inversiones.</em></span><span class="sd">4</span></label><label class="op"><input type="checkbox" value="fiscal"><span class="nm">Impuestos<em>Modificación de la ley 11.683, procedimiento tributario.</em></span><span class="sd">6</span></label><label class="op"><input type="checkbox" value="bcra"><span class="nm">Reglas del Banco Central<em>Carta orgánica, instrumentos de política monetaria.</em></span><span class="sd">3</span></label><label class="op"><input type="checkbox" value="tratados"><span class="nm">Tratados internacionales<em>Acuerdos con otros países, propiedad intelectual.</em></span><span class="sd">1</span></label><label class="op"><input type="checkbox" value="desregulacion"><span class="nm">Derogación de normas<em>Eliminación de regulaciones y normas obsoletas.</em></span><span class="sd">1</span></label><label class="op"><input type="checkbox" value="conciliaciones"><span class="nm">Conciliaciones y acuerdos<em>Homologación de acuerdos entre privados.</em></span><span class="sd">1</span></label><label class="op"><input type="checkbox" value="procedimiento"><span class="nm">Cuestiones de procedimiento<em>Mociones, apartamientos del reglamento, cuestión previa.</em></span><span class="sd">10</span></label></div>
+    <div class="panel">
+      <div class="lab">Votos a favor estimados</div>
+      <div class="big" id="af">0</div>
+      <div class="res" id="res">Elegí qué toca el proyecto</div>
+      <p class="det" id="det">Marcá una o más dimensiones a la izquierda para ver cómo votaría cada bloque.</p>
+      <div class="chips" id="chips"></div>
+      <div style="margin-top:16px;padding-top:12px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted)">
+        <label for="pres">Presentes</label>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:6px">
+          <input type="range" id="pres" min="150" max="256" value="235" step="1" style="flex:1;accent-color:#16130f">
+          <b id="presv" style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#16130f;min-width:34px;text-align:right">235</b>
+        </div>
+        <label for="chicos" style="display:block;margin-top:12px">Votos de los bloques de 1 y 2 <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#999083">(en el período aportaron entre 6 y 15)</span></label>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:6px">
+          <input type="range" id="chicos" min="0" max="24" value="8" step="1" style="flex:1;accent-color:#16130f">
+          <b id="chicosv" style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#16130f;min-width:34px;text-align:right">8</b>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="box"><b>Cómo decide.</b> Para cada bloque se suman sus antecedentes en las dimensiones elegidas. Si votó a favor más veces de las que votó en contra, se estima a favor; si es al revés, en contra. Las abstenciones no cuentan. Cuando un bloque no tiene antecedente en ninguna de las dimensiones elegidas, se marca «sin antecedente» y no se lo suma. Los bloques de uno y dos diputados no se estiman por bloque porque no son un bloque: se cargan a mano con el control de abajo, y en el período aportaron entre 6 y 15 votos a las leyes del paquete económico.</div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>El registro, dimensión por dimensión</h2>
+  <p class="sub">Posición mayoritaria de cada bloque en cada familia de votaciones, con la cantidad de veces que se repitió sobre el total.</p>
+  <table class="mx">
+    <thead><tr><th>Dimensión</th><th class="bc">LLA</th><th class="bc">PRO</th><th class="bc">UCR</th><th class="bc">AFed</th><th class="bc">PU</th><th class="bc">UxP</th></tr></thead>
+    <tbody><tr><td class="dm"><b>Energía y tarifas</b><span>7 actas</span></td><td class="cel af"><b>A favor</b><span>7 de 7</span></td><td class="cel af"><b>A favor</b><span>7 de 7</span></td><td class="cel af"><b>A favor</b><span>7 de 7</span></td><td class="cel af"><b>A favor</b><span>7 de 7</span></td><td class="cel ne"><b>En contra</b><span>7 de 7</span></td><td class="cel ne"><b>En contra</b><span>7 de 7</span></td></tr><tr><td class="dm"><b>Régimen de incentivos a la inversión</b><span>4 actas</span></td><td class="cel af"><b>A favor</b><span>4 de 4</span></td><td class="cel af"><b>A favor</b><span>4 de 4</span></td><td class="cel af"><b>A favor</b><span>4 de 4</span></td><td class="cel af"><b>A favor</b><span>4 de 4</span></td><td class="cel ne"><b>En contra</b><span>4 de 4</span></td><td class="cel ne"><b>En contra</b><span>4 de 4</span></td></tr><tr><td class="dm"><b>Impuestos</b><span>6 actas</span></td><td class="cel af"><b>A favor</b><span>6 de 6</span></td><td class="cel af"><b>A favor</b><span>6 de 6</span></td><td class="cel af"><b>A favor</b><span>6 de 6</span></td><td class="cel af"><b>A favor</b><span>6 de 6</span></td><td class="cel ne"><b>En contra</b><span>5 de 6</span></td><td class="cel ne"><b>En contra</b><span>6 de 6</span></td></tr><tr><td class="dm"><b>Reglas del Banco Central</b><span>3 actas</span></td><td class="cel af"><b>A favor</b><span>3 de 3</span></td><td class="cel af"><b>A favor</b><span>3 de 3</span></td><td class="cel af"><b>A favor</b><span>3 de 3</span></td><td class="cel af"><b>A favor</b><span>3 de 3</span></td><td class="cel af"><b>A favor</b><span>3 de 3</span></td><td class="cel ne"><b>En contra</b><span>3 de 3</span></td></tr><tr><td class="dm"><b>Tratados internacionales</b><span>1 acta</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel ne"><b>En contra</b><span>1 de 1</span></td></tr><tr><td class="dm"><b>Derogación de normas</b><span>1 acta</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel ne"><b>En contra</b><span>1 de 1</span></td></tr><tr><td class="dm"><b>Conciliaciones y acuerdos</b><span>1 acta</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel af"><b>A favor</b><span>1 de 1</span></td><td class="cel ne"><b>En contra</b><span>1 de 1</span></td></tr><tr><td class="dm"><b>Cuestiones de procedimiento</b><span>10 actas</span></td><td class="cel ne"><b>En contra</b><span>10 de 10</span></td><td class="cel ne"><b>En contra</b><span>8 de 9</span></td><td class="cel ne"><b>En contra</b><span>5 de 5</span></td><td class="cel af"><b>A favor</b><span>8 de 10</span></td><td class="cel af"><b>A favor</b><span>10 de 10</span></td><td class="cel af"><b>A favor</b><span>10 de 10</span></td></tr></tbody>
+  </table>
+</div></section>
+
+<section><div class="wrap">
+  <h2>La línea que separa a los bloques</h2>
+  <p class="sub">Mirando el registro entero, cada bloque tiene una frontera clara, y no es ideológica: es temática.</p>
+  <div class="tres">
+    <div><b>7 de 7</b><span>veces que Provincias Unidas votó contra un proyecto de energía, el régimen de incentivos o impuestos.</span></div>
+    <div><b>6 de 6</b><span>veces que acompañó cuando el proyecto era institucional: BCRA, tratados, derogación de normas, conciliaciones.</span></div>
+    <div><b>10 de 10</b><span>veces que La Libertad Avanza votó en contra de una cuestión de procedimiento, junto a PRO y UCR.</span></div>
+  </div>
+  <div class="box"><b>Qué significa para un proyecto en preparación.</b> Un proyecto que solo toca energía, incentivos o impuestos pierde 18 votos de Provincias Unidas y 92 de Unión por la Patria, y se aprueba con el núcleo de 122 más los bloques chicos. Si además toca una cuestión de procedimiento, el eje se invierte y el proyecto cae. Si el proyecto es institucional, Provincias Unidas acompaña y el margen sube a 140.</div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Cuánto se puede confiar</h2>
+  <p class="sub">El simulador no adivina un proyecto nuevo: supone que el conflicto se repite. Se probó dejando cada votación afuera y prediciendo la posición de cada bloque solo con las otras votaciones de la misma familia.</p>
+  <div class="tres">
+    <div><b>97.9%</b><span>de los votos emitidos, predichos correctamente (n = 6,573).</span></div>
+    <div><b>33</b><span>votaciones distintas, ocho familias, tres sesiones.</span></div>
+    <div><b>1,6%</b><span>de los votos se apartan del bloque: ahí el simulador falla por diseño.</span></div>
+  </div>
+  <div class="box"><b>El límite, dicho claro.</b> El 97.9% mide consistencia, no extrapolación: dentro de una familia, las votaciones son capítulos de la misma ley, así que el bloque repite su posición casi por definición. Para un tema que nunca apareció en el período, el simulador no tiene antecedente y lo muestra como tal. Lo que falta para dar el salto son los dictámenes de comisión y más períodos de votaciones.</div>
+</div></section>
+
+<footer><div class="wrap">
+  Fuente: 33 votaciones nominales del período 144, Cámara de Diputados de la Nación. Regla: posición mayoritaria del bloque en cada familia de votaciones, con abstenciones y ausentes excluidos; bloques de cuatro o más integrantes. El simulador cuenta antecedentes, no predice intenciones. Los votos estimados usan las bancas actuales de cada bloque, sin descontar ausencias.
+</div></footer>
+
+<script>
+const SEATS = {"LLA": 95, "PRO": 12, "UCR": 6, "AFed": 9, "PU": 18, "UxP": 92};
+const REG = {"energia": {"LLA": {"AF": 7, "NE": 0}, "PRO": {"AF": 7, "NE": 0}, "UCR": {"AF": 7, "NE": 0}, "AFed": {"AF": 7, "NE": 0}, "PU": {"AF": 0, "NE": 7}, "UxP": {"AF": 0, "NE": 7}}, "rigi": {"LLA": {"AF": 4, "NE": 0}, "PRO": {"AF": 4, "NE": 0}, "UCR": {"AF": 4, "NE": 0}, "AFed": {"AF": 4, "NE": 0}, "PU": {"AF": 0, "NE": 4}, "UxP": {"AF": 0, "NE": 4}}, "fiscal": {"LLA": {"AF": 6, "NE": 0}, "PRO": {"AF": 6, "NE": 0}, "UCR": {"AF": 6, "NE": 0}, "AFed": {"AF": 6, "NE": 0}, "PU": {"AF": 1, "NE": 5}, "UxP": {"AF": 0, "NE": 6}}, "bcra": {"LLA": {"AF": 3, "NE": 0}, "PRO": {"AF": 3, "NE": 0}, "UCR": {"AF": 3, "NE": 0}, "AFed": {"AF": 3, "NE": 0}, "PU": {"AF": 3, "NE": 0}, "UxP": {"AF": 0, "NE": 3}}, "tratados": {"LLA": {"AF": 1, "NE": 0}, "PRO": {"AF": 1, "NE": 0}, "UCR": {"AF": 1, "NE": 0}, "AFed": {"AF": 1, "NE": 0}, "PU": {"AF": 1, "NE": 0}, "UxP": {"AF": 0, "NE": 1}}, "desregulacion": {"LLA": {"AF": 1, "NE": 0}, "PRO": {"AF": 1, "NE": 0}, "UCR": {"AF": 1, "NE": 0}, "AFed": {"AF": 1, "NE": 0}, "PU": {"AF": 1, "NE": 0}, "UxP": {"AF": 0, "NE": 1}}, "conciliaciones": {"LLA": {"AF": 1, "NE": 0}, "PRO": {"AF": 1, "NE": 0}, "UCR": {"AF": 1, "NE": 0}, "AFed": {"AF": 1, "NE": 0}, "PU": {"AF": 1, "NE": 0}, "UxP": {"AF": 0, "NE": 1}}, "procedimiento": {"LLA": {"AF": 0, "NE": 10}, "PRO": {"AF": 1, "NE": 8}, "UCR": {"AF": 0, "NE": 5}, "AFed": {"AF": 8, "NE": 2}, "PU": {"AF": 10, "NE": 0}, "UxP": {"AF": 10, "NE": 0}}};
+const NOMBRE = {"LLA": "La Libertad Avanza", "PRO": "PRO", "UCR": "UCR", "AFed": "Argentina Federal", "PU": "Provincias Unidas", "UxP": "Uni\u00f3n por la Patria"};
+const BLOCS = ["LLA","PRO","UCR","AFed","PU","UxP"];
+
+const ops = [...document.querySelectorAll('.op input')];
+const rng = document.getElementById('pres');
+const rch = document.getElementById('chicos');
+const outCh = document.getElementById('chicosv');
+const outAF = document.getElementById('af');
+const outPres = document.getElementById('presv');
+const res = document.getElementById('res');
+const det = document.getElementById('det');
+const chips = document.getElementById('chips');
+
+function calcular() {
+  const sel = ops.filter(o => o.checked).map(o => o.value);
+  const presentes = +rng.value;
+  const pred = {};
+  BLOCS.forEach(b => {
+    let af = 0, ne = 0;
+    sel.forEach(d => { af += REG[d][b].AF; ne += REG[d][b].NE; });
+    pred[b] = (af === 0 && ne === 0) ? '??' : (af > ne ? 'AF' : (ne > af ? 'NE' : '??'));
+  });
+  let af = 0;
+  BLOCS.forEach(b => { if (pred[b] === 'AF') af += SEATS[b]; });
+  af += +rch.value;
+  outCh.textContent = rch.value;
+  af = Math.min(af, presentes);
+  const nec = Math.floor(presentes / 2) + 1;
+  outAF.textContent = af;
+  outPres.textContent = presentes;
+  chips.innerHTML = BLOCS.map(b => {
+    const c = pred[b] === 'AF' ? 'af' : (pred[b] === 'NE' ? 'ne' : 'sin');
+    const t = pred[b] === 'AF' ? 'a favor' : (pred[b] === 'NE' ? 'en contra' : 'sin antecedente');
+    return '<span class="chip ' + c + '">' + b + ' · ' + t + '</span>';
+  }).join('');
+  if (!sel.length) {
+    res.textContent = 'Elegí qué toca el proyecto';
+    res.className = 'res';
+    det.textContent = 'Marcá una o más dimensiones a la izquierda para ver cómo votaría cada bloque.';
+    return;
+  }
+  const sobra = af - nec;
+  if (sobra >= 0) {
+    res.textContent = 'Se aprueba';
+    res.className = 'res ok';
+    det.textContent = 'Con ' + af + ' votos sobre ' + presentes + ' presentes. El mínimo es ' + nec + ': aguanta ' + sobra + ' deserción(es).';
+  } else {
+    res.textContent = 'No se aprueba';
+    res.className = 'res no';
+    det.textContent = 'Con ' + af + ' votos sobre ' + presentes + ' presentes no alcanza: el mínimo es ' + nec + ' y faltan ' + (-sobra) + '.';
+  }
+}
+ops.forEach(o => o.addEventListener('change', calcular));
+rng.addEventListener('input', calcular);
+rch.addEventListener('input', calcular);
+document.querySelectorAll('.pret button').forEach(b => b.addEventListener('click', () => {
+  const set = b.dataset.set ? b.dataset.set.split(',') : [];
+  ops.forEach(o => o.checked = set.includes(o.value));
+  calcular();
+}));
+calcular();
+</script>
+</body></html>

@@ -212,7 +212,7 @@ footer a {{ color:var(--muted); }}
 </style>
 </head>
 <body>
-<nav class="top"><div class="wrap"><a class="brand" href="/">Corvus Lab</a><div><a href="/congreso">Congreso</a> · <a href="/disidencias">Disidencias</a> · <a href="/mapa">Mapa</a> · <a href="/cordoba">Córdoba</a></div></div></nav>
+<nav class="top"><div class="wrap"><a class="brand" href="/">Corvus Lab</a><div><a href="/congreso">Congreso</a> · <a href="/bloques">Bloques</a> · <a href="/disidencias">Disidencias</a> · <a href="/mapa">Mapa</a> · <a href="/cordoba">Córdoba</a></div></div></nav>
 
 <header class="hero"><div class="wrap">
 <div class="kicker">Plan de Metas · Municipalidad de Córdoba · 2024-2027</div>

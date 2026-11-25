@@ -498,7 +498,7 @@ HTML = f"""<!DOCTYPE html>
 
 <nav class="top"><div class="wrap">
   <a class="brand" href="/">Corvus Lab</a>
-  <div><a href="/congreso">Congreso</a> · <a href="/mapa">Mapa</a> · <a href="/bloques">Bloques</a> · <a href="/plan-de-metas">Plan de Metas</a> · <a href="/proyectos">Trabajos</a></div>
+  <div><a href="/congreso">Congreso</a> · <a href="/mapa">Mapa</a> · <a href="/bloques">Bloques</a> · <a href="/viabilidad">Viabilidad</a> · <a href="/plan-de-metas">Plan de Metas</a> · <a href="/proyectos">Trabajos</a></div>
 </div></nav>
 
 <header class="hero"><div class="wrap">

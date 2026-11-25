@@ -180,7 +180,7 @@ footer {{ padding:26px 0 60px; color:var(--soft); font-size:12.5px; }}
 
 <nav class="top"><div class="wrap">
   <a class="brand" href="/">Corvus Lab</a>
-  <div><a href="/congreso">Congreso</a> · <a href="/cordoba">Córdoba</a> · <a href="/mapa">Mapa</a> · <a href="/bloques">Bloques</a> · <a href="/viabilidad">Viabilidad</a> · <a href="/simulador">Simulador</a> · <a href="/afinidad">Afinidad</a> · <a href="/plan-de-metas">Plan de Metas</a> · <a href="/proyectos">Trabajos</a></div>
+  <div><a href="/congreso">Congreso</a> · <a href="/cordoba">Córdoba</a> · <a href="/mapa">Mapa</a> · <a href="/bloques">Bloques</a> · <a href="/viabilidad">Viabilidad</a> · <a href="/simulador">Simulador</a> · <a href="/termometro">Termómetro</a> · <a href="/afinidad">Afinidad</a> · <a href="/plan-de-metas">Plan de Metas</a> · <a href="/proyectos">Trabajos</a></div>
 </div></nav>
 
 <header class="hero"><div class="wrap">

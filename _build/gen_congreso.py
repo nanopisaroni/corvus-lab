@@ -258,6 +258,7 @@ footer a {{ color: var(--muted); }}
       <li><a href="/viabilidad">Viabilidad</a></li>
       <li><a href="/simulador">Simulador</a></li>
       <li><a href="/termometro">Termómetro</a></li>
+      <li><a href="/ejecucion">Ejecución</a></li>
       <li><a href="/plan-de-metas">Plan de Metas</a></li>
       <li><a href="/proyectos">Trabajos</a></li>
       <li><a href="/coleccion">Colección</a></li>

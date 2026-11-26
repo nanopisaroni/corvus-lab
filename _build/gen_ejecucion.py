@@ -19,8 +19,10 @@ P26 = [p for p in prog if p["anio"] == 2026]
 P25 = [p for p in prog if p["anio"] == 2025]
 
 def miles(x):  # millones -> string en billones/millones
-    if x >= 1e6: return f"$ {x/1e6:,.2f} billones".replace(",", ".")
-    return f"$ {x/1e3:,.0f} miles de millones".replace(",", ".")
+    def fmt(v, d):
+        return f"{v:,.{d}f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    if x >= 1e6: return f"$ {fmt(x/1e6, 2)} billones"
+    return f"$ {fmt(x/1e3, 0)} miles de millones"
 
 def n(x, d=1): return f"{x:,.{d}f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
